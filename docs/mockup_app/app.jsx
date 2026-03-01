@@ -1005,7 +1005,11 @@ export default function App() {
     return (
       <div style={{ paddingBottom: 20 }}>
         {/* Header */}
-        <Header title="FlexShot" right={
+        <Header title="FlexShot" left={
+          <div style={{ fontSize: 26, fontWeight: 900, fontStyle: "italic", textTransform: "uppercase", letterSpacing: -2, fontFamily: "'Inter', sans-serif" }}>
+            <span style={{ color: C.text }}>Flex</span><span style={{ color: C.brand }}>Shot</span>
+          </div>
+        } right={
           <IconBtn icon="Bell" onClick={() => setShowNotif(true)} badge />
         } />
 
@@ -1541,7 +1545,11 @@ export default function App() {
 
     return (
       <div>
-        <Header title="FlexTale" right={
+        <Header title="FlexTale" left={
+          <div style={{ fontSize: 26, fontWeight: 900, fontStyle: "italic", textTransform: "uppercase", letterSpacing: -2, fontFamily: "'Inter', sans-serif" }}>
+            <span style={{ color: C.text }}>Flex</span><span style={{ color: C.brand }}>Tale</span>
+          </div>
+        } right={
           <button onClick={() => setShowPaywall(true)} style={{ background: `${C.brand}15`, border: `1px solid ${C.brand}30`, padding: "7px 14px", borderRadius: 16, color: C.brand, fontSize: 12, fontWeight: 900, cursor: "pointer", display: "flex", alignItems: "center", gap: 6, fontFamily: "'JetBrains Mono', monospace" }}>
             <Icons.Zap size={14} stroke={C.brand} fill={`${C.brand}30`} /> {credits}
           </button>
