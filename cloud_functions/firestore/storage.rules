@@ -1,0 +1,78 @@
+rules_version = '2';
+
+service firebase.storage {
+  match /b/{bucket}/o {
+
+    // =============================================
+    // Helper functions
+    // =============================================
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    // Validates uploaded file: must be an image and under 10 MB.
+    function isValidImage() {
+      return request.resource.contentType.matches('image/.*')
+        && request.resource.size <= 10 * 1024 * 1024;
+    }
+
+    // =============================================
+    // config/** — public assets (Remote Config images, etc.)
+    // Admin-uploaded only; no client writes.
+    // =============================================
+    match /config/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // =============================================
+    // templates/** — FlexShot / FlexTale template assets
+    // Public read for rendering; admin-uploaded only.
+    // =============================================
+    match /templates/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // =============================================
+    // stories/** — published story images & scenes
+    // Public read (shareable links); written by Cloud Functions.
+    // =============================================
+    match /stories/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // =============================================
+    // onboarding/** — onboarding / tutorial assets
+    // Public read; admin-uploaded only.
+    // =============================================
+    match /onboarding/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // =============================================
+    // uploads/{userId}/** — user-uploaded photos
+    // Owner can read and write; max 10 MB, image/* only.
+    // =============================================
+    match /uploads/{userId}/{allPaths=**} {
+      allow read: if isOwner(userId);
+      allow write: if isOwner(userId) && isValidImage();
+    }
+
+    // =============================================
+    // generated/{userId}/** — AI-generated output images
+    // Owner can read; written exclusively by Cloud Functions.
+    // =============================================
+    match /generated/{userId}/{allPaths=**} {
+      allow read: if isOwner(userId);
+      allow write: if false;
+    }
+  }
+}

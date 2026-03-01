@@ -1,0 +1,140 @@
+rules_version = '2';
+
+service cloud.firestore {
+  match /databases/{database}/documents {
+
+    // =============================================
+    // Helper functions
+    // =============================================
+
+    function isAuthenticated() {
+      return request.auth != null;
+    }
+
+    function isOwner(userId) {
+      return isAuthenticated() && request.auth.uid == userId;
+    }
+
+    function isResourceOwner() {
+      return isAuthenticated() && resource.data.userId == request.auth.uid;
+    }
+
+    // Returns true if the incoming write does NOT touch any server-only fields.
+    // These fields are managed exclusively by Cloud Functions.
+    function noServerOnlyFields() {
+      let serverOnly = [
+        'creditsBalance',
+        'subscriptionPlan',
+        'subscriptionExpiresAt',
+        'subscriptionProductId',
+        'wowActive',
+        'wowExpiresAt',
+        'wowProductId',
+        'totalGenerations',
+        'totalStories',
+        'createdAt'
+      ];
+      return !request.resource.data.diff(resource.data).affectedKeys().hasAny(serverOnly);
+    }
+
+    // Returns the set of fields the client is allowed to write on their
+    // own user document.
+    function allowedUserFields() {
+      return [
+        'displayName',
+        'avatarUrl',
+        'deviceInfo',
+        'geo',
+        'fcmToken',
+        'lastActiveAt',
+        'updatedAt',
+        'glowUsedToday',
+        'glowLastResetDate',
+        'wowConfig'
+      ].toSet();
+    }
+
+    // =============================================
+    // users/{userId}
+    // =============================================
+    match /users/{userId} {
+      // Only the document owner can read their own profile.
+      allow read: if isOwner(userId);
+
+      // Owner can update, but CANNOT touch server-only fields.
+      // On update we verify the diff contains no server-only keys.
+      allow update: if isOwner(userId) && noServerOnlyFields();
+
+      // Client-side create is denied — user docs are bootstrapped by
+      // Cloud Functions on first sign-in (auth trigger).
+      allow create: if false;
+      allow delete: if false;
+    }
+
+    // =============================================
+    // generations/{genId}
+    // =============================================
+    match /generations/{genId} {
+      // Owner can read their own generations.
+      allow read: if isResourceOwner();
+
+      // All writes are server-side only (Cloud Functions).
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    // =============================================
+    // stories/{storyId}
+    // =============================================
+    match /stories/{storyId} {
+      // Owner can read their own stories.
+      allow read: if isResourceOwner();
+
+      // All writes are server-side only.
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+
+      // -----------------------------------------
+      // stories/{storyId}/scenes/{sceneId}
+      // -----------------------------------------
+      match /scenes/{sceneId} {
+        // Read allowed if the parent story belongs to the requesting user.
+        allow read: if isAuthenticated()
+          && get(/databases/$(database)/documents/stories/$(storyId)).data.userId == request.auth.uid;
+
+        // All writes are server-side only.
+        allow create: if false;
+        allow update: if false;
+        allow delete: if false;
+      }
+    }
+
+    // =============================================
+    // orders/{orderId}
+    // =============================================
+    match /orders/{orderId} {
+      // Owner can read their own orders.
+      allow read: if isResourceOwner();
+
+      // All writes are server-side only (Stripe webhook handler).
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+
+    // =============================================
+    // creditLogs/{logId}
+    // =============================================
+    match /creditLogs/{logId} {
+      // Owner can read their own credit logs.
+      allow read: if isResourceOwner();
+
+      // All writes are server-side only.
+      allow create: if false;
+      allow update: if false;
+      allow delete: if false;
+    }
+  }
+}

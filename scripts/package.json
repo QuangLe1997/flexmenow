@@ -1,0 +1,24 @@
+{
+  "name": "flexme-scripts",
+  "version": "1.0.0",
+  "description": "FlexMe utility scripts - seed, migrate, deploy, tools",
+  "scripts": {
+    "seed:templates": "ts-node seed/seed_templates.ts",
+    "seed:stories": "ts-node seed/seed_stories.ts",
+    "seed:users": "ts-node seed/seed_users.ts",
+    "validate:json": "ts-node tools/validate_json.ts",
+    "extract:mockup": "ts-node tools/extract_mockup_data.ts",
+    "deploy:functions": "bash deploy/deploy_functions.sh",
+    "deploy:rules": "bash deploy/deploy_rules.sh",
+    "publish:json": "bash deploy/publish_json.sh"
+  },
+  "dependencies": {
+    "firebase-admin": "^12.0.0",
+    "ajv": "^8.12.0"
+  },
+  "devDependencies": {
+    "typescript": "^5.4.0",
+    "ts-node": "^10.9.0",
+    "@types/node": "^20.0.0"
+  }
+}

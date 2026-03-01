@@ -21,3 +21,27 @@ Thumbs.db
 # IDE
 .vscode/
 .idea/
+
+# Build output
+lib/
+dist/
+*.tsbuildinfo
+
+# Scripts output
+scripts/.output/
+scripts/dist/
+
+# Cloud Functions build
+cloud_functions/lib/
+
+# Certs (private keys)
+certs/
+
+# Claude Code internal
+.claude/
+
+# Mockup build
+docs/mockup_app/dist/
+
+# Package lock (mockup only)
+docs/mockup_app/package-lock.json
