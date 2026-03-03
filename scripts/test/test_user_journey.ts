@@ -17,6 +17,7 @@
  *   cd scripts && npx ts-node test/test_user_journey.ts
  */
 
+import "dotenv/config";
 import { execSync } from "child_process";
 
 const PROJECT_ID = "flexme-now";
@@ -146,7 +147,8 @@ async function callCF(name: string, data: any, idToken: string) {
 }
 
 async function signUpAnonymous(): Promise<{ idToken: string; uid: string }> {
-  const apiKey = "AIzaSyBj8jBZWTI5vJfNqwDJWlEBcL2smHwpAoE";
+  const apiKey = process.env.FIREBASE_API_KEY || "";
+  if (!apiKey) throw new Error("FIREBASE_API_KEY env var not set");
   const r = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`, {
     method: "POST",
     headers: { "Content-Type": "application/json" },

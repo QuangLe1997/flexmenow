@@ -6,19 +6,27 @@
     "seed:templates": "ts-node seed/seed_templates.ts",
     "seed:stories": "ts-node seed/seed_stories.ts",
     "seed:users": "ts-node seed/seed_users.ts",
+    "seed:firestore": "ts-node seed/seed_firestore_rest.ts",
+    "test:cf": "ts-node test/test_all_cf.ts",
     "validate:json": "ts-node tools/validate_json.ts",
     "extract:mockup": "ts-node tools/extract_mockup_data.ts",
+    "upload:images": "ts-node tools/upload_images_to_gcs.ts",
+    "gen:images": "ts-node tools/gen_sample_images.ts",
+    "gen:templates": "ts-node tools/gen_sample_images.ts --templates",
+    "gen:stories": "ts-node tools/gen_sample_images.ts --stories",
     "deploy:functions": "bash deploy/deploy_functions.sh",
     "deploy:rules": "bash deploy/deploy_rules.sh",
     "publish:json": "bash deploy/publish_json.sh"
   },
   "dependencies": {
+    "ajv": "^8.12.0",
     "firebase-admin": "^12.0.0",
-    "ajv": "^8.12.0"
+    "sharp": "^0.34.5"
   },
   "devDependencies": {
-    "typescript": "^5.4.0",
+    "@types/node": "^20.0.0",
+    "dotenv": "^17.3.1",
     "ts-node": "^10.9.0",
-    "@types/node": "^20.0.0"
+    "typescript": "^5.4.0"
   }
 }

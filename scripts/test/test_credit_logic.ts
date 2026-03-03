@@ -18,6 +18,7 @@
  *   cd scripts && npx ts-node test/test_credit_logic.ts --only=cf
  */
 
+import "dotenv/config";
 import { execSync } from "child_process";
 
 const PROJECT_ID = "flexme-now";
@@ -218,7 +219,8 @@ async function callCF(name: string, data: any, idToken: string) {
 }
 
 async function getFirebaseIdToken(): Promise<{ idToken: string; uid: string }> {
-  const apiKey = "AIzaSyBj8jBZWTI5vJfNqwDJWlEBcL2smHwpAoE";
+  const apiKey = process.env.FIREBASE_API_KEY || "";
+  if (!apiKey) throw new Error("FIREBASE_API_KEY env var not set");
   const url = `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`;
   const resp = await fetch(url, {
     method: "POST",

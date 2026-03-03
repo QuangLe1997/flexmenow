@@ -7,6 +7,7 @@
  * Usage: cd scripts && npx ts-node test/test_tale_full.ts
  */
 
+import "dotenv/config";
 import { execSync, spawn } from "child_process";
 
 const PROJECT_ID = "flexme-now";
@@ -87,7 +88,8 @@ async function fsQuery(col: string, field: string, value: string) {
 // ── Auth ──
 
 async function signUp() {
-  const apiKey = "AIzaSyBj8jBZWTI5vJfNqwDJWlEBcL2smHwpAoE";
+  const apiKey = process.env.FIREBASE_API_KEY || "";
+  if (!apiKey) throw new Error("FIREBASE_API_KEY env var not set");
   const r = await fetch(`https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`, {
     method: "POST", headers: { "Content-Type": "application/json" },
     body: JSON.stringify({ returnSecureToken: true }),

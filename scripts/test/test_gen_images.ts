@@ -4,6 +4,7 @@
  * Usage: cd scripts && npx ts-node test/test_gen_images.ts
  */
 
+import "dotenv/config";
 import { execSync } from "child_process";
 
 const PROJECT_ID = "flexme-now";
@@ -13,7 +14,8 @@ const CF_BASE = `https://${REGION}-${PROJECT_ID}.cloudfunctions.net`;
 const gcloudToken = execSync("gcloud auth print-access-token", { encoding: "utf8" }).trim();
 
 async function signUp() {
-  const apiKey = "AIzaSyBj8jBZWTI5vJfNqwDJWlEBcL2smHwpAoE";
+  const apiKey = process.env.FIREBASE_API_KEY || "";
+  if (!apiKey) throw new Error("FIREBASE_API_KEY env var not set");
   const r = await fetch(
     `https://identitytoolkit.googleapis.com/v1/accounts:signUp?key=${apiKey}`,
     {
