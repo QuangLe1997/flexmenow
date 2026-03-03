@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "585110904868",
+    "project_id": "flexme-now",
+    "storage_bucket": "flexme-now.firebasestorage.app"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:585110904868:android:f1de45d801dab98da378b1",
+        "android_client_info": {
+          "package_name": "com.flexmenow.app"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyBj8jBZWTI5vJfNqwDJWlEBcL2smHwpAoE"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
