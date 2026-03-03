@@ -11,7 +11,7 @@ import {
   STORAGE_PATHS,
 } from "../config/constants";
 import { GenFlexTaleInput, GenFlexTaleResult, StoryPackScene } from "../models/story";
-import { checkAndDeductCredits } from "../services/credits_service";
+import { checkAndDeductCredits, addCredits } from "../services/credits_service";
 import {
   optimizePrompt,
   generateImageWithConsistency,
@@ -78,6 +78,10 @@ export const genFlexTale = onCall(
     }
     const userId = request.auth.uid;
 
+    let creditsRemaining: number | undefined;
+    let creditCost: number | undefined;
+    let storyId: string | undefined;
+
     try {
       // 2. Validate input
       const inputImagePath = requireStoragePath(request.data.inputImagePath, "inputImagePath");
@@ -138,10 +142,10 @@ export const genFlexTale = onCall(
       const totalScenes = packScenes.length;
 
       // 5. Calculate credit cost
-      const creditCost = FLEXTALE_BASE_CREDIT_COST + totalScenes * FLEXTALE_PER_SCENE_COST;
+      creditCost = FLEXTALE_BASE_CREDIT_COST + totalScenes * FLEXTALE_PER_SCENE_COST;
 
       // 6. Deduct credits
-      const creditsRemaining = await checkAndDeductCredits(
+      creditsRemaining = await checkAndDeductCredits(
         userId,
         creditCost,
         "spend_flextale",
@@ -151,7 +155,7 @@ export const genFlexTale = onCall(
 
       // 7. Create story doc
       const storyRef = db.collection(COLLECTIONS.STORIES).doc();
-      const storyId = storyRef.id;
+      storyId = storyRef.id;
 
       await storyRef.set({
         userId,
@@ -192,10 +196,22 @@ export const genFlexTale = onCall(
       const referenceImageBase64 = bufferToBase64(inputImageBuffer);
 
       // 9. Process each scene SEQUENTIALLY for consistency
+      //    Add delay between scenes to avoid Vertex AI rate limits (429)
+      const INTER_SCENE_DELAY_MS = 8000; // 8s between scenes to avoid Vertex AI 429
       let previousSceneImageBase64: string | null = null;
       let completedCount = 0;
 
-      for (const packScene of packScenes) {
+      for (let sceneIdx = 0; sceneIdx < packScenes.length; sceneIdx++) {
+        const packScene = packScenes[sceneIdx];
+
+        // Delay between scenes (skip first scene)
+        if (sceneIdx > 0) {
+          logger.debug(
+            `Waiting ${INTER_SCENE_DELAY_MS}ms before scene ${packScene.sceneOrder}`,
+            { ...LOG_CTX, userId, storyId }
+          );
+          await new Promise((r) => setTimeout(r, INTER_SCENE_DELAY_MS));
+        }
         const sceneStartTime = Date.now();
         const sceneDocRef = scenesCollection.doc(`scene_${packScene.sceneOrder}`);
 
@@ -213,18 +229,18 @@ export const genFlexTale = onCall(
               : `This is the opening scene of the story.`,
           ].join(". ");
 
+          // Replace {subject} placeholder — Imagen uses [1] reference for the person
+          const sceneBasePrompt = (packScene.promptTemplate || "").replace(/\{subject\}/gi, "the person");
           const optimizedPrompt = await optimizePrompt(
-            packScene.promptTemplate,
+            sceneBasePrompt,
             packScene.styleHint || "realistic",
             storyContext
           );
 
           // 9b. Generate image with face/subject consistency
           const imagenConfig: ImagenConfig = {
-            guidanceScale: packScene.imagenParams?.guidanceScale || 8.0,
             numberOfImages: 1,
             aspectRatio: packScene.imagenParams?.aspectRatio || "9:16",
-            safetyFilterLevel: "BLOCK_MEDIUM_AND_ABOVE",
             negativePrompt: packScene.negativePrompt || undefined,
           };
 
@@ -281,9 +297,9 @@ export const genFlexTale = onCall(
       }
 
       // 10. Mark story as completed (or partially completed)
-      const finalStatus = completedCount === totalScenes ? "completed" : "completed";
-      // Even if some scenes failed, we mark the story as completed so the user
-      // can see what was generated. The individual scene statuses show failures.
+      const finalStatus = completedCount === totalScenes ? "completed" : "partial";
+      // Even if some scenes failed, the user can see what was generated.
+      // Individual scene statuses show which ones succeeded/failed.
       await storyRef.update({
         status: finalStatus,
         completedScenes: completedCount,
@@ -326,6 +342,39 @@ export const genFlexTale = onCall(
         ...LOG_CTX,
         userId,
       });
+
+      // Refund credits if they were deducted
+      if (typeof creditsRemaining === "number" && typeof creditCost === "number") {
+        try {
+          await addCredits(
+            userId,
+            creditCost,
+            "refund",
+            storyId || null,
+            `Refund - FlexTale generation failed`
+          );
+          logger.info(`Refunded ${creditCost} credits for failed FlexTale`, {
+            ...LOG_CTX,
+            userId,
+          });
+
+          // Mark the story doc as failed if it was created
+          if (storyId) {
+            const db = getDb();
+            await db.collection(COLLECTIONS.STORIES).doc(storyId).update({
+              status: "failed",
+              errorMessage: error instanceof Error ? error.message : "Unknown error",
+              completedAt: FieldValue.serverTimestamp(),
+            });
+          }
+        } catch (refundError) {
+          logger.error("Failed to refund credits for FlexTale", refundError, {
+            ...LOG_CTX,
+            userId,
+          });
+        }
+      }
+
       throw wrapError(error);
     }
   }

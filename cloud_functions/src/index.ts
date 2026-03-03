@@ -14,6 +14,7 @@
 
 export { genFlexShot } from "./functions/gen_flexshot";
 export { genFlexTale } from "./functions/gen_flextale";
+export { genFlexLocket } from "./functions/gen_flexlocket";
 export { checkGeo } from "./functions/check_geo";
 export { handleEventRevenueCat } from "./functions/handle_revenuecat";
 export { onUserCreate } from "./functions/on_user_create";

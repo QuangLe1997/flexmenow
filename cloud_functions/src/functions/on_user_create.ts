@@ -1,59 +1,65 @@
-import { beforeUserCreated } from "firebase-functions/v2/identity";
+import { onCall, HttpsError } from "firebase-functions/v2/https";
 import { REGION, NEW_USER_FREE_CREDITS } from "../config/constants";
 import { createUserDoc } from "../services/user_service";
 import { addCredits } from "../services/credits_service";
 import { logger } from "../utils/logger";
+import { getDb } from "../config/firebase";
 
 const LOG_CTX = { functionName: "onUserCreate" };
 
 /**
- * onUserCreate — Auth trigger that fires before a new user is fully created.
+ * onUserCreate — Callable function that the client calls right after
+ * Firebase Auth sign-in to ensure the user document exists in Firestore.
  *
- * Uses `beforeUserCreated` (blocking function) to set up the user's Firestore
- * document and grant welcome credits before the client SDK resolves the
- * sign-in promise. This ensures the user doc is always ready by the time
- * the client first loads.
+ * We use a callable instead of `beforeUserCreated` because the blocking
+ * function requires Identity Platform (GCIP) which is not enabled.
  *
  * Steps:
- *  1. Extract user identity from the auth event
- *  2. Create the user document in Firestore with defaults
- *  3. Grant welcome credits (NEW_USER_FREE_CREDITS)
- *  4. Write the initial creditLog entry
- *
- * If any step fails, the user creation is NOT blocked — we log the error
- * and let the user in. A background repair job can fix missing docs later.
+ *  1. Verify auth context
+ *  2. Check if user doc already exists (idempotent)
+ *  3. If not, create the user document in Firestore with defaults
+ *  4. Grant welcome credits (NEW_USER_FREE_CREDITS)
+ *  5. Write the initial creditLog entry
  */
-export const onUserCreate = beforeUserCreated(
+export const onUserCreate = onCall(
   {
     region: REGION,
+    memory: "256MiB",
+    timeoutSeconds: 30,
   },
-  async (event) => {
-    const user = event.data;
-    const userId = user.uid;
+  async (request) => {
+    // 1. Verify auth
+    if (!request.auth) {
+      throw new HttpsError("unauthenticated", "Must be authenticated");
+    }
 
-    logger.info(`New user signing up: ${userId} (${user.email})`, {
-      ...LOG_CTX,
-      userId,
-    });
+    const userId = request.auth.uid;
+    const email = request.auth.token.email || undefined;
+    const displayName = request.auth.token.name || undefined;
+    const photoURL = request.auth.token.picture || undefined;
+    const providerId = request.auth.token.firebase?.sign_in_provider || "anonymous";
+
+    logger.info(`Ensuring user doc for: ${userId}`, { ...LOG_CTX, userId });
 
     try {
-      // 1. Determine provider
-      const providerId =
-        event.additionalUserInfo?.providerId ||
-        (user.providerData && user.providerData.length > 0
-          ? user.providerData[0].providerId
-          : "password");
+      // 2. Check if user doc already exists
+      const db = getDb();
+      const userDoc = await db.collection("users").doc(userId).get();
+      if (userDoc.exists) {
+        logger.info(`User doc already exists for ${userId}`, { ...LOG_CTX, userId });
+        return { status: "exists", userId };
+      }
 
-      // 2. Create user document in Firestore
+      // 3. Create user document in Firestore
       await createUserDoc(userId, {
         uid: userId,
-        email: user.email,
-        displayName: user.displayName,
-        photoURL: user.photoURL,
+        email,
+        displayName,
+        photoURL,
         providerId,
       });
 
-      // 3. Grant welcome credits
+      // 4. Grant welcome credits
       await addCredits(
         userId,
         NEW_USER_FREE_CREDITS,
@@ -66,15 +72,14 @@ export const onUserCreate = beforeUserCreated(
         `User ${userId} created with ${NEW_USER_FREE_CREDITS} welcome credits`,
         { ...LOG_CTX, userId }
       );
+
+      return { status: "created", userId, credits: NEW_USER_FREE_CREDITS };
     } catch (error) {
-      // Do not block user creation on failure — log and continue
       logger.error("Failed to set up new user doc", error, {
         ...LOG_CTX,
         userId,
       });
+      throw new HttpsError("internal", "Failed to create user document");
     }
-
-    // Return nothing to allow the user creation to proceed
-    return;
   }
 );

@@ -24,6 +24,7 @@ export type CreditLogType =
   | "purchase"
   | "spend_flexshot"
   | "spend_flextale"
+  | "spend_glow"
   | "refund"
   | "bonus"
   | "referral"
@@ -34,7 +35,7 @@ export interface CreditLog {
   amount: number;
   type: CreditLogType;
   referenceId: string | null;
-  referenceType: "generation" | "story" | "order" | null;
+  referenceType: "generation" | "story" | "enhancement" | "order" | null;
   balanceAfter: number;
   description: string;
   createdAt: Timestamp;

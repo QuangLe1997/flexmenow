@@ -125,12 +125,14 @@ export async function addCredits(
  */
 function referenceTypeFromLogType(
   type: CreditLogType
-): "generation" | "story" | "order" | null {
+): "generation" | "story" | "enhancement" | "order" | null {
   switch (type) {
     case "spend_flexshot":
       return "generation";
     case "spend_flextale":
       return "story";
+    case "spend_glow":
+      return "enhancement";
     case "purchase":
     case "refund":
       return "order";

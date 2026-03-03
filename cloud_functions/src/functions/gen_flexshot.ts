@@ -11,7 +11,7 @@ import {
   STORAGE_PATHS,
 } from "../config/constants";
 import { GenFlexShotInput, GenFlexShotResult } from "../models/generation";
-import { checkAndDeductCredits } from "../services/credits_service";
+import { checkAndDeductCredits, addCredits } from "../services/credits_service";
 import { optimizePrompt, generateImage, ImagenConfig } from "../services/ai_service";
 import {
   downloadImage,
@@ -66,6 +66,10 @@ export const genFlexShot = onCall(
     }
     const userId = request.auth.uid;
 
+    let creditsRemaining: number | undefined;
+    let creditCost: number | undefined;
+    let generationId: string | undefined;
+
     try {
       // 2. Validate input
       const inputImagePath = requireStoragePath(request.data.inputImagePath, "inputImagePath");
@@ -95,12 +99,12 @@ export const genFlexShot = onCall(
       }
 
       // 4. Determine credit cost
-      const creditCost = template.isPremium
+      creditCost = template.isPremium
         ? PREMIUM_TEMPLATE_CREDIT_COST
         : TEMPLATE_CREDIT_COST;
 
       // 5. Check and deduct credits
-      const creditsRemaining = await checkAndDeductCredits(
+      creditsRemaining = await checkAndDeductCredits(
         userId,
         creditCost,
         "spend_flexshot",
@@ -110,7 +114,7 @@ export const genFlexShot = onCall(
 
       // 6. Create generation doc
       const genRef = db.collection(COLLECTIONS.GENERATIONS).doc();
-      const generationId = genRef.id;
+      generationId = genRef.id;
 
       await genRef.set({
         userId,
@@ -142,8 +146,10 @@ export const genFlexShot = onCall(
 
       // 8. Optimize prompt via Gemini
       await genRef.update({ progress: 40 });
+      // Replace {subject} placeholder — Imagen uses [1] reference for the person
+      const basePrompt = (template.promptTemplate || "").replace(/\{subject\}/gi, "the person");
       const optimizedPrompt = await optimizePrompt(
-        template.promptTemplate,
+        basePrompt,
         style || template.style || "realistic",
         `Template: ${template.name}, Category: ${template.category}`
       );
@@ -152,11 +158,8 @@ export const genFlexShot = onCall(
 
       // 9. Generate image via Imagen
       const imagenConfig: ImagenConfig = {
-        guidanceScale: template.imagenParams?.guidanceScale || 7.5,
         numberOfImages: 1,
         aspectRatio: template.imagenParams?.aspectRatio || "1:1",
-        safetyFilterLevel:
-          template.imagenParams?.safetyFilterLevel || "BLOCK_MEDIUM_AND_ABOVE",
         negativePrompt: template.negativePrompt || undefined,
       };
 
@@ -180,9 +183,7 @@ export const genFlexShot = onCall(
         outputImageUrl: outputUrl,
         generationTimeMs,
         imagenMetadata: {
-          model: "imagen-3.0-generate-001",
-          seed: null,
-          guidanceScale: imagenConfig.guidanceScale,
+          model: "gemini-image",
         },
         completedAt: FieldValue.serverTimestamp(),
       });
@@ -221,6 +222,39 @@ export const genFlexShot = onCall(
         ...LOG_CTX,
         userId,
       });
+
+      // Refund credits if they were deducted (creditsRemaining is defined after deduction)
+      if (typeof creditsRemaining === "number" && typeof creditCost === "number") {
+        try {
+          await addCredits(
+            userId,
+            creditCost,
+            "refund",
+            generationId || null,
+            `Refund - FlexShot generation failed`
+          );
+          logger.info(`Refunded ${creditCost} credits for failed FlexShot`, {
+            ...LOG_CTX,
+            userId,
+          });
+
+          // Mark the generation doc as failed if it was created
+          if (generationId) {
+            const db = getDb();
+            await db.collection(COLLECTIONS.GENERATIONS).doc(generationId).update({
+              status: "failed",
+              errorMessage: error instanceof Error ? error.message : "Unknown error",
+              completedAt: FieldValue.serverTimestamp(),
+            });
+          }
+        } catch (refundError) {
+          logger.error("Failed to refund credits for FlexShot", refundError, {
+            ...LOG_CTX,
+            userId,
+          });
+        }
+      }
+
       throw wrapError(error);
     }
   }
