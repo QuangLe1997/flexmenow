@@ -22,10 +22,11 @@ Thumbs.db
 .vscode/
 .idea/
 
-# Build output
-lib/
-dist/
+# Build output (TypeScript compiled output, NOT Flutter source)
+/lib/
+/dist/
 *.tsbuildinfo
+!mobile_app/lib/
 
 # Scripts output
 scripts/.output/
