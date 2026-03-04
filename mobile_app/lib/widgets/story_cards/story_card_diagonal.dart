@@ -113,10 +113,12 @@ class _StoryCardDiagonalState extends State<StoryCardDiagonal>
                 Positioned(
                   top: 14,
                   left: 14,
-                  child: Row(
+                  right: 14,
+                  child: Wrap(
+                    spacing: 6,
+                    runSpacing: 4,
                     children: [
                       StoryCatPill(category: tale.category),
-                      const SizedBox(width: 6),
                       StoryCreditPill(credits: tale.credits),
                     ],
                   ),
@@ -158,15 +160,21 @@ class _StoryCardDiagonalState extends State<StoryCardDiagonal>
                         const SizedBox(height: 6),
                         Row(
                           children: [
-                            Text(
-                              '${tale.chapterCount} ch \u00b7 ${tale.totalPics} img',
-                              style: AppTextStyles.monoSmall.copyWith(color: AppColors.textTer),
+                            Flexible(
+                              child: Text(
+                                '${tale.chapterCount} ch \u00b7 ${tale.totalPics} img',
+                                style: AppTextStyles.monoSmall.copyWith(color: AppColors.textTer),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
                             ),
                             const SizedBox(width: 10),
-                            DotIndicator(
-                              count: _images.length,
-                              activeIndex: currentImageIndex,
-                              showGlow: true,
+                            Flexible(
+                              child: DotIndicator(
+                                count: _images.length,
+                                activeIndex: currentImageIndex,
+                                showGlow: true,
+                              ),
                             ),
                             const Spacer(),
                             StoryGoButton(onTap: widget.data.onTap, size: 36),

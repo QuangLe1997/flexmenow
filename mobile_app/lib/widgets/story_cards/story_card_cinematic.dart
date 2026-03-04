@@ -124,6 +124,8 @@ class _StoryCardCinematicState extends State<StoryCardCinematic>
                       children: [
                         Text(
                           tale.localizedTitle('en'),
+                          maxLines: 1,
+                          overflow: TextOverflow.ellipsis,
                           style: const TextStyle(
                             fontSize: AppSizes.fontXlPlus,
                             fontWeight: FontWeight.w900,
@@ -146,17 +148,23 @@ class _StoryCardCinematicState extends State<StoryCardCinematic>
                         const SizedBox(height: 10),
                         Row(
                           children: [
-                            Text(
-                              '${tale.chapterCount} chapters \u00b7 ${tale.totalPics} images',
-                              style: AppTextStyles.monoSmall.copyWith(
-                                color: Colors.white.withValues(alpha: 0.35),
+                            Flexible(
+                              child: Text(
+                                '${tale.chapterCount} chapters \u00b7 ${tale.totalPics} images',
+                                style: AppTextStyles.monoSmall.copyWith(
+                                  color: Colors.white.withValues(alpha: 0.35),
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
                               ),
                             ),
                             const Spacer(),
-                            DotIndicator(
-                              count: _images.length,
-                              activeIndex: currentImageIndex,
-                              showGlow: true,
+                            Flexible(
+                              child: DotIndicator(
+                                count: _images.length,
+                                activeIndex: currentImageIndex,
+                                showGlow: true,
+                              ),
                             ),
                             const Spacer(),
                             StoryGoButton(onTap: widget.data.onTap, size: 38),

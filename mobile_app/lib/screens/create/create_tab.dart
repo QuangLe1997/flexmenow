@@ -245,8 +245,10 @@ class _CreateTabState extends ConsumerState<CreateTab> {
                   ),
                 ),
                 Positioned(
-                  top: 12, left: 12,
-                  child: Row(
+                  top: 12, left: 12, right: 12,
+                  child: Wrap(
+                    spacing: 6,
+                    runSpacing: 4,
                     children: [
                       Container(
                         padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
@@ -256,8 +258,7 @@ class _CreateTabState extends ConsumerState<CreateTab> {
                         ),
                         child: Text('SPOTLIGHT', style: AppTextStyles.mono.copyWith(fontSize: AppSizes.fontXxsPlus, fontWeight: FontWeight.w700, color: AppColors.brand, letterSpacing: 1)),
                       ),
-                      if (shot.hasBadge) ...[
-                        const SizedBox(width: 6),
+                      if (shot.hasBadge)
                         Container(
                           padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 5),
                           decoration: BoxDecoration(
@@ -266,7 +267,6 @@ class _CreateTabState extends ConsumerState<CreateTab> {
                           ),
                           child: Text(shot.badge!, style: AppTextStyles.mono.copyWith(fontSize: AppSizes.fontXxsPlus, fontWeight: FontWeight.w700, color: Colors.white)),
                         ),
-                      ],
                     ],
                   ),
                 ),
@@ -277,19 +277,26 @@ class _CreateTabState extends ConsumerState<CreateTab> {
                     children: [
                       Text(shot.style.toUpperCase(), style: AppTextStyles.mono.copyWith(fontSize: AppSizes.fontXxsPlus, fontWeight: FontWeight.w600, color: AppColors.brand, letterSpacing: 1)),
                       const SizedBox(height: 4),
-                      Text(shot.localizedName('en'), style: TextStyle(fontSize: AppSizes.font2xl, fontWeight: FontWeight.w800, fontStyle: FontStyle.italic, color: AppColors.text, letterSpacing: -0.5)),
+                      Text(shot.localizedName('en'), maxLines: 1, overflow: TextOverflow.ellipsis, style: TextStyle(fontSize: AppSizes.font2xl, fontWeight: FontWeight.w800, fontStyle: FontStyle.italic, color: AppColors.text, letterSpacing: -0.5)),
                       const SizedBox(height: 8),
                       Row(
                         children: [
-                          Icon(LucideIcons.heart, size: AppSizes.iconXs, color: AppColors.textSec),
-                          const SizedBox(width: 4),
-                          Text('${shot.likes}', style: AppTextStyles.mono.copyWith(fontSize: AppSizes.fontXsPlus, color: AppColors.textSec)),
-                          const SizedBox(width: 12),
-                          Icon(LucideIcons.eye, size: AppSizes.iconXs, color: AppColors.textSec),
-                          const SizedBox(width: 4),
-                          Text('${shot.views}', style: AppTextStyles.mono.copyWith(fontSize: AppSizes.fontXsPlus, color: AppColors.textSec)),
-                          const Spacer(),
-                          DotIndicator(count: hotShots.length, activeIndex: _spotlightIndex % hotShots.length, dotSize: 5, activeDotWidth: 14, spacing: 2),
+                          Flexible(
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(LucideIcons.heart, size: AppSizes.iconXs, color: AppColors.textSec),
+                                const SizedBox(width: 4),
+                                Text('${shot.likes}', style: AppTextStyles.mono.copyWith(fontSize: AppSizes.fontXsPlus, color: AppColors.textSec)),
+                                const SizedBox(width: 12),
+                                Icon(LucideIcons.eye, size: AppSizes.iconXs, color: AppColors.textSec),
+                                const SizedBox(width: 4),
+                                Text('${shot.views}', style: AppTextStyles.mono.copyWith(fontSize: AppSizes.fontXsPlus, color: AppColors.textSec)),
+                              ],
+                            ),
+                          ),
+                          const SizedBox(width: 8),
+                          Flexible(child: DotIndicator(count: hotShots.length, activeIndex: _spotlightIndex % hotShots.length, dotSize: 5, activeDotWidth: 14, spacing: 2)),
                           const SizedBox(width: 8),
                           Container(
                             width: 28, height: 28,
@@ -581,7 +588,7 @@ class _CreateTabState extends ConsumerState<CreateTab> {
                         const SizedBox(width: 3),
                         Text('${shot.credits}', style: AppTextStyles.mono.copyWith(fontSize: AppSizes.fontXxsPlus, color: AppColors.brand, fontWeight: FontWeight.w700)),
                         const Spacer(),
-                        Text(shot.category, style: TextStyle(fontSize: AppSizes.fontXxsPlus, color: AppColors.textTer)),
+                        Flexible(child: Text(shot.category, style: TextStyle(fontSize: AppSizes.fontXxsPlus, color: AppColors.textTer), maxLines: 1, overflow: TextOverflow.ellipsis)),
                       ],
                     ),
                   ],

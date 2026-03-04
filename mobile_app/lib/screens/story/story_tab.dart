@@ -226,9 +226,8 @@ class _StoryTabState extends ConsumerState<StoryTab> with TickerProviderStateMix
             const SizedBox(height: 6),
             Text('AI photos of you, delivered daily', style: TextStyle(fontSize: AppSizes.fontXs, color: Colors.white.withValues(alpha: 0.8))),
             const SizedBox(height: 12),
-            Row(mainAxisAlignment: MainAxisAlignment.center, children: [
+            Wrap(alignment: WrapAlignment.center, spacing: 8, runSpacing: 6, children: [
               _wowBadge('SUBSCRIPTION ONLY', Colors.white.withValues(alpha: 0.15)),
-              const SizedBox(width: 8),
               _wowBadge('From \$2.99', AppColors.brand.withValues(alpha: 0.3)),
             ]),
             const SizedBox(height: 14),

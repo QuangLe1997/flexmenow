@@ -59,71 +59,12 @@ class _StoryCardMagazineState extends State<StoryCardMagazine>
           ),
           child: Row(
             children: [
-              // Left: stacked card area
+              // Left: stacked card area — sorted so front card renders on top
               SizedBox(
                 width: 170,
                 child: Stack(
                   alignment: Alignment.center,
-                  children: List.generate(n, (i) {
-                    final isFront = currentImageIndex == i;
-                    final isBack = (currentImageIndex + 1) % n == i;
-
-                    double tx, ty, rot, sc, op;
-                    if (isFront) {
-                      tx = -8; ty = -4; rot = -4; sc = 1.0; op = 1.0;
-                    } else if (isBack) {
-                      tx = 12; ty = 6; rot = 3; sc = 0.9; op = 0.5;
-                    } else {
-                      tx = 20; ty = 10; rot = 6; sc = 0.82; op = 0.15;
-                    }
-
-                    return AnimatedContainer(
-                      duration: const Duration(milliseconds: 900),
-                      curve: kSpringBounce,
-                      transform: Matrix4.identity()
-                        // ignore: deprecated_member_use
-                        ..translate(tx, ty)
-                        ..rotateZ(rot * math.pi / 180)
-                        // ignore: deprecated_member_use
-                        ..scale(sc),
-                      transformAlignment: Alignment.center,
-                      child: AnimatedOpacity(
-                        opacity: op,
-                        duration: const Duration(milliseconds: 900),
-                        curve: kSpringBounce,
-                        child: Container(
-                          width: 110,
-                          height: 155,
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(14),
-                            border: Border.all(
-                              color: isFront
-                                  ? AppColors.brand.withValues(alpha: 0.25)
-                                  : Colors.white.withValues(alpha: 0.03),
-                              width: 2,
-                            ),
-                            boxShadow: [
-                              if (isFront)
-                                ...AppShadows.cardHero
-                              else
-                                ...AppShadows.md,
-                              if (isFront)
-                                ...AppShadows.brandGlow(0.04),
-                            ],
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(12),
-                            child: PlaceholderImage(
-                              index: widget.data.cardIndex + i,
-                              borderRadius: 0,
-                              imageUrl: _images[i],
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    );
-                  }),
+                  children: _sortedCards(n),
                 ),
               ),
 
@@ -135,10 +76,11 @@ class _StoryCardMagazineState extends State<StoryCardMagazine>
                     crossAxisAlignment: CrossAxisAlignment.start,
                     mainAxisAlignment: MainAxisAlignment.center,
                     children: [
-                      Row(
+                      Wrap(
+                        spacing: 6,
+                        runSpacing: 4,
                         children: [
                           StoryCatPill(category: tale.category),
-                          const SizedBox(width: 6),
                           StoryCreditPill(credits: tale.credits),
                         ],
                       ),
@@ -183,6 +125,80 @@ class _StoryCardMagazineState extends State<StoryCardMagazine>
                 ),
               ),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  List<Widget> _sortedCards(int n) {
+    final indices = List.generate(n, (i) => i);
+    // Sort: front card last so it renders on top (highest z-index in Stack)
+    indices.sort((a, b) {
+      final aFront = currentImageIndex == a;
+      final bFront = currentImageIndex == b;
+      if (aFront) return 1;
+      if (bFront) return -1;
+      return a.compareTo(b);
+    });
+    return indices.map((i) => _buildCard(i, n)).toList();
+  }
+
+  Widget _buildCard(int i, int n) {
+    final isFront = currentImageIndex == i;
+    final isBack = (currentImageIndex + 1) % n == i;
+
+    double tx, ty, rot, sc, op;
+    if (isFront) {
+      tx = -8; ty = -4; rot = -4; sc = 1.0; op = 1.0;
+    } else if (isBack) {
+      tx = 12; ty = 6; rot = 3; sc = 0.9; op = 0.7;
+    } else {
+      tx = 20; ty = 10; rot = 6; sc = 0.82; op = 0.35;
+    }
+
+    return AnimatedContainer(
+      duration: const Duration(milliseconds: 900),
+      curve: kSpringBounce,
+      transform: Matrix4.identity()
+        // ignore: deprecated_member_use
+        ..translate(tx, ty)
+        ..rotateZ(rot * math.pi / 180)
+        // ignore: deprecated_member_use
+        ..scale(sc),
+      transformAlignment: Alignment.center,
+      child: AnimatedOpacity(
+        opacity: op,
+        duration: const Duration(milliseconds: 900),
+        curve: kSpringBounce,
+        child: Container(
+          width: 110,
+          height: 155,
+          decoration: BoxDecoration(
+            borderRadius: BorderRadius.circular(14),
+            border: Border.all(
+              color: isFront
+                  ? AppColors.brand.withValues(alpha: 0.25)
+                  : Colors.white.withValues(alpha: 0.03),
+              width: 2,
+            ),
+            boxShadow: [
+              if (isFront)
+                ...AppShadows.cardHero
+              else
+                ...AppShadows.md,
+              if (isFront)
+                ...AppShadows.brandGlow(0.04),
+            ],
+          ),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(12),
+            child: PlaceholderImage(
+              index: widget.data.cardIndex + i,
+              borderRadius: 0,
+              imageUrl: _images[i],
+              fit: BoxFit.cover,
+            ),
           ),
         ),
       ),

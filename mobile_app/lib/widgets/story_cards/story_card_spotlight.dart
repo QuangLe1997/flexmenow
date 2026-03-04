@@ -72,9 +72,9 @@ class _StoryCardSpotlightState extends State<StoryCardSpotlight>
                                 imageFilter: ImageFilter.blur(sigmaX: 30, sigmaY: 30),
                                 child: ColorFiltered(
                                   colorFilter: const ColorFilter.matrix([
-                                    0.25, 0, 0, 0, 0,
-                                    0, 0.25, 0, 0, 0,
-                                    0, 0, 0.25, 0, 0,
+                                    0.4, 0, 0, 0, 0,
+                                    0, 0.4, 0, 0, 0,
+                                    0, 0, 0.4, 0, 0,
                                     0, 0, 0, 1, 0,
                                   ]),
                                   child: Transform.scale(
@@ -140,10 +140,12 @@ class _StoryCardSpotlightState extends State<StoryCardSpotlight>
                       Positioned(
                         top: 12,
                         left: 12,
-                        child: Row(
+                        right: 12,
+                        child: Wrap(
+                          spacing: 6,
+                          runSpacing: 4,
                           children: [
                             StoryCatPill(category: tale.category),
-                            const SizedBox(width: 6),
                             StoryCreditPill(credits: tale.credits),
                           ],
                         ),

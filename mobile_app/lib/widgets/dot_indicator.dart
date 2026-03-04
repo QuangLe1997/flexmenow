@@ -28,25 +28,27 @@ class DotIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return Row(
-      mainAxisSize: MainAxisSize.min,
-      children: List.generate(count, (index) {
-        final isActive = index == activeIndex;
-        return AnimatedContainer(
-          duration: const Duration(milliseconds: 250),
-          curve: AppCurves.enter,
-          margin: EdgeInsets.symmetric(horizontal: spacing),
-          width: isActive ? activeDotWidth : dotSize,
-          height: dotSize,
-          decoration: BoxDecoration(
-            borderRadius: BorderRadius.circular(AppSizes.radiusFull),
-            color: isActive ? activeColor : inactiveColor,
-            boxShadow: isActive && showGlow
-                ? AppShadows.colorGlow(activeColor, opacity: 0.5, blur: 8, spread: 1)
-                : null,
-          ),
-        );
-      }),
+    return ClipRect(
+      child: Row(
+        mainAxisSize: MainAxisSize.min,
+        children: List.generate(count, (index) {
+          final isActive = index == activeIndex;
+          return AnimatedContainer(
+            duration: const Duration(milliseconds: 250),
+            curve: AppCurves.enter,
+            margin: EdgeInsets.symmetric(horizontal: spacing),
+            width: isActive ? activeDotWidth : dotSize,
+            height: dotSize,
+            decoration: BoxDecoration(
+              borderRadius: BorderRadius.circular(AppSizes.radiusFull),
+              color: isActive ? activeColor : inactiveColor,
+              boxShadow: isActive && showGlow
+                  ? AppShadows.colorGlow(activeColor, opacity: 0.5, blur: 8, spread: 1)
+                  : null,
+            ),
+          );
+        }),
+      ),
     );
   }
 }

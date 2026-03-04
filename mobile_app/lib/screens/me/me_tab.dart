@@ -237,9 +237,8 @@ class _MeTabState extends ConsumerState<MeTab> {
         child: Row(children: [
           Icon(icon, size: AppSizes.iconBase, color: AppColors.textSec),
           const SizedBox(width: 12),
-          Text(label, style: TextStyle(fontSize: AppSizes.fontSmPlus, color: AppColors.text)),
-          const Spacer(),
-          if (value.isNotEmpty) Text(value, style: TextStyle(fontSize: AppSizes.fontXs, color: AppColors.textTer)),
+          Expanded(child: Text(label, style: TextStyle(fontSize: AppSizes.fontSmPlus, color: AppColors.text), maxLines: 1, overflow: TextOverflow.ellipsis)),
+          if (value.isNotEmpty) Text(value, style: TextStyle(fontSize: AppSizes.fontXs, color: AppColors.textTer), maxLines: 1, overflow: TextOverflow.ellipsis),
           const SizedBox(width: 4),
           Icon(LucideIcons.chevronRight, size: AppSizes.iconSm, color: AppColors.textTer),
         ]),
@@ -502,7 +501,7 @@ class _MeTabState extends ConsumerState<MeTab> {
                     ),
                     const SizedBox(width: 12),
                     Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(story.storyTitle, style: const TextStyle(fontSize: AppSizes.fontSm, fontWeight: FontWeight.w600, color: AppColors.text)),
+                      Text(story.storyTitle, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: AppSizes.fontSm, fontWeight: FontWeight.w600, color: AppColors.text)),
                       Text('${story.completedScenes}/${story.totalScenes} scenes', style: const TextStyle(fontSize: AppSizes.fontXsPlus, color: AppColors.textTer)),
                     ])),
                     Icon(LucideIcons.chevronRight, size: AppSizes.iconMd, color: AppColors.textTer),

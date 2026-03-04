@@ -97,9 +97,13 @@ class _StoryCardPolaroidState extends State<StoryCardPolaroid>
                       const SizedBox(height: 10),
                       Row(
                         children: [
-                          Text(
-                            '${tale.chapterCount} ch \u00b7 ${tale.totalPics} img',
-                            style: AppTextStyles.monoSmall.copyWith(color: AppColors.textTer),
+                          Flexible(
+                            child: Text(
+                              '${tale.chapterCount} ch \u00b7 ${tale.totalPics} img',
+                              style: AppTextStyles.monoSmall.copyWith(color: AppColors.textTer),
+                              maxLines: 1,
+                              overflow: TextOverflow.ellipsis,
+                            ),
                           ),
                           const SizedBox(width: 8),
                           StoryCreditPill(credits: tale.credits),
@@ -112,59 +116,71 @@ class _StoryCardPolaroidState extends State<StoryCardPolaroid>
                 ),
               ),
 
-              // Right: polaroid stack
+              // Right: polaroid stack — sorted so active card renders on top
               SizedBox(
                 width: 155,
                 child: Stack(
                   alignment: Alignment.center,
-                  children: List.generate(_images.length, (i) {
-                    final isActive = currentImageIndex == i;
-                    final tilt = _tilts[i % _tilts.length] * math.pi / 180;
-
-                    return AnimatedContainer(
-                      duration: AppDurations.slower,
-                      curve: kBouncyCurve,
-                      transform: Matrix4.identity()
-                        ..rotateZ(tilt)
-                        // ignore: deprecated_member_use
-                        ..scale(isActive ? 1.0 : 0.88)
-                        // ignore: deprecated_member_use
-                        ..translate(0.0, isActive ? 0.0 : 8.0),
-                      transformAlignment: Alignment.center,
-                      child: AnimatedOpacity(
-                        opacity: isActive ? 1.0 : 0.25,
-                        duration: AppDurations.slower,
-                        curve: kBouncyCurve,
-                        child: Container(
-                          width: 115,
-                          height: 158,
-                          decoration: BoxDecoration(
-                            color: Colors.white,
-                            borderRadius: BorderRadius.circular(4),
-                            boxShadow: [
-                              if (isActive)
-                                ...AppShadows.cardHero
-                              else
-                                ...AppShadows.md,
-                            ],
-                          ),
-                          padding: const EdgeInsets.fromLTRB(6, 6, 6, 24),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(2),
-                            child: PlaceholderImage(
-                              index: widget.data.cardIndex + i,
-                              borderRadius: 0,
-                              imageUrl: _images[i],
-                              fit: BoxFit.cover,
-                            ),
-                          ),
-                        ),
-                      ),
-                    );
-                  }),
+                  children: _sortedCards(),
                 ),
               ),
             ],
+          ),
+        ),
+      ),
+    );
+  }
+
+  List<Widget> _sortedCards() {
+    final indices = List.generate(_images.length, (i) => i);
+    indices.sort((a, b) {
+      if (currentImageIndex == a) return 1; // active card last (on top)
+      if (currentImageIndex == b) return -1;
+      return a.compareTo(b);
+    });
+    return indices.map((i) => _buildCard(i)).toList();
+  }
+
+  Widget _buildCard(int i) {
+    final isActive = currentImageIndex == i;
+    final tilt = _tilts[i % _tilts.length] * math.pi / 180;
+
+    return AnimatedContainer(
+      duration: AppDurations.slower,
+      curve: kBouncyCurve,
+      transform: Matrix4.identity()
+        ..rotateZ(tilt)
+        // ignore: deprecated_member_use
+        ..scale(isActive ? 1.0 : 0.88)
+        // ignore: deprecated_member_use
+        ..translate(0.0, isActive ? 0.0 : 8.0),
+      transformAlignment: Alignment.center,
+      child: AnimatedOpacity(
+        opacity: isActive ? 1.0 : 0.5,
+        duration: AppDurations.slower,
+        curve: kBouncyCurve,
+        child: Container(
+          width: 115,
+          height: 158,
+          decoration: BoxDecoration(
+            color: Colors.white,
+            borderRadius: BorderRadius.circular(4),
+            boxShadow: [
+              if (isActive)
+                ...AppShadows.cardHero
+              else
+                ...AppShadows.md,
+            ],
+          ),
+          padding: const EdgeInsets.fromLTRB(6, 6, 6, 24),
+          child: ClipRRect(
+            borderRadius: BorderRadius.circular(2),
+            child: PlaceholderImage(
+              index: widget.data.cardIndex + i,
+              borderRadius: 0,
+              imageUrl: _images[i],
+              fit: BoxFit.cover,
+            ),
           ),
         ),
       ),

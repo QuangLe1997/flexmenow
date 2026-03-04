@@ -269,14 +269,11 @@ class _TalePreviewScreenState extends ConsumerState<TalePreviewScreen> {
                 crossAxisAlignment: CrossAxisAlignment.start,
                 children: [
                   const SizedBox(height: 44),
-                  Row(children: [
+                  Wrap(spacing: 8, runSpacing: 6, children: [
                     _badge(tale.category.toUpperCase(), AppColors.purple),
-                    const SizedBox(width: 8),
                     _badge('TALE', AppColors.brand),
-                    if (tale.hasBadge) ...[
-                      const SizedBox(width: 8),
-                      _badge(tale.badge!, AppColors.red)
-                    ],
+                    if (tale.hasBadge)
+                      _badge(tale.badge!, AppColors.red),
                   ]),
                   const SizedBox(height: 14),
                   Text(localized(tale.title, context),
@@ -420,6 +417,8 @@ class _TalePreviewScreenState extends ConsumerState<TalePreviewScreen> {
                                       CrossAxisAlignment.start,
                                   children: [
                                     Text(heading,
+                                        maxLines: 2,
+                                        overflow: TextOverflow.ellipsis,
                                         style: TextStyle(
                                             fontSize:
                                                 AppSizes.fontMdPlus,
