@@ -1,0 +1,471 @@
+[
+  {
+    "slug": "promotion_day",
+    "title": ["Promotion Day", "Ngay Thang Chuc"],
+    "desc": ["From grinding in silence to getting the title I earned", "Tu lam tham lang den chuc danh xung dang"],
+    "cat": "career",
+    "type": "journey",
+    "gender": "all",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Professional corporate photography, warm confident lighting, modern office environment",
+    "gs": 8,
+    "tags": ["promotion", "career", "success", "office", "milestone", "growth"],
+    "chs": [
+      ["Morning Nerves", "Hoi Hop Sang", "Got the meeting invite last night. Couldn't sleep. Today might change everything \ud83d\ude2c\ud83d\udcbc", "Nhan lich hop tu toi qua. Khong ngu duoc. Hom nay co the thay doi tat ca \ud83d\ude2c\ud83d\udcbc", "Portrait of {subject} standing in front of bathroom mirror in professional attire, adjusting collar nervously, morning light streaming through window, expression of anticipation and nervous energy, crisp outfit ready for a big day"],
+      ["Power Walk", "Buoc Chan Tu Tin", "Walking into the office different today. Same hallway but my steps feel heavier, more purposeful \ud83d\udeb6\u200d\u2640\ufe0f\u2728", "Buoc vao van phong khac hom nay. Cung hanh lang nhung buoc chan nang hon, co muc dich hon \ud83d\udeb6\u200d\u2640\ufe0f\u2728", "Portrait of {subject} walking through a modern office corridor with confident stride, professional business attire, glass walls reflecting their silhouette, morning sunlight flooding the hallway, determined focused expression"],
+      ["The Meeting", "Cuoc Hop", "Sat across from the VP. My heart was doing gymnastics but my face said 'I was born for this' \ud83d\udcaa\ud83d\ude0e", "Ngoi doi dien pho giam doc. Tim nhao lon nhung mat bao 'toi sinh ra de lam viec nay' \ud83d\udcaa\ud83d\ude0e", "Portrait of {subject} sitting in a modern conference room across from executives, hands clasped on table with confident posture, glass table and city view behind, professional warm lighting, expression of composed confidence during important meeting"],
+      ["It's Official", "Chinh Thuc", "THEY SAID YES. New title. New salary. All those late nights finally meant something \ud83c\udf89\ud83d\ude2d", "HO NOI DONG Y. Chuc danh moi. Luong moi. Nhung dem khuya cuoi cung co y nghia \ud83c\udf89\ud83d\ude2d", "Portrait of {subject} in office with overwhelmed joyful expression, hand over mouth in disbelief, eyes glistening with happy tears, promotion letter or new business card visible on desk, colleagues blurred in background, warm celebratory lighting"],
+      ["New Nameplate", "Bang Ten Moi", "New nameplate on the desk. I keep looking at it like it's not real. But it IS real \ud83e\udea7\ud83d\udd25", "Bang ten moi tren ban. Cu nhin hoai nhu khong that. Nhung no THAT \ud83e\udea7\ud83d\udd25", "Portrait of {subject} sitting at a new bigger desk in a corner office, proudly looking at their new nameplate, professional setting with city skyline view through windows, warm afternoon light, expression of pride and accomplishment, subtle smile of disbelief"],
+      ["Celebration Dinner", "Tiec Mung", "Team took me out to celebrate. These people believed in me before I believed in myself \ud83c\udf7e\ud83e\udd42", "Team dua di an mung. Nhung nguoi nay tin toi truoc khi toi tin chinh minh \ud83c\udf7e\ud83e\udd42", "Portrait of {subject} at an upscale restaurant table with colleagues, raising a champagne glass in a toast, warm ambient restaurant lighting, genuine smile of gratitude, professional yet relaxed attire, celebratory dinner atmosphere with city lights visible through windows"],
+      ["Calling Mom", "Goi Me", "Called mom to tell her. She cried. I cried. We're a mess but a proud mess \ud83d\udcf1\ud83d\ude2d\u2764\ufe0f", "Goi bao me. Me khoc. Toi khoc. Loan het nhung la cai loan tu hao \ud83d\udcf1\ud83d\ude2d\u2764\ufe0f", "Portrait of {subject} sitting in their car after dinner, on the phone with emotional expression, tears of joy, city lights bokeh through car windows, warm intimate lighting from dashboard, one hand wiping tears while smiling, raw emotional moment of sharing success with family"]
+    ]
+  },
+
+  {
+    "slug": "painting_session",
+    "title": ["Painting Session", "Buoi Ve Tranh"],
+    "desc": ["Afternoon therapy with colors and canvas", "Lieu phap buoi chieu voi mau ve va canvas"],
+    "cat": "hobby",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Soft artistic photography, natural light studio, warm creative atmosphere with paint splashes",
+    "gs": 8,
+    "tags": ["painting", "art", "creative", "hobby", "relaxing", "aesthetic"],
+    "chs": [
+      ["Setting Up", "Chuan Bi", "Blank canvas energy. The possibilities are endless and slightly terrifying \ud83c\udfa8\ud83e\udee3", "Nang luong canvas trang. Kha nang vo han va hoi dang so \ud83c\udfa8\ud83e\udee3", "Portrait of {subject} setting up an easel by a sunlit window, wearing a paint-stained oversized shirt, arranging brushes and paint tubes on a wooden table, soft afternoon light streaming in, creative workspace with plants and art supplies, calm focused expression"],
+      ["First Strokes", "Net Ve Dau", "First brush stroke always feels like jumping off a cliff. Here we go \ud83d\udd8c\ufe0f\ud83d\udcab", "Net co dau tien luon nhu nhay tu vach da. Bat dau thoi \ud83d\udd8c\ufe0f\ud83d\udcab", "Portrait of {subject} making the first bold stroke on a white canvas, paintbrush in hand with colorful paint, concentrated expression with slight smile, natural window light illuminating the canvas and her face, paint palette in other hand, creative flow beginning"],
+      ["In the Zone", "Nhap Tam", "Haven't checked my phone in 2 hours. This is what peace feels like \ud83c\udf3f\ud83d\ude0c", "2 tieng khong check dien thoai. Day la su binh yen \ud83c\udf3f\ud83d\ude0c", "Portrait of {subject} deeply focused on painting, face close to canvas adding fine details, paint smudges on her cheek and hands, warm golden hour light, multiple colors on her palette, completely absorbed in creative work, serene concentrated expression"],
+      ["Happy Accident", "Loi Dep", "Made a mistake and it turned into the best part of the painting. Art imitates life \ud83e\udd37\u200d\u2640\ufe0f\u2728", "Lam sai va no thanh phan dep nhat buc tranh. Nghe thuat bat chuoc doi \ud83e\udd37\u200d\u2640\ufe0f\u2728", "Portrait of {subject} stepping back from canvas with surprised delighted expression, paintbrush held up, looking at an unexpected beautiful result on the canvas, paint splatter on her oversized shirt, natural light studio setting, joyful creative discovery moment"],
+      ["The Reveal", "Hoan Thanh", "Not perfect but it's MINE. Made with my hands and my messy beautiful brain \ud83d\uddbc\ufe0f\u2764\ufe0f", "Khong hoan hao nhung la CUA TOI. Lam bang tay va bo nao dep loan cua toi \ud83d\uddbc\ufe0f\u2764\ufe0f", "Portrait of {subject} holding up finished painting proudly next to her face, paint on her hands and cheeks, beaming smile, warm sunset light from window, colorful art studio background with brushes and palettes, proud creative accomplishment, authentic artistic joy"]
+    ]
+  },
+
+  {
+    "slug": "guitar_practice",
+    "title": ["Guitar Practice", "Tap Guitar"],
+    "desc": ["From sore fingers to soulful strings", "Tu ngon tay dau den nhung soi day co hon"],
+    "cat": "hobby",
+    "type": "journey",
+    "gender": "male",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Warm bedroom musician photography, intimate natural lighting, cozy home setting",
+    "gs": 8,
+    "tags": ["guitar", "music", "learning", "hobby", "practice", "acoustic"],
+    "chs": [
+      ["Unboxing", "Mo Hop", "She's here. My first guitar. Don't know a single chord yet but we're about to change that \ud83c\udfb8\ud83d\ude0d", "No day roi. Cay guitar dau tien. Chua biet mot hop am nao nhung chung toi se thay doi dieu do \ud83c\udfb8\ud83d\ude0d", "Portrait of {subject} sitting on bed holding a brand new acoustic guitar, examining it with excitement and wonder, bedroom setting with warm lamp light, guitar still shiny and new, eager beginner energy, casual home clothes"],
+      ["Sore Fingers", "Ngon Tay Dau", "Day 7. My fingers hate me. But I can play two chords now so who's really winning \ud83e\udeb5\ud83d\ude24", "Ngay 7. Ngon tay ghet toi. Nhung biet 2 hop am roi ai dang thang \ud83e\udeb5\ud83d\ude24", "Portrait of {subject} practicing guitar with a grimace, looking at sore red fingertips, acoustic guitar on lap, cozy bedroom corner with fairy lights, music sheets scattered around, determined expression despite the pain, warm evening lighting"],
+      ["First Song", "Bai Hat Dau", "Played my first full song today. It was terrible. But I played the WHOLE thing \ud83c\udfb5\ud83d\ude02", "Choi het bai hat dau tien hom nay. Te lam. Nhung choi HET bai \ud83c\udfb5\ud83d\ude02", "Portrait of {subject} playing acoustic guitar with genuine smile of accomplishment, phone propped up showing chord chart, sitting on a cozy chair in bedroom, warm golden lamp light, relaxed casual pose, the joy of completing something for the first time"],
+      ["Late Night Vibes", "Dem Khuya", "2 AM guitar sessions hit different. The whole world is quiet and it's just me and the strings \ud83c\udf19\ud83c\udfb6", "Guitar luc 2 gio sang khac biet lam. Ca the gioi im lang chi co toi va nhung soi day \ud83c\udf19\ud83c\udfb6", "Portrait of {subject} playing guitar late at night by window, moonlight and city lights visible outside, only illuminated by soft desk lamp, peaceful meditative expression, acoustic guitar cradled close, intimate quiet night atmosphere, soulful moment"],
+      ["Campfire Ready", "San Sang Lua Trai", "3 months in. Can finally play around a campfire without embarrassing myself. Growth is real \ud83d\udd25\ud83c\udfb8", "3 thang roi. Cuoi cung co the choi o lua trai ma khong xau ho. Truong thanh that su \ud83d\udd25\ud83c\udfb8", "Portrait of {subject} playing guitar outdoors by a campfire at dusk, warm firelight illuminating face, confident relaxed posture, friends blurred in background enjoying the music, natural outdoor setting, accomplished musician vibes, warm orange fire glow against twilight sky"]
+    ]
+  },
+
+  {
+    "slug": "startup_launch",
+    "title": ["Startup Launch", "Khoi Nghiep"],
+    "desc": ["Building something from nothing. No plan B", "Xay dung tu con so. Khong co ke hoach B"],
+    "cat": "career",
+    "type": "journey",
+    "gender": "all",
+    "dur": "many",
+    "badge": "NEW",
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Modern startup photography, clean tech aesthetic, dynamic entrepreneurial energy",
+    "gs": 8,
+    "tags": ["startup", "entrepreneur", "business", "tech", "hustle", "launch"],
+    "chs": [
+      ["The Idea", "Y Tuong", "3 AM. Can't sleep. This idea won't leave my head. Writing everything down before it disappears \ud83d\udca1\ud83d\udcdd", "3 gio sang. Khong ngu duoc. Y tuong nay khong roi khoi dau. Viet het xuong truoc khi no bien mat \ud83d\udca1\ud83d\udcdd", "Portrait of {subject} sitting at a desk late at night with laptop and notebooks, scribbling ideas frantically, desk lamp the only light source, whiteboard behind with mind map sketches, excited wide-eyed expression, messy hair, coffee cups scattered, the birth of a startup idea"],
+      ["Garage Mode", "Che Do Garage", "Working from my garage because I can't afford an office. Every legend started somewhere right? \ud83d\udee0\ufe0f\ud83d\ude05", "Lam viec trong garage vi khong du tien thue van phong. Moi huyen thoai deu bat dau tu dau do phai khong? \ud83d\udee0\ufe0f\ud83d\ude05", "Portrait of {subject} working at a makeshift desk in a garage or small apartment, dual monitors with code and design mockups, whiteboards covered in business plans, wearing a hoodie, focused determined expression, humble beginnings energy, natural daylight from garage door"],
+      ["First User", "Nguoi Dung Dau", "SOMEONE SIGNED UP. A real human being chose to use what I built. I'm not crying you're crying \ud83d\ude2d\ud83d\ude80", "CO NGUOI DANG KY. Mot nguoi that su chon dung thu toi xay. Toi khong khoc ban dang khoc \ud83d\ude2d\ud83d\ude80", "Portrait of {subject} staring at laptop screen with hand over mouth in shock and joy, analytics dashboard showing first user signup, late night home office setting, screen glow on face, overwhelming emotion of first validation, startup milestone moment"],
+      ["Pitch Day", "Ngay Pitch", "Presented to investors today. Hands were shaking but the vision was crystal clear \ud83d\udcca\ud83d\udcaa", "Trinh bay cho nha dau tu hom nay. Tay run nhung tam nhin ro rang \ud83d\udcca\ud83d\udcaa", "Portrait of {subject} standing in front of a presentation screen in a modern meeting room, presenting to investors, professional attire, confident posture despite nervous energy, startup pitch deck visible on screen behind, bright meeting room with glass walls"],
+      ["Launch Day", "Ngay Ra Mat", "WE'RE LIVE. Pressed the button. No going back now. Let's see what the world thinks \ud83c\udf0d\ud83d\udd25", "DA LEN SONG. Nhan nut. Khong quay lai duoc. Xem the gioi nghi gi \ud83c\udf0d\ud83d\udd25", "Portrait of {subject} at a desk with team members behind, finger dramatically hovering over keyboard for the launch, excitement and nervous energy, multiple screens showing the product going live, modern co-working space, everyone holding their breath"],
+      ["Going Viral", "Viral Roi", "Woke up to 10K users. My phone won't stop buzzing. This is actually happening \ud83d\udcc8\ud83e\udd2f", "Thuc day thay 10K nguoi dung. Dien thoai rung hoai. Dieu nay that su dang xay ra \ud83d\udcc8\ud83e\udd2f", "Portrait of {subject} sitting up in bed holding phone showing explosive growth metrics, morning light through curtains, expression of pure disbelief and excitement, notifications flooding the screen, messy bed and casual sleepwear, the moment a startup takes off"]
+    ]
+  },
+
+  {
+    "slug": "photography_walk",
+    "title": ["Photography Walk", "Di Chup Anh"],
+    "desc": ["Finding beauty in everyday street corners", "Tim ve dep o moi goc pho thuong ngay"],
+    "cat": "hobby",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Urban photography aesthetic, golden hour light, cinematic street vibes",
+    "gs": 8,
+    "tags": ["photography", "city", "walk", "creative", "urban", "golden-hour"],
+    "chs": [
+      ["Gear Up", "Chuan Bi Do", "Camera charged. Lens clean. No plan, just vibes. Best photos happen when you're not looking for them \ud83d\udcf7\u2728", "May sac day. Ong kinh sach. Khong ke hoach, chi co cam xuc. Anh dep nhat khi khong tim kiem \ud83d\udcf7\u2728", "Portrait of {subject} adjusting camera strap around neck on a city sidewalk, wearing casual streetwear with a crossbody bag, morning light hitting the buildings behind, excited expression ready for adventure, camera gear visible, urban street setting"],
+      ["Light Chaser", "Duoi Anh Sang", "Found this insane light between two buildings. Photography is 90% being in the right place at the right time \ud83c\udf1e\ud83d\ude0d", "Tim duoc anh sang dien dao giua hai toa nha. Chup anh la 90% dung cho dung luc \ud83c\udf1e\ud83d\ude0d", "Portrait of {subject} crouching down on a city street to capture a photo, dramatic light shaft between buildings falling across them, camera held up to eye, urban architecture framing the shot, golden directional light creating beautiful shadows, photographer in action"],
+      ["Hidden Gem", "Vien Ngoc An", "Turned down a random alley and found this. The city always has secrets if you bother to look \ud83c\udfdb\ufe0f\ud83d\udcab", "Re vao hem ngau nhien va tim thay dieu nay. Thanh pho luon co bi mat neu ban chiu tim \ud83c\udfdb\ufe0f\ud83d\udcab", "Portrait of {subject} standing in a beautiful hidden alleyway, looking up with wonder at colorful walls or street art, camera hanging at chest, dappled light filtering through overhead structures, discovering a hidden urban gem, warm afternoon glow"],
+      ["Golden Hour", "Gio Vang", "Golden hour never misses. Everything looks like a movie right now and I'm the main character \ud83c\udf05\ud83c\udfac", "Gio vang khong bao gio that vong. Moi thu nhu phim va toi la nhan vat chinh \ud83c\udf05\ud83c\udfac", "Portrait of {subject} standing on a city bridge or overpass during golden hour, warm orange sunlight bathing everything, holding camera with one hand, wind in hair, city skyline glowing behind, magical golden hour photography moment, cinematic wide composition"],
+      ["The Shot", "Buc Anh Do", "Got THE shot today. The one that makes the whole walk worth it. Photographer's high is real \ud83d\udcf8\ud83d\udd25", "Chup duoc BUC ANH hom nay. Buc anh khien ca chuyen di xung dang. Cam giac phoi cua photographer la that \ud83d\udcf8\ud83d\udd25", "Portrait of {subject} reviewing a photo on camera LCD screen with an expression of pure satisfaction, standing on a quiet street at dusk, warm streetlamp light, genuine smile of creative fulfillment, city transitioning from day to night behind them"],
+      ["Editing Time", "Chinh Anh", "Home. Tea. Lightroom. Watching the photos come alive in the edit is the cherry on top \ud83c\udf52\ud83d\udcbb", "Ve nha. Tra. Lightroom. Nhin anh song day trong luc chinh la phan tuyet nhat \ud83c\udf52\ud83d\udcbb", "Portrait of {subject} sitting at a cozy desk at home editing photos on laptop, cup of tea beside them, warm desk lamp, photos from the day spread around, focused satisfied expression, evening editing session, creative workflow, cozy home office setup"]
+    ]
+  },
+
+  {
+    "slug": "dance_class",
+    "title": ["Dance Class", "Lop Nhay"],
+    "desc": ["Moving my body and forgetting everything else", "Chuyen dong co the va quen het moi thu"],
+    "cat": "hobby",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Dynamic dance photography, studio lighting with mirrors, energetic movement captured",
+    "gs": 8,
+    "tags": ["dance", "fitness", "class", "movement", "energy", "studio"],
+    "chs": [
+      ["Warming Up", "Khoi Dong", "Stretching in the mirror. My body is about to be put through it and I'm here for it \ud83e\udd38\u200d\u2640\ufe0f\ud83d\udd25", "Keo gian truoc guong. Co the sap bi hanh va toi san sang \ud83e\udd38\u200d\u2640\ufe0f\ud83d\udd25", "Portrait of {subject} stretching in a dance studio with mirrors, wearing stylish dance outfit, reflection visible in mirror wall, warm studio lighting, long limbs in graceful stretch, focused pre-class energy"],
+      ["Learning Steps", "Hoc Buoc", "The choreographer makes it look effortless. Meanwhile I'm out here looking like a confused flamingo \ud83e\ua9a9\ud83d\ude02", "Bien dao lam nhu de. Trong khi toi o day nhu hong hac hoang loan \ud83e\ua9a9\ud83d\ude02", "Portrait of {subject} in dance studio watching instructor intently, trying to mirror the moves, slightly confused but amused expression, other dancers visible in mirror, studio lights overhead, learning moment in dance class"],
+      ["Caught the Groove", "Bat Nhip", "Something clicked. My body finally knows what to do. This feeling is ADDICTIVE \ud83d\udc83\u2728", "Co gi do vao. Co the cuoi cung biet phai lam gi. Cam giac nay GAY NGHIEN \ud83d\udc83\u2728", "Portrait of {subject} dancing with full confidence and flow, mid-movement with hair swinging, dynamic pose in mirror-walled studio, joyful expression of being in the zone, studio lights creating dramatic shadows, peak dance moment"],
+      ["Mirror Selfie", "Selfie Guong", "Post-class glow is the best glow. Sweaty but make it fashion \ud83e\udd33\ud83d\udca6", "Glow sau lop la glow dep nhat. Mo hoi nhung thoi trang \ud83e\udd33\ud83d\udca6", "Portrait of {subject} taking a mirror selfie in dance studio, post-workout glow, slightly sweaty with flushed cheeks, confident pose, dance studio mirrors and barres visible, athletic wear, radiant post-exercise energy, natural beauty moment"],
+      ["Cool Down", "Ha Nhiet", "Lying on the studio floor because my legs said 'no more.' But my soul said 'one more class' \ud83e\uddd8\u200d\u2640\ufe0f\ud83d\ude0c", "Nam tren san studio vi chan noi 'khong nua.' Nhung tam hon noi 'them mot lop nua' \ud83e\uddd8\u200d\u2640\ufe0f\ud83d\ude0c", "Portrait of {subject} lying on the dance studio floor in cool-down position, relaxed exhausted but satisfied expression, wooden floor with natural light, peaceful post-dance moment, gentle stretching, serene studio atmosphere"]
+    ]
+  },
+
+  {
+    "slug": "podcast_recording",
+    "title": ["Podcast Recording", "Thu Podcast"],
+    "desc": ["Behind the mic, sharing stories that matter", "Sau micro, chia se nhung cau chuyen dang ke"],
+    "cat": "career",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Modern podcast studio photography, warm ambient lighting, professional audio setup",
+    "gs": 8,
+    "tags": ["podcast", "recording", "content", "creator", "audio", "storytelling"],
+    "chs": [
+      ["Studio Setup", "Lap Studio", "Setting up the mic, checking levels. There's something about a quiet studio before recording that's almost sacred \ud83c\udf99\ufe0f\ud83e\udd0c", "Setup mic, check am thanh. Co dieu gi do ve studio im lang truoc khi thu gan nhu linh thieng \ud83c\udf99\ufe0f\ud83e\udd0c", "Portrait of {subject} adjusting a professional condenser microphone in a cozy podcast studio, headphones around neck, acoustic foam panels on walls, warm LED accent lighting, laptop and audio interface on desk, focused expression preparing for recording"],
+      ["Going Live", "Bat Dau Thu", "3... 2... 1... And we're recording. My voice sounds weird in headphones but we push through \ud83c\udfa7\ud83d\ude05", "3... 2... 1... Va bat dau thu. Giong toi nghe la trong tai nghe nhung cu tiep thoi \ud83c\udfa7\ud83d\ude05", "Portrait of {subject} speaking into a large studio microphone with headphones on, animated hand gestures while talking, warm studio lighting with colored LED accents, audio waveform visible on laptop screen, engaged passionate expression, in the flow of recording"],
+      ["Deep Convo", "Cau Chuyen Sau", "This conversation just went places I didn't expect. Raw, honest, no script. The best episodes are never planned \ud83d\udcac\u2764\ufe0f", "Cuoc tro chuyen vua di nhung noi toi khong ngo. Moc, that, khong kich ban. Tap hay nhat khong bao gio len ke hoach \ud83d\udcac\u2764\ufe0f", "Portrait of {subject} leaning forward toward microphone in an intense emotional moment during recording, eyes slightly glistening, genuine vulnerable expression, headphones on, warm intimate studio lighting, deep conversation happening, authentic podcasting moment"],
+      ["Laugh Break", "Phut Cuoi", "Had to pause recording because we couldn't stop laughing. These are the moments that make it worth it \ud83d\ude02\ud83c\udf99\ufe0f", "Phai tam dung vi cuoi khong dung duoc. Day la nhung khoanh khac khien moi thu xung dang \ud83d\ude02\ud83c\udf99\ufe0f", "Portrait of {subject} laughing uncontrollably at the podcast desk, leaning back in chair, headphones slightly askew, genuine belly laugh, microphone in foreground, warm cozy studio setting, pure joy and fun moment during recording"],
+      ["That's a Wrap", "Xong Roi", "Episode done. Raw file saved. Now the editing begins but the hard part is over. Content creator life \ud83c\udfac\u2705", "Xong tap. File goc da luu. Gio chinh sua nhung phan kho da xong. Doi content creator \ud83c\udfac\u2705", "Portrait of {subject} leaning back in studio chair with satisfied expression, headphones off around neck, looking at laptop screen with completed audio waveform, studio microphone in foreground, warm studio ambience, accomplished feeling after a good recording session"],
+      ["Upload Day", "Ngay Dang", "Just hit publish. Sending my thoughts into the void and hoping the void listens back \ud83d\udce4\ud83c\udf0d", "Vua nhan xuat ban. Gui suy nghi vao hu khong va hy vong hu khong lang nghe lai \ud83d\udce4\ud83c\udf0d", "Portrait of {subject} at home desk with laptop showing podcast platform upload screen, finger hovering over publish button, nervous excited expression, headphones on desk, late evening warm lighting, the anticipation of sharing creative work with the world"]
+    ]
+  },
+
+  {
+    "slug": "plant_parent",
+    "title": ["Plant Parent", "Bo Me Cay"],
+    "desc": ["My apartment is basically a jungle now and I love it", "Can ho gio co ban la rung nhiet doi va toi thich vay"],
+    "cat": "hobby",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Bright indoor garden photography, natural sunlight, green lush botanical aesthetic",
+    "gs": 8,
+    "tags": ["plants", "houseplants", "green", "hobby", "home", "nature"],
+    "chs": [
+      ["Morning Rounds", "Di Tham Sang", "Good morning babies. Yes I talk to my plants. No I'm not taking questions \ud83c\udf3f\u2615", "Chao buoi sang cac con. Dung, toi noi chuyen voi cay. Khong, toi khong nhan cau hoi \ud83c\udf3f\u2615", "Portrait of {subject} in pajamas holding a watering can, gently watering a collection of houseplants by a bright window, morning sunlight streaming through, lush green plants everywhere, tender caring expression, cozy plant-filled apartment"],
+      ["New Leaf Alert", "La Moi Roi", "MY MONSTERA GREW A NEW LEAF. This is not a drill. I'm literally more excited than I should be \ud83c\udf31\ud83d\ude2d", "MONSTERA TREN LA MOI. Khong phai tap tran. Toi phan khich hon muc binh thuong \ud83c\udf31\ud83d\ude2d", "Portrait of {subject} kneeling beside a large monstera plant, pointing excitedly at a fresh unfurling leaf, overjoyed expression, bright natural light, surrounded by various houseplants in beautiful pots, plant parent milestone moment"],
+      ["Repotting Day", "Ngay Thay Chau", "Repotting day is messy but therapeutic. Getting my hands dirty is self-care at this point \ud83e\udeb4\ud83e\udd32", "Ngay thay chau lon xon nhung tri lieu. Ban tay toi la cham soc ban than gio \ud83e\udeb4\ud83e\udd32", "Portrait of {subject} sitting on the floor surrounded by terracotta pots, soil, and plants ready to be repotted, hands covered in soil, happy focused expression, newspaper spread on floor, gardening tools nearby, natural bright indoor lighting"],
+      ["Plant Shelfie", "Ke Cay", "The shelf is giving jungle paradise. Every single one of these I kept alive against all odds \ud83c\udf3f\ud83d\udcaa", "Ke cay dang ra vibe thien duong nhiet doi. Moi cay toi giu song bat chap moi kho khan \ud83c\udf3f\ud83d\udcaa", "Portrait of {subject} standing proudly in front of a lush plant shelf display, arms crossed with satisfied smile, beautiful arrangement of various houseplants at different heights, sunlight creating leaf shadows on the wall, green botanical paradise at home"],
+      ["Propagation Station", "Tram Nhan Giong", "Growing new plants from cuttings is basically free money. My plant family keeps expanding \ud83c\udf31\ud83d\udcb0", "Trong cay moi tu canh cat la tien mien phi. Gia dinh cay cu lon dan \ud83c\udf31\ud83d\udcb0", "Portrait of {subject} at a bright windowsill with glass propagation jars containing plant cuttings in water, roots visible in clear water, examining new growth with magnifying glass or excited expression, botanical illustrations on wall behind, bright airy plant corner"]
+    ]
+  },
+
+  {
+    "slug": "car_wash_flex",
+    "title": ["Car Wash Flex", "Rua Xe Chanh Sa"],
+    "desc": ["Sunday ritual: making the ride look brand new", "Nghi thuc chu nhat: lam xe nhu moi tinh"],
+    "cat": "lifestyle",
+    "type": "vlog",
+    "gender": "male",
+    "dur": "many",
+    "badge": null,
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Clean automotive photography, reflective surfaces, satisfying detail shots, luxury vibes",
+    "gs": 8,
+    "tags": ["car", "detailing", "luxury", "flex", "clean", "lifestyle"],
+    "chs": [
+      ["Before Shot", "Truoc Khi Rua", "She's been through a rough week. Time to bring her back to showroom condition \ud83d\ude97\ud83d\udcaa", "No da trai qua mot tuan kho. Den luc dua ve tinh trang showroom \ud83d\ude97\ud83d\udcaa", "Portrait of {subject} standing next to a luxury car in the driveway, inspecting the dirty exterior with determined expression, wearing a tank top and shorts, bucket and supplies visible, morning sunlight, pre-wash assessment moment"],
+      ["Foam Party", "Tiec Bot", "The foam cannon is the best investment I ever made. Look at this satisfying coverage \ud83e\uddc1\ud83d\ude0d", "Sung phun bot la khoan dau tu tot nhat. Nhin lop bot phu day nay \ud83e\uddc1\ud83d\ude0d", "Portrait of {subject} using a foam cannon to spray thick white foam on the car, satisfied expression watching the foam cover the surface, bubbles and foam everywhere, driveway setting, golden morning light, satisfying car wash moment"],
+      ["Detail Mode", "Che Do Chi Tiet", "Getting into every crevice. Detailing is meditation for people who can't sit still \ud83e\uddf9\ud83e\uddd8\u200d\u2642\ufe0f", "Di vao moi ke. Detailing la thien dinh cho nguoi khong ngoi yen duoc \ud83e\uddf9\ud83e\uddd8\u200d\u2642\ufe0f", "Portrait of {subject} meticulously detailing the car's wheel with a brush, close attention to detail, focused determined expression, clean portions contrasting with work-in-progress, various detailing products arranged neatly nearby, warm afternoon light"],
+      ["Mirror Finish", "Bong Nhu Guong", "You can literally see yourself in the paint. This is what perfection looks like \ud83e\udd24\u2728", "Soi guong duoc luon tren son. Day la su hoan hao \ud83e\udd24\u2728", "Portrait of {subject} admiring the freshly polished car surface, reflection visible in the glossy paint, running a hand just above the perfect finish, impressed proud expression, car gleaming under sunlight, premium luxury car detailing result"],
+      ["The Money Shot", "Buc Anh Tien", "Done. She looks better than the day I got her. Sunday well spent \ud83d\ude97\ud83d\udcf8\ud83d\udd25", "Xong. No dep hon ngay toi mua. Chu nhat khong phi \ud83d\ude97\ud83d\udcf8\ud83d\udd25", "Portrait of {subject} leaning against the perfectly clean luxury car with arms crossed, proud satisfied expression, car gleaming and spotless behind them, golden hour sunset light reflecting off the paint, driveway flex moment, ultimate car wash result"]
+    ]
+  },
+
+  {
+    "slug": "thrift_shopping",
+    "title": ["Thrift Shopping", "Do Si Da"],
+    "desc": ["One person's trash is my next outfit", "Rac cua nguoi nay la outfit cua toi"],
+    "cat": "lifestyle",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Vintage thrift store photography, warm retro tones, eclectic fashion aesthetic",
+    "gs": 8,
+    "tags": ["thrift", "fashion", "shopping", "vintage", "sustainable", "style"],
+    "chs": [
+      ["The Hunt Begins", "Bat Dau San", "Walking into the thrift store with zero expectations and unlimited imagination. Let's go \ud83d\uded2\ud83d\udd0d", "Buoc vao cua hang do cu voi ky vong bang khong va tri tuong tuong vo han. Bat dau \ud83d\uded2\ud83d\udd0d", "Portrait of {subject} walking through the entrance of a colorful thrift store, excited expression scanning the racks, vintage decor and clothing racks visible, warm eclectic lighting, treasure hunt energy, wearing casual trendy outfit"],
+      ["Rack Diving", "Luc Gia", "Found a designer jacket for $8. EIGHT DOLLARS. The thrift gods are smiling on me today \ud83e\udde5\ud83d\ude31", "Tim duoc ao khoac hieu voi 200k. HAI TRAM NGAN. Than thrift dang cuoi voi toi hom nay \ud83e\udde5\ud83d\ude31", "Portrait of {subject} holding up an amazing vintage jacket find with shocked excited expression, price tag visible, colorful clothing racks behind, thrift store setting with eclectic items, warm lighting, the thrill of a great find"],
+      ["Try-On Haul", "Thu Do", "The fitting room is where the magic happens. This shirt has no business looking this good for $3 \ud83d\udc57\u2728", "Phong thu do la noi phep mau xay ra. Cai ao nay dep vo ly voi gia 80k \ud83d\udc57\u2728", "Portrait of {subject} in a thrift store fitting room mirror, trying on a vintage outfit with a twirl, delighted surprised expression, eclectic mix of clothing items hung on the door, warm fitting room lighting, fashion discovery moment"],
+      ["Styled Up", "Phoi Do", "Put together a whole outfit from scratch for under $20. Stylists could never \ud83d\udc85\ud83d\udcb5", "Phoi nguyen bo outfit duoi 500k. Stylist khong lam duoc \ud83d\udc85\ud83d\udcb5", "Portrait of {subject} posing confidently in a complete thrift store outfit, full styled look, standing in front of a colorful vintage wall or mural, golden hour light, fashion-forward pose, sustainable fashion flexing, proud of the curated look"],
+      ["The Haul", "Chien Loi Pham", "Today's damage: 6 pieces, $32 total. Fashion on a budget is an art form and I'm Picasso \ud83d\udcb0\ud83c\udfa8", "Thien hai hom nay: 6 mon, 800k tong. Thoi trang gia re la nghe thuat va toi la Picasso \ud83d\udcb0\ud83c\udfa8", "Portrait of {subject} sitting on bed surrounded by thrift store finds laid out neatly, smiling proudly at the collection, vintage and unique pieces displayed, warm bedroom lighting, shopping bags visible, satisfied thrift haul moment"]
+    ]
+  },
+
+  {
+    "slug": "dj_night",
+    "title": ["DJ Night", "Dem DJ"],
+    "desc": ["Behind the decks, making the whole room move", "Sau ban mix, lam ca phong rung chuyen"],
+    "cat": "lifestyle",
+    "type": "story",
+    "gender": "male",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Neon nightclub photography, dramatic colored lighting, high energy club atmosphere",
+    "gs": 8,
+    "tags": ["dj", "music", "nightlife", "club", "party", "mixing"],
+    "chs": [
+      ["Sound Check", "Kiem Tra Am", "Empty club. Full speakers. Testing the system before the chaos. The calm before the bass drop \ud83c\udfb6\ud83d\udd0a", "Club trong. Loa day. Test he thong truoc khi hon loan. Yen binh truoc cu bass drop \ud83c\udfb6\ud83d\udd0a", "Portrait of {subject} standing behind DJ equipment in an empty club, testing headphones and adjusting mixer levels, colored LED lights dimly illuminating the empty dance floor, focused professional expression, turntables and mixer in foreground, pre-show preparation"],
+      ["Doors Open", "Mo Cua", "People are rolling in. Energy is building. I can feel the bass in my chest already \ud83d\udea8\ud83d\udc9f", "Nguoi bat dau vao. Nang luong dang tang. Cam nhan bass trong long nguc roi \ud83d\udea8\ud83d\udc9f", "Portrait of {subject} behind the DJ booth watching the crowd start to fill in, neon purple and blue lighting, hands on the mixer ready to go, anticipation and excitement building, club starting to come alive, dramatic colored lighting on face"],
+      ["Peak Hour", "Gio Dinh", "THE FLOOR IS PACKED. Everyone's moving. This is what I live for. Feel that beat \ud83d\udd25\ud83c\udfb5", "SAN CHAT NIC. Ai cung nhay. Day la dieu toi song vi. Cam nhan nhip dap \ud83d\udd25\ud83c\udfb5", "Portrait of {subject} DJing at peak energy, one hand on headphone one hand on mixer, crowd going wild in background with raised hands, intense neon strobe lighting, sweat on brow, commanding the room, peak club atmosphere, electric energy"],
+      ["The Drop", "Tha Nhac", "Dropped the remix and the crowd LOST IT. There's no drug stronger than a good drop at 1 AM \ud83d\udca3\ud83e\udd2f", "Tha ban remix va dam dong MAT KIEM SOAT. Khong co ma tuy nao manh hon mot cu drop hay luc 1 gio sang \ud83d\udca3\ud83e\udd2f", "Portrait of {subject} with arms raised behind the DJ booth during an epic beat drop moment, crowd in full frenzy below, dramatic colored laser lights cutting through fog machine haze, euphoric powerful expression, the climax of the set, pure musical energy"],
+      ["Last Song", "Bai Cuoi", "Last track of the night. Slowed it down. Watching everyone sway together. Music connects people like nothing else \ud83c\udf19\ud83d\ude0c", "Bai cuoi cua dem. Ha tempo. Nhin moi nguoi lac cung nhau. Am nhac ket noi nguoi ta nhu khong gi khac \ud83c\udf19\ud83d\ude0c", "Portrait of {subject} playing the final slow song, relaxed satisfied expression, gentle warm lighting replacing harsh strobes, crowd swaying peacefully in soft light, emotional moment at the end of the night, DJ savoring the last song"],
+      ["After Hours", "Sau Dem", "3 AM. Club's empty. Ears ringing. Packing up my gear with the biggest smile. Until next time \ud83c\udfa7\ud83c\udf03", "3 gio sang. Club trong. Tai u u. Don do voi nu cuoi lon nhat. Hen lan sau \ud83c\udfa7\ud83c\udf03", "Portrait of {subject} packing up DJ equipment in the now empty club, tired but deeply satisfied expression, house lights on revealing the plain room, headphones around neck, equipment cases open, the quiet aftermath of an incredible night, blue dawn light mixing with fluorescent club lights"]
+    ]
+  },
+
+  {
+    "slug": "journaling_morning",
+    "title": ["Journaling Morning", "Sang Viet Nhat Ky"],
+    "desc": ["Pouring my thoughts onto paper before the world wakes up", "Do suy nghi len giay truoc khi the gioi thuc giac"],
+    "cat": "hobby",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Soft morning light photography, warm cozy aesthetic, intimate personal moments",
+    "gs": 8,
+    "tags": ["journaling", "morning", "mindfulness", "routine", "writing", "self-care"],
+    "chs": [
+      ["First Light", "Anh Sang Dau", "5:30 AM. The world is still asleep. This hour belongs to me and my thoughts \ud83c\udf05\ud83d\udcdd", "5:30 sang. The gioi con ngu. Gio nay la cua toi va suy nghi cua toi \ud83c\udf05\ud83d\udcdd", "Portrait of {subject} sitting up in bed at dawn, soft pink morning light coming through curtains, holding a journal and pen, peaceful sleepy but intentional expression, messy hair, cozy blankets, warm intimate early morning atmosphere"],
+      ["Coffee & Words", "Ca Phe & Chu", "The perfect combo: hot coffee and an open journal. My therapist is proud \u2615\ud83d\udcd3", "Combo hoan hao: ca phe nong va nhat ky mo. Bac si tam ly tu hao \u2615\ud83d\udcd3", "Portrait of {subject} at a small kitchen table or desk, writing in a leather journal with one hand, holding coffee mug with the other, soft morning window light, cozy sweater, focused reflective expression, steam rising from coffee, peaceful morning ritual"],
+      ["Stream of Thoughts", "Dong Suy Nghi", "When the pen starts moving and your hand can't keep up with your brain. Pure therapy \ud83d\udd8a\ufe0f\ud83e\udde0", "Khi but bat dau chay va tay khong theo kip nao. Tri lieu thuan khiet \ud83d\udd8a\ufe0f\ud83e\udde0", "Portrait of {subject} writing intensely in journal, leaning over the pages, pen moving fast, several pages already filled with writing visible, deeply absorbed expression, warm golden morning light growing stronger, intimate close-up of the writing moment"],
+      ["Gratitude List", "Danh Sach Biet On", "3 things I'm grateful for today. Some days it's hard. Today it was easy \ud83d\ude4f\u2764\ufe0f", "3 dieu biet on hom nay. Co ngay kho. Hom nay de \ud83d\ude4f\u2764\ufe0f", "Portrait of {subject} smiling softly while writing a gratitude list, morning sun now fully up creating warm light, journal open showing neat handwriting, relaxed content expression, sitting by a sunny window with plants, peaceful grateful moment"],
+      ["Closing the Book", "Gap Sach", "Journal closed. Mind clear. Ready to face whatever today throws at me \ud83d\udcaa\ud83c\udf1e", "Gap nhat ky. Dau oc trong. San sang doi mat bat cu gi hom nay nem ra \ud83d\udcaa\ud83c\udf1e", "Portrait of {subject} closing the journal with both hands, serene confident expression, fully dressed and ready for the day, bright morning light filling the room, coffee cup empty, journal and pen neatly placed, sense of calm readiness and intention"]
+    ]
+  },
+
+  {
+    "slug": "motorcycle_ride",
+    "title": ["Motorcycle Ride", "Chay Moto"],
+    "desc": ["Just me, the road, and the wind", "Chi co toi, con duong, va gio"],
+    "cat": "lifestyle",
+    "type": "vlog",
+    "gender": "male",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Adventure motorcycle photography, open road cinematic, freedom and speed aesthetic",
+    "gs": 8,
+    "tags": ["motorcycle", "ride", "road-trip", "adventure", "freedom", "open-road"],
+    "chs": [
+      ["Gearing Up", "Mac Do", "Helmet on. Jacket zipped. The road doesn't care about your problems and that's the beauty of it \ud83c\udfc1\ud83e\uddd4", "Mu bao hiem xong. Keo ao. Con duong khong care van de cua ban va do la ve dep \ud83c\udfc1\ud83e\uddd4", "Portrait of {subject} putting on motorcycle helmet and leather jacket beside a motorcycle, morning light, determined adventure-ready expression, motorcycle gleaming, riding gear and boots, pre-ride ritual moment"],
+      ["Open Road", "Duong Mo", "Nothing but open road ahead. This is what freedom actually feels like \ud83d\udee3\ufe0f\ud83d\udca8", "Chi co duong rong phia truoc. Day la cam giac tu do that su \ud83d\udee3\ufe0f\ud83d\udca8", "Portrait of {subject} riding motorcycle on an open scenic road, wind in jacket, vast landscape stretching to horizon, dynamic riding pose, speed blur on road edges, blue sky with scattered clouds, the pure feeling of freedom on two wheels"],
+      ["Mountain Pass", "Deo Nui", "Took the mountain route. Curves for days. My bike was made for roads like these \u26f0\ufe0f\ud83d\udeb5", "Chon duong nui. Cua ong lien tiep. Xe toi sinh ra cho nhung con duong nhu nay \u26f0\ufe0f\ud83d\udeb5", "Portrait of {subject} on motorcycle navigating a winding mountain road, dramatic mountain scenery, leaning into a curve, mountains and valleys visible in background, golden afternoon light, adventure and skill combined, breathtaking mountain pass riding"],
+      ["Pit Stop", "Diem Dung", "Stopped at a random roadside spot. Best view I've seen in months. Some things GPS can't find \ud83d\udccd\ud83c\udf04", "Dung o diem ven duong ngau nhien. View dep nhat thang. Co thu GPS khong tim duoc \ud83d\udccd\ud83c\udf04", "Portrait of {subject} standing next to parked motorcycle at a scenic overlook, helmet off hanging on handlebar, looking out at a stunning valley or coastline view, wind-swept hair, leather jacket, moment of peaceful appreciation, golden hour light on the landscape"],
+      ["Night Ride", "Chay Dem", "Riding under the stars. Headlight cutting through the dark. Just me and the engine hum \ud83c\udf03\ud83c\udfcd\ufe0f", "Chay duoi sao. Den pha cat qua bong toi. Chi co toi va tieng may ro \ud83c\udf03\ud83c\udfcd\ufe0f", "Portrait of {subject} on motorcycle at night, face illuminated by dashboard lights and moonlight, stars visible in dark sky above, motorcycle headlight beam on the dark road ahead, serene nighttime riding atmosphere, quiet solitary freedom"],
+      ["Home Stretch", "Duong Ve", "500 km later. Tired legs, full heart. The road always gives back more than it takes \ud83c\udfe0\u2764\ufe0f", "500 km sau. Chan moi, long day. Con duong luon tra lai nhieu hon no lay \ud83c\udfe0\u2764\ufe0f", "Portrait of {subject} arriving home on motorcycle at dusk, removing helmet with tired satisfied smile, dusty motorcycle showing the journey, warm porch light in background, the content exhaustion of a great road trip, golden sunset colors in the sky"]
+    ]
+  },
+
+  {
+    "slug": "nail_art_day",
+    "title": ["Nail Art Day", "Ngay Lam Nail"],
+    "desc": ["Self-care starts at the fingertips", "Cham soc ban than bat dau tu dau ngon tay"],
+    "cat": "lifestyle",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Clean nail salon photography, soft pink and white aesthetic, detailed close-up beauty shots",
+    "gs": 8,
+    "tags": ["nails", "nail-art", "beauty", "self-care", "aesthetic", "salon"],
+    "chs": [
+      ["Inspo Board", "Bang Cam Hung", "Spent an hour scrolling nail inspo. My Pinterest board is a masterpiece. Time to make it real \ud83d\udcf1\ud83d\udc85", "Luot nail inspo mot tieng. Board Pinterest la kiet tac. Den luc bien thanh that \ud83d\udcf1\ud83d\udc85", "Portrait of {subject} sitting in nail salon chair, showing phone screen with nail inspiration photos to the nail technician, excited anticipatory expression, clean bright salon environment, soft pink and white decor, choosing the perfect design"],
+      ["Prep Work", "Chuan Bi", "The filing and shaping part is oddly satisfying. Watching old nails become a blank canvas \ud83d\udee0\ufe0f\u2728", "Phan giua va tao hinh man nguyen ky la. Xem mong cu thanh canvas trang \ud83d\udee0\ufe0f\u2728", "Portrait of {subject} getting nails prepped at the salon, hands extended on the nail table, technician working on filing, relaxed content expression, clean professional nail station, soft overhead lighting, the satisfying preparation phase"],
+      ["Color Time", "Chon Mau", "Choosing between 47 shades of pink because apparently I'm that person \ud83c\udfa8\ud83d\ude02", "Chon giua 47 sac hong vi hien nhien toi la kieu nguoi do \ud83c\udfa8\ud83d\ude02", "Portrait of {subject} holding up multiple nail polish bottles comparing shades, playful indecisive expression, colorful polish display in background, salon setting, bright even lighting, the eternal struggle of choosing the perfect color"],
+      ["The Art", "Nghe Thuat", "Watching the nail tech work is like watching a tiny Picasso. The TALENT \ud83d\udc69\u200d\ud83c\udfa8\ud83e\udd2f", "Xem tho nail lam nhu xem Picasso ti hon. TAI NANG \ud83d\udc69\u200d\ud83c\udfa8\ud83e\udd2f", "Portrait of {subject} watching in amazement as intricate nail art is being applied to her nails, eyes wide with appreciation, detailed nail work in progress visible, salon lighting highlighting the fine details, impressed fascinated expression"],
+      ["The Reveal", "Ket Qua", "LOOK AT THESE. I can't stop staring at my own hands. Is this what having nice things feels like? \ud83d\udc85\ud83d\udd25", "NHIN NAY. Khong ngung nhin tay minh. Day la cam giac co thu dep sao? \ud83d\udc85\ud83d\udd25", "Portrait of {subject} holding up beautifully finished nails to admire, spreading fingers to show off the nail art, delighted proud expression, perfect manicure catching the light, salon background soft focus, the satisfying reveal of gorgeous nail art"]
+    ]
+  },
+
+  {
+    "slug": "coding_hackathon",
+    "title": ["Coding Hackathon", "Hackathon Lap Trinh"],
+    "desc": ["48 hours. One idea. No sleep. Let's build", "48 tieng. Mot y tuong. Khong ngu. Bat dau xay"],
+    "cat": "career",
+    "type": "journey",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Tech hackathon photography, screen glow, high energy late night coding atmosphere",
+    "gs": 8,
+    "tags": ["coding", "hackathon", "tech", "programming", "startup", "developer"],
+    "chs": [
+      ["Check In", "Dang Ky", "Badge on. Laptop charged. Free energy drinks stacked. The next 48 hours are going to be insane \ud83c\udfab\ud83d\udcbb", "Badge xong. Laptop sac day. Nuoc tang luc mien phi chong dong. 48 tieng toi se dien ro \ud83c\udfab\ud83d\udcbb", "Portrait of {subject} at hackathon registration desk putting on event badge, laptop bag over shoulder, excited determined expression, large event space with other participants setting up in background, bright venue lighting, hackathon banners visible"],
+      ["Brainstorm", "Dong Nao", "Whiteboard full of ideas. Most are terrible. But somewhere in this mess is the one that wins \ud83e\udde0\ud83d\udca1", "Bang trang day y tuong. Phan lon te. Nhung dau do trong dam loan nay la y tuong chien thang \ud83e\udde0\ud83d\udca1", "Portrait of {subject} standing at a whiteboard covered in diagrams and sticky notes, marker in hand, brainstorming expression, team members visible discussing around a table, hackathon venue with multiple teams working, creative chaos energy"],
+      ["Deep Focus", "Tap Trung Sau", "Hour 12. Headphones on. World off. The code is flowing and nothing else exists \ud83c\udfa7\u26a1", "Gio thu 12. Tai nghe bat. The gioi tat. Code dang chay va khong gi ton tai nua \ud83c\udfa7\u26a1", "Portrait of {subject} deeply focused coding at laptop, headphones on, dark venue with screen glow illuminating face, multiple monitors with code visible, energy drink cans around, late night hackathon atmosphere, intense concentration, green code on dark screens"],
+      ["3 AM Bug", "Bug 3 Gio Sang", "Found a critical bug at 3 AM. My eyes are burning but we don't quit. We debug \ud83d\udc1b\ud83d\ude29", "Tim bug nghiem trong luc 3 gio sang. Mat chay nhung khong bo cuoc. Debug thoi \ud83d\udc1b\ud83d\ude29", "Portrait of {subject} staring at laptop screen with frustrated exhausted expression at 3 AM, rubbing eyes, error messages visible on screen, empty coffee cups and snack wrappers scattered, dim venue lighting with other sleepy hackers in background, the struggle of late night debugging"],
+      ["Demo Time", "Trinh Bay", "IT WORKS. Standing in front of judges presenting what we built in 48 sleepless hours. Hands shaking, voice steady \ud83c\udfaf\ud83d\ude24", "NO CHAY. Dung truoc ban giam khao trinh bay thu chung toi xay trong 48 tieng khong ngu. Tay run, giong vung \ud83c\udfaf\ud83d\ude24", "Portrait of {subject} presenting project demo on stage to hackathon judges, laptop connected to big screen showing the working prototype, tired but proud expression, audience of fellow hackers watching, bright stage lighting, the culmination of 48 hours of work"],
+      ["Results", "Ket Qua", "WE WON. 48 hours of pure chaos and no sleep but WE ACTUALLY WON. Someone pinch me \ud83c\udfc6\ud83d\ude2d", "CHUNG TOI THANG. 48 tieng hon loan va khong ngu nhung THAT SU THANG. Ai veo toi di \ud83c\udfc6\ud83d\ude2d", "Portrait of {subject} on stage holding a hackathon trophy or prize, overwhelmed emotional expression, team members celebrating beside them, confetti or streamers, audience cheering, bright stage lights, the euphoria of winning after an exhausting marathon of coding"]
+    ]
+  },
+
+  {
+    "slug": "tattoo_session",
+    "title": ["Tattoo Session", "Buoi Xam Hinh"],
+    "desc": ["Wearing my story on my skin permanently", "Mang cau chuyen cua toi tren da vinh vien"],
+    "cat": "lifestyle",
+    "type": "story",
+    "gender": "all",
+    "dur": "many",
+    "badge": "NEW",
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Tattoo studio photography, dramatic intimate lighting, artistic body art aesthetic",
+    "gs": 8,
+    "tags": ["tattoo", "ink", "body-art", "permanent", "meaningful", "studio"],
+    "chs": [
+      ["The Design", "Thiet Ke", "Months of thinking. Hours of designing. Today it goes from paper to skin. No turning back \ud83d\udcdd\u2728", "Nhieu thang suy nghi. Hang gio thiet ke. Hom nay tu giay len da. Khong quay lai \ud83d\udcdd\u2728", "Portrait of {subject} in a tattoo studio examining the final stencil design on paper, holding it up with careful consideration, tattoo artist workspace visible with equipment, warm studio lighting, expression of excitement mixed with serious commitment"],
+      ["Stencil On", "Dat Hinh", "Stencil placed. Seeing it on my skin for the first time. This is actually happening \ud83e\udd2f\ud83d\udcab", "Dat hinh len. Nhin no tren da lan dau. Dieu nay that su dang xay ra \ud83e\udd2f\ud83d\udcab", "Portrait of {subject} looking at the temporary stencil transfer on their skin, checking placement in a mirror, amazed expression seeing the design on their body for the first time, tattoo studio setting, anticipation building, clean bright studio lighting"],
+      ["Needle Time", "Gio Kim", "The buzzing starts. Pain? Yes. Worth it? Absolutely. My pain tolerance is being tested and I'm passing \ud83d\udcaa\ud83d\ude2c", "Tieng kim bat dau. Dau? Co. Dang khong? Hoan toan. Do chiu dau dang bi thu thach va toi dang qua \ud83d\udcaa\ud83d\ude2c", "Portrait of {subject} getting tattooed, gripping the chair or biting lip through the pain, tattoo artist's gloved hands working with the machine, close-up showing the process, determined brave expression, tattoo studio with art on walls, dramatic focused lighting"],
+      ["Taking Shape", "Thanh Hinh", "Watching the art come alive on my skin line by line. Every second of pain is a stroke of beauty \ud83c\udfa8\u2764\ufe0f", "Nhin nghe thuat song day tren da tung duong. Moi giay dau la mot net dep \ud83c\udfa8\u2764\ufe0f", "Portrait of {subject} watching the tattoo progress with fascinated expression, partially completed tattoo visible showing detailed artwork, tattoo artist working in background, dramatic angled lighting highlighting the fresh ink, midway through the session"],
+      ["Fresh Ink", "Muc Moi", "IT'S DONE. Fresh ink. Slightly swollen but GORGEOUS. This is part of me now \ud83d\udd25\ud83d\ude0d", "XONG ROI. Muc moi. Hoi sung nhung TUYET DEP. Day la phan cua toi gio \ud83d\udd25\ud83d\ude0d", "Portrait of {subject} admiring the completed fresh tattoo, holding the area up proudly to show it off, wrapping being prepared by the artist, glowing satisfied expression, beautiful detailed tattoo art visible, studio mirrors reflecting the new ink, accomplishment and ownership"],
+      ["Healed", "Lanh Roi", "Fully healed. The colors settled. It looks even better than I imagined. My body is my canvas \ud83e\uddd1\u200d\ud83c\udfa8\u2728", "Da lanh han. Mau da on dinh. Dep hon toi tuong tuong. Co the toi la canvas \ud83e\uddd1\u200d\ud83c\udfa8\u2728", "Portrait of {subject} weeks later showing the fully healed tattoo in natural sunlight, vibrant settled colors, confident proud pose showing off the artwork, outdoor setting with beautiful natural light, the tattoo as a permanent part of their identity, artistic self-expression"]
+    ]
+  },
+
+  {
+    "slug": "book_club",
+    "title": ["Book Club", "Cau Lac Bo Sach"],
+    "desc": ["When books bring the best people together", "Khi sach mang nhung nguoi tot nhat den voi nhau"],
+    "cat": "hobby",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Warm cozy literary photography, soft ambient lighting, bookish aesthetic",
+    "gs": 8,
+    "tags": ["books", "reading", "book-club", "friends", "literary", "cozy"],
+    "chs": [
+      ["Finishing Up", "Doc Xong", "Stayed up until 2 AM to finish the book before today's meeting. The ending WRECKED me \ud83d\udcda\ud83d\ude2d", "Thuc den 2 gio sang doc xong sach truoc buoi hop hom nay. Cai ket TAN NAT toi \ud83d\udcda\ud83d\ude2d", "Portrait of {subject} in bed at night reading the last pages of a book with intense emotional expression, bedside lamp glowing warmly, sticky notes and bookmarks visible in the book, cozy blankets, post-reading emotional hangover, late night reading marathon"],
+      ["Cafe Arrival", "Den Quan", "First one here. Grabbed the cozy corner. Book club spot secured \u2615\ud83d\udcda", "Den dau. Chiem goc am cung. Vi tri book club da bao \u2615\ud83d\udcda", "Portrait of {subject} sitting at a cozy cafe corner table with the book and a latte, saving seats for friends, warm cafe lighting, bookmarks and notes sticking out of the book, relaxed anticipatory expression, pretty cafe interior with bookshelves"],
+      ["Deep Discussion", "Thao Luan Sau", "We've been arguing about the ending for 30 minutes. Nobody agrees and that's the best part \ud83d\udde3\ufe0f\ud83d\udd25", "Tranh luan ve cai ket 30 phut roi. Khong ai dong y va do la phan hay nhat \ud83d\udde3\ufe0f\ud83d\udd25", "Portrait of {subject} in animated discussion at the cafe table, gesturing passionately while making a point about the book, other members' hands and books visible, warm engaged expression, coffee cups and open books on table, lively intellectual conversation"],
+      ["Plot Twist Reaction", "Phan Ung Bat Ngo", "When someone brings up a theory you never considered and your whole understanding shifts \ud83e\udd2f\ud83d\udcda", "Khi ai do dua ra ly thuyet ban chua bao gio nghi va hieu biet toan bo thay doi \ud83e\udd2f\ud83d\udcda", "Portrait of {subject} with a mind-blown expression during book club discussion, hand on forehead in realization, book open on table with highlighted passages, other members talking in background, warm cafe glow, that moment when a new perspective changes everything"],
+      ["Next Pick", "Sach Tiep", "Voted on next month's book. I'm already excited. This is the hobby that keeps on giving \ud83d\udcd6\u2764\ufe0f", "Binh chon sach thang sau. Da phan khich roi. Day la so thich cho di khong ngung \ud83d\udcd6\u2764\ufe0f", "Portrait of {subject} holding up the newly chosen book with an excited grin, cafe table scattered with book recommendations, friends visible in warm soft focus, bookshop bag nearby, the joy of a new reading adventure ahead, cozy bookish community vibes"]
+    ]
+  },
+
+  {
+    "slug": "basketball_pickup",
+    "title": ["Pickup Basketball", "Bong Ro Phui"],
+    "desc": ["Nothing but hoops, sweat, and bragging rights", "Chi co ro, mo hoi, va quyen khoe khoang"],
+    "cat": "lifestyle",
+    "type": "vlog",
+    "gender": "male",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Dynamic sports photography, outdoor court golden hour, athletic action shots",
+    "gs": 8,
+    "tags": ["basketball", "sports", "pickup", "hoops", "athletic", "outdoor"],
+    "chs": [
+      ["Lacing Up", "Buoc Day", "Fresh kicks. Full water bottle. It's been a long week and the court is my therapist \ud83d\udc5f\ud83c\udfc0", "Giay moi. Binh nuoc day. Tuan dai va san bong la bac si tam ly cua toi \ud83d\udc5f\ud83c\udfc0", "Portrait of {subject} sitting courtside on an outdoor basketball court, lacing up basketball shoes, basketball beside them, late afternoon golden light, urban park setting, focused expression preparing for the game, athletic wear"],
+      ["Warm Up", "Khoi Dong", "Solo drills before the squad shows up. The sound of a ball bouncing on concrete is therapy \ud83c\udfc0\ud83c\udfb5", "Tap mot minh truoc khi ae den. Tieng bong nay tren san la tri lieu \ud83c\udfc0\ud83c\udfb5", "Portrait of {subject} dribbling basketball alone on outdoor court, warm-up routine, athletic form, long shadows from low sun, empty court with city backdrop, focused determined expression, the meditative solitude of pre-game practice"],
+      ["Game On", "Bat Dau Tran", "5 on 5. No refs. Just respect and buckets. This is basketball at its purest \ud83d\udd25\ud83e\udd1d", "5 doi 5. Khong trong tai. Chi co ton trong va nem ro. Bong ro thuan khiet nhat \ud83d\udd25\ud83e\udd1d", "Portrait of {subject} in the middle of a pickup basketball game, driving to the basket with intensity, other players around, outdoor court with chain-link fence, golden hour light creating dramatic shadows, competitive athletic energy, pure street basketball"],
+      ["The Crossover", "Crossover", "Hit them with the crossover and the defender's ankles are still at the three-point line \ud83d\ude08\u26a1", "Choi crossover ma hau ve van con dung o duong 3 diem \ud83d\ude08\u26a1", "Portrait of {subject} executing a basketball crossover move with confident swagger, low athletic stance, opponent slightly blurred reacting behind, outdoor court setting, action frozen mid-move, dynamic sports photography, golden hour backlighting creating a halo effect"],
+      ["Victory Lap", "Vong Chien Thang", "W secured. Nothing hits different like winning a pickup game with the boys \ud83c\udfc6\ud83d\udcaa", "Chien thang. Khong gi suong bang thang tran phui voi ae \ud83c\udfc6\ud83d\udcaa", "Portrait of {subject} celebrating after winning the pickup game, high-fiving teammates, sweaty and exhausted but elated, sunset behind the basketball hoop, triumphant expression, urban outdoor court, the pure joy of competitive victory with friends"]
+    ]
+  },
+
+  {
+    "slug": "candle_making",
+    "title": ["Candle Making", "Lam Nen"],
+    "desc": ["Melting wax and creating vibes from scratch", "Chay sap va tao vibe tu con so"],
+    "cat": "hobby",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Warm cozy craft photography, soft candlelight, artisan handmade aesthetic",
+    "gs": 8,
+    "tags": ["candle", "handmade", "craft", "diy", "cozy", "creative"],
+    "chs": [
+      ["Supplies Ready", "Do Da San Sang", "Wax, wicks, essential oils, cute jars. This kitchen is about to become a candle factory \ud83d\udd6f\ufe0f\ud83e\uddea", "Sap, bac, tinh dau, lo xinh. Bep sap thanh xuong nen \ud83d\udd6f\ufe0f\ud83e\uddea", "Portrait of {subject} at a clean kitchen counter with candle-making supplies neatly arranged, soy wax flakes, essential oil bottles, glass jars, wicks, excited expression ready to create, warm kitchen lighting, artisan craft setup"],
+      ["Melting Wax", "Chay Sap", "Watching wax melt is oddly hypnotic. Is this what peace feels like? Because I'm feeling very peaceful \ud83e\udee0\u2728", "Xem sap chay thoi mien ky la. Day co phai binh yen? Vi toi dang rat binh yen \ud83e\udee0\u2728", "Portrait of {subject} stirring melting wax in a double boiler, steam rising gently, watching the process with calm meditative expression, warm stove light, kitchen setting, the therapeutic process of slow careful crafting"],
+      ["Scent Mixing", "Pha Huong", "Mixing lavender and vanilla and my kitchen smells like a spa. I might never leave \ud83d\udc9c\ud83c\udf3f", "Pha lavender va vanilla va bep toi thom nhu spa. Co le se khong bao gio di \ud83d\udc9c\ud83c\udf3f", "Portrait of {subject} carefully adding drops of essential oil into melted wax, sniffing and testing the scent with eyes closed, blissful expression, essential oil bottles arranged nearby, soft warm lighting, the art of creating the perfect fragrance blend"],
+      ["The Pour", "Do Sap", "The pour is the most satisfying part. Watching the liquid gold fill each jar perfectly \ud83c\udfa8\ud83d\ude0d", "Do sap la phan suong nhat. Nhin vang long lap day tung lo hoan hao \ud83c\udfa8\ud83d\ude0d", "Portrait of {subject} carefully pouring melted wax into glass jars, steady focused hands, golden liquid wax streaming, multiple containers being filled, warm lighting reflecting off the liquid, precise careful crafting moment, artisan at work"],
+      ["Finished Product", "Thanh Pham", "Look at these babies. Made with my own hands, my own scents, my own love. Small business energy \ud83d\udd6f\ufe0f\u2764\ufe0f\ud83d\udd25", "Nhin nhung em be nay. Lam bang tay toi, huong toi chon, tinh yeu cua toi. Nang luong kinh doanh nho \ud83d\udd6f\ufe0f\u2764\ufe0f\ud83d\udd25", "Portrait of {subject} proudly displaying a collection of finished handmade candles, beautifully labeled and arranged on a wooden tray, warm candlelight from lit candles illuminating her face, satisfied accomplished expression, cozy aesthetic setup, handmade artisan candle collection"]
+    ]
+  },
+
+  {
+    "slug": "street_photography",
+    "title": ["Street Photography", "Chup Anh Duong Pho"],
+    "desc": ["Capturing raw moments in the urban jungle", "Bat nhung khoanh khac moc trong rung do thi"],
+    "cat": "hobby",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Raw street photography aesthetic, high contrast urban, documentary style with cinematic moments",
+    "gs": 8,
+    "tags": ["street-photography", "urban", "documentary", "city", "raw", "candid"],
+    "chs": [
+      ["Early Start", "Khoi Dau Som", "5 AM. Empty streets. The city before it puts its makeup on. This is when the real shots happen \ud83c\udf03\ud83d\udcf7", "5 gio sang. Duong trong. Thanh pho truoc khi trang diem. Day la luc anh that su xay ra \ud83c\udf03\ud83d\udcf7", "Portrait of {subject} walking through quiet pre-dawn city streets with camera, first light breaking over buildings, long empty shadows, wearing dark street clothes with camera bag, contemplative focused expression, the city in its most raw unfiltered state"],
+      ["Decisive Moment", "Khoanh Khac Quyet Dinh", "Saw it. Raised the camera. Got it. The whole thing took 0.5 seconds. That's street photography \u26a1\ud83d\udcf8", "Thay no. Giua may len. Chup duoc. Toan bo mat 0.5 giay. Do la chup anh duong pho \u26a1\ud83d\udcf8", "Portrait of {subject} in the act of quickly raising camera to eye to capture a fleeting moment, dynamic action pose, urban environment with interesting light and shadow play, fast reflexes, street photography in action, city life happening around them"],
+      ["Light & Shadow", "Anh Sang & Bong Toi", "Found this insane shadow pattern between two buildings. The city is an art gallery if you know where to look \ud83c\udfdb\ufe0f\ud83d\udda4", "Tim duoc hoa tiet bong dien dao giua hai toa nha. Thanh pho la phong tranh neu biet nhin \ud83c\udfdb\ufe0f\ud83d\udda4", "Portrait of {subject} standing in a dramatic geometric shadow pattern cast by urban architecture, high contrast black and white light, camera held at waist level, studying the interplay of light and shadow, strong graphic composition, urban geometry as art"],
+      ["The People", "Con Nguoi", "Every face tells a story. The old man feeding pigeons. The kid chasing bubbles. Life is the best subject \ud83d\udc65\u2764\ufe0f", "Moi khuon mat ke mot cau chuyen. Ong gia cho chim an. Dua tre duoi bong bong. Doi song la chu de tot nhat \ud83d\udc65\u2764\ufe0f", "Portrait of {subject} crouching low on a busy sidewalk photographing street life, camera aimed at eye level with the street, people walking past in motion blur, warm afternoon light, urban documentary photographer at work, immersed in the human stories of the city"],
+      ["Rain Changes Everything", "Mua Thay Doi Tat Ca", "Started raining. Most people hide. Photographers come alive. Wet streets are a gift \ud83c\udf27\ufe0f\ud83d\udcf7", "Troi mua. Nguoi ta tron. Photographer song day. Duong uot la mon qua \ud83c\udf27\ufe0f\ud83d\udcf7", "Portrait of {subject} shooting photos in the rain on city streets, camera protected but still shooting, neon reflections on wet pavement, rain droplets visible, determined passionate expression, umbrella in one hand camera in the other, the magical transformation of a rainy city"],
+      ["The Edit", "Hau Ky", "Home. Dark room mode. Going through 400 shots to find THE ten. Street photography is 1% shooting, 99% curating \ud83d\udcbb\ud83d\udc40", "Ve nha. Che do phong toi. Luot 400 buc tim MUOI buc. Chup anh duong pho 1% chup, 99% chon \ud83d\udcbb\ud83d\udc40", "Portrait of {subject} at home desk in the dark with only monitor light illuminating their face, scrolling through hundreds of street photos on screen, intense focused editing expression, darkened room with prints on wall, the meticulous curation process of selecting the best work"]
+    ]
+  }
+]

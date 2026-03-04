@@ -1,0 +1,1599 @@
+[
+  {
+    "slug": "glow_up",
+    "title": [
+      "Glow Up Era",
+      "Thời Đại Lên Đời"
+    ],
+    "desc": [
+      "My glow up journey — from zero confidence to unstoppable",
+      "Hành trình lên đời — từ không tự tin đến không thể ngăn cản"
+    ],
+    "cat": "beauty",
+    "type": "journey",
+    "gender": "female",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "beauty transformation, soft glowing skin, editorial",
+    "gs": 7.5,
+    "tags": [
+      "glow-up",
+      "transformation",
+      "beauty",
+      "confidence",
+      "skincare"
+    ],
+    "chs": [
+      [
+        "The Before",
+        "Trước Đây",
+        "This is where it started. No filter, no shame 📸",
+        "Đây là nơi bắt đầu. Không filter, không xấu hổ 📸",
+        "Portrait of {subject} with minimal styling, natural look, soft window light, humble beginning, authentic raw beauty"
+      ],
+      [
+        "Skincare First",
+        "Skincare Trước",
+        "Started my skincare routine. Consistency is everything 🧴",
+        "Bắt đầu routine skincare. Kiên trì là tất cả 🧴",
+        "Portrait of {subject} doing skincare routine, bathroom mirror, serums and creams, glass skin beginning, self-care ritual"
+      ],
+      [
+        "Hair Glow",
+        "Tóc Lên Đời",
+        "New hair, new me. The glow up is loading... 💇‍♀️",
+        "Tóc mới, tôi mới. Glow up đang loading... 💇‍♀️",
+        "Portrait of {subject} with fresh salon hairstyle, beautiful hair transformation, salon setting, confidence boost"
+      ],
+      [
+        "Style Evolution",
+        "Tiến Hoá Style",
+        "Found my style. Fashion is self-expression 👗✨",
+        "Tìm được style. Thời trang là tự thể hiện 👗✨",
+        "Portrait of {subject} in trendy curated outfit, full-length mirror selfie aesthetic, fashion evolution, personal style discovery"
+      ],
+      [
+        "Fitness Results",
+        "Kết Quả Tập Luyện",
+        "The gym sessions are paying off. Body confidence unlocked 💪",
+        "Tập gym đang thấy kết quả. Tự tin cơ thể đã mở khoá 💪",
+        "Portrait of {subject} showing fitness progress, athletic wear, confident body language, gym or outdoor, healthy glow"
+      ],
+      [
+        "Confidence Peak",
+        "Đỉnh Tự Tin",
+        "This is what confidence looks like. Unstoppable energy 🔥",
+        "Đây là tự tin trông như thế nào. Năng lượng không ngăn cản 🔥",
+        "Stunning portrait of {subject} with full glow up complete, professional styling, radiant skin, confident powerful pose, editorial quality"
+      ],
+      [
+        "The After",
+        "Sau Này",
+        "Same me, upgraded version. The glow up is real 👑",
+        "Vẫn là tôi, phiên bản nâng cấp. Glow up là thật 👑",
+        "Magazine-quality portrait of {subject} fully transformed, beautiful styling, glowing skin, confident smile, dramatic before-after energy"
+      ],
+      [
+        "New Chapter",
+        "Chương Mới",
+        "This isn't even my final form. Stay tuned 🦋",
+        "Đây chưa phải hình thái cuối. Đón xem tiếp 🦋",
+        "Portrait of {subject} looking forward with hope, sunset light, wind in hair, new beginning energy, butterfly transformation complete"
+      ]
+    ]
+  },
+  {
+    "slug": "hair_makeover",
+    "title": [
+      "Hair Makeover",
+      "Đổi Mới Mái Tóc"
+    ],
+    "desc": [
+      "From boring to iconic — a complete hair transformation story",
+      "Từ nhàm chán đến iconic — câu chuyện thay đổi tóc hoàn toàn"
+    ],
+    "cat": "beauty",
+    "type": "flex",
+    "gender": "female",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "salon beauty, hair editorial, warm lighting",
+    "gs": 7,
+    "tags": [
+      "hair",
+      "makeover",
+      "beauty",
+      "salon",
+      "transformation",
+      "style"
+    ],
+    "chs": [
+      [
+        "Before Pic",
+        "Ảnh Trước",
+        "Current hair is giving nothing. Time for a change 💇‍♀️",
+        "Tóc hiện tại không có gì. Đến lúc thay đổi 💇‍♀️",
+        "Portrait of {subject} with plain hairstyle, looking in mirror, contemplating change, natural lighting, before moment"
+      ],
+      [
+        "Salon Arrival",
+        "Đến Salon",
+        "At the salon. Told them to go crazy. No fear 💈",
+        "Đến salon. Bảo họ làm điên lên. Không sợ 💈",
+        "Portrait of {subject} sitting in salon chair, cape on, stylist consulting, salon interior, excited anticipation"
+      ],
+      [
+        "The Process",
+        "Quá Trình",
+        "Trust the process. My stylist is an artist 🎨",
+        "Tin vào quá trình. Thợ tóc là nghệ sĩ 🎨",
+        "Portrait of {subject} mid-hair process, foils or color being applied, salon transformation in progress, professional care"
+      ],
+      [
+        "The Reveal",
+        "Ra Mắt",
+        "THE REVEAL. I literally screamed. New hair who dis 😱✨",
+        "RA MẮT. Tôi hét lên thật sự. Tóc mới ai đây 😱✨",
+        "Portrait of {subject} seeing new hairstyle for first time, mirror reaction, stunning hair transformation, salon reveal moment, joy"
+      ],
+      [
+        "Street Test",
+        "Test Ngoài Đường",
+        "Taking the new hair for a test drive. Heads are turning 💁‍♀️",
+        "Chạy thử tóc mới ngoài đường. Mọi người ngoái nhìn 💁‍♀️",
+        "Portrait of {subject} walking confidently on street with new hairstyle, wind blowing, urban background, heads turning energy"
+      ],
+      [
+        "Selfie Queen",
+        "Nữ Hoàng Selfie",
+        "Can't stop taking selfies. New hair unlocked a new me 📱👑",
+        "Không ngừng chụp selfie. Tóc mới mở khoá tôi mới 📱👑",
+        "Portrait of {subject} taking selfie with stunning new hair, golden hour light, beautiful hair flowing, confident self-love moment"
+      ]
+    ]
+  },
+  {
+    "slug": "glass_skin",
+    "title": [
+      "Glass Skin Journey",
+      "Hành Trình Da Thuỷ Tinh"
+    ],
+    "desc": [
+      "7 steps to glass skin — the Korean skincare transformation",
+      "7 bước đến da thuỷ tinh — biến đổi skincare kiểu Hàn"
+    ],
+    "cat": "beauty",
+    "type": "journey",
+    "gender": "female",
+    "dur": "many",
+    "badge": "NEW",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "dewy glass skin, K-beauty glow, soft luminous",
+    "gs": 7,
+    "tags": [
+      "glass-skin",
+      "skincare",
+      "beauty",
+      "k-beauty",
+      "glow",
+      "routine"
+    ],
+    "chs": [
+      [
+        "Skin Goals",
+        "Mục Tiêu Da",
+        "Starting my glass skin journey. K-beauty here I come 🧴✨",
+        "Bắt đầu hành trình da thuỷ tinh. K-beauty tôi đến đây 🧴✨",
+        "Portrait of {subject} looking at skin in mirror, natural bare face, determined expression, bathroom, skincare products lined up"
+      ],
+      [
+        "Double Cleanse",
+        "Rửa Mặt Kép",
+        "Double cleanse is the foundation. Clean canvas, clean start 🫧",
+        "Rửa mặt kép là nền tảng. Canvas sạch, khởi đầu sạch 🫧",
+        "Portrait of {subject} doing double cleanse ritual, foam on face, bathroom mirror, evening skincare routine, clean beauty"
+      ],
+      [
+        "Essence Layer",
+        "Lớp Tinh Chất",
+        "Layering essence like a pro. My skin is drinking it up 💧",
+        "Thoa tinh chất như pro. Da tôi uống hết 💧",
+        "Portrait of {subject} applying essence to face, dewy fresh skin, close-up beauty shot, K-beauty routine, hydration step"
+      ],
+      [
+        "Sheet Mask Night",
+        "Đêm Đắp Mặt Nạ",
+        "Sheet mask Sundays are non-negotiable. Self-care is self-love 🎭",
+        "Chủ Nhật đắp mặt nạ là bắt buộc. Chăm sóc mình là yêu mình 🎭",
+        "Cozy portrait of {subject} wearing sheet mask, comfortable at home, candles, relaxation, self-care Sunday aesthetic"
+      ],
+      [
+        "Progress Check",
+        "Kiểm Tra Tiến Trình",
+        "Week 4 progress. The glow is starting to show ✨📈",
+        "Tuần 4 tiến trình. Glow bắt đầu xuất hiện ✨📈",
+        "Portrait of {subject} checking skin progress in mirror, visible improvement, natural morning light, growing confidence, dewy skin"
+      ],
+      [
+        "Glass Achieved",
+        "Da Thuỷ Tinh Đạt Được",
+        "Glass skin ACHIEVED. My skin is literally reflecting light 💎",
+        "Da thuỷ tinh ĐẠT ĐƯỢC. Da tôi thật sự phản chiếu ánh sáng 💎",
+        "Stunning beauty portrait of {subject} with perfect glass skin, dewy luminous complexion, soft studio lighting, K-beauty goal achieved"
+      ],
+      [
+        "No Filter Needed",
+        "Không Cần Filter",
+        "Posted without filter for the first time. Glass skin era 🥂",
+        "Đăng không filter lần đầu tiên. Thời đại da thuỷ tinh 🥂",
+        "Portrait of {subject} in natural sunlight, glowing dewy skin, no-makeup makeup look, confident bare-face beauty, glass skin flex"
+      ]
+    ]
+  },
+  {
+    "slug": "fashion_week",
+    "title": [
+      "Fashion Week",
+      "Tuần Lễ Thời Trang"
+    ],
+    "desc": [
+      "Front row to backstage — my Fashion Week experience",
+      "Hàng ghế đầu đến hậu trường — trải nghiệm Tuần Lễ Thời Trang"
+    ],
+    "cat": "beauty",
+    "type": "flex",
+    "gender": "female",
+    "dur": "once",
+    "badge": null,
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, casual wear, rural",
+    "style": "high fashion editorial, runway lighting, couture",
+    "gs": 8,
+    "tags": [
+      "fashion-week",
+      "runway",
+      "beauty",
+      "couture",
+      "style",
+      "designer"
+    ],
+    "chs": [
+      [
+        "Show Day Look",
+        "Outfit Ngày Show",
+        "Fashion Week fit check. Dressed to be photographed 📸",
+        "Check outfit ngày Tuần Lễ. Ăn mặc để được chụp ảnh 📸",
+        "Portrait of {subject} in high-fashion outfit at fashion week venue entrance, paparazzi, street style photography, designer clothing"
+      ],
+      [
+        "Front Row",
+        "Hàng Ghế Đầu",
+        "Front row seats. The view from here hits different 👀",
+        "Ghế hàng đầu. View từ đây khác biệt 👀",
+        "Portrait of {subject} seated front row at fashion show, runway in view, other fashion guests, dramatic show lighting"
+      ],
+      [
+        "Runway Magic",
+        "Phép Màu Sàn Catwalk",
+        "The models are walking. Fashion is art in motion 🖼️",
+        "Các người mẫu đang đi. Thời trang là nghệ thuật chuyển động 🖼️",
+        "Portrait of {subject} watching runway show, models walking past, dramatic lighting, absorbed in fashion art, front row perspective"
+      ],
+      [
+        "Backstage Pass",
+        "Vào Hậu Trường",
+        "Backstage access! The chaos is beautiful 🎭",
+        "Vào hậu trường! Sự hỗn loạn thật đẹp 🎭",
+        "Portrait of {subject} backstage at fashion show, models getting ready, makeup artists, organized chaos, fashion industry insider"
+      ],
+      [
+        "Street Style Star",
+        "Ngôi Sao Street Style",
+        "Got photographed by street style photographers. Made it! 📷",
+        "Được nhiếp ảnh gia street style chụp. Đã thành công! 📷",
+        "Portrait of {subject} being photographed on street outside fashion show, striking a pose, designer outfit, photographers around"
+      ],
+      [
+        "Designer Meet",
+        "Gặp Nhà Thiết Kế",
+        "Met the designer behind the collection. Iconic moment 🤝",
+        "Gặp nhà thiết kế đứng sau bộ sưu tập. Khoảnh khắc iconic 🤝",
+        "Portrait of {subject} with fashion designer backstage, congratulatory moment, fashion industry networking, VIP access"
+      ],
+      [
+        "After Party",
+        "After Party",
+        "Fashion Week after party. The real show starts now 🥂🎶",
+        "After party Tuần Lễ. Show thật sự bắt đầu 🥂🎶",
+        "Portrait of {subject} at fashion week after party, exclusive venue, fashion crowd, champagne, celebration of fashion"
+      ],
+      [
+        "Fashion Recap",
+        "Tổng Kết",
+        "Fashion Week recap: I came, I saw, I was styled 💅",
+        "Tổng kết Tuần Lễ: Tôi đến, tôi thấy, tôi được style 💅",
+        "Portrait of {subject} post-fashion week, collage energy, carrying show invitations and gifts, fulfilled fashion dream"
+      ]
+    ]
+  },
+  {
+    "slug": "glam_makeup",
+    "title": [
+      "Glam Makeup Day",
+      "Ngày Makeup Glam"
+    ],
+    "desc": [
+      "From bare face to full glam — a makeup transformation story",
+      "Từ mặt mộc đến full glam — câu chuyện biến đổi makeup"
+    ],
+    "cat": "beauty",
+    "type": "flex",
+    "gender": "female",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "beauty editorial, glam makeup, studio lighting",
+    "gs": 7.5,
+    "tags": [
+      "makeup",
+      "glam",
+      "beauty",
+      "transformation",
+      "mua",
+      "tutorial"
+    ],
+    "chs": [
+      [
+        "Bare Canvas",
+        "Canvas Mộc",
+        "Starting with a clean canvas. The transformation begins 🎨",
+        "Bắt đầu với canvas sạch. Sự biến đổi bắt đầu 🎨",
+        "Portrait of {subject} with bare clean face, no makeup, natural beauty, bathroom mirror, about to start makeup routine"
+      ],
+      [
+        "Base Perfect",
+        "Nền Hoàn Hảo",
+        "Foundation blended to perfection. Flawless base loading ✨",
+        "Kem nền blend hoàn hảo. Nền hoàn hảo đang load ✨",
+        "Portrait of {subject} applying foundation, beauty sponge, flawless base, vanity mirror with lights, makeup process"
+      ],
+      [
+        "Eye Art",
+        "Nghệ Thuật Mắt",
+        "The eyeshadow is giving EVERYTHING. Blending is therapy 👁️",
+        "Phấn mắt đang cho TẤT CẢ. Blend là liệu pháp 👁️",
+        "Close-up portrait of {subject} with dramatic eye makeup, blending eyeshadow, artistic eye look, detailed beauty"
+      ],
+      [
+        "Lip Moment",
+        "Khoảnh Khắc Môi",
+        "The perfect lip. Red or nude? Red. Always red 💋",
+        "Đôi môi hoàn hảo. Đỏ hay nude? Đỏ. Luôn luôn đỏ 💋",
+        "Portrait of {subject} applying lipstick, mirror close-up, bold lip color, beauty ritual, confident expression"
+      ],
+      [
+        "Full Glam",
+        "Full Glam",
+        "Full glam COMPLETE. The before and after is crazy 💄🤯",
+        "Full glam HOÀN TẤT. Trước và sau điên khùng 💄🤯",
+        "Stunning portrait of {subject} with complete glam makeup, flawless finish, editorial beauty, dramatic lighting, transformation complete"
+      ],
+      [
+        "Ready to Slay",
+        "Sẵn Sàng Slay",
+        "Hair done, makeup done. Ready to slay the world 🔥💅",
+        "Tóc xong, makeup xong. Sẵn sàng slay thế giới 🔥💅",
+        "Portrait of {subject} fully glammed and styled, ready to go out, confident pose, outfit complete, slay energy"
+      ],
+      [
+        "Night Out Glow",
+        "Glow Đi Chơi Đêm",
+        "The makeup survived the whole night. We love a lasting look 🌙",
+        "Makeup sống sót cả đêm. Yêu look bền 🌙",
+        "Portrait of {subject} late at night still looking glam, city lights, end of night selfie, makeup still perfect, night out glow"
+      ]
+    ]
+  },
+  {
+    "slug": "that_girl_era",
+    "title": [
+      "That Girl Era",
+      "Thời Đại That Girl"
+    ],
+    "desc": [
+      "Becoming THAT girl — wellness, routine, and main character energy",
+      "Trở thành THAT girl — wellness, routine, và năng lượng nhân vật chính"
+    ],
+    "cat": "beauty",
+    "type": "aesthetic",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "clean aesthetic, golden morning light, wellness minimal",
+    "gs": 7,
+    "tags": [
+      "that-girl",
+      "wellness",
+      "beauty",
+      "routine",
+      "aesthetic",
+      "morning"
+    ],
+    "chs": [
+      [
+        "5AM Club",
+        "Hội 5 Giờ Sáng",
+        "5AM alarm. That girl doesn't snooze 🌅⏰",
+        "Báo thức 5 giờ. That girl không snooze 🌅⏰",
+        "Portrait of {subject} waking up at sunrise, clean minimalist bedroom, morning golden light, fresh face, early bird energy"
+      ],
+      [
+        "Morning Workout",
+        "Tập Sáng",
+        "Morning Pilates done. Body and mind aligned 🧘‍♀️",
+        "Pilates sáng xong. Thân và tâm đồng nhất 🧘‍♀️",
+        "Portrait of {subject} doing Pilates or yoga, clean workout space, morning light, athletic wear, wellness routine"
+      ],
+      [
+        "Green Smoothie",
+        "Sinh Tố Xanh",
+        "Green smoothie loaded with superfoods. Fueling the day right 🥤🥬",
+        "Sinh tố xanh đầy superfood. Nạp năng lượng đúng cách 🥤🥬",
+        "Portrait of {subject} making green smoothie in clean white kitchen, fresh ingredients, healthy lifestyle, morning nutrition"
+      ],
+      [
+        "Journaling",
+        "Viết Nhật Ký",
+        "Journaling my intentions. Manifestation queen 📓✨",
+        "Viết nhật ký ý định. Nữ hoàng manifestation 📓✨",
+        "Portrait of {subject} journaling at clean desk, coffee nearby, morning light, gratitude practice, mindful moment"
+      ],
+      [
+        "Outfit Check",
+        "Check Outfit",
+        "Outfit of the day: clean, minimal, powerful 👗",
+        "Outfit hôm nay: sạch, tối giản, mạnh mẽ 👗",
+        "Portrait of {subject} in curated minimal outfit, full-length mirror, neutral tones, capsule wardrobe, effortless style"
+      ],
+      [
+        "Productive Day",
+        "Ngày Hiệu Quả",
+        "Checked everything off the to-do list. That girl energy 📝✅",
+        "Check xong hết to-do list. Năng lượng that girl 📝✅",
+        "Portrait of {subject} at cafe with laptop, productive work, iced coffee, organized notes, accomplished feeling"
+      ],
+      [
+        "Evening Wind Down",
+        "Buổi Tối Thư Giãn",
+        "Evening routine: skincare, reading, gratitude. Peace 🕊️",
+        "Routine tối: skincare, đọc sách, biết ơn. Bình yên 🕊️",
+        "Portrait of {subject} in evening self-care, reading book, candles lit, cozy atmosphere, peaceful end to perfect day"
+      ]
+    ]
+  },
+  {
+    "slug": "model_photoshoot",
+    "title": [
+      "Model Photoshoot",
+      "Chụp Ảnh Người Mẫu"
+    ],
+    "desc": [
+      "Behind the scenes of a professional photoshoot — from BTS to final shot",
+      "Hậu trường buổi chụp ảnh chuyên nghiệp — từ BTS đến ảnh cuối"
+    ],
+    "cat": "beauty",
+    "type": "flex",
+    "gender": "female",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "professional photography, studio lighting, editorial",
+    "gs": 8,
+    "tags": [
+      "model",
+      "photoshoot",
+      "beauty",
+      "studio",
+      "editorial",
+      "bts"
+    ],
+    "chs": [
+      [
+        "Hair & Makeup",
+        "Tóc & Makeup",
+        "In the chair. Glam team doing their thing 💄💇‍♀️",
+        "Trên ghế. Đội glam đang làm việc 💄💇‍♀️",
+        "Portrait of {subject} in makeup chair getting styled, vanity lights, professional MUA working, behind-the-scenes preparation"
+      ],
+      [
+        "Wardrobe Pick",
+        "Chọn Trang Phục",
+        "Picking the outfit. Every piece tells a story 👗🎬",
+        "Chọn trang phục. Mỗi bộ kể một câu chuyện 👗🎬",
+        "Portrait of {subject} choosing outfit from rack of designer clothes, stylist helping, studio wardrobe area, fashion selection"
+      ],
+      [
+        "First Shot",
+        "Ảnh Đầu Tiên",
+        "Camera rolling! Finding my angles 📸",
+        "Máy chạy! Tìm góc đẹp 📸",
+        "Portrait of {subject} in first pose during photoshoot, studio lights and reflectors, photographer directing, professional set"
+      ],
+      [
+        "In the Zone",
+        "Vào Zone",
+        "In the zone. The camera loves confidence 🎯",
+        "Vào zone. Máy ảnh yêu sự tự tin 🎯",
+        "Dynamic portrait of {subject} mid-photoshoot, powerful pose, professional lighting, wind machine, in-the-moment energy"
+      ],
+      [
+        "Direction Magic",
+        "Phép Màu Đạo Diễn",
+        "The photographer said \"perfect\" and I felt it 🙌",
+        "Nhiếp ảnh gia nói \"perfect\" và tôi cảm nhận được 🙌",
+        "Portrait of {subject} interacting with photographer, reviewing shots on camera, collaborative creative process, studio energy"
+      ],
+      [
+        "The Money Shot",
+        "Ảnh Tuyệt Đỉnh",
+        "THE shot. When everything aligns perfectly ✨📸",
+        "BỨC ẢNH ĐÓ. Khi mọi thứ sắp hàng hoàn hảo ✨📸",
+        "Stunning editorial portrait of {subject}, perfect lighting, powerful pose, magazine-cover quality, the hero shot"
+      ],
+      [
+        "Wrap Party",
+        "Tiệc Kết Thúc",
+        "That's a wrap! Can't wait to see the finals 🎬🥂",
+        "Hết! Nóng lòng xem ảnh cuối 🎬🥂",
+        "Portrait of {subject} celebrating end of shoot with crew, happy tired expression, behind-the-scenes wrap, team celebration"
+      ]
+    ]
+  },
+  {
+    "slug": "clean_girl_day",
+    "title": [
+      "Clean Girl Day",
+      "Ngày Clean Girl"
+    ],
+    "desc": [
+      "The clean girl aesthetic from morning to night — less is more",
+      "Thẩm mỹ clean girl từ sáng đến tối — ít là nhiều"
+    ],
+    "cat": "beauty",
+    "type": "aesthetic",
+    "gender": "female",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, heavy makeup, colorful, cluttered",
+    "style": "minimal clean beauty, dewy natural, neutral tones",
+    "gs": 7,
+    "tags": [
+      "clean-girl",
+      "minimal",
+      "beauty",
+      "dewy",
+      "aesthetic",
+      "natural"
+    ],
+    "chs": [
+      [
+        "Dewy Morning",
+        "Sáng Dewy",
+        "Glass skin morning. Less is always more ✨🫧",
+        "Sáng da thuỷ tinh. Ít luôn là nhiều ✨🫧",
+        "Portrait of {subject} with dewy fresh morning skin, minimal skincare, natural light, clean bathroom, no-makeup glow"
+      ],
+      [
+        "Slick Bun",
+        "Búi Gọn",
+        "Slicked-back bun. The clean girl signature look 💁‍♀️",
+        "Búi tóc gọn. Look signature của clean girl 💁‍♀️",
+        "Portrait of {subject} with perfect slicked-back hair bun, gold hoop earrings, clean minimal look, neutral background"
+      ],
+      [
+        "Minimal Makeup",
+        "Makeup Tối Giản",
+        "No-makeup makeup. 5 minutes and done 💄⏱️",
+        "Makeup không-makeup. 5 phút xong 💄⏱️",
+        "Close-up portrait of {subject} with minimal no-makeup makeup, dewy skin, clean brows, natural lip, effortless beauty"
+      ],
+      [
+        "Neutral Fit",
+        "Outfit Trung Tính",
+        "Neutral outfit energy. Beige is a personality 🤎",
+        "Năng lượng outfit trung tính. Beige là cả tính cách 🤎",
+        "Portrait of {subject} in neutral tone outfit, beige and cream layers, clean girl fashion, minimalist style, full body"
+      ],
+      [
+        "Coffee Run",
+        "Đi Mua Cà Phê",
+        "Iced oat latte and clean girl energy. That's the vibe 🧋",
+        "Latte yến mạch đá và năng lượng clean girl. Đó là vibes 🧋",
+        "Portrait of {subject} walking with iced latte, clean casual outfit, city street, effortless cool, clean girl on the go"
+      ],
+      [
+        "Golden Hour Glow",
+        "Glow Golden Hour",
+        "Golden hour + clean girl aesthetic = perfection 🌅",
+        "Golden hour + thẩm mỹ clean girl = hoàn hảo 🌅",
+        "Portrait of {subject} in golden hour light, dewy glowing skin, minimal jewelry, natural beauty at its peak, clean girl aesthetic"
+      ]
+    ]
+  },
+  {
+    "slug": "coquette_princess",
+    "title": [
+      "Coquette Princess",
+      "Công Chúa Coquette"
+    ],
+    "desc": [
+      "Living my coquette era — bows, pink, and princess energy",
+      "Sống thời đại coquette — nơ, hồng, và năng lượng công chúa"
+    ],
+    "cat": "beauty",
+    "type": "aesthetic",
+    "gender": "female",
+    "dur": "once",
+    "badge": "NEW",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, masculine, dark, sporty",
+    "style": "coquette pink, soft feminine, bows and lace",
+    "gs": 8,
+    "tags": [
+      "coquette",
+      "pink",
+      "beauty",
+      "princess",
+      "feminine",
+      "bows",
+      "aesthetic"
+    ],
+    "chs": [
+      [
+        "Pink Morning",
+        "Sáng Hồng",
+        "Waking up in my pink princess bedroom. Coquette era activated 🎀",
+        "Thức dậy trong phòng ngủ công chúa hồng. Coquette era kích hoạt 🎀",
+        "Portrait of {subject} in pink-themed bedroom, satin bows, soft morning light, feminine decor, coquette aesthetic waking up"
+      ],
+      [
+        "Bow Details",
+        "Chi Tiết Nơ",
+        "Bows in my hair, bows on my dress. It's a bow world 🎀🎀",
+        "Nơ trên tóc, nơ trên váy. Đây là thế giới nơ 🎀🎀",
+        "Portrait of {subject} with pink bows in hair, lace details, soft pink outfit, coquette styling, romantic feminine"
+      ],
+      [
+        "Cherry Lips",
+        "Môi Cherry",
+        "Cherry lips and rosy cheeks. Doll energy 🍒💋",
+        "Môi cherry và má hồng. Năng lượng búp bê 🍒💋",
+        "Close-up portrait of {subject} with cherry red lips, rosy blush, pearl accessories, coquette makeup, doll-like beauty"
+      ],
+      [
+        "Tea Party",
+        "Tiệc Trà",
+        "Having a tea party because I'm a princess obviously 🫖👸",
+        "Tổ chức tiệc trà vì tôi là công chúa đương nhiên 🫖👸",
+        "Portrait of {subject} at aesthetic tea party, vintage china, pink flowers, lace tablecloth, princess energy, coquette lifestyle"
+      ],
+      [
+        "Lace & Pearls",
+        "Ren & Ngọc Trai",
+        "Lace dress and pearl necklace. Coquette meets old money 💎",
+        "Váy ren và vòng ngọc trai. Coquette gặp old money 💎",
+        "Portrait of {subject} in lace dress with pearl jewelry, romantic garden setting, soft diffused light, elegant coquette"
+      ],
+      [
+        "Sunset Princess",
+        "Công Chúa Hoàng Hôn",
+        "Sunset walks in my coquette outfit. Main character princess 🌅👸",
+        "Dạo hoàng hôn trong outfit coquette. Công chúa nhân vật chính 🌅👸",
+        "Portrait of {subject} walking at sunset in flowing pink dress, flower petals, romantic dreamy atmosphere, coquette princess energy"
+      ],
+      [
+        "Sweet Dreams",
+        "Giấc Mơ Ngọt",
+        "Goodnight from your favorite coquette girl. Sweet dreams 🎀💤",
+        "Chúc ngủ ngon từ cô gái coquette yêu thích. Mơ đẹp 🎀💤",
+        "Portrait of {subject} in silk pajamas, pink bedroom, fairy lights, soft cozy evening, coquette bedtime aesthetic"
+      ]
+    ]
+  },
+  {
+    "slug": "mob_wife_glam",
+    "title": [
+      "Mob Wife Glam",
+      "Glam Mob Wife"
+    ],
+    "desc": [
+      "Bold, unapologetic, and dripping in gold — the mob wife era",
+      "Mạnh mẽ, không xin lỗi, và phủ vàng — thời đại mob wife"
+    ],
+    "cat": "beauty",
+    "type": "aesthetic",
+    "gender": "female",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, minimalist, plain, shy",
+    "style": "bold mob wife glamour, leopard fur gold, maximalist",
+    "gs": 8,
+    "tags": [
+      "mob-wife",
+      "glam",
+      "beauty",
+      "bold",
+      "leopard",
+      "gold",
+      "aesthetic"
+    ],
+    "chs": [
+      [
+        "Wake Up Fabulous",
+        "Dậy Là Đẹp",
+        "Woke up and chose violence (fashion violence) 💅🐆",
+        "Dậy và chọn bạo lực (bạo lực thời trang) 💅🐆",
+        "Portrait of {subject} in glamorous silk robe, big hair, luxury bedroom, bold attitude from the start, mob wife morning"
+      ],
+      [
+        "The Fur",
+        "Áo Lông",
+        "The fur coat is not a choice, it's a lifestyle 🧥💎",
+        "Áo lông không phải lựa chọn, nó là lối sống 🧥💎",
+        "Portrait of {subject} in oversized fur coat, dramatic entrance, sunglasses, bold confidence, mob wife signature look"
+      ],
+      [
+        "Gold Everything",
+        "Vàng Khắp Nơi",
+        "Gold chains, gold rings, gold everything. More is more 💰",
+        "Dây vàng, nhẫn vàng, vàng khắp nơi. Nhiều hơn là nhiều hơn 💰",
+        "Portrait of {subject} dripping in gold jewelry, chunky chains and rings, bold red nails, maximalist glamour, mob wife flex"
+      ],
+      [
+        "Leopard Print",
+        "Hoạ Tiết Beo",
+        "Head to toe leopard print. It's giving BOSS 🐆",
+        "Từ đầu đến chân hoạ tiết beo. Đang cho vibes BOSS 🐆",
+        "Portrait of {subject} in full leopard print outfit, oversized sunglasses, bold attitude, street or restaurant setting, mob wife icon"
+      ],
+      [
+        "Power Lunch",
+        "Bữa Trưa Quyền Lực",
+        "Lunch at the best restaurant. They know my table 🍝👑",
+        "Trưa ở nhà hàng tốt nhất. Họ biết bàn của tôi 🍝👑",
+        "Portrait of {subject} at Italian restaurant, red wine, confident seated pose, mob wife dining, respected regular"
+      ],
+      [
+        "Red Lip Exit",
+        "Ra Về Môi Đỏ",
+        "Red lip, fur coat, head high. That's how a mob wife exits 💋",
+        "Môi đỏ, áo lông, đầu cao. Đó là cách mob wife ra về 💋",
+        "Portrait of {subject} walking away with bold red lip, fur coat billowing, confident stride, dramatic exit, mob wife energy"
+      ],
+      [
+        "Unbothered Queen",
+        "Nữ Hoàng Không Quan Tâm",
+        "Unbothered and unapologetic. The mob wife era is forever 👑🐆",
+        "Không quan tâm và không xin lỗi. Thời đại mob wife là mãi mãi 👑🐆",
+        "Portrait of {subject} in dramatic pose, full mob wife styling, powerful attitude, sunset or city background, era-defining moment"
+      ]
+    ]
+  },
+  {
+    "slug": "got_a_bae",
+    "title": [
+      "Got a Bae",
+      "Có Người Yêu Rồi"
+    ],
+    "desc": [
+      "From single to taken — our love story in 8 chapters",
+      "Từ FA đến có đôi — chuyện tình chúng tôi trong 8 chương"
+    ],
+    "cat": "couple",
+    "type": "story",
+    "gender": "couple",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, lonely, sad",
+    "style": "romantic warm tones, couple chemistry, love story",
+    "gs": 7.5,
+    "tags": [
+      "couple",
+      "love",
+      "bae",
+      "relationship",
+      "dating",
+      "romance"
+    ],
+    "chs": [
+      [
+        "First Sight",
+        "Ánh Nhìn Đầu",
+        "The moment I saw you. Everything changed 👀💕",
+        "Khoảnh khắc tôi thấy bạn. Mọi thứ thay đổi 👀💕",
+        "Portrait of {subject} in a romantic first meeting moment, cafe or park, eyes meeting, butterflies energy, warm natural light"
+      ],
+      [
+        "First Date",
+        "Hẹn Hò Đầu",
+        "First date. Nervous but excited. Best decision ever 🍽️💗",
+        "Hẹn hò đầu. Hồi hộp nhưng háo hức. Quyết định tốt nhất 🍽️💗",
+        "Portrait of {subject} on romantic first date, restaurant or cafe, smiling across table, candle light, nervous excitement"
+      ],
+      [
+        "Getting Close",
+        "Gần Nhau Hơn",
+        "We just click. Like puzzle pieces finding each other 🧩",
+        "Chúng tôi hợp nhau. Như mảnh ghép tìm thấy nhau 🧩",
+        "Portrait of {subject} couple walking together, holding hands, laughing, park or waterfront, growing connection"
+      ],
+      [
+        "Making It Official",
+        "Chính Thức",
+        "It's official. Changed my status and my whole life 💑",
+        "Chính thức. Đổi status và cả cuộc đời 💑",
+        "Portrait of {subject} couple in sweet embrace, official couple moment, romantic setting, sunset, happiness overflowing"
+      ],
+      [
+        "Our Song",
+        "Bài Hát Của Chúng Tôi",
+        "Every couple has a song. Ours plays on repeat 🎵❤️",
+        "Mỗi cặp đôi có bài hát. Bài chúng tôi lặp lại mãi 🎵❤️",
+        "Portrait of {subject} couple sharing earphones, music moment, cozy indoor setting, intimate shared experience"
+      ],
+      [
+        "Adventures Begin",
+        "Phiêu Lưu Bắt Đầu",
+        "First trip together. Adventures are better with you 🗺️",
+        "Chuyến đi đầu cùng nhau. Phiêu lưu đẹp hơn có bạn 🗺️",
+        "Portrait of {subject} couple on first trip together, scenic destination, travel couple, excited exploring together"
+      ],
+      [
+        "Meet the Friends",
+        "Gặp Bạn Bè",
+        "Introduced bae to the squad. They approved 🤝✅",
+        "Giới thiệu bae cho hội. Họ chấp thuận 🤝✅",
+        "Portrait of {subject} couple with friend group, social gathering, everyone happy, relationship milestone, friend approval"
+      ],
+      [
+        "Us Forever",
+        "Chúng Ta Mãi Mãi",
+        "This is just the beginning of our story. Us vs the world ❤️",
+        "Đây chỉ là khởi đầu câu chuyện. Chúng ta vs thế giới ❤️",
+        "Romantic portrait of {subject} couple at sunset, forehead touch, silhouette, golden light, forever love promise"
+      ]
+    ]
+  },
+  {
+    "slug": "couple_goals",
+    "title": [
+      "Couple Goals Day",
+      "Ngày Couple Mục Tiêu"
+    ],
+    "desc": [
+      "A perfect day as a couple — morning coffee to midnight cuddles",
+      "Một ngày hoàn hảo của cặp đôi — cà phê sáng đến ôm khuya"
+    ],
+    "cat": "couple",
+    "type": "vlog",
+    "gender": "couple",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "warm couple aesthetic, natural chemistry, lifestyle",
+    "gs": 7,
+    "tags": [
+      "couple-goals",
+      "love",
+      "day",
+      "relationship",
+      "cute",
+      "together"
+    ],
+    "chs": [
+      [
+        "Morning Together",
+        "Sáng Cùng Nhau",
+        "Morning coffee together. Best part of every day ☕💑",
+        "Cà phê sáng cùng nhau. Phần đẹp nhất mỗi ngày ☕💑",
+        "Portrait of {subject} couple having morning coffee together, kitchen counter, matching mugs, sleepy smiles, domestic bliss"
+      ],
+      [
+        "Matching Outfits",
+        "Đồ Đôi",
+        "Matching outfits because we're THAT couple 👫👗",
+        "Đồ đôi vì chúng tôi là CẶP ĐÓ 👫👗",
+        "Portrait of {subject} couple in coordinated outfits, mirror selfie, stylish couple fashion, matching energy"
+      ],
+      [
+        "Food Date",
+        "Hẹn Ăn",
+        "Our favorite restaurant. We always order the same thing 🍕❤️",
+        "Nhà hàng yêu thích. Luôn gọi món cũ 🍕❤️",
+        "Portrait of {subject} couple at favorite restaurant, sharing food, laughing together, intimate dining moment"
+      ],
+      [
+        "Adventure Time",
+        "Giờ Phiêu Lưu",
+        "Random adventures with you are the best adventures 🚗",
+        "Phiêu lưu ngẫu nhiên với bạn là phiêu lưu tốt nhất 🚗",
+        "Portrait of {subject} couple on spontaneous adventure, outdoor activity, fun together, carefree couple energy"
+      ],
+      [
+        "Sunset Walk",
+        "Đi Dạo Hoàng Hôn",
+        "Sunset walks with my person. Therapy for free 🌅",
+        "Đi dạo hoàng hôn với người mình. Liệu pháp miễn phí 🌅",
+        "Romantic portrait of {subject} couple walking at sunset, holding hands, golden light, peaceful waterfront or park"
+      ],
+      [
+        "Cozy Night",
+        "Đêm Ấm Áp",
+        "Movie night in. Pizza and cuddles is peak romance 🍿🛋️",
+        "Đêm xem phim. Pizza và ôm là đỉnh cao lãng mạn 🍿🛋️",
+        "Portrait of {subject} couple on couch for movie night, blankets, snacks, cozy living room, domestic couple goals"
+      ],
+      [
+        "Goodnight Kiss",
+        "Hôn Chúc Ngủ Ngon",
+        "End of a perfect day with my favorite person. Grateful 💋🌙",
+        "Kết thúc ngày hoàn hảo với người yêu thích. Biết ơn 💋🌙",
+        "Intimate portrait of {subject} couple goodnight moment, soft bedroom lighting, tender moment, love and gratitude"
+      ]
+    ]
+  },
+  {
+    "slug": "the_proposal",
+    "title": [
+      "The Proposal",
+      "Lời Cầu Hôn"
+    ],
+    "desc": [
+      "From planning to the big question — our proposal story in 9 chapters",
+      "Từ lên kế hoạch đến câu hỏi lớn — câu chuyện cầu hôn 9 chương"
+    ],
+    "cat": "couple",
+    "type": "story",
+    "gender": "couple",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "romantic cinematic, emotional, golden tones",
+    "gs": 8,
+    "tags": [
+      "proposal",
+      "engagement",
+      "couple",
+      "love",
+      "ring",
+      "romantic",
+      "milestone"
+    ],
+    "chs": [
+      [
+        "The Ring",
+        "Chiếc Nhẫn",
+        "Found THE ring. My heart is racing already 💍",
+        "Tìm được CHIẾC NHẪN ĐÓ. Tim đang đập nhanh rồi 💍",
+        "Close-up of {subject} looking at engagement ring in jewelry box, soft focused background, emotional anticipation, ring shopping moment"
+      ],
+      [
+        "Secret Plan",
+        "Kế Hoạch Bí Mật",
+        "Planning the perfect proposal. Nobody can know 🤫📋",
+        "Lên kế hoạch cầu hôn hoàn hảo. Không ai được biết 🤫📋",
+        "Portrait of {subject} secretly planning, phone calls, venue scouting, nervous excitement, keeping the secret"
+      ],
+      [
+        "The Day Begins",
+        "Ngày Bắt Đầu",
+        "Today is the day. Acting normal is the hardest part 😅",
+        "Hôm nay là ngày đó. Giả vờ bình thường là phần khó nhất 😅",
+        "Portrait of {subject} couple having normal morning, one nervous while hiding it, casual breakfast, butterflies"
+      ],
+      [
+        "Getting There",
+        "Đến Nơi",
+        "Taking her to our special place. She has no idea 🚗💕",
+        "Đưa cô ấy đến nơi đặc biệt. Cô ấy không biết gì 🚗💕",
+        "Portrait of {subject} couple arriving at romantic scenic location, beautiful setup in background, anticipation building"
+      ],
+      [
+        "The Setup",
+        "Dàn Cảnh",
+        "The setup is perfect. Flowers, candles, everything ready 🌹🕯️",
+        "Dàn cảnh hoàn hảo. Hoa, nến, mọi thứ sẵn sàng 🌹🕯️",
+        "Portrait of {subject} with romantic proposal setup, flowers and candles, scenic location, breathtaking arrangement, love in every detail"
+      ],
+      [
+        "THE Moment",
+        "KHOẢNH KHẮC ĐÓ",
+        "Got down on one knee. The most important question of my life 💍🧎",
+        "Quỳ một gối. Câu hỏi quan trọng nhất đời 💍🧎",
+        "Emotional portrait of {subject} in proposal moment, one knee, ring presented, tears of joy, the big question, golden hour"
+      ],
+      [
+        "She Said Yes",
+        "Cô Ấy Nói Có",
+        "SHE SAID YES! I'm the happiest person alive 😭💍❤️",
+        "CÔ ẤY NÓI CÓ! Tôi là người hạnh phúc nhất 😭💍❤️",
+        "Joyful portrait of {subject} couple after saying yes, tearful embrace, ring on finger, celebration, overwhelming happiness"
+      ],
+      [
+        "Ring Selfie",
+        "Selfie Nhẫn",
+        "First photo as fiancés. Look at that ring 💎📸",
+        "Ảnh đầu tiên là hôn thê. Nhìn chiếc nhẫn 💎📸",
+        "Portrait of {subject} couple showing off engagement ring, selfie together, beaming smiles, ring in focus, newly engaged"
+      ],
+      [
+        "Telling Everyone",
+        "Báo Tin",
+        "Called everyone we love. The screaming was loud 📱🎉",
+        "Gọi mọi người thương. Tiếng hét rất to 📱🎉",
+        "Portrait of {subject} couple FaceTiming family with excitement, sharing engagement news, phone screen reactions, joy spreading"
+      ]
+    ]
+  },
+  {
+    "slug": "anniversary_trip",
+    "title": [
+      "Anniversary Trip",
+      "Chuyến Đi Kỷ Niệm"
+    ],
+    "desc": [
+      "Celebrating our anniversary with a dream trip together",
+      "Kỷ niệm ngày yêu bằng chuyến đi mơ ước cùng nhau"
+    ],
+    "cat": "couple",
+    "type": "travel",
+    "gender": "couple",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "romantic travel, warm couple tones, love journey",
+    "gs": 7.5,
+    "tags": [
+      "anniversary",
+      "trip",
+      "couple",
+      "love",
+      "travel",
+      "celebration"
+    ],
+    "chs": [
+      [
+        "Happy Anniversary",
+        "Chúc Mừng Kỷ Niệm",
+        "Happy anniversary to us! Time for a trip ✈️💕",
+        "Chúc mừng kỷ niệm! Thời gian đi chơi ✈️💕",
+        "Portrait of {subject} couple at airport with anniversary excitement, travel outfits, loving looks, departure together"
+      ],
+      [
+        "Checking In",
+        "Nhận Phòng",
+        "Checking into our dream hotel. The room has THAT view 🏨",
+        "Nhận phòng khách sạn mơ ước. Phòng có VIEW ĐÓ 🏨",
+        "Portrait of {subject} couple at luxury hotel room, stunning view, romantic room setup, flowers and champagne"
+      ],
+      [
+        "Explore Together",
+        "Khám Phá Cùng Nhau",
+        "Exploring a new city hand in hand. My favorite adventure partner 🗺️",
+        "Khám phá thành phố mới nắm tay. Đối tác phiêu lưu yêu thích 🗺️",
+        "Portrait of {subject} couple exploring scenic destination, walking together, discovering new places, adventure couple"
+      ],
+      [
+        "Romantic Dinner",
+        "Bữa Tối Lãng Mạn",
+        "Anniversary dinner for two. Cheers to us 🥂🕯️",
+        "Bữa tối kỷ niệm cho hai. Chúc mừng chúng ta 🥂🕯️",
+        "Portrait of {subject} couple at romantic candlelit dinner, toasting, anniversary celebration, intimate restaurant, dressed up"
+      ],
+      [
+        "The Gift",
+        "Món Quà",
+        "Surprised my love with a gift. The reaction was everything 🎁😍",
+        "Tặng bất ngờ cho người yêu. Phản ứng là tất cả 🎁😍",
+        "Portrait of {subject} couple exchanging anniversary gifts, surprised reaction, sentimental moment, love and gratitude"
+      ],
+      [
+        "Sunset Together",
+        "Hoàng Hôn Cùng Nhau",
+        "Watching the sunset together. Every year better than the last 🌅❤️",
+        "Ngắm hoàng hôn cùng nhau. Mỗi năm đẹp hơn năm trước 🌅❤️",
+        "Romantic portrait of {subject} couple watching sunset together, arm around each other, scenic overlook, golden light, timeless love"
+      ],
+      [
+        "Forever and Always",
+        "Mãi Mãi Và Luôn Luôn",
+        "Here's to many more years of us. I love you always ❤️♾️",
+        "Chúc cho nhiều năm nữa của chúng ta. Yêu em/anh luôn ❤️♾️",
+        "Portrait of {subject} couple in final loving moment, foreheads touching, sunset silhouette, eternal love promise, anniversary complete"
+      ]
+    ]
+  },
+  {
+    "slug": "long_distance",
+    "title": [
+      "Long Distance Love",
+      "Yêu Xa"
+    ],
+    "desc": [
+      "Missing you across miles — our long distance love story",
+      "Nhớ em/anh qua hàng dặm — câu chuyện tình yêu xa"
+    ],
+    "cat": "couple",
+    "type": "story",
+    "gender": "couple",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "emotional distance love, soft melancholy warmth, longing",
+    "gs": 7.5,
+    "tags": [
+      "long-distance",
+      "love",
+      "couple",
+      "missing",
+      "facetime",
+      "reunion"
+    ],
+    "chs": [
+      [
+        "The Goodbye",
+        "Lời Tạm Biệt",
+        "Airport goodbye. The hardest part of long distance ✈️😢",
+        "Tạm biệt sân bay. Phần khó nhất của yêu xa ✈️😢",
+        "Emotional portrait of {subject} couple saying goodbye at airport, tearful embrace, departure gate, bittersweet moment"
+      ],
+      [
+        "FaceTime Nights",
+        "Đêm FaceTime",
+        "FaceTime until we fall asleep. You're my last thought 📱💤",
+        "FaceTime đến khi ngủ. Em/anh là suy nghĩ cuối cùng 📱💤",
+        "Portrait of {subject} on FaceTime call in bed at night, phone screen showing partner, cozy bedroom, late night connection"
+      ],
+      [
+        "Missing You",
+        "Nhớ Em/Anh",
+        "Looking at old photos. Missing you hits different tonight 📸💔",
+        "Xem lại ảnh cũ. Nhớ em/anh khác biệt tối nay 📸💔",
+        "Portrait of {subject} looking at phone photos of partner, nostalgic expression, rainy window, missing someone deeply"
+      ],
+      [
+        "Care Package",
+        "Gói Yêu Thương",
+        "Sent a care package. Love travels through mail too 📦❤️",
+        "Gửi gói yêu thương. Tình yêu đi qua bưu điện 📦❤️",
+        "Portrait of {subject} preparing or receiving care package, handwritten letter, gifts, long distance love effort"
+      ],
+      [
+        "Counting Days",
+        "Đếm Ngày",
+        "Counting down the days until I see you again. 12 more ⏰",
+        "Đếm ngược ngày gặp lại. Còn 12 ngày ⏰",
+        "Portrait of {subject} marking calendar, anticipation, looking at countdown, hopeful expression, waiting for reunion"
+      ],
+      [
+        "The Reunion",
+        "Ngày Tái Hợp",
+        "REUNION DAY! Running through the airport like a movie 🏃‍♀️💕",
+        "NGÀY TÁI HỢP! Chạy qua sân bay như trong phim 🏃‍♀️💕",
+        "Joyful portrait of {subject} couple reuniting at airport, running embrace, tears of joy, airport arrival, movie-like reunion"
+      ],
+      [
+        "Together Again",
+        "Bên Nhau Lại",
+        "Finally in your arms again. Distance makes love stronger 💪❤️",
+        "Cuối cùng trong vòng tay em/anh. Khoảng cách làm tình yêu mạnh hơn 💪❤️",
+        "Portrait of {subject} couple together again, tight embrace, relief and happiness, together at last, love conquers distance"
+      ]
+    ]
+  },
+  {
+    "slug": "first_date",
+    "title": [
+      "First Date Butterflies",
+      "Hẹn Hò Đầu Tim Đập"
+    ],
+    "desc": [
+      "The nervous excitement of a perfect first date",
+      "Sự hồi hộp háo hức của buổi hẹn hò đầu hoàn hảo"
+    ],
+    "cat": "couple",
+    "type": "story",
+    "gender": "female",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "romantic first date, nervous excitement, warm tones",
+    "gs": 7,
+    "tags": [
+      "first-date",
+      "butterflies",
+      "couple",
+      "dating",
+      "nervous",
+      "romance"
+    ],
+    "chs": [
+      [
+        "Getting Ready",
+        "Chuẩn Bị",
+        "Changed outfits 5 times. First date energy is REAL 👗😅",
+        "Thay đồ 5 lần. Năng lượng hẹn hò đầu là THẬT 👗😅",
+        "Portrait of {subject} getting ready for first date, clothes scattered, mirror check, nervous but excited, bedroom preparation"
+      ],
+      [
+        "The Arrival",
+        "Đến Nơi",
+        "Heart racing as I walk in. Please don't be weird, please 💓",
+        "Tim đập khi bước vào. Xin đừng weird, xin 💓",
+        "Portrait of {subject} arriving at date venue, restaurant or cafe entrance, nervous smile, first date anticipation"
+      ],
+      [
+        "First Laugh",
+        "Tiếng Cười Đầu",
+        "First laugh together. Okay this might actually be amazing 😄",
+        "Tiếng cười đầu cùng nhau. OK đây có thể tuyệt vời thật 😄",
+        "Portrait of {subject} laughing genuinely at date, relaxing into the moment, chemistry building, natural connection"
+      ],
+      [
+        "The Vibe",
+        "Vibes",
+        "The conversation flows so naturally. No awkward silences 🗣️✨",
+        "Cuộc trò chuyện trôi tự nhiên. Không có khoảng lặng ngượng 🗣️✨",
+        "Portrait of {subject} in deep conversation at date, engaged and connected, romantic lighting, two people clicking"
+      ],
+      [
+        "Walking Together",
+        "Đi Bộ Cùng Nhau",
+        "The walk after dinner. Neither of us wants the night to end 🌙",
+        "Đi bộ sau bữa tối. Không ai muốn đêm kết thúc 🌙",
+        "Portrait of {subject} walking together after date, moonlit street, lingering together, not ready to say goodbye"
+      ],
+      [
+        "The Text After",
+        "Tin Nhắn Sau",
+        "Got home and immediately texted. Can't wait for date 2 📱💕",
+        "Về nhà và nhắn tin ngay. Nóng lòng hẹn hò lần 2 📱💕",
+        "Portrait of {subject} smiling at phone after first date, lying on bed, texting, post-date glow, butterflies confirmed"
+      ]
+    ]
+  },
+  {
+    "slug": "beach_couple",
+    "title": [
+      "Beach Couple",
+      "Cặp Đôi Biển"
+    ],
+    "desc": [
+      "Sun, sand, and love — our tropical couple getaway",
+      "Nắng, cát, và tình yêu — kỳ nghỉ biển của đôi ta"
+    ],
+    "cat": "couple",
+    "type": "travel",
+    "gender": "couple",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cold, urban, indoor",
+    "style": "tropical beach couple, vivid summer, sun-kissed",
+    "gs": 7.5,
+    "tags": [
+      "beach",
+      "couple",
+      "tropical",
+      "summer",
+      "love",
+      "vacation"
+    ],
+    "chs": [
+      [
+        "Beach Arrival",
+        "Đến Biển",
+        "Toes in the sand. Beach vacation with bae activated 🏖️",
+        "Ngón chân trên cát. Kỳ nghỉ biển với bae kích hoạt 🏖️",
+        "Portrait of {subject} couple arriving at tropical beach, first sight of ocean, excited, travel couple, sunny paradise"
+      ],
+      [
+        "Ocean Dip",
+        "Xuống Biển",
+        "First ocean dip together. The water is perfect 🌊💙",
+        "Lần đầu xuống biển cùng nhau. Nước hoàn hảo 🌊💙",
+        "Portrait of {subject} couple in crystal turquoise ocean water, playing in waves, splashing, fun beach couple moment"
+      ],
+      [
+        "Beach Selfie",
+        "Selfie Biển",
+        "The beach selfie every couple needs 📸🌴",
+        "Selfie biển mà mọi cặp đôi cần 📸🌴",
+        "Portrait of {subject} couple taking beach selfie, palm trees behind, sunglasses, matching swimwear, iconic couple photo"
+      ],
+      [
+        "Sunset Beach",
+        "Hoàng Hôn Biển",
+        "Beach sunset with my person. This is what love looks like 🌅",
+        "Hoàng hôn biển với người mình. Đây là tình yêu 🌅",
+        "Romantic portrait of {subject} couple on beach at sunset, silhouette, golden orange sky, walking along shore"
+      ],
+      [
+        "Bonfire Night",
+        "Đêm Lửa Trại",
+        "Beach bonfire under the stars. Just us and the waves 🔥⭐",
+        "Lửa trại biển dưới sao. Chỉ có chúng tôi và sóng 🔥⭐",
+        "Portrait of {subject} couple at beach bonfire at night, fire glow on faces, starry sky, intimate romantic night"
+      ],
+      [
+        "Matching Tans",
+        "Cùng Rám Nắng",
+        "Matching tan lines. Best vacation of our lives 🤎☀️",
+        "Vết nắng đôi. Kỳ nghỉ đẹp nhất đời 🤎☀️",
+        "Portrait of {subject} couple sun-kissed, beach casual, golden skin glow, relaxed vacation vibes, happy together"
+      ],
+      [
+        "Beach Love",
+        "Tình Biển",
+        "The beach brought us closer. Salty hair, don't care 🧂💕",
+        "Biển mang chúng tôi gần hơn. Tóc mặn, không quan tâm 🧂💕",
+        "Portrait of {subject} couple in tender moment on beach, wind in hair, ocean behind, love amplified by paradise"
+      ]
+    ]
+  },
+  {
+    "slug": "winter_romance",
+    "title": [
+      "Winter Romance",
+      "Tình Yêu Mùa Đông"
+    ],
+    "desc": [
+      "Cold weather, warm hearts — our cozy winter love story",
+      "Thời tiết lạnh, trái tim ấm — câu chuyện tình mùa đông ấm áp"
+    ],
+    "cat": "couple",
+    "type": "story",
+    "gender": "couple",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, summer, tropical, hot",
+    "style": "cozy winter warmth, frost and love, snowy romance",
+    "gs": 7.5,
+    "tags": [
+      "winter",
+      "romance",
+      "couple",
+      "cozy",
+      "snow",
+      "love",
+      "cold"
+    ],
+    "chs": [
+      [
+        "Snowy Morning",
+        "Sáng Tuyết",
+        "Woke up to snow. Winter with you is magical ❄️☕",
+        "Thức dậy có tuyết. Mùa đông với bạn thật kỳ diệu ❄️☕",
+        "Portrait of {subject} couple looking out window at snowy morning, coffee mugs, cozy pajamas, warm indoor contrast to snow outside"
+      ],
+      [
+        "Bundled Up",
+        "Quấn Ấm",
+        "Matching scarves and holding hands. Winter couple goals 🧣💑",
+        "Khăn đôi và nắm tay. Couple mùa đông mục tiêu 🧣💑",
+        "Portrait of {subject} couple bundled up in winter clothes, matching scarves, walking in snow, breath visible, cozy together"
+      ],
+      [
+        "Snow Play",
+        "Chơi Tuyết",
+        "Snowball fight! Love is playful 🌨️😂",
+        "Đánh nhau bằng tuyết! Tình yêu vui tươi 🌨️😂",
+        "Fun portrait of {subject} couple having snowball fight, laughing, snowy landscape, playful winter romance"
+      ],
+      [
+        "Hot Chocolate",
+        "Sô-cô-la Nóng",
+        "Warming up with hot chocolate. Your hands keep mine warm ☕🤲",
+        "Sưởi ấm với sô-cô-la nóng. Tay bạn giữ ấm tay tôi ☕🤲",
+        "Portrait of {subject} couple sharing hot chocolate at winter cafe, warm mugs, frosted window, cozy intimate moment"
+      ],
+      [
+        "Ice Skating",
+        "Trượt Băng",
+        "Ice skating together. I fell but you caught me 💕⛸️",
+        "Trượt băng cùng nhau. Tôi ngã nhưng bạn đỡ 💕⛸️",
+        "Portrait of {subject} couple ice skating, holding hands on ice, winter wonderland rink, romantic winter activity"
+      ],
+      [
+        "Fireside Cuddle",
+        "Ôm Bên Lò Sưởi",
+        "Fireplace cuddles. Winter nights with you are everything 🔥🛋️",
+        "Ôm bên lò sưởi. Đêm đông với bạn là tất cả 🔥🛋️",
+        "Portrait of {subject} couple cuddling by fireplace, blanket, warm golden firelight, cozy cabin, winter night romance"
+      ],
+      [
+        "Snow Kiss",
+        "Hôn Dưới Tuyết",
+        "Kiss in the snow. Winter romance is our vibe ❄️💋",
+        "Hôn dưới tuyết. Tình yêu mùa đông là vibes chúng tôi ❄️💋",
+        "Romantic portrait of {subject} couple kissing in falling snow, winter evening, snowflakes, warm glow, fairy tale winter moment"
+      ]
+    ]
+  },
+  {
+    "slug": "prom_night",
+    "title": [
+      "Prom Night",
+      "Đêm Prom"
+    ],
+    "desc": [
+      "The magical prom night — from getting ready to the last dance",
+      "Đêm prom kỳ diệu — từ chuẩn bị đến điệu nhảy cuối"
+    ],
+    "cat": "couple",
+    "type": "story",
+    "gender": "couple",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "prom night glamour, fairy lights, youthful romance",
+    "gs": 7.5,
+    "tags": [
+      "prom",
+      "night",
+      "couple",
+      "dance",
+      "high-school",
+      "glamour"
+    ],
+    "chs": [
+      [
+        "Prom Ready",
+        "Sẵn Sàng Prom",
+        "Getting prom ready. This is THE night 💄👗",
+        "Chuẩn bị prom. Đây là ĐÊM ĐÓ 💄👗",
+        "Portrait of {subject} getting ready for prom, dress laid out, makeup in progress, excited anticipation, bedroom preparation"
+      ],
+      [
+        "The Corsage",
+        "Bông Hoa Cài",
+        "He brought the corsage. Matching our outfits perfectly 🌹",
+        "Anh mang bông hoa cài. Phối hoàn hảo với trang phục 🌹",
+        "Portrait of {subject} couple with corsage and boutonnière, prom tradition, house porch, parents watching, sweet moment"
+      ],
+      [
+        "Grand Entrance",
+        "Lối Vào Lộng Lẫy",
+        "Walking into prom. All eyes on us 👀✨",
+        "Bước vào prom. Mọi ánh mắt đổ về chúng tôi 👀✨",
+        "Portrait of {subject} couple making grand entrance at prom venue, decorated gymnasium or ballroom, fairy lights, prom decorations"
+      ],
+      [
+        "First Dance",
+        "Điệu Nhảy Đầu",
+        "Our first dance. Time stopped for a moment 💃🕺",
+        "Điệu nhảy đầu tiên. Thời gian dừng lại một chút 💃🕺",
+        "Portrait of {subject} couple slow dancing at prom, spotlight, other couples around, romantic prom dance moment"
+      ],
+      [
+        "Prom Photo",
+        "Ảnh Prom",
+        "THE prom photo. This one's going in the yearbook 📸👑",
+        "BỨC ẢNH prom. Cái này vào sách kỷ yếu 📸👑",
+        "Portrait of {subject} couple posing for classic prom photo, backdrop with decorations, formal pose, milestone high school moment"
+      ],
+      [
+        "Dance Floor",
+        "Sàn Nhảy",
+        "When our song came on, the dance floor was OURS 🎵🕺",
+        "Khi bài hát chúng tôi bật lên, sàn nhảy là CỦA CHÚNG TÔI 🎵🕺",
+        "Portrait of {subject} couple dancing freely on prom dance floor, fun energetic dancing, friends around, party energy"
+      ],
+      [
+        "Prom Night End",
+        "Kết Thúc Đêm Prom",
+        "Best night of our lives so far. Prom 2026 forever 💕🎓",
+        "Đêm đẹp nhất đời cho đến nay. Prom 2026 mãi mãi 💕🎓",
+        "Portrait of {subject} couple outside after prom, starry night, formal wear slightly disheveled, happy tired, unforgettable night"
+      ]
+    ]
+  },
+  {
+    "slug": "moving_in",
+    "title": [
+      "Moving In Together",
+      "Dọn Về Ở Chung"
+    ],
+    "desc": [
+      "The big step — moving in together and building our home",
+      "Bước tiến lớn — dọn về ở chung và xây dựng tổ ấm"
+    ],
+    "cat": "couple",
+    "type": "story",
+    "gender": "couple",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "domestic warmth, new home energy, couple lifestyle",
+    "gs": 7,
+    "tags": [
+      "moving-in",
+      "home",
+      "couple",
+      "milestone",
+      "domestic",
+      "together"
+    ],
+    "chs": [
+      [
+        "Moving Day",
+        "Ngày Dọn Nhà",
+        "Moving day! All our stuff in one truck. This is happening 📦🚚",
+        "Ngày dọn nhà! Tất cả đồ trên một xe. Nó đang xảy ra 📦🚚",
+        "Portrait of {subject} couple with moving boxes, new apartment entrance, excited first day, cardboard boxes stacked"
+      ],
+      [
+        "Our Keys",
+        "Chìa Khoá Của Chúng Ta",
+        "OUR keys to OUR place. This hit different 🔑🏠",
+        "Chìa khoá CỦA CHÚNG TA cho NƠI CỦA CHÚNG TA. Cảm giác khác biệt 🔑🏠",
+        "Portrait of {subject} couple holding keys to new apartment, standing at front door, proud milestone moment, new home"
+      ],
+      [
+        "Unpacking Chaos",
+        "Hỗn Loạn Mở Hộp",
+        "Unpacking is chaos but it's OUR chaos and I love it 📦😂",
+        "Mở hộp hỗn loạn nhưng là hỗn loạn CỦA CHÚNG TÔI 📦😂",
+        "Portrait of {subject} couple unpacking boxes together, messy but fun, teamwork, new apartment, building together"
+      ],
+      [
+        "First Dinner",
+        "Bữa Tối Đầu",
+        "First dinner in our new home. Floor picnic with pizza 🍕🏠",
+        "Bữa tối đầu ở nhà mới. Picnic trên sàn với pizza 🍕🏠",
+        "Portrait of {subject} couple having floor picnic in new empty apartment, pizza box, candles, romantic first meal together at home"
+      ],
+      [
+        "Decorating",
+        "Trang Trí",
+        "Making this place ours. Every piece has meaning 🖼️🪴",
+        "Biến nơi này thành của chúng tôi. Mỗi món đồ có ý nghĩa 🖼️🪴",
+        "Portrait of {subject} couple decorating new home, hanging photos, arranging plants, making it theirs, nesting together"
+      ],
+      [
+        "Home Sweet Home",
+        "Nhà Ấm Áp",
+        "Home is wherever you are. Our place is finally done 🏡❤️",
+        "Nhà là nơi có bạn. Nơi của chúng ta cuối cùng xong 🏡❤️",
+        "Portrait of {subject} couple in completed cozy home, comfortable on couch, home sweet home, domestic happiness, warm lighting"
+      ],
+      [
+        "Netflix & Us",
+        "Netflix & Chúng Ta",
+        "First movie night on OUR couch in OUR apartment. Peak happiness 🛋️🍿",
+        "Đêm phim đầu trên sofa CỦA CHÚNG TÔI trong căn hộ CỦA CHÚNG TÔI. Đỉnh cao hạnh phúc 🛋️🍿",
+        "Portrait of {subject} couple watching movie on couch, blankets, snacks, cozy living room, domestic bliss achieved"
+      ]
+    ]
+  }
+]

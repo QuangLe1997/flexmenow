@@ -83,8 +83,8 @@ class _StoryCardGlassState extends State<StoryCardGlass>
                         ),
                       ),
 
-                      // 3D cards
-                      ...List.generate(n, (i) => _buildCarouselCard(i, n)),
+                      // 3D cards — sorted so front card renders last (on top)
+                      ..._sortedCarouselCards(n),
 
                       // Category pill top-left
                       Positioned(
@@ -116,6 +116,18 @@ class _StoryCardGlassState extends State<StoryCardGlass>
     );
   }
 
+  List<Widget> _sortedCarouselCards(int n) {
+    final indices = List.generate(n, (i) => i);
+    indices.sort((a, b) {
+      final da = (a - currentImageIndex + n) % n;
+      final db = (b - currentImageIndex + n) % n;
+      if (da == 0) return 1; // front card last (renders on top)
+      if (db == 0) return -1;
+      return da.compareTo(db);
+    });
+    return indices.map((i) => _buildCarouselCard(i, n)).toList();
+  }
+
   Widget _buildCarouselCard(int i, int n) {
     final d = (i - currentImageIndex + n) % n;
     double tx, ry, sc, op;
@@ -123,9 +135,9 @@ class _StoryCardGlassState extends State<StoryCardGlass>
     if (d == 0) {
       tx = 0; ry = 0; sc = 1.0; op = 1.0;
     } else if (d == 1) {
-      tx = 65; ry = 15; sc = 0.78; op = 0.55;
+      tx = 65; ry = 15; sc = 0.78; op = 0.75;
     } else if (d == n - 1) {
-      tx = -65; ry = -15; sc = 0.78; op = 0.55;
+      tx = -65; ry = -15; sc = 0.78; op = 0.75;
     } else {
       tx = 0; ry = 0; sc = 0.6; op = 0.0;
     }

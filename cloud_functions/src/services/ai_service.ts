@@ -1,9 +1,4 @@
 import { getGenAIClient, getGeminiModel, getGeminiImageModel } from "../config/ai";
-import {
-  IMAGEN_MODEL,
-  PROJECT_ID,
-  VERTEX_AI_LOCATION,
-} from "../config/constants";
 import { logger } from "../utils/logger";
 import { throwInternal } from "../utils/errors";
 
@@ -196,106 +191,84 @@ export async function generateImage(
 }
 
 /**
- * Enhance a photo subtly using Imagen — FlexLocket "Glow" feature.
+ * Enhance a photo subtly using Gemini — FlexLocket "Glow" feature.
  *
  * Unlike FlexShot (which generates new images from templates),
  * FlexLocket enhances the original photo with subtle improvements:
  * better lighting, skin tone, color grading — while keeping the
  * subject exactly as they are. Nobody should tell it's AI-enhanced.
  *
- * Uses STYLE_REFERENCE (not SUBJECT_REFERENCE) with the same image
- * so Imagen applies subtle artistic enhancement without transforming the face.
+ * Uses Gemini native image generation with the original photo as reference.
  */
 export async function enhancePhoto(
   inputImageBase64: string,
   enhancementPrompt: string,
   config: ImagenConfig = {}
 ): Promise<Buffer> {
-  const {
-    numberOfImages = 1,
-    aspectRatio = "1:1",
-    safetyFilterLevel = "BLOCK_MEDIUM_AND_ABOVE",
-    negativePrompt,
-  } = config;
+  const { aspectRatio = "1:1", negativePrompt } = config;
 
-  const endpoint = `https://${VERTEX_AI_LOCATION}-aiplatform.googleapis.com/v1/projects/${PROJECT_ID}/locations/${VERTEX_AI_LOCATION}/publishers/google/models/${IMAGEN_MODEL}:predict`;
+  const client = getGenAIClient();
+  const model = getGeminiImageModel();
 
-  const instances = [
-    {
-      prompt: `A photo of [1]. ${enhancementPrompt}`,
-      ...(negativePrompt && { negativePrompt }),
-      referenceImages: [
-        {
-          referenceImage: {
-            bytesBase64Encoded: inputImageBase64,
-          },
-          referenceType: "REFERENCE_TYPE_SUBJECT",
-          referenceId: 1,
-          subjectImageConfig: {
-            subjectType: "SUBJECT_TYPE_PERSON",
-          },
-        },
-      ],
-    },
-  ];
+  const finalPrompt = negativePrompt
+    ? `${enhancementPrompt}\n\nAvoid: ${negativePrompt}`
+    : enhancementPrompt;
 
-  const parameters = {
-    sampleCount: numberOfImages,
-    aspectRatio,
-    safetyFilterLevel,
-    personGeneration: "allow_all",
-  };
+  const instruction = [
+    "Enhance this photo with subtle, professional retouching.",
+    "Keep the person's face, identity, pose, background, and clothing EXACTLY the same.",
+    "Only apply lighting, color grading, and skin tone improvements.",
+    "The result must look like the same photo with better lighting — NOT a new image.",
+    "",
+    finalPrompt,
+  ].join("\n");
+
+  logger.info(`Gemini enhance prompt: ${instruction.substring(0, 200)}`, LOG_CTX);
 
   return withRetry(async () => {
     try {
-      const { GoogleAuth } = await import("google-auth-library");
-      const auth = new GoogleAuth({
-        scopes: ["https://www.googleapis.com/auth/cloud-platform"],
-      });
-      const client = await auth.getClient();
-      const accessToken = await client.getAccessToken();
-
-      const response = await fetch(endpoint, {
-        method: "POST",
-        headers: {
-          "Authorization": `Bearer ${accessToken.token}`,
-          "Content-Type": "application/json",
+      const response = await client.models.generateContent({
+        model,
+        contents: [
+          {
+            role: "user",
+            parts: [
+              { inlineData: { mimeType: "image/jpeg", data: inputImageBase64 } },
+              { text: instruction },
+            ],
+          },
+        ],
+        config: {
+          responseModalities: ["IMAGE"],
+          imageConfig: {
+            aspectRatio: aspectRatio as "1:1" | "3:4" | "4:3" | "9:16" | "16:9",
+          },
         },
-        body: JSON.stringify({ instances, parameters }),
       });
 
-      if (!response.ok) {
-        const errorBody = await response.text();
-        // Check for rate limit in REST response
-        if (response.status === 429) {
-          throw new Error(`429 RESOURCE_EXHAUSTED: ${errorBody}`);
+      const candidates = response.candidates;
+      if (!candidates || candidates.length === 0) {
+        logger.error("Gemini enhance returned no candidates", new Error("empty candidates"), LOG_CTX);
+        throwInternal("Photo enhancement returned no candidates — may have been filtered by safety.");
+      }
+
+      const parts = candidates[0].content?.parts;
+      if (parts) {
+        for (const part of parts) {
+          if (part.inlineData?.data) {
+            return Buffer.from(part.inlineData.data, "base64");
+          }
         }
-        logger.error("Imagen enhance API error", new Error(errorBody), LOG_CTX);
-        throwInternal(`Photo enhancement failed: ${response.status}`);
       }
 
-      const result = await response.json() as Record<string, unknown>;
-
-      logger.info(`Imagen enhance response keys: ${Object.keys(result).join(", ")}`, LOG_CTX);
-
-      const predictions = result.predictions as Array<{ bytesBase64Encoded: string }> | undefined;
-      if (!predictions || predictions.length === 0) {
-        const debugResult = { ...result };
-        delete debugResult.predictions;
-        logger.error("Imagen enhance returned no predictions", new Error(JSON.stringify(debugResult).substring(0, 1000)), LOG_CTX);
-        throwInternal("Photo enhancement returned no predictions — image may have been filtered by safety.");
-      }
-
-      return Buffer.from(predictions[0].bytesBase64Encoded, "base64");
+      logger.error("Gemini enhance returned no image data", new Error("no inlineData"), LOG_CTX);
+      throwInternal("Photo enhancement returned no image data.");
     } catch (error) {
       if (error instanceof Error && error.message.includes("enhancement")) {
         throw error;
       }
-      if (error instanceof Error && error.message.includes("no predictions")) {
-        throw error;
-      }
       logger.error("Photo enhancement unexpected error", error, LOG_CTX);
-      throw error; // Re-throw for retry logic
+      throw error; // Re-throw for retry logic to catch 429s
     }
   }, "enhancePhoto");
 }

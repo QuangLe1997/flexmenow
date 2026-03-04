@@ -1,4 +1,5 @@
 import { onCall, CallableRequest } from "firebase-functions/v2/https";
+import { defineSecret } from "firebase-functions/params";
 import { FieldValue } from "firebase-admin/firestore";
 import { getDb } from "../config/firebase";
 import {
@@ -35,6 +36,8 @@ import {
 } from "../utils/errors";
 import { logger } from "../utils/logger";
 
+const geminiApiKeys = defineSecret("GEMINI_API_KEYS");
+
 const LOG_CTX = { functionName: "genFlexTale" };
 
 /**
@@ -70,6 +73,7 @@ export const genFlexTale = onCall(
     timeoutSeconds: FLEXTALE_TIMEOUT_SECONDS,
     memory: FLEXTALE_MEMORY,
     maxInstances: 20,
+    secrets: [geminiApiKeys],
   },
   async (request: CallableRequest<GenFlexTaleInput>): Promise<GenFlexTaleResult> => {
     // 1. Auth check
@@ -195,23 +199,13 @@ export const genFlexTale = onCall(
       const inputImageBuffer = await downloadImage(inputImagePath);
       const referenceImageBase64 = bufferToBase64(inputImageBuffer);
 
-      // 9. Process each scene SEQUENTIALLY for consistency
-      //    Add delay between scenes to avoid Vertex AI rate limits (429)
-      const INTER_SCENE_DELAY_MS = 8000; // 8s between scenes to avoid Vertex AI 429
-      let previousSceneImageBase64: string | null = null;
+      // 9. Process ALL scenes in PARALLEL
+      //    Each scene uses a random API key from the pool to avoid rate limits.
+      //    Style consistency is maintained via the shared reference image +
+      //    story context in the prompt (no sequential previousScene dependency).
       let completedCount = 0;
 
-      for (let sceneIdx = 0; sceneIdx < packScenes.length; sceneIdx++) {
-        const packScene = packScenes[sceneIdx];
-
-        // Delay between scenes (skip first scene)
-        if (sceneIdx > 0) {
-          logger.debug(
-            `Waiting ${INTER_SCENE_DELAY_MS}ms before scene ${packScene.sceneOrder}`,
-            { ...LOG_CTX, userId, storyId }
-          );
-          await new Promise((r) => setTimeout(r, INTER_SCENE_DELAY_MS));
-        }
+      const scenePromises = packScenes.map(async (packScene, sceneIdx) => {
         const sceneStartTime = Date.now();
         const sceneDocRef = scenesCollection.doc(`scene_${packScene.sceneOrder}`);
 
@@ -224,12 +218,13 @@ export const genFlexTale = onCall(
             `Story: ${pack.name}`,
             `Scene ${packScene.sceneOrder}/${totalScenes}: ${packScene.sceneName}`,
             `Category: ${pack.category}`,
-            completedCount > 0
-              ? `This is a continuation scene. Maintain visual consistency with previous scenes.`
-              : `This is the opening scene of the story.`,
+            `Maintain a consistent cinematic visual style across all scenes of this story.`,
+            sceneIdx === 0
+              ? `This is the opening scene of the story.`
+              : `This is scene ${packScene.sceneOrder} — keep the same color palette, lighting style, and mood as other scenes in this story.`,
           ].join(". ");
 
-          // Replace {subject} placeholder — Imagen uses [1] reference for the person
+          // Replace {subject} placeholder
           const sceneBasePrompt = (packScene.promptTemplate || "").replace(/\{subject\}/gi, "the person");
           const optimizedPrompt = await optimizePrompt(
             sceneBasePrompt,
@@ -238,6 +233,8 @@ export const genFlexTale = onCall(
           );
 
           // 9b. Generate image with face/subject consistency
+          //     previousScene = null → each scene uses only the reference image
+          //     Style consistency comes from the story context in the prompt
           const imagenConfig: ImagenConfig = {
             numberOfImages: 1,
             aspectRatio: packScene.imagenParams?.aspectRatio || "9:16",
@@ -247,16 +244,13 @@ export const genFlexTale = onCall(
           const outputBuffer = await generateImageWithConsistency(
             optimizedPrompt,
             referenceImageBase64,
-            previousSceneImageBase64,
+            null, // no previous scene — parallel mode
             imagenConfig
           );
 
           // 9c. Upload scene result
           const scenePath = `${STORAGE_PATHS.STORIES}/${userId}/${storyId}/scene_${packScene.sceneOrder}.png`;
           const sceneUrl = await uploadImage(outputBuffer, scenePath);
-
-          // Keep the current scene for next scene's style reference
-          previousSceneImageBase64 = bufferToBase64(outputBuffer);
 
           // 9d. Update scene doc
           const sceneTimeMs = Date.now() - sceneStartTime;
@@ -272,7 +266,7 @@ export const genFlexTale = onCall(
 
           // 9e. Update story progress
           await storyRef.update({
-            completedScenes: completedCount,
+            completedScenes: FieldValue.increment(1),
           });
 
           logger.info(
@@ -280,7 +274,7 @@ export const genFlexTale = onCall(
             { ...LOG_CTX, userId, storyId }
           );
         } catch (sceneError) {
-          // Mark this scene as failed but continue with the rest
+          // Mark this scene as failed but don't fail the whole story
           logger.error(
             `Scene ${packScene.sceneOrder} failed`,
             sceneError,
@@ -291,10 +285,11 @@ export const genFlexTale = onCall(
             status: "failed",
             completedAt: FieldValue.serverTimestamp(),
           });
-
-          // Do not break — attempt remaining scenes even if one fails
         }
-      }
+      });
+
+      // Wait for all scenes to complete (parallel)
+      await Promise.all(scenePromises);
 
       // 10. Mark story as completed (or partially completed)
       const finalStatus = completedCount === totalScenes ? "completed" : "partial";

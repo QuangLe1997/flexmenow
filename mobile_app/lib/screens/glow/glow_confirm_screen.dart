@@ -675,71 +675,133 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
     if (_agentState != _AgentState.loaded) return const SizedBox.shrink();
 
     final reIdeaRemaining = 3 - _reIdeaCount;
+    final hasSelection = _selectedSuggestionIndex != null;
+    final hasCustom = _customTextController.text.trim().isNotEmpty;
 
     return Column(
       children: [
-        // Header: AI Agent + Re-idea button
+        // Header row: selected prompt preview + Re-idea
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Row(
             children: [
-              const Icon(LucideIcons.bot, size: AppSizes.iconSm, color: AppColors.brand),
-              const SizedBox(width: 6),
-              Text(
-                'AI Agent',
-                style: TextStyle(fontSize: AppSizes.fontXs, fontWeight: FontWeight.w700, color: AppColors.brand),
+              // Show selected suggestion prompt preview or hint
+              Expanded(
+                child: AnimatedSwitcher(
+                  duration: AppDurations.fast,
+                  child: hasSelection
+                      ? Row(
+                          key: ValueKey(_selectedSuggestionIndex),
+                          children: [
+                            Icon(LucideIcons.sparkles, size: 12, color: AppColors.brand),
+                            const SizedBox(width: 6),
+                            Expanded(
+                              child: Text(
+                                _suggestions[_selectedSuggestionIndex!].title,
+                                style: TextStyle(
+                                  fontSize: AppSizes.fontXsPlus,
+                                  fontWeight: FontWeight.w600,
+                                  color: AppColors.brand,
+                                ),
+                                maxLines: 1,
+                                overflow: TextOverflow.ellipsis,
+                              ),
+                            ),
+                          ],
+                        )
+                      : Row(
+                          key: const ValueKey('hint'),
+                          children: [
+                            Icon(LucideIcons.mousePointerClick, size: 12, color: AppColors.textTer),
+                            const SizedBox(width: 6),
+                            Text(
+                              'Tap a suggestion or type below',
+                              style: TextStyle(fontSize: AppSizes.fontXxsPlus, color: AppColors.textTer),
+                            ),
+                          ],
+                        ),
+                ),
               ),
               const SizedBox(width: 8),
-              Text(
-                'Tap a suggestion or type your own',
-                style: TextStyle(fontSize: AppSizes.fontXxsPlus, color: AppColors.textTer),
-              ),
-              const Spacer(),
+              // Re-idea button — more prominent with gradient
               if (reIdeaRemaining > 0)
                 GestureDetector(
                   onTap: _reIdea,
                   child: Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                    padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
                     decoration: BoxDecoration(
-                      color: AppColors.purple.withValues(alpha: 0.12),
+                      gradient: const LinearGradient(
+                        colors: [Color(0xFF7C3AED), Color(0xFF9333EA)],
+                      ),
                       borderRadius: BorderRadius.circular(AppSizes.radiusFull),
-                      border: Border.all(color: AppColors.purple.withValues(alpha: 0.3)),
+                      boxShadow: [
+                        BoxShadow(
+                          color: const Color(0xFF7C3AED).withValues(alpha: 0.25),
+                          blurRadius: 8,
+                          offset: const Offset(0, 2),
+                        ),
+                      ],
                     ),
                     child: Row(mainAxisSize: MainAxisSize.min, children: [
-                      const Icon(LucideIcons.refreshCw, size: 11, color: AppColors.purple),
+                      const Icon(LucideIcons.wand2, size: 12, color: Colors.white),
                       const SizedBox(width: 4),
                       Text(
-                        'Re-idea ($reIdeaRemaining)',
-                        style: AppTextStyles.monoSmall.copyWith(color: AppColors.purple),
+                        'New ideas ($reIdeaRemaining)',
+                        style: const TextStyle(
+                          fontSize: 10,
+                          fontWeight: FontWeight.w700,
+                          color: Colors.white,
+                          letterSpacing: 0.2,
+                        ),
                       ),
                     ]),
+                  ),
+                )
+              else
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: AppColors.zinc700,
+                    borderRadius: BorderRadius.circular(AppSizes.radiusFull),
+                  ),
+                  child: Text(
+                    'No re-ideas left',
+                    style: TextStyle(fontSize: 9, color: AppColors.textTer),
                   ),
                 ),
             ],
           ),
         ),
         const SizedBox(height: 8),
-        // Custom text input
+        // Custom text input with AI icon
         Padding(
           padding: const EdgeInsets.symmetric(horizontal: 16),
           child: Container(
-            height: 40,
+            height: 42,
             decoration: BoxDecoration(
               color: AppColors.input,
               borderRadius: BorderRadius.circular(AppSizes.radiusMd),
-              border: Border.all(color: AppColors.borderMed),
+              border: Border.all(
+                color: hasCustom
+                    ? AppColors.brand.withValues(alpha: 0.4)
+                    : AppColors.borderMed,
+              ),
             ),
             child: Row(
               children: [
                 const SizedBox(width: 10),
-                Icon(LucideIcons.pencil, size: 13, color: AppColors.textTer),
+                Icon(
+                  hasCustom ? LucideIcons.sparkles : LucideIcons.pencil,
+                  size: 14,
+                  color: hasCustom ? AppColors.brand : AppColors.textTer,
+                ),
                 const SizedBox(width: 8),
                 Expanded(
                   child: TextField(
                     controller: _customTextController,
                     style: const TextStyle(fontSize: AppSizes.fontXs, color: AppColors.text),
                     decoration: const InputDecoration(
-                      hintText: 'Or type your own idea...',
+                      hintText: 'Or describe your own vision...',
                       hintStyle: TextStyle(fontSize: AppSizes.fontXs, color: AppColors.textTer),
                       border: InputBorder.none,
                       isDense: true,
@@ -754,7 +816,19 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
                     },
                   ),
                 ),
-                const SizedBox(width: 10),
+                if (hasCustom)
+                  GestureDetector(
+                    onTap: () {
+                      _customTextController.clear();
+                      setState(() {});
+                    },
+                    child: Padding(
+                      padding: const EdgeInsets.all(8),
+                      child: Icon(LucideIcons.x, size: 14, color: AppColors.textTer),
+                    ),
+                  )
+                else
+                  const SizedBox(width: 10),
               ],
             ),
           ),
@@ -774,29 +848,53 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
             end: Alignment.bottomCenter,
             colors: [
               Colors.transparent,
-              Colors.black.withValues(alpha: 0.7),
+              Colors.black.withValues(alpha: 0.4),
+              Colors.black.withValues(alpha: 0.85),
             ],
-            stops: const [0.5, 1.0],
+            stops: const [0.3, 0.6, 1.0],
           ),
         ),
         alignment: Alignment.bottomCenter,
-        padding: const EdgeInsets.only(bottom: 28),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
+        padding: const EdgeInsets.only(bottom: 24),
+        child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            SizedBox(
-              width: 18,
-              height: 18,
-              child: CircularProgressIndicator(
-                strokeWidth: 2,
-                color: AppColors.brand.withValues(alpha: 0.8),
+            // Animated AI scanning indicator
+            Container(
+              padding: const EdgeInsets.symmetric(horizontal: 20, vertical: 10),
+              decoration: BoxDecoration(
+                color: Colors.white.withValues(alpha: 0.08),
+                borderRadius: BorderRadius.circular(AppSizes.radiusFull),
+                border: Border.all(color: AppColors.brand.withValues(alpha: 0.2)),
+              ),
+              child: Row(
+                mainAxisSize: MainAxisSize.min,
+                children: [
+                  SizedBox(
+                    width: 16,
+                    height: 16,
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2,
+                      color: AppColors.brand,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Text(
+                    'AI is analyzing your photo...',
+                    style: TextStyle(
+                      fontSize: AppSizes.fontSmPlus,
+                      fontWeight: FontWeight.w600,
+                      color: Colors.white,
+                      letterSpacing: 0.2,
+                    ),
+                  ),
+                ],
               ),
             ),
-            const SizedBox(width: 10),
+            const SizedBox(height: 8),
             Text(
-              'Analyzing your photo...',
-              style: TextStyle(fontSize: AppSizes.fontSmPlus, fontWeight: FontWeight.w600, color: Colors.white),
+              'Generating creative ideas',
+              style: TextStyle(fontSize: AppSizes.fontXxsPlus, color: Colors.white.withValues(alpha: 0.5)),
             ),
           ],
         ),
@@ -815,7 +913,6 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
   Widget _buildSuggestionsOverlay() {
     final pageSuggestions = _currentPageSuggestions;
     final startIndex = _suggestionPage * _suggestionsPerPage;
-    final hasPrev = _suggestionPage > 0;
     final hasNext = _suggestionPage < _totalPages - 1;
 
     return Positioned(
@@ -829,15 +926,45 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
             end: Alignment.bottomCenter,
             colors: [
               Colors.transparent,
-              Colors.black.withValues(alpha: 0.85),
+              Colors.black.withValues(alpha: 0.5),
+              Colors.black.withValues(alpha: 0.92),
             ],
+            stops: const [0.0, 0.3, 1.0],
           ),
         ),
-        padding: const EdgeInsets.fromLTRB(8, 40, 8, 10),
+        padding: const EdgeInsets.fromLTRB(10, 36, 10, 10),
         child: Column(
           mainAxisSize: MainAxisSize.min,
           children: [
-            // Suggestion chips
+            // AI badge header
+            Row(
+              mainAxisAlignment: MainAxisAlignment.center,
+              children: [
+                Container(
+                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
+                  decoration: BoxDecoration(
+                    color: AppColors.brand.withValues(alpha: 0.15),
+                    borderRadius: BorderRadius.circular(AppSizes.radiusFull),
+                    border: Border.all(color: AppColors.brand.withValues(alpha: 0.25)),
+                  ),
+                  child: Row(mainAxisSize: MainAxisSize.min, children: [
+                    const Icon(LucideIcons.sparkles, size: 11, color: AppColors.brand),
+                    const SizedBox(width: 4),
+                    Text(
+                      'AI picks for you',
+                      style: TextStyle(
+                        fontSize: AppSizes.fontXxsPlus,
+                        fontWeight: FontWeight.w600,
+                        color: AppColors.brand,
+                        letterSpacing: 0.3,
+                      ),
+                    ),
+                  ]),
+                ),
+              ],
+            ),
+            const SizedBox(height: 10),
+            // Suggestion chips — glass cards with AI aesthetic
             Wrap(
               spacing: 8,
               runSpacing: 8,
@@ -852,61 +979,113 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
                   }),
                   child: AnimatedContainer(
                     duration: AppDurations.fast,
-                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 9),
                     decoration: BoxDecoration(
-                      color: isActive
-                          ? AppColors.brand
-                          : Colors.white.withValues(alpha: 0.12),
+                      gradient: isActive
+                          ? const LinearGradient(
+                              colors: [Color(0xFFF59E0B), Color(0xFFEF8B0A)],
+                            )
+                          : null,
+                      color: isActive ? null : Colors.white.withValues(alpha: 0.08),
                       borderRadius: BorderRadius.circular(AppSizes.radiusFull),
                       border: Border.all(
                         color: isActive
                             ? AppColors.brand
-                            : Colors.white.withValues(alpha: 0.3),
-                        width: isActive ? 1.5 : 1,
+                            : Colors.white.withValues(alpha: 0.18),
+                        width: isActive ? 1.5 : 0.5,
                       ),
+                      boxShadow: isActive
+                          ? [
+                              BoxShadow(
+                                color: AppColors.brand.withValues(alpha: 0.35),
+                                blurRadius: 12,
+                                spreadRadius: -2,
+                              ),
+                            ]
+                          : null,
                     ),
-                    child: Text(
-                      s.title,
-                      style: TextStyle(
-                        fontSize: AppSizes.fontSmPlus,
-                        fontWeight: isActive ? FontWeight.w700 : FontWeight.w500,
-                        color: isActive ? AppColors.bg : Colors.white,
-                      ),
+                    child: Row(
+                      mainAxisSize: MainAxisSize.min,
+                      children: [
+                        if (isActive)
+                          const Padding(
+                            padding: EdgeInsets.only(right: 5),
+                            child: Icon(LucideIcons.sparkles, size: 12, color: Color(0xFF1C1917)),
+                          ),
+                        Text(
+                          s.title,
+                          style: TextStyle(
+                            fontSize: AppSizes.fontSmPlus,
+                            fontWeight: isActive ? FontWeight.w700 : FontWeight.w500,
+                            color: isActive ? const Color(0xFF1C1917) : Colors.white.withValues(alpha: 0.9),
+                          ),
+                        ),
+                      ],
                     ),
                   ),
                 );
               }),
             ),
-            const SizedBox(height: 8),
-            // Page navigation: < 1/4 >
+            const SizedBox(height: 10),
+            // Next batch button + page dots
             Row(
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
-                GestureDetector(
-                  onTap: hasPrev ? () => setState(() => _suggestionPage--) : null,
-                  child: Icon(
-                    LucideIcons.chevronLeft,
-                    size: AppSizes.iconBase,
-                    color: hasPrev ? Colors.white : Colors.white24,
+                // Page dots
+                ...List.generate(_totalPages, (i) {
+                  final isCurrent = i == _suggestionPage;
+                  return GestureDetector(
+                    onTap: () => setState(() => _suggestionPage = i),
+                    child: AnimatedContainer(
+                      duration: AppDurations.fast,
+                      margin: const EdgeInsets.symmetric(horizontal: 3),
+                      width: isCurrent ? 18 : 6,
+                      height: 6,
+                      decoration: BoxDecoration(
+                        color: isCurrent
+                            ? AppColors.brand
+                            : Colors.white.withValues(alpha: 0.25),
+                        borderRadius: BorderRadius.circular(3),
+                      ),
+                    ),
+                  );
+                }),
+                if (hasNext) ...[
+                  const SizedBox(width: 12),
+                  // "Next batch" pill button
+                  GestureDetector(
+                    onTap: () => setState(() => _suggestionPage++),
+                    child: Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                      decoration: BoxDecoration(
+                        gradient: const LinearGradient(
+                          colors: [Color(0xFF7C3AED), Color(0xFF9333EA)],
+                        ),
+                        borderRadius: BorderRadius.circular(AppSizes.radiusFull),
+                        boxShadow: [
+                          BoxShadow(
+                            color: const Color(0xFF7C3AED).withValues(alpha: 0.3),
+                            blurRadius: 8,
+                            offset: const Offset(0, 2),
+                          ),
+                        ],
+                      ),
+                      child: Row(mainAxisSize: MainAxisSize.min, children: [
+                        Text(
+                          'Next batch',
+                          style: TextStyle(
+                            fontSize: AppSizes.fontXxsPlus,
+                            fontWeight: FontWeight.w700,
+                            color: Colors.white,
+                            letterSpacing: 0.2,
+                          ),
+                        ),
+                        const SizedBox(width: 4),
+                        const Icon(LucideIcons.arrowRight, size: 11, color: Colors.white),
+                      ]),
+                    ),
                   ),
-                ),
-                const SizedBox(width: 10),
-                Text(
-                  '${_suggestionPage + 1} / $_totalPages',
-                  style: AppTextStyles.mono.copyWith(
-                    fontSize: AppSizes.fontXsPlus,
-                    color: Colors.white70,
-                  ),
-                ),
-                const SizedBox(width: 10),
-                GestureDetector(
-                  onTap: hasNext ? () => setState(() => _suggestionPage++) : null,
-                  child: Icon(
-                    LucideIcons.chevronRight,
-                    size: AppSizes.iconBase,
-                    color: hasNext ? Colors.white : Colors.white24,
-                  ),
-                ),
+                ],
               ],
             ),
           ],

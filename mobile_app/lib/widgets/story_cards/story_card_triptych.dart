@@ -7,7 +7,7 @@ import 'story_card_base.dart';
 import 'story_card_shared.dart';
 
 /// Style F — Vertical Triptych.
-/// 3 portrait thumbnails, center rises + gold glow, 3000ms.
+/// 3 portrait thumbnails using Expanded (no overflow), center rises + gold glow, 3000ms.
 class StoryCardTriptych extends StatefulWidget {
   final StoryCardData data;
   const StoryCardTriptych({super.key, required this.data});
@@ -30,7 +30,6 @@ class _StoryCardTriptychState extends State<StoryCardTriptych>
   void initState() {
     super.initState();
     _images = widget.data.paddedImageUrls;
-    // Start at center (index 1)
     currentImageIndex = 1;
     startSlideshow();
   }
@@ -55,55 +54,61 @@ class _StoryCardTriptychState extends State<StoryCardTriptych>
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // 3 portrait thumbnails
+                // 3 portrait thumbnails — Expanded prevents overflow
                 SizedBox(
                   height: 210,
                   child: Padding(
-                    padding: const EdgeInsets.fromLTRB(20, 20, 20, 8),
+                    padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
                     child: Row(
-                      mainAxisAlignment: MainAxisAlignment.center,
+                      crossAxisAlignment: CrossAxisAlignment.center,
                       children: List.generate(3, (i) {
                         final isCenter = currentImageIndex == i;
-                        return AnimatedContainer(
-                          duration: const Duration(milliseconds: 700),
-                          curve: kSmoothBounce,
-                          width: isCenter ? 105 : 85,
-                          height: isCenter ? 155 : 125,
-                          margin: const EdgeInsets.symmetric(horizontal: 5),
-                          transform: Matrix4.translationValues(
-                            0,
-                            isCenter ? -8 : 6,
-                            0,
-                          ),
-                          decoration: BoxDecoration(
-                            borderRadius: BorderRadius.circular(isCenter ? 16 : 12),
-                            border: Border.all(
-                              color: isCenter
-                                  ? AppColors.brand.withValues(alpha: 0.3)
-                                  : Colors.white.withValues(alpha: 0.04),
-                              width: 2,
+                        return Expanded(
+                          child: AnimatedContainer(
+                            duration: const Duration(milliseconds: 700),
+                            curve: kSmoothBounce,
+                            height: isCenter ? 165 : 125,
+                            margin: const EdgeInsets.symmetric(horizontal: 4),
+                            transform: Matrix4.translationValues(
+                              0,
+                              isCenter ? -10 : 8,
+                              0,
                             ),
-                            boxShadow: [
-                              if (isCenter) ...[
-                                ...AppShadows.cardHero,
-                                ...AppShadows.brandGlow(0.06),
-                              ] else
-                                ...AppShadows.md,
-                            ],
-                          ),
-                          child: ClipRRect(
-                            borderRadius: BorderRadius.circular(isCenter ? 14 : 10),
-                            child: ColorFiltered(
-                              colorFilter: ColorFilter.matrix(
-                                isCenter
-                                    ? _identityMatrix()
-                                    : _dimMatrix(),
+                            transformAlignment: Alignment.center,
+                            decoration: BoxDecoration(
+                              borderRadius:
+                                  BorderRadius.circular(isCenter ? 16 : 12),
+                              border: Border.all(
+                                color: isCenter
+                                    ? AppColors.brand.withValues(alpha: 0.3)
+                                    : Colors.white.withValues(alpha: 0.04),
+                                width: 2,
                               ),
-                              child: PlaceholderImage(
-                                index: widget.data.cardIndex + i,
-                                borderRadius: 0,
-                                imageUrl: i < _images.length ? _images[i] : _images.last,
-                                fit: BoxFit.cover,
+                              boxShadow: [
+                                if (isCenter) ...[
+                                  ...AppShadows.cardHero,
+                                  ...AppShadows.brandGlow(0.06),
+                                ] else
+                                  ...AppShadows.md,
+                              ],
+                            ),
+                            child: ClipRRect(
+                              borderRadius: BorderRadius.circular(
+                                  isCenter ? 14 : 10),
+                              child: ColorFiltered(
+                                colorFilter: ColorFilter.matrix(
+                                  isCenter
+                                      ? _identityMatrix()
+                                      : _dimMatrix(),
+                                ),
+                                child: PlaceholderImage(
+                                  index: widget.data.cardIndex + i,
+                                  borderRadius: 0,
+                                  imageUrl: i < _images.length
+                                      ? _images[i]
+                                      : _images.last,
+                                  fit: BoxFit.cover,
+                                ),
                               ),
                             ),
                           ),
@@ -135,9 +140,9 @@ class _StoryCardTriptychState extends State<StoryCardTriptych>
   /// brightness(0.5) saturate(0.6) approximation.
   List<double> _dimMatrix() {
     return [
-      0.3, 0, 0, 0, 0,
-      0, 0.3, 0, 0, 0,
-      0, 0, 0.3, 0, 0,
+      0.5, 0, 0, 0, 0,
+      0, 0.5, 0, 0, 0,
+      0, 0, 0.5, 0, 0,
       0, 0, 0, 1, 0,
     ];
   }

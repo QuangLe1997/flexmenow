@@ -1,4 +1,5 @@
 import { onCall, CallableRequest } from "firebase-functions/v2/https";
+import { defineSecret } from "firebase-functions/params";
 import { FieldValue } from "firebase-admin/firestore";
 import { getDb } from "../config/firebase";
 import {
@@ -20,6 +21,8 @@ import {
 import { requireStoragePath, optionalString } from "../utils/validators";
 import { throwUnauthenticated, wrapError } from "../utils/errors";
 import { logger } from "../utils/logger";
+
+const geminiApiKeys = defineSecret("GEMINI_API_KEYS");
 
 const LOG_CTX = { functionName: "genFlexLocket" };
 
@@ -258,6 +261,7 @@ export const genFlexLocket = onCall(
     timeoutSeconds: FLEXLOCKET_TIMEOUT_SECONDS,
     memory: FLEXLOCKET_MEMORY,
     maxInstances: 50,
+    secrets: [geminiApiKeys],
   },
   async (request: CallableRequest<GenFlexLocketInput>): Promise<GenFlexLocketResult> => {
     const startTime = Date.now();

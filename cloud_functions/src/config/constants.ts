@@ -12,11 +12,13 @@ export const STORAGE_BUCKET =
   process.env.FIREBASE_STORAGE_BUCKET || "flexme-now.firebasestorage.app";
 
 // ---------- AI / ML ----------
-export const GEMINI_API_KEY = process.env.GEMINI_API_KEY || "";
-export const GEMINI_MODEL = "gemini-2.0-flash";
+/** Comma-separated pool of Gemini API keys for round-robin/random rotation */
+export const GEMINI_API_KEYS: string[] = (process.env.GEMINI_API_KEYS || process.env.GEMINI_API_KEY || "")
+  .split(",")
+  .map((k) => k.trim())
+  .filter(Boolean);
+export const GEMINI_MODEL = "gemini-2.5-flash";
 export const VERTEX_AI_LOCATION = process.env.VERTEX_AI_LOCATION || "us-central1";
-export const IMAGEN_MODEL =
-  process.env.IMAGEN_MODEL || "imagen-3.0-capability-001";
 export const GEMINI_IMAGE_MODEL =
   process.env.GEMINI_IMAGE_MODEL || "gemini-2.5-flash-image";
 

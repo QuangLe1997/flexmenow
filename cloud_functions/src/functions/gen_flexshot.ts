@@ -1,4 +1,5 @@
 import { onCall, CallableRequest } from "firebase-functions/v2/https";
+import { defineSecret } from "firebase-functions/params";
 import { FieldValue } from "firebase-admin/firestore";
 import { getDb } from "../config/firebase";
 import {
@@ -28,6 +29,8 @@ import {
   throwNotFound,
   wrapError,
 } from "../utils/errors";
+
+const geminiApiKeys = defineSecret("GEMINI_API_KEYS");
 import { logger } from "../utils/logger";
 
 const LOG_CTX = { functionName: "genFlexShot" };
@@ -56,6 +59,7 @@ export const genFlexShot = onCall(
     timeoutSeconds: FLEXSHOT_TIMEOUT_SECONDS,
     memory: FLEXSHOT_MEMORY,
     maxInstances: 50,
+    secrets: [geminiApiKeys],
   },
   async (request: CallableRequest<GenFlexShotInput>): Promise<GenFlexShotResult> => {
     const startTime = Date.now();

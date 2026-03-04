@@ -1,0 +1,762 @@
+[
+  {
+    "slug": "gaming_setup",
+    "name": {
+      "en": "Gaming Setup",
+      "vi": "Góc Gaming",
+      "es": "Setup Gaming",
+      "pt": "Setup Gamer",
+      "ja": "ゲーミングセットアップ",
+      "ko": "게이밍 셋업"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "male",
+    "style": "Neon",
+    "badge": "HOT",
+    "premium": false,
+    "prompt": "Epic portrait of {subject} at a premium RGB gaming battlestation, triple ultrawide monitors glowing, custom mechanical keyboard with RGB, gaming headset, LED strip ambient lighting in purple and cyan, cyberpunk gamer aesthetic, 35mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, old computer, bright daylight, office cubicle, messy desk",
+    "styleHint": "RGB neon purple and cyan glow, triple monitor setup, cyberpunk gaming atmosphere",
+    "guidanceScale": 8,
+    "tags": [
+      "gaming",
+      "setup",
+      "rgb",
+      "lifestyle",
+      "gamer",
+      "neon",
+      "tech"
+    ]
+  },
+  {
+    "slug": "music_studio",
+    "name": {
+      "en": "Music Studio",
+      "vi": "Phòng Thu Nhạc",
+      "es": "Estudio Musical",
+      "pt": "Estúdio Musical",
+      "ja": "ミュージックスタジオ",
+      "ko": "뮤직 스튜디오"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "male",
+    "style": "Creative",
+    "badge": null,
+    "premium": false,
+    "prompt": "Creative portrait of {subject} in a professional music recording studio, large mixing console with illuminated faders, studio monitors and acoustic panels, professional headphones around neck, warm booth lighting, musical genius atmosphere, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, bedroom, cheap equipment, bright daylight, messy cables",
+    "styleHint": "warm studio booth lighting, professional mixing console glow, musical creative atmosphere",
+    "guidanceScale": 7.5,
+    "tags": [
+      "music",
+      "studio",
+      "recording",
+      "lifestyle",
+      "creative",
+      "producer"
+    ]
+  },
+  {
+    "slug": "surfing_wave",
+    "name": {
+      "en": "Surfing Wave",
+      "vi": "Lướt Sóng",
+      "es": "Ola de Surf",
+      "pt": "Onda de Surf",
+      "ja": "サーフィンウェーブ",
+      "ko": "서핑 웨이브"
+    },
+    "category": "lifestyle",
+    "type": "travel",
+    "gender": "male",
+    "style": "Action",
+    "badge": null,
+    "premium": false,
+    "prompt": "Dynamic action portrait of {subject} surfing a perfect turquoise barrel wave at sunset, ocean spray catching golden light, tropical beach and palm trees in background, athletic motion freeze, surf photography, 200mm telephoto lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, flat water, pool, indoor, calm, overcast, small wave",
+    "styleHint": "golden sunset surf spray, turquoise barrel wave, dynamic athletic action freeze",
+    "guidanceScale": 8,
+    "tags": [
+      "surfing",
+      "wave",
+      "ocean",
+      "lifestyle",
+      "action",
+      "tropical"
+    ]
+  },
+  {
+    "slug": "skateboard_park",
+    "name": {
+      "en": "Skateboard Park",
+      "vi": "Công Viên Trượt Ván",
+      "es": "Parque de Skate",
+      "pt": "Pista de Skate",
+      "ja": "スケートパーク",
+      "ko": "스케이트 파크"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "male",
+    "style": "Street",
+    "badge": null,
+    "premium": false,
+    "prompt": "Cool street portrait of {subject} at an urban skate park with concrete bowls and ramps, skateboard in hand, colorful graffiti murals on walls, golden hour side lighting, streetwear fashion, youth culture energy, 35mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor, formal clothing, night, rainy, empty",
+    "styleHint": "golden hour skate park, graffiti murals, streetwear culture, youth energy",
+    "guidanceScale": 7.5,
+    "tags": [
+      "skateboard",
+      "skate-park",
+      "lifestyle",
+      "street",
+      "urban",
+      "youth"
+    ]
+  },
+  {
+    "slug": "basketball_court",
+    "name": {
+      "en": "Basketball Court",
+      "vi": "Sân Bóng Rổ",
+      "es": "Cancha de Basket",
+      "pt": "Quadra de Basquete",
+      "ja": "バスケットコート",
+      "ko": "농구 코트"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "male",
+    "style": "Dynamic",
+    "badge": null,
+    "premium": false,
+    "prompt": "Dynamic portrait of {subject} on an outdoor basketball court at dusk, dramatic warm side lighting, urban skyline in background, athletic jersey, mid-action dribble pose, intense focused expression, sports photography, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor gym, bright fluorescent, casual clothes, sitting",
+    "styleHint": "dramatic dusk side lighting, urban outdoor court, athletic action intensity",
+    "guidanceScale": 8,
+    "tags": [
+      "basketball",
+      "court",
+      "lifestyle",
+      "sport",
+      "urban",
+      "athletic"
+    ]
+  },
+  {
+    "slug": "yoga_sunrise",
+    "name": {
+      "en": "Yoga Sunrise",
+      "vi": "Yoga Bình Minh",
+      "es": "Yoga Amanecer",
+      "pt": "Yoga Nascer do Sol",
+      "ja": "ヨガサンライズ",
+      "ko": "요가 선라이즈"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "female",
+    "style": "Serene",
+    "badge": null,
+    "premium": false,
+    "prompt": "Peaceful portrait of {subject} in an elegant yoga tree pose on a mountain cliff at sunrise, misty valley below with rolling clouds, serene golden pink morning light, flowing yoga outfit, wellness and mindfulness aesthetic, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor gym, night, urban, crowded, harsh light",
+    "styleHint": "serene sunrise golden pink light, misty mountain valley, mindfulness and wellness calm",
+    "guidanceScale": 7,
+    "tags": [
+      "yoga",
+      "sunrise",
+      "wellness",
+      "lifestyle",
+      "mindful",
+      "mountain"
+    ]
+  },
+  {
+    "slug": "rooftop_chill",
+    "name": {
+      "en": "Rooftop Chill",
+      "vi": "Chill Rooftop",
+      "es": "Relax en Azotea",
+      "pt": "Rooftop Relax",
+      "ja": "ルーフトップチル",
+      "ko": "루프탑 칠"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "all",
+    "style": "Cozy",
+    "badge": null,
+    "premium": false,
+    "prompt": "Relaxed portrait of {subject} on a trendy rooftop terrace at sunset, fairy string lights overhead, comfortable outdoor lounge furniture, urban skyline view, craft cocktail in hand, warm golden hour glow, chill vibes, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, rainy, cold, indoor, formal, crowded",
+    "styleHint": "fairy light bokeh, warm sunset rooftop glow, relaxed urban chill atmosphere",
+    "guidanceScale": 7,
+    "tags": [
+      "rooftop",
+      "chill",
+      "lifestyle",
+      "sunset",
+      "urban",
+      "relax"
+    ]
+  },
+  {
+    "slug": "pool_party",
+    "name": {
+      "en": "Pool Party",
+      "vi": "Tiệc Hồ Bơi",
+      "es": "Fiesta en Piscina",
+      "pt": "Pool Party",
+      "ja": "プールパーティー",
+      "ko": "풀 파티"
+    },
+    "category": "lifestyle",
+    "type": "sexy",
+    "gender": "all",
+    "style": "Fun",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Fun vibrant portrait of {subject} at a lively pool party, colorful inflatable floats, splashing turquoise water, tropical cocktails, palm trees, bright sunshine, summer fashion, energetic party atmosphere, 35mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor, winter, formal, empty pool, night, cold",
+    "styleHint": "vibrant summer colors, splashing water energy, tropical pool party fun",
+    "guidanceScale": 7,
+    "tags": [
+      "pool",
+      "party",
+      "summer",
+      "lifestyle",
+      "fun",
+      "tropical"
+    ]
+  },
+  {
+    "slug": "music_festival",
+    "name": {
+      "en": "Music Festival",
+      "vi": "Lễ Hội Âm Nhạc",
+      "es": "Festival de Música",
+      "pt": "Festival de Música",
+      "ja": "ミュージックフェス",
+      "ko": "뮤직 페스티벌"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "couple",
+    "style": "Electric",
+    "badge": "HOT",
+    "premium": true,
+    "prompt": "Energetic portrait of {subject} at a massive outdoor music festival, dramatic stage laser lights and confetti, crowd energy with raised hands, EDM atmosphere, festival fashion with glitter and accessories, vivid neon colors, 35mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, quiet, indoor, formal, empty venue, daytime office",
+    "styleHint": "dramatic stage lasers and confetti, neon festival energy, EDM crowd atmosphere",
+    "guidanceScale": 8,
+    "tags": [
+      "festival",
+      "music",
+      "edm",
+      "lifestyle",
+      "concert",
+      "party",
+      "neon"
+    ]
+  },
+  {
+    "slug": "graduation",
+    "name": {
+      "en": "Graduation",
+      "vi": "Tốt Nghiệp",
+      "es": "Graduación",
+      "pt": "Formatura",
+      "ja": "卒業式",
+      "ko": "졸업식"
+    },
+    "category": "lifestyle",
+    "type": "traditional",
+    "gender": "all",
+    "style": "Proud",
+    "badge": null,
+    "premium": false,
+    "prompt": "Proud portrait of {subject} in graduation cap and gown, prestigious university campus with ivy-covered stone buildings, celebratory confetti in the air, diploma in hand, joyful achievement expression, sunny day, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor, casual clothing, night, sad expression, empty background",
+    "styleHint": "sunny campus celebration, confetti joy, prestigious university architecture, achievement pride",
+    "guidanceScale": 7,
+    "tags": [
+      "graduation",
+      "university",
+      "achievement",
+      "lifestyle",
+      "proud",
+      "academic"
+    ]
+  },
+  {
+    "slug": "dog_park",
+    "name": {
+      "en": "Dog Park",
+      "vi": "Công Viên Chó",
+      "es": "Parque de Perros",
+      "pt": "Parque de Cães",
+      "ja": "ドッグパーク",
+      "ko": "도그 파크"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "female",
+    "style": "Heartwarming",
+    "badge": null,
+    "premium": false,
+    "prompt": "Heartwarming portrait of {subject} at a scenic park with a cute golden retriever, autumn golden leaves on trees, soft natural afternoon sunlight, joyful genuine smile, dog looking up adoringly, lifestyle photography, 85mm lens, bokeh background",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor, dark, no dog, sad expression, harsh light",
+    "styleHint": "soft autumn golden light, heartwarming pet companionship, natural bokeh warmth",
+    "guidanceScale": 7,
+    "tags": [
+      "dog",
+      "park",
+      "pet",
+      "lifestyle",
+      "autumn",
+      "heartwarming"
+    ]
+  },
+  {
+    "slug": "barista_coffee",
+    "name": {
+      "en": "Barista Coffee",
+      "vi": "Barista Cà Phê",
+      "es": "Barista Café",
+      "pt": "Barista Café",
+      "ja": "バリスタコーヒー",
+      "ko": "바리스타 커피"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "female",
+    "style": "Warm",
+    "badge": null,
+    "premium": false,
+    "prompt": "Lifestyle portrait of {subject} as a skilled barista crafting beautiful latte art, cozy artisan cafe interior with exposed brick, steam rising from espresso machine, warm ambient lighting, earth tones, coffee lover aesthetic, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, chain restaurant, cold tones, bright fluorescent, outdoor",
+    "styleHint": "warm cafe ambient lighting, espresso steam, exposed brick artisan atmosphere",
+    "guidanceScale": 7,
+    "tags": [
+      "barista",
+      "coffee",
+      "cafe",
+      "lifestyle",
+      "warm",
+      "artisan"
+    ]
+  },
+  {
+    "slug": "brunch_queen",
+    "name": {
+      "en": "Brunch Queen",
+      "vi": "Nữ Hoàng Brunch",
+      "es": "Reina del Brunch",
+      "pt": "Rainha do Brunch",
+      "ja": "ブランチクイーン",
+      "ko": "브런치 퀸"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "female",
+    "style": "Aesthetic",
+    "badge": null,
+    "premium": false,
+    "prompt": "Instagram-aesthetic portrait of {subject} at a luxury brunch table, beautifully plated avocado toast and pastries, fresh flower arrangement, mimosa cocktail, soft pastel cafe interior, flat lay elements, golden morning light, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, messy food, dark restaurant, fast food, harsh light, ugly plating",
+    "styleHint": "soft pastel aesthetic, luxury brunch presentation, golden morning light, Instagram-worthy",
+    "guidanceScale": 7,
+    "tags": [
+      "brunch",
+      "aesthetic",
+      "lifestyle",
+      "food",
+      "instagram",
+      "morning"
+    ]
+  },
+  {
+    "slug": "road_trip",
+    "name": {
+      "en": "Road Trip",
+      "vi": "Phượt Đường Dài",
+      "es": "Viaje por Carretera",
+      "pt": "Road Trip",
+      "ja": "ロードトリップ",
+      "ko": "로드 트립"
+    },
+    "category": "lifestyle",
+    "type": "travel",
+    "gender": "couple",
+    "style": "Adventure",
+    "badge": null,
+    "premium": false,
+    "prompt": "Adventure portrait of {subject} on an epic road trip, vintage convertible car parked on a scenic desert highway overlook, endless road stretching to mountains, wind-blown hair, freedom and wanderlust, golden sunset, 35mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, city traffic, rain, indoor, formal clothing, crowded road",
+    "styleHint": "endless desert highway, vintage car freedom, golden sunset wanderlust adventure",
+    "guidanceScale": 7.5,
+    "tags": [
+      "road-trip",
+      "adventure",
+      "desert",
+      "lifestyle",
+      "freedom",
+      "vintage"
+    ]
+  },
+  {
+    "slug": "motorcycle",
+    "name": {
+      "en": "Motorcycle",
+      "vi": "Mô Tô",
+      "es": "Motocicleta",
+      "pt": "Motocicleta",
+      "ja": "モーターサイクル",
+      "ko": "모터사이클"
+    },
+    "category": "lifestyle",
+    "type": "sexy",
+    "gender": "male",
+    "style": "Rebel",
+    "badge": null,
+    "premium": false,
+    "prompt": "Bold cinematic portrait of {subject} on a classic motorcycle on an open country road, leather jacket, sunset dust and warm backlighting, rebellious attitude, dramatic long shadows, American rebel aesthetic, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, scooter, city traffic, formal suit, rainy, parked in garage",
+    "styleHint": "sunset backlight dust, leather rebel aesthetic, dramatic long shadows, open road freedom",
+    "guidanceScale": 8,
+    "tags": [
+      "motorcycle",
+      "rebel",
+      "lifestyle",
+      "leather",
+      "sunset",
+      "road"
+    ]
+  },
+  {
+    "slug": "tennis_match",
+    "name": {
+      "en": "Tennis Match",
+      "vi": "Trận Tennis",
+      "es": "Partido de Tenis",
+      "pt": "Partida de Tênis",
+      "ja": "テニスマッチ",
+      "ko": "테니스 매치"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "female",
+    "style": "Athletic",
+    "badge": null,
+    "premium": false,
+    "prompt": "Athletic portrait of {subject} on a pristine tennis court, dynamic serve action pose, white tennis outfit, dramatic stadium lighting, tennis racket mid-swing, focused champion expression, sports editorial photography, 200mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, casual clothes, sitting, indoor, dark, messy court",
+    "styleHint": "dramatic stadium lighting, dynamic serve motion, pristine court, champion focus",
+    "guidanceScale": 8,
+    "tags": [
+      "tennis",
+      "sport",
+      "athletic",
+      "lifestyle",
+      "match",
+      "action"
+    ]
+  },
+  {
+    "slug": "street_food",
+    "name": {
+      "en": "Street Food",
+      "vi": "Ẩm Thực Đường Phố",
+      "es": "Comida Callejera",
+      "pt": "Comida de Rua",
+      "ja": "ストリートフード",
+      "ko": "스트릿 푸드"
+    },
+    "category": "lifestyle",
+    "type": "travel",
+    "gender": "all",
+    "style": "Vibrant",
+    "badge": null,
+    "premium": false,
+    "prompt": "Vibrant portrait of {subject} enjoying street food at a bustling Asian night market, colorful neon signs in Chinese and Japanese characters, steaming food stalls with wok flames, lanterns, lively atmosphere, 35mm lens, street photography",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, fine dining, empty street, daytime, western restaurant, cold",
+    "styleHint": "bustling night market neon, steaming wok flames, vibrant Asian street food energy",
+    "guidanceScale": 7.5,
+    "tags": [
+      "street-food",
+      "night-market",
+      "asia",
+      "lifestyle",
+      "food",
+      "vibrant"
+    ]
+  },
+  {
+    "slug": "marathon_run",
+    "name": {
+      "en": "Marathon Run",
+      "vi": "Chạy Marathon",
+      "es": "Maratón",
+      "pt": "Maratona",
+      "ja": "マラソンラン",
+      "ko": "마라톤 런"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "male",
+    "style": "Inspiring",
+    "badge": null,
+    "premium": false,
+    "prompt": "Inspiring portrait of {subject} crossing a marathon finish line with arms raised in triumph, determined focused expression, cheering crowd behind barriers, race bib and medal, morning golden light, athletic achievement, 200mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, walking, casual clothes, indoor, night, sad expression",
+    "styleHint": "morning golden light, triumph finish line moment, crowd energy, athletic determination",
+    "guidanceScale": 7.5,
+    "tags": [
+      "marathon",
+      "running",
+      "sport",
+      "lifestyle",
+      "achievement",
+      "fitness"
+    ]
+  },
+  {
+    "slug": "vinyl_record",
+    "name": {
+      "en": "Vinyl Record",
+      "vi": "Đĩa Than Vinyl",
+      "es": "Disco de Vinilo",
+      "pt": "Disco de Vinil",
+      "ja": "レコードバイナル",
+      "ko": "바이닐 레코드"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "female",
+    "style": "Retro",
+    "badge": null,
+    "premium": false,
+    "prompt": "Retro-cool portrait of {subject} browsing vinyl records in a vintage record shop, warm incandescent lighting, shelves of classic album covers, turntable playing in background, music lover aesthetic, nostalgic atmosphere, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, digital streaming, modern store, cold lighting, outdoor",
+    "styleHint": "warm vintage incandescent glow, classic album covers, nostalgic vinyl shop atmosphere",
+    "guidanceScale": 7,
+    "tags": [
+      "vinyl",
+      "record",
+      "music",
+      "lifestyle",
+      "retro",
+      "vintage"
+    ]
+  },
+  {
+    "slug": "pottery_studio",
+    "name": {
+      "en": "Pottery Studio",
+      "vi": "Xưởng Gốm",
+      "es": "Taller de Cerámica",
+      "pt": "Ateliê de Cerâmica",
+      "ja": "陶芸スタジオ",
+      "ko": "도예 스튜디오"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "female",
+    "style": "Artistic",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Artistic portrait of {subject} crafting pottery on a spinning wheel, clay-covered hands shaping a beautiful vase, rustic studio with shelves of ceramic work, soft natural light from large windows, meditative creative process, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, factory, machine-made, dark, messy floor, harsh light",
+    "styleHint": "soft natural studio light, rustic ceramics, meditative creative hands, artisan craft beauty",
+    "guidanceScale": 7,
+    "tags": [
+      "pottery",
+      "ceramic",
+      "art",
+      "lifestyle",
+      "craft",
+      "creative"
+    ]
+  },
+  {
+    "slug": "kpop_idol_stage",
+    "name": {
+      "en": "K-Pop Idol",
+      "vi": "Idol K-Pop",
+      "es": "Ídolo K-Pop",
+      "pt": "Ídolo K-Pop",
+      "ja": "K-POPアイドル",
+      "ko": "K-POP 아이돌"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "female",
+    "style": "K-Pop",
+    "badge": "HOT",
+    "premium": true,
+    "prompt": "K-pop idol portrait of {subject} performing on a massive concert stage, dramatic colored stage spotlights in pink and blue, holographic projection effects, sea of fan lightsticks in the audience, polished flawless idol aesthetic, dynamic dance pose, concert photography",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, amateur, small venue, casual clothing, daytime, outdoor park",
+    "styleHint": "dramatic pink and blue stage spotlights, holographic effects, fan lightstick ocean, idol polish",
+    "guidanceScale": 8.5,
+    "tags": [
+      "kpop",
+      "idol",
+      "concert",
+      "stage",
+      "trend",
+      "korean",
+      "dance"
+    ]
+  },
+  {
+    "slug": "main_character",
+    "name": {
+      "en": "Main Character",
+      "vi": "Nhân Vật Chính",
+      "es": "Protagonista",
+      "pt": "Protagonista",
+      "ja": "メインキャラクター",
+      "ko": "메인 캐릭터"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "female",
+    "style": "Cinematic",
+    "badge": "HOT",
+    "premium": false,
+    "prompt": "Cinematic main character energy portrait of {subject} walking confidently through a city crosswalk in slow-motion, wind-blown hair, dramatic golden hour backlight creating a halo effect, protagonist energy, movie poster composition, shallow depth of field",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, background extra, dull lighting, sitting still, indoor office, night",
+    "styleHint": "golden hour backlight halo, cinematic slow-motion, protagonist walk, movie poster depth",
+    "guidanceScale": 8,
+    "tags": [
+      "main-character",
+      "protagonist",
+      "cinematic",
+      "trend",
+      "confidence",
+      "genz"
+    ]
+  },
+  {
+    "slug": "that_girl_morning",
+    "name": {
+      "en": "That Girl",
+      "vi": "That Girl",
+      "es": "Esa Chica",
+      "pt": "Aquela Garota",
+      "ja": "ザットガール",
+      "ko": "댓 걸"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "female",
+    "style": "Clean",
+    "badge": null,
+    "premium": false,
+    "prompt": "Aesthetic \"that girl\" morning routine portrait of {subject} in a clean minimalist Scandinavian apartment, green smoothie in hand, yoga mat rolled nearby, gratitude journal on marble counter, golden morning light through sheer curtains, wellness lifestyle",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, messy room, dark night, junk food, cluttered, harsh light",
+    "styleHint": "clean minimalist Scandinavian, golden morning light, wellness routine aesthetic",
+    "guidanceScale": 7,
+    "tags": [
+      "that-girl",
+      "morning",
+      "wellness",
+      "trend",
+      "minimalist",
+      "routine"
+    ]
+  },
+  {
+    "slug": "mob_wife_glam",
+    "name": {
+      "en": "Mob Wife Glam",
+      "vi": "Mob Wife Glam",
+      "es": "Mob Wife Glam",
+      "pt": "Mob Wife Glam",
+      "ja": "モブワイフグラム",
+      "ko": "몹 와이프 글램"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "female",
+    "style": "Bold",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Bold mob wife glamour portrait of {subject} in full leopard print ensemble with oversized luxurious fur coat, dramatic chunky gold jewelry and large hoop earrings, big designer sunglasses, bold red lip, over-the-top Italian-American confidence, cinematic",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, minimalist, quiet luxury, natural, plain, shy expression, sporty",
+    "styleHint": "leopard print maximalism, oversized fur and gold, bold red lip, Italian-American glam confidence",
+    "guidanceScale": 8,
+    "tags": [
+      "mob-wife",
+      "glam",
+      "leopard",
+      "trend",
+      "bold",
+      "fashion",
+      "fur"
+    ]
+  },
+  {
+    "slug": "clean_girl_glow",
+    "name": {
+      "en": "Clean Girl Glow",
+      "vi": "Clean Girl Glow",
+      "es": "Clean Girl Brillo",
+      "pt": "Clean Girl Brilho",
+      "ja": "クリーンガールグロウ",
+      "ko": "클린걸 글로우"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "all",
+    "style": "Natural",
+    "badge": null,
+    "premium": false,
+    "prompt": "Clean girl aesthetic portrait of {subject} with dewy glass skin and minimal no-makeup makeup, slicked-back bun hair, neutral earth tones outfit, gold hoop earrings, effortless natural beauty glow, soft golden window light, fresh and polished, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, heavy makeup, colorful, messy hair, dark gothic, cluttered background",
+    "styleHint": "dewy glass skin glow, slicked-back minimalism, neutral earth tones, soft golden light",
+    "guidanceScale": 7,
+    "tags": [
+      "clean-girl",
+      "glow",
+      "minimal",
+      "trend",
+      "dewy",
+      "natural",
+      "beauty"
+    ]
+  },
+  {
+    "slug": "tiktok_viral",
+    "name": {
+      "en": "TikTok Viral",
+      "vi": "TikTok Viral",
+      "es": "TikTok Viral",
+      "pt": "TikTok Viral",
+      "ja": "TikTokバイラル",
+      "ko": "틱톡 바이럴"
+    },
+    "category": "lifestyle",
+    "type": "trend",
+    "gender": "couple",
+    "style": "Trendy",
+    "badge": "HOT",
+    "premium": false,
+    "prompt": "TikTok viral-ready portrait of {subject} with trendy Gen-Z fashion and bold colorful makeup, ring light catchlights visible in eyes, front-facing smartphone selfie angle, trendy aesthetic background with LED strip lights, viral-worthy confidence and energy, social media star vibes",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, professional studio, old-fashioned, formal business, dull boring, no energy",
+    "styleHint": "ring light catchlights, Gen-Z bold fashion, LED strip aesthetic, viral social media energy",
+    "guidanceScale": 8,
+    "tags": [
+      "tiktok",
+      "viral",
+      "genz",
+      "trend",
+      "social-media",
+      "selfie",
+      "trendy"
+    ]
+  }
+]

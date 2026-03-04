@@ -13,11 +13,7 @@ import '../../data/mock_data.dart';
 import '../../providers/app_providers.dart';
 import '../../widgets/image_slideshow.dart';
 
-/// Me tab — "PROFILE" header + Bell/Settings, profile card (avatar in gold-bordered
-/// circle, name italic, @username gold, streak badge, 3-stat grid, Edit Profile btn),
-/// 3-tab switcher (Shots/Saved/Tales), 3-col content grid, Upgrade card with Crown.
-///
-/// Wired to real user data, generations, and stories from Firestore.
+/// Me tab — Premium profile + history gallery.
 class MeTab extends ConsumerStatefulWidget {
   const MeTab({super.key});
 
@@ -25,7 +21,7 @@ class MeTab extends ConsumerStatefulWidget {
   ConsumerState<MeTab> createState() => _MeTabState();
 }
 
-class _MeTabState extends ConsumerState<MeTab> {
+class _MeTabState extends ConsumerState<MeTab> with SingleTickerProviderStateMixin {
   int _selectedTabIndex = 0;
   static const _tabs = ['Glow', 'Shots', 'Tales'];
 
@@ -50,21 +46,25 @@ class _MeTabState extends ConsumerState<MeTab> {
               totalShots: totalShots,
               totalStories: totalStories,
               avatarUrl: user?.avatarUrl,
+              isPremium: isPremium,
             )),
             SliverToBoxAdapter(child: _buildTabSwitcher()),
+            const SliverToBoxAdapter(child: SizedBox(height: 12)),
             _buildContentGrid(),
             if (!isPremium)
               SliverToBoxAdapter(child: _buildUpgradeCard()),
-            const SliverToBoxAdapter(child: SizedBox(height: 16)),
+            const SliverToBoxAdapter(child: SizedBox(height: 100)),
           ],
         ),
       ),
     );
   }
 
+  // ── Header ──
+
   Widget _buildHeader() {
     return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 8),
+      padding: const EdgeInsets.fromLTRB(20, 16, 16, 8),
       child: Row(
         children: [
           Text('PROFILE', style: AppTextStyles.mono.copyWith(fontSize: AppSizes.fontXsPlus, fontWeight: FontWeight.w700, color: AppColors.textTer, letterSpacing: 3)),
@@ -92,12 +92,15 @@ class _MeTabState extends ConsumerState<MeTab> {
     );
   }
 
+  // ── Profile Card ──
+
   Widget _buildProfileCard({
     required String displayName,
     required double credits,
     required int totalShots,
     required int totalStories,
     String? avatarUrl,
+    required bool isPremium,
   }) {
     return Padding(
       padding: const EdgeInsets.fromLTRB(16, 8, 16, 16),
@@ -110,50 +113,492 @@ class _MeTabState extends ConsumerState<MeTab> {
         ),
         child: Column(
           children: [
-            // Avatar
-            Container(
-              width: 68, height: 68,
-              decoration: BoxDecoration(
-                shape: BoxShape.circle,
-                border: Border.all(color: AppColors.brand, width: 2.5),
-                boxShadow: AppShadows.brandGlow(0.25),
-              ),
-              child: ClipOval(
-                child: avatarUrl != null && avatarUrl.isNotEmpty
-                    ? CachedNetworkImage(imageUrl: avatarUrl, fit: BoxFit.cover, errorWidget: (_, __, ___) => _avatarFallback(displayName))
-                    : _avatarFallback(displayName),
-              ),
-            ),
-            const SizedBox(height: 12),
-            Text(displayName, style: const TextStyle(fontSize: AppSizes.fontLg, fontWeight: FontWeight.w700, fontStyle: FontStyle.italic, color: AppColors.text)),
-            const SizedBox(height: 16),
-            // 3-stat grid
-            Row(children: [
-              _statItem('$totalShots', 'Shots'),
-              _statDivider(),
-              _statItem('$totalStories', 'Tales'),
-              _statDivider(),
-              _statItem(credits.toStringAsFixed(credits.truncateToDouble() == credits ? 0 : 1), 'Credits'),
-            ]),
-            const SizedBox(height: 16),
-            // Edit Profile button
-            Material(
-              color: Colors.transparent,
-              child: InkWell(
-                onTap: () => _showEditProfile(),
-                borderRadius: BorderRadius.circular(AppSizes.radiusMd),
-                child: Container(
-                  width: double.infinity, height: 44,
-                  decoration: BoxDecoration(borderRadius: BorderRadius.circular(AppSizes.radiusMd), border: Border.all(color: AppColors.borderMed)),
-                  child: Center(child: Text('Edit Profile', style: const TextStyle(fontSize: AppSizes.fontSm, fontWeight: FontWeight.w600, color: AppColors.textSec))),
+            // Avatar + Name row
+            Row(
+              children: [
+                Container(
+                  width: 56, height: 56,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    border: Border.all(color: AppColors.brand, width: 2.5),
+                    boxShadow: AppShadows.brandGlow(0.2),
+                  ),
+                  child: ClipOval(
+                    child: avatarUrl != null && avatarUrl.isNotEmpty
+                        ? CachedNetworkImage(imageUrl: avatarUrl, fit: BoxFit.cover, errorWidget: (_, __, ___) => _avatarFallback(displayName))
+                        : _avatarFallback(displayName),
+                  ),
                 ),
+                const SizedBox(width: 14),
+                Expanded(child: Column(
+                  crossAxisAlignment: CrossAxisAlignment.start,
+                  children: [
+                    Row(children: [
+                      Flexible(child: Text(displayName, style: const TextStyle(fontSize: AppSizes.fontLg, fontWeight: FontWeight.w700, color: AppColors.text), maxLines: 1, overflow: TextOverflow.ellipsis)),
+                      if (isPremium) ...[
+                        const SizedBox(width: 6),
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 6, vertical: 2),
+                          decoration: BoxDecoration(gradient: AppGradients.btn, borderRadius: BorderRadius.circular(AppSizes.radiusFull)),
+                          child: Row(mainAxisSize: MainAxisSize.min, children: [
+                            Icon(LucideIcons.crown, size: 10, color: AppColors.bg),
+                            const SizedBox(width: 3),
+                            Text('PRO', style: AppTextStyles.mono.copyWith(fontSize: 9, fontWeight: FontWeight.w800, color: AppColors.bg)),
+                          ]),
+                        ),
+                      ],
+                    ]),
+                    const SizedBox(height: 2),
+                    GestureDetector(
+                      onTap: _showEditProfile,
+                      child: Text('Edit Profile', style: TextStyle(fontSize: AppSizes.fontXsPlus, color: AppColors.brand, fontWeight: FontWeight.w500)),
+                    ),
+                  ],
+                )),
+              ],
+            ),
+            const SizedBox(height: 18),
+            // 3-stat grid
+            Container(
+              padding: const EdgeInsets.symmetric(vertical: 12),
+              decoration: BoxDecoration(
+                color: AppColors.bg,
+                borderRadius: BorderRadius.circular(AppSizes.radiusMd),
               ),
+              child: Row(children: [
+                _statItem('$totalShots', 'Shots', LucideIcons.sparkles, AppColors.brand),
+                _statDivider(),
+                _statItem('$totalStories', 'Tales', LucideIcons.bookOpen, AppColors.purple),
+                _statDivider(),
+                _statItem(credits.toStringAsFixed(credits.truncateToDouble() == credits ? 0 : 1), 'Credits', LucideIcons.zap, AppColors.brand),
+              ]),
             ),
           ],
         ),
       ),
     );
   }
+
+  Widget _avatarFallback(String name) {
+    final initial = name.isNotEmpty ? name[0].toUpperCase() : 'F';
+    return Container(
+      decoration: const BoxDecoration(gradient: AppGradients.hero),
+      child: Center(child: Text(initial, style: const TextStyle(fontSize: AppSizes.fontXl, fontWeight: FontWeight.w800, color: AppColors.bg))),
+    );
+  }
+
+  Widget _statItem(String value, String label, IconData icon, Color color) {
+    return Expanded(child: Column(children: [
+      Row(mainAxisAlignment: MainAxisAlignment.center, mainAxisSize: MainAxisSize.min, children: [
+        Icon(icon, size: 12, color: color.withValues(alpha: 0.6)),
+        const SizedBox(width: 4),
+        Text(value, style: AppTextStyles.mono.copyWith(fontSize: AppSizes.fontBase, fontWeight: FontWeight.w700, color: AppColors.text)),
+      ]),
+      const SizedBox(height: 2),
+      Text(label, style: const TextStyle(fontSize: AppSizes.fontXs, color: AppColors.textTer)),
+    ]));
+  }
+
+  Widget _statDivider() => Container(width: 1, height: 28, color: AppColors.borderMed);
+
+  // ── Tab Switcher ──
+
+  Widget _buildTabSwitcher() {
+    return Padding(
+      padding: const EdgeInsets.symmetric(horizontal: 16),
+      child: Container(
+        height: 42,
+        decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(AppSizes.radiusMd), border: Border.all(color: AppColors.borderMed)),
+        child: Row(
+          children: List.generate(_tabs.length, (i) {
+            final isActive = i == _selectedTabIndex;
+            return Expanded(
+              child: GestureDetector(
+                onTap: () => setState(() => _selectedTabIndex = i),
+                child: AnimatedContainer(
+                  duration: AppDurations.fast,
+                  decoration: BoxDecoration(
+                    color: isActive ? AppColors.brand.withValues(alpha: 0.15) : Colors.transparent,
+                    borderRadius: BorderRadius.circular(AppSizes.radiusSm),
+                    border: isActive ? Border.all(color: AppColors.brand.withValues(alpha: 0.3)) : null,
+                  ),
+                  margin: const EdgeInsets.all(3),
+                  child: Center(child: Text(_tabs[i], style: TextStyle(fontSize: AppSizes.fontSmPlus, fontWeight: isActive ? FontWeight.w600 : FontWeight.w400, color: isActive ? AppColors.brand : AppColors.textTer))),
+                ),
+              ),
+            );
+          }),
+        ),
+      ),
+    );
+  }
+
+  // ── Content ──
+
+  Widget _buildContentGrid() {
+    switch (_selectedTabIndex) {
+      case 0:
+        return _buildGlowGrid();
+      case 1:
+        return _buildShotsGrid();
+      case 2:
+        return _buildTalesList();
+      default:
+        return _buildEmptyState('Nothing here yet', LucideIcons.image);
+    }
+  }
+
+  // ── Glow Grid ──
+
+  Widget _buildGlowGrid() {
+    final enhancementsAsync = ref.watch(userEnhancementsProvider);
+
+    return enhancementsAsync.when(
+      loading: () => _buildLoadingState(),
+      error: (_, __) => _buildEmptyState('Your enhancements will appear here', LucideIcons.sun),
+      data: (enhancements) {
+        if (enhancements.isEmpty) return _buildEmptyState('Your enhancements will appear here', LucideIcons.sun);
+
+        return SliverPadding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          sliver: SliverGrid(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                final enh = enhancements[index];
+                final mode = kEnhanceModes.where((m) => m.id == enh.enhanceMode).firstOrNull ?? kEnhanceModes.first;
+                final isCompleted = enh.isCompleted;
+                final isFailed = enh.isFailed;
+
+                return GestureDetector(
+                  onTap: isCompleted ? () => context.push('/glow/result', extra: {
+                    'imageUrl': enh.outputImageUrl,
+                    'originalPath': enh.inputImageUrl,
+                    'enhanceMode': enh.enhanceMode,
+                    'filterId': enh.filterId,
+                  }) : null,
+                  child: Container(
+                    margin: const EdgeInsets.all(3),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(AppSizes.radiusMd),
+                      border: Border.all(color: isFailed ? AppColors.red.withValues(alpha: 0.3) : AppColors.border),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(AppSizes.radiusMd - 1),
+                      child: Stack(fit: StackFit.expand, children: [
+                        if (enh.outputImageUrl != null && enh.outputImageUrl!.isNotEmpty)
+                          CachedNetworkImage(imageUrl: enh.outputImageUrl!, fit: BoxFit.cover, placeholder: (_, __) => Container(color: AppColors.zinc900), errorWidget: (_, __, ___) => PlaceholderImage(index: index, borderRadius: 0))
+                        else
+                          PlaceholderImage(index: index, borderRadius: 0),
+                        // Gradient overlay at bottom
+                        Positioned(left: 0, right: 0, bottom: 0, child: Container(
+                          height: 36,
+                          decoration: BoxDecoration(gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [Colors.transparent, Colors.black.withValues(alpha: 0.7)])),
+                        )),
+                        // Mode badge
+                        Positioned(left: 6, bottom: 6, child: Row(mainAxisSize: MainAxisSize.min, children: [
+                          Icon(mode.icon, size: 10, color: mode.color),
+                          const SizedBox(width: 3),
+                          Text(mode.name, style: TextStyle(fontSize: 9, fontWeight: FontWeight.w600, color: Colors.white.withValues(alpha: 0.9))),
+                        ])),
+                        // Status overlays
+                        if (isFailed)
+                          Positioned.fill(child: Container(
+                            decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.5)),
+                            child: const Center(child: Icon(LucideIcons.alertCircle, size: 20, color: AppColors.red)),
+                          ))
+                        else if (enh.isInProgress)
+                          Positioned.fill(child: Container(
+                            decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.4)),
+                            child: const Center(child: SizedBox(width: 20, height: 20, child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.brand))),
+                          )),
+                      ]),
+                    ),
+                  ),
+                );
+              },
+              childCount: enhancements.length,
+            ),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, childAspectRatio: 0.85),
+          ),
+        );
+      },
+    );
+  }
+
+  // ── Shots Grid ──
+
+  Widget _buildShotsGrid() {
+    final generationsAsync = ref.watch(userGenerationsProvider);
+
+    return generationsAsync.when(
+      loading: () => _buildLoadingState(),
+      error: (_, __) => _buildEmptyState('Your creations will appear here', LucideIcons.sparkles),
+      data: (generations) {
+        if (generations.isEmpty) return _buildEmptyState('Your creations will appear here', LucideIcons.sparkles);
+
+        return SliverPadding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          sliver: SliverGrid(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                final gen = generations[index];
+                final isCompleted = gen.isCompleted;
+                final isFailed = gen.isFailed;
+
+                return GestureDetector(
+                  onTap: isCompleted ? () => context.push('/create/result/${gen.id}') : null,
+                  child: Container(
+                    margin: const EdgeInsets.all(3),
+                    decoration: BoxDecoration(
+                      borderRadius: BorderRadius.circular(AppSizes.radiusMd),
+                      border: Border.all(color: isFailed ? AppColors.red.withValues(alpha: 0.3) : AppColors.border),
+                    ),
+                    child: ClipRRect(
+                      borderRadius: BorderRadius.circular(AppSizes.radiusMd - 1),
+                      child: Stack(fit: StackFit.expand, children: [
+                        if (gen.outputImageUrl != null && gen.outputImageUrl!.isNotEmpty)
+                          CachedNetworkImage(imageUrl: gen.outputImageUrl!, fit: BoxFit.cover, placeholder: (_, __) => Container(color: AppColors.zinc900), errorWidget: (_, __, ___) => PlaceholderImage(index: index, borderRadius: 0))
+                        else
+                          PlaceholderImage(index: index, borderRadius: 0),
+                        // Bottom gradient
+                        Positioned(left: 0, right: 0, bottom: 0, child: Container(
+                          height: 44,
+                          decoration: BoxDecoration(gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter, colors: [Colors.transparent, Colors.black.withValues(alpha: 0.8)])),
+                        )),
+                        // Template name + time
+                        Positioned(left: 6, right: 6, bottom: 6, child: Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Text(gen.templateName, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: 10, fontWeight: FontWeight.w600, color: Colors.white)),
+                            Text(_timeAgo(gen.createdAt), style: TextStyle(fontSize: 8, color: Colors.white.withValues(alpha: 0.6))),
+                          ],
+                        )),
+                        // Status overlays
+                        if (isFailed)
+                          Positioned.fill(child: Container(
+                            decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.5)),
+                            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                              const Icon(LucideIcons.alertCircle, size: 20, color: AppColors.red),
+                              const SizedBox(height: 4),
+                              Text('Failed', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w600, color: AppColors.red)),
+                            ]),
+                          ))
+                        else if (gen.isInProgress)
+                          Positioned.fill(child: Container(
+                            decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.4)),
+                            child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+                              const SizedBox(width: 22, height: 22, child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.brand)),
+                              const SizedBox(height: 6),
+                              Text('Generating...', style: TextStyle(fontSize: 9, fontWeight: FontWeight.w500, color: AppColors.brand)),
+                            ]),
+                          )),
+                      ]),
+                    ),
+                  ),
+                );
+              },
+              childCount: generations.length,
+            ),
+            gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, childAspectRatio: 0.85),
+          ),
+        );
+      },
+    );
+  }
+
+  // ── Tales List ──
+
+  Widget _buildTalesList() {
+    final storiesAsync = ref.watch(userStoriesProvider);
+
+    return storiesAsync.when(
+      loading: () => _buildLoadingState(),
+      error: (_, __) => _buildEmptyState('Your stories will appear here', LucideIcons.bookOpen),
+      data: (stories) {
+        if (stories.isEmpty) return _buildEmptyState('Your stories will appear here', LucideIcons.bookOpen);
+
+        return SliverPadding(
+          padding: const EdgeInsets.symmetric(horizontal: 16),
+          sliver: SliverList(
+            delegate: SliverChildBuilderDelegate(
+              (context, index) {
+                final story = stories[index];
+                final isCompleted = story.isCompleted;
+                final isFailed = story.isFailed;
+                final isProcessing = story.isInProgress;
+                final progress = story.totalScenes > 0 ? story.completedScenes / story.totalScenes : 0.0;
+
+                final statusColor = isCompleted ? AppColors.green : isFailed ? AppColors.red : AppColors.brand;
+                final statusLabel = isCompleted ? 'Done' : isFailed ? 'Failed' : '${story.completedScenes}/${story.totalScenes}';
+
+                return GestureDetector(
+                  onTap: isCompleted ? () => context.push('/story/reader/${story.id}') : null,
+                  child: Container(
+                    margin: const EdgeInsets.only(bottom: 10),
+                    padding: const EdgeInsets.all(14),
+                    decoration: BoxDecoration(
+                      color: AppColors.card,
+                      borderRadius: BorderRadius.circular(AppSizes.radiusLg),
+                      border: Border.all(color: isFailed ? AppColors.red.withValues(alpha: 0.2) : AppColors.border),
+                    ),
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        Row(
+                          children: [
+                            // Scene count circle
+                            Container(
+                              width: 42, height: 42,
+                              decoration: BoxDecoration(
+                                shape: BoxShape.circle,
+                                color: AppColors.bg,
+                                border: Border.all(color: statusColor.withValues(alpha: 0.3), width: 2),
+                              ),
+                              child: Center(
+                                child: isProcessing
+                                    ? SizedBox(width: 18, height: 18, child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.brand, value: progress > 0 ? progress : null))
+                                    : Text('${story.totalScenes}', style: TextStyle(fontSize: AppSizes.fontSmPlus, fontWeight: FontWeight.w700, color: statusColor)),
+                              ),
+                            ),
+                            const SizedBox(width: 12),
+                            // Title + meta
+                            Expanded(child: Column(
+                              crossAxisAlignment: CrossAxisAlignment.start,
+                              children: [
+                                Text(story.storyTitle, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: AppSizes.fontSmPlus, fontWeight: FontWeight.w600, color: AppColors.text)),
+                                const SizedBox(height: 3),
+                                Row(children: [
+                                  // Status pill
+                                  Container(
+                                    padding: const EdgeInsets.symmetric(horizontal: 7, vertical: 2),
+                                    decoration: BoxDecoration(
+                                      color: statusColor.withValues(alpha: 0.1),
+                                      borderRadius: BorderRadius.circular(AppSizes.radiusFull),
+                                      border: Border.all(color: statusColor.withValues(alpha: 0.2)),
+                                    ),
+                                    child: Text(statusLabel, style: AppTextStyles.mono.copyWith(fontSize: 9, fontWeight: FontWeight.w700, color: statusColor)),
+                                  ),
+                                  const SizedBox(width: 8),
+                                  // Credits
+                                  Icon(LucideIcons.zap, size: 10, color: AppColors.textTer),
+                                  const SizedBox(width: 2),
+                                  Text('${story.creditsSpent}', style: TextStyle(fontSize: AppSizes.fontXs, color: AppColors.textTer)),
+                                  const Spacer(),
+                                  // Time
+                                  Text(_timeAgo(story.createdAt), style: TextStyle(fontSize: AppSizes.fontXs, color: AppColors.textTer)),
+                                ]),
+                              ],
+                            )),
+                            if (isCompleted)
+                              Padding(
+                                padding: const EdgeInsets.only(left: 8),
+                                child: Icon(LucideIcons.chevronRight, size: AppSizes.iconMd, color: AppColors.textTer),
+                              ),
+                          ],
+                        ),
+                        // Progress bar for in-progress stories
+                        if (isProcessing) ...[
+                          const SizedBox(height: 10),
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(2),
+                            child: LinearProgressIndicator(
+                              value: progress > 0 ? progress : null,
+                              backgroundColor: AppColors.zinc800,
+                              color: AppColors.brand,
+                              minHeight: 3,
+                            ),
+                          ),
+                        ],
+                      ],
+                    ),
+                  ),
+                );
+              },
+              childCount: stories.length,
+            ),
+          ),
+        );
+      },
+    );
+  }
+
+  // ── Empty / Loading States ──
+
+  Widget _buildEmptyState(String message, IconData icon) {
+    return SliverToBoxAdapter(
+      child: Padding(
+        padding: const EdgeInsets.symmetric(vertical: 56, horizontal: 32),
+        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
+          Container(
+            width: 64, height: 64,
+            decoration: BoxDecoration(color: AppColors.card, shape: BoxShape.circle, border: Border.all(color: AppColors.borderMed)),
+            child: Icon(icon, size: AppSizes.iconXl, color: AppColors.zinc700),
+          ),
+          const SizedBox(height: 16),
+          Text(message, style: const TextStyle(fontSize: AppSizes.fontSm, color: AppColors.textTer), textAlign: TextAlign.center),
+        ]),
+      ),
+    );
+  }
+
+  Widget _buildLoadingState() {
+    return const SliverToBoxAdapter(
+      child: Padding(
+        padding: EdgeInsets.symmetric(vertical: 56),
+        child: Center(child: SizedBox(width: 24, height: 24, child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.brand))),
+      ),
+    );
+  }
+
+  // ── Upgrade Card ──
+
+  Widget _buildUpgradeCard() {
+    return Padding(
+      padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+      child: Container(
+        padding: const EdgeInsets.all(18),
+        decoration: BoxDecoration(
+          borderRadius: BorderRadius.circular(AppSizes.radiusXl),
+          gradient: AppGradients.story,
+          border: Border.all(color: AppColors.brand.withValues(alpha: 0.2)),
+        ),
+        child: Row(children: [
+          Container(
+            width: 44, height: 44,
+            decoration: BoxDecoration(shape: BoxShape.circle, gradient: AppGradients.hero, boxShadow: AppShadows.brandGlow()),
+            child: const Icon(LucideIcons.crown, size: AppSizes.iconLg, color: AppColors.bg),
+          ),
+          const SizedBox(width: 14),
+          Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
+            const Text('Upgrade to Pro', style: TextStyle(fontSize: AppSizes.fontSmPlus, fontWeight: FontWeight.w700, color: AppColors.text)),
+            const SizedBox(height: 2),
+            Text('Unlimited generations & exclusive templates', style: TextStyle(fontSize: AppSizes.fontXs, color: AppColors.textSec)),
+          ])),
+          const SizedBox(width: 8),
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
+            decoration: BoxDecoration(gradient: AppGradients.btn, borderRadius: BorderRadius.circular(AppSizes.radiusMd)),
+            child: const Text('Go', style: TextStyle(fontSize: AppSizes.fontXs, fontWeight: FontWeight.w700, color: AppColors.bg)),
+          ),
+        ]),
+      ),
+    );
+  }
+
+  // ── Helpers ──
+
+  String _timeAgo(DateTime? dt) {
+    if (dt == null) return '';
+    final diff = DateTime.now().difference(dt);
+    if (diff.inMinutes < 1) return 'just now';
+    if (diff.inMinutes < 60) return '${diff.inMinutes}m ago';
+    if (diff.inHours < 24) return '${diff.inHours}h ago';
+    if (diff.inDays < 7) return '${diff.inDays}d ago';
+    return '${dt.day}/${dt.month}';
+  }
+
+  // ── Bottom Sheets (Notifications / Settings / Edit Profile) ──
 
   void _showNotifications() {
     showModalBottomSheet(
@@ -166,16 +611,14 @@ class _MeTabState extends ConsumerState<MeTab> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Row(children: [
-              Text('Notifications', style: TextStyle(fontSize: AppSizes.fontLg, fontWeight: FontWeight.w700, color: AppColors.text)),
+              const Text('Notifications', style: TextStyle(fontSize: AppSizes.fontLg, fontWeight: FontWeight.w700, color: AppColors.text)),
               const Spacer(),
-              GestureDetector(onTap: () => Navigator.of(context).pop(), child: Icon(LucideIcons.x, size: AppSizes.iconBase, color: AppColors.textSec)),
+              GestureDetector(onTap: () => Navigator.of(context).pop(), child: const Icon(LucideIcons.x, size: AppSizes.iconBase, color: AppColors.textSec)),
             ]),
             const SizedBox(height: 32),
             Icon(LucideIcons.bellOff, size: AppSizes.icon4xl, color: AppColors.zinc700),
             const SizedBox(height: 12),
             Text('No notifications yet', style: TextStyle(fontSize: AppSizes.fontSmPlus, color: AppColors.textTer)),
-            const SizedBox(height: 8),
-            Text('When you get likes or new content,\nthey\'ll show up here', style: TextStyle(fontSize: AppSizes.fontXs, color: AppColors.textTer, height: 1.5), textAlign: TextAlign.center),
             const SizedBox(height: 24),
           ],
         ),
@@ -194,9 +637,9 @@ class _MeTabState extends ConsumerState<MeTab> {
           mainAxisSize: MainAxisSize.min,
           children: [
             Row(children: [
-              Text('Settings', style: TextStyle(fontSize: AppSizes.fontLg, fontWeight: FontWeight.w700, color: AppColors.text)),
+              const Text('Settings', style: TextStyle(fontSize: AppSizes.fontLg, fontWeight: FontWeight.w700, color: AppColors.text)),
               const Spacer(),
-              GestureDetector(onTap: () => Navigator.of(context).pop(), child: Icon(LucideIcons.x, size: AppSizes.iconBase, color: AppColors.textSec)),
+              GestureDetector(onTap: () => Navigator.of(context).pop(), child: const Icon(LucideIcons.x, size: AppSizes.iconBase, color: AppColors.textSec)),
             ]),
             const SizedBox(height: 16),
             _settingsItem(LucideIcons.globe, 'Language', 'English', () {}),
@@ -262,9 +705,9 @@ class _MeTabState extends ConsumerState<MeTab> {
           crossAxisAlignment: CrossAxisAlignment.start,
           children: [
             Row(children: [
-              Text('Edit Profile', style: TextStyle(fontSize: AppSizes.fontLg, fontWeight: FontWeight.w700, color: AppColors.text)),
+              const Text('Edit Profile', style: TextStyle(fontSize: AppSizes.fontLg, fontWeight: FontWeight.w700, color: AppColors.text)),
               const Spacer(),
-              GestureDetector(onTap: () => Navigator.of(ctx).pop(), child: Icon(LucideIcons.x, size: AppSizes.iconBase, color: AppColors.textSec)),
+              GestureDetector(onTap: () => Navigator.of(ctx).pop(), child: const Icon(LucideIcons.x, size: AppSizes.iconBase, color: AppColors.textSec)),
             ]),
             const SizedBox(height: 20),
             Text('Display Name', style: TextStyle(fontSize: AppSizes.fontXs, fontWeight: FontWeight.w600, color: AppColors.textSec)),
@@ -296,15 +739,11 @@ class _MeTabState extends ConsumerState<MeTab> {
                       await FirebaseAuth.instance.currentUser?.updateDisplayName(name);
                       if (ctx.mounted) Navigator.of(ctx).pop();
                       if (context.mounted) {
-                        ScaffoldMessenger.of(context).showSnackBar(
-                          const SnackBar(content: Text('Profile updated!')),
-                        );
+                        ScaffoldMessenger.of(context).showSnackBar(const SnackBar(content: Text('Profile updated!')));
                       }
                     } catch (e) {
                       if (ctx.mounted) {
-                        ScaffoldMessenger.of(ctx).showSnackBar(
-                          SnackBar(content: Text('Update failed: $e')),
-                        );
+                        ScaffoldMessenger.of(ctx).showSnackBar(SnackBar(content: Text('Update failed: $e')));
                       }
                     }
                   },
@@ -316,248 +755,6 @@ class _MeTabState extends ConsumerState<MeTab> {
             const SizedBox(height: 8),
           ],
         ),
-      ),
-    );
-  }
-
-  Widget _avatarFallback(String name) {
-    final initial = name.isNotEmpty ? name[0].toUpperCase() : 'F';
-    return Container(
-      decoration: const BoxDecoration(gradient: AppGradients.hero),
-      child: Center(child: Text(initial, style: const TextStyle(fontSize: AppSizes.font2xl, fontWeight: FontWeight.w800, color: AppColors.bg))),
-    );
-  }
-
-  Widget _statItem(String value, String label) {
-    return Expanded(child: Column(children: [
-      Text(value, style: AppTextStyles.mono.copyWith(fontSize: AppSizes.fontLg, fontWeight: FontWeight.w700, color: AppColors.text)),
-      const SizedBox(height: 2),
-      Text(label, style: const TextStyle(fontSize: AppSizes.fontXsPlus, color: AppColors.textTer)),
-    ]));
-  }
-
-  Widget _statDivider() => Container(width: 1, height: 30, color: AppColors.borderMed);
-
-  Widget _buildTabSwitcher() {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Container(
-        height: 40,
-        decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(AppSizes.radiusMd), border: Border.all(color: AppColors.borderMed)),
-        child: Row(
-          children: List.generate(_tabs.length, (i) {
-            final isActive = i == _selectedTabIndex;
-            return Expanded(
-              child: GestureDetector(
-                onTap: () => setState(() => _selectedTabIndex = i),
-                child: AnimatedContainer(
-                  duration: AppDurations.fast,
-                  decoration: BoxDecoration(
-                    color: isActive ? AppColors.brand.withValues(alpha: 0.15) : Colors.transparent,
-                    borderRadius: BorderRadius.circular(AppSizes.radiusSm),
-                    border: isActive ? Border.all(color: AppColors.brand.withValues(alpha: 0.3)) : null,
-                  ),
-                  margin: const EdgeInsets.all(3),
-                  child: Center(child: Text(_tabs[i], style: TextStyle(fontSize: AppSizes.fontSmPlus, fontWeight: isActive ? FontWeight.w600 : FontWeight.w400, color: isActive ? AppColors.brand : AppColors.textTer))),
-                ),
-              ),
-            );
-          }),
-        ),
-      ),
-    );
-  }
-
-  Widget _buildContentGrid() {
-    switch (_selectedTabIndex) {
-      case 0: // Glow (FlexLocket)
-        return _buildGlowGrid();
-      case 1: // Shots
-        return _buildShotsGrid();
-      case 2: // Tales
-        return _buildTalesGrid();
-      default:
-        return _buildEmptyState('Nothing here yet');
-    }
-  }
-
-  Widget _buildGlowGrid() {
-    final enhancementsAsync = ref.watch(userEnhancementsProvider);
-
-    return enhancementsAsync.when(
-      loading: () => _buildEmptyState('Your FlexLocket enhancements will appear here'),
-      error: (_, __) => _buildEmptyState('Your FlexLocket enhancements will appear here'),
-      data: (enhancements) {
-        final completed = enhancements.where((e) => e.isCompleted).toList();
-        if (completed.isEmpty) return _buildEmptyState('Your FlexLocket enhancements will appear here');
-
-        return SliverGrid(
-          delegate: SliverChildBuilderDelegate(
-            (context, index) {
-              final enh = completed[index];
-              final mode = kEnhanceModes.where((m) => m.id == enh.enhanceMode).firstOrNull ?? kEnhanceModes.first;
-              return GestureDetector(
-                onTap: () => context.push('/glow/result', extra: {
-                  'imageUrl': enh.outputImageUrl,
-                  'originalPath': enh.inputImageUrl,
-                  'enhanceMode': enh.enhanceMode,
-                  'filterId': enh.filterId,
-                }),
-                child: Container(
-                  margin: const EdgeInsets.all(2),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(AppSizes.radiusSm),
-                    child: Stack(fit: StackFit.expand, children: [
-                      if (enh.outputImageUrl != null && enh.outputImageUrl!.isNotEmpty)
-                        CachedNetworkImage(imageUrl: enh.outputImageUrl!, fit: BoxFit.cover, placeholder: (_, __) => Container(color: AppColors.zinc900), errorWidget: (_, __, ___) => PlaceholderImage(index: index, borderRadius: AppSizes.radiusSm))
-                      else
-                        PlaceholderImage(index: index, borderRadius: AppSizes.radiusSm),
-                      Positioned(top: 6, right: 6, child: Container(
-                        width: 22, height: 22,
-                        decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.5), shape: BoxShape.circle),
-                        child: Icon(mode.icon, size: 11, color: mode.color),
-                      )),
-                    ]),
-                  ),
-                ),
-              );
-            },
-            childCount: completed.length,
-          ),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, childAspectRatio: 1.0),
-        );
-      },
-    );
-  }
-
-  Widget _buildShotsGrid() {
-    final generationsAsync = ref.watch(userGenerationsProvider);
-
-    return generationsAsync.when(
-      loading: () => _buildEmptyState('Your FlexShot creations will appear here'),
-      error: (_, __) => _buildEmptyState('Your FlexShot creations will appear here'),
-      data: (generations) {
-        final completed = generations.where((g) => g.isCompleted).toList();
-        if (completed.isEmpty) return _buildEmptyState('Your FlexShot creations will appear here');
-
-        return SliverGrid(
-          delegate: SliverChildBuilderDelegate(
-            (context, index) {
-              final gen = completed[index];
-              return GestureDetector(
-                onTap: () => context.push('/create/result/${gen.id}'),
-                child: Container(
-                  margin: const EdgeInsets.all(2),
-                  child: ClipRRect(
-                    borderRadius: BorderRadius.circular(AppSizes.radiusSm),
-                    child: Stack(fit: StackFit.expand, children: [
-                      if (gen.outputImageUrl != null && gen.outputImageUrl!.isNotEmpty)
-                        CachedNetworkImage(imageUrl: gen.outputImageUrl!, fit: BoxFit.cover, placeholder: (_, __) => Container(color: AppColors.zinc900), errorWidget: (_, __, ___) => PlaceholderImage(index: index, borderRadius: AppSizes.radiusSm))
-                      else
-                        PlaceholderImage(index: index, borderRadius: AppSizes.radiusSm),
-                      Positioned(top: 6, right: 6, child: Container(
-                        width: 22, height: 22,
-                        decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.5), shape: BoxShape.circle),
-                        child: Icon(LucideIcons.sparkles, size: 11, color: AppColors.brand),
-                      )),
-                    ]),
-                  ),
-                ),
-              );
-            },
-            childCount: completed.length,
-          ),
-          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(crossAxisCount: 3, childAspectRatio: 1.0),
-        );
-      },
-    );
-  }
-
-  Widget _buildTalesGrid() {
-    final storiesAsync = ref.watch(userStoriesProvider);
-
-    return storiesAsync.when(
-      loading: () => _buildEmptyState('Your FlexTale stories will appear here'),
-      error: (_, __) => _buildEmptyState('Your FlexTale stories will appear here'),
-      data: (stories) {
-        final completed = stories.where((s) => s.isCompleted).toList();
-        if (completed.isEmpty) return _buildEmptyState('Your FlexTale stories will appear here');
-
-        return SliverList(
-          delegate: SliverChildBuilderDelegate(
-            (context, index) {
-              final story = completed[index];
-              return GestureDetector(
-                onTap: () => context.push('/story/reader/${story.id}'),
-                child: Container(
-                  margin: const EdgeInsets.symmetric(horizontal: 16, vertical: 4),
-                  padding: const EdgeInsets.all(12),
-                  decoration: BoxDecoration(color: AppColors.card, borderRadius: BorderRadius.circular(AppSizes.radiusMd), border: Border.all(color: AppColors.borderMed)),
-                  child: Row(children: [
-                    Container(
-                      width: 48, height: 48,
-                      decoration: BoxDecoration(borderRadius: BorderRadius.circular(AppSizes.radiusSm), color: AppColors.purple.withValues(alpha: 0.1)),
-                      child: Icon(LucideIcons.bookOpen, size: AppSizes.iconLg, color: AppColors.purple),
-                    ),
-                    const SizedBox(width: 12),
-                    Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                      Text(story.storyTitle, maxLines: 1, overflow: TextOverflow.ellipsis, style: const TextStyle(fontSize: AppSizes.fontSm, fontWeight: FontWeight.w600, color: AppColors.text)),
-                      Text('${story.completedScenes}/${story.totalScenes} scenes', style: const TextStyle(fontSize: AppSizes.fontXsPlus, color: AppColors.textTer)),
-                    ])),
-                    Icon(LucideIcons.chevronRight, size: AppSizes.iconMd, color: AppColors.textTer),
-                  ]),
-                ),
-              );
-            },
-            childCount: completed.length,
-          ),
-        );
-      },
-    );
-  }
-
-  Widget _buildEmptyState(String message) {
-    return SliverToBoxAdapter(
-      child: Padding(
-        padding: const EdgeInsets.all(48),
-        child: Column(mainAxisAlignment: MainAxisAlignment.center, children: [
-          Icon(LucideIcons.image, size: AppSizes.icon6xl, color: AppColors.zinc700),
-          const SizedBox(height: 12),
-          Text(message, style: const TextStyle(fontSize: AppSizes.fontSmPlus, color: AppColors.textTer), textAlign: TextAlign.center),
-        ]),
-      ),
-    );
-  }
-
-  Widget _buildUpgradeCard() {
-    return Padding(
-      padding: const EdgeInsets.fromLTRB(16, 16, 16, 0),
-      child: Container(
-        padding: const EdgeInsets.all(20),
-        decoration: BoxDecoration(
-          borderRadius: BorderRadius.circular(AppSizes.radiusXl),
-          gradient: AppGradients.story,
-          border: Border.all(color: AppColors.brand.withValues(alpha: 0.2)),
-        ),
-        child: Row(children: [
-          Container(
-            width: 48, height: 48,
-            decoration: BoxDecoration(shape: BoxShape.circle, gradient: AppGradients.hero, boxShadow: AppShadows.brandGlow()),
-            child: const Icon(LucideIcons.crown, size: AppSizes.iconXl, color: AppColors.bg),
-          ),
-          const SizedBox(width: 16),
-          Expanded(child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-            Text('Upgrade to Pro', style: const TextStyle(fontSize: AppSizes.fontBase, fontWeight: FontWeight.w700, color: AppColors.text)),
-            const SizedBox(height: 2),
-            Text('Unlimited generations & exclusive templates', style: const TextStyle(fontSize: AppSizes.fontXs, color: AppColors.textSec)),
-          ])),
-          const SizedBox(width: 8),
-          Container(
-            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 8),
-            decoration: BoxDecoration(gradient: AppGradients.btn, borderRadius: BorderRadius.circular(AppSizes.radiusMd)),
-            child: Text('View Plans', style: const TextStyle(fontSize: AppSizes.fontXs, fontWeight: FontWeight.w700, color: AppColors.bg)),
-          ),
-        ]),
       ),
     );
   }

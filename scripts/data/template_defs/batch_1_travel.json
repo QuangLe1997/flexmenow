@@ -1,0 +1,584 @@
+[
+  {
+    "slug": "dubai_skyline",
+    "name": {
+      "en": "Dubai Skyline",
+      "vi": "Dubai Skyline",
+      "es": "Dubái Skyline",
+      "pt": "Dubai Skyline",
+      "ja": "ドバイスカイライン",
+      "ko": "두바이 스카이라인"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "male",
+    "style": "Cinematic",
+    "badge": "HOT",
+    "premium": true,
+    "prompt": "Professional portrait of {subject} standing on a luxury rooftop terrace overlooking the Dubai skyline at sunset, Burj Khalifa glowing in golden light behind, panoramic city view, 85mm lens, ultra-realistic, cinematic color grading",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor, studio, overcast",
+    "styleHint": "golden sunset glow, luxury rooftop atmosphere, Dubai skyline panorama, cinematic warmth",
+    "guidanceScale": 7.5,
+    "tags": [
+      "dubai",
+      "skyline",
+      "travel",
+      "rooftop",
+      "burj-khalifa",
+      "sunset"
+    ]
+  },
+  {
+    "slug": "santorini_sunset",
+    "name": {
+      "en": "Santorini Sunset",
+      "vi": "Hoàng Hôn Santorini",
+      "es": "Santorini Atardecer",
+      "pt": "Pôr do Sol Santorini",
+      "ja": "サントリーニ夕日",
+      "ko": "산토리니 선셋"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "couple",
+    "style": "Warm",
+    "badge": null,
+    "premium": false,
+    "prompt": "Stunning portrait of {subject} on a white-washed Santorini terrace with iconic blue dome churches, breathtaking orange and pink sunset over the Aegean Sea, warm Mediterranean golden hour light, 85mm lens, travel photography",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, overcast, cold tones, indoor",
+    "styleHint": "warm Mediterranean golden hour, white and blue Santorini palette, romantic sunset tones",
+    "guidanceScale": 7.5,
+    "tags": [
+      "santorini",
+      "greece",
+      "sunset",
+      "travel",
+      "mediterranean",
+      "couple"
+    ]
+  },
+  {
+    "slug": "iceland_aurora",
+    "name": {
+      "en": "Iceland Aurora",
+      "vi": "Cực Quang Iceland",
+      "es": "Aurora Islandia",
+      "pt": "Aurora Islândia",
+      "ja": "アイスランドオーロラ",
+      "ko": "아이슬란드 오로라"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "female",
+    "style": "Mystical",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Epic portrait of {subject} standing under the Northern Lights aurora borealis in Iceland, vibrant green and purple lights dancing across the night sky, snow-covered volcanic landscape, mystical atmosphere, long exposure photography style",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, daytime, sunny, indoor, city",
+    "styleHint": "vibrant aurora greens and purples, mystical night atmosphere, snow-covered Icelandic landscape",
+    "guidanceScale": 8,
+    "tags": [
+      "iceland",
+      "aurora",
+      "northern-lights",
+      "travel",
+      "night",
+      "winter"
+    ]
+  },
+  {
+    "slug": "maldives_beach",
+    "name": {
+      "en": "Maldives Beach",
+      "vi": "Biển Maldives",
+      "es": "Playa Maldivas",
+      "pt": "Praia Maldivas",
+      "ja": "モルディブビーチ",
+      "ko": "몰디브 비치"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "couple",
+    "style": "Bright",
+    "badge": null,
+    "premium": true,
+    "prompt": "Paradise portrait of {subject} on a pristine white sand beach in the Maldives, crystal clear turquoise water, overwater bungalows in background, tropical sunset, palm tree silhouettes, vivid colors, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, overcast, cold, rocky beach, urban",
+    "styleHint": "tropical paradise colors, crystal turquoise water, pristine white sand, sunset warmth",
+    "guidanceScale": 7,
+    "tags": [
+      "maldives",
+      "beach",
+      "tropical",
+      "paradise",
+      "travel",
+      "ocean"
+    ]
+  },
+  {
+    "slug": "nyc_times_square",
+    "name": {
+      "en": "NYC Times Square",
+      "vi": "Quảng Trường Thời Đại",
+      "es": "Times Square NYC",
+      "pt": "Times Square NYC",
+      "ja": "NYCタイムズスクエア",
+      "ko": "NYC 타임스퀘어"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "all",
+    "style": "Urban",
+    "badge": "HOT",
+    "premium": false,
+    "prompt": "Dynamic portrait of {subject} in the heart of Times Square New York City at night, vibrant neon billboards and LED screens, yellow taxis, bustling crowd energy, urban night photography, 35mm lens, ultra-detailed",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, daytime, quiet, empty street, rural",
+    "styleHint": "vibrant neon billboards, yellow taxi energy, bustling NYC night atmosphere",
+    "guidanceScale": 8,
+    "tags": [
+      "nyc",
+      "times-square",
+      "travel",
+      "neon",
+      "urban",
+      "night"
+    ]
+  },
+  {
+    "slug": "london_bridge",
+    "name": {
+      "en": "London Bridge",
+      "vi": "Cầu London",
+      "es": "Puente de Londres",
+      "pt": "Ponte de Londres",
+      "ja": "ロンドンブリッジ",
+      "ko": "런던 브리지"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "female",
+    "style": "Classic",
+    "badge": null,
+    "premium": false,
+    "prompt": "Elegant portrait of {subject} on Tower Bridge London at twilight, dramatic sky with clouds, Thames River reflections, iconic Victorian architecture, warm street lamp glow, cinematic British atmosphere, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, daytime, sunny, modern buildings only",
+    "styleHint": "dramatic twilight sky, Victorian architecture, warm lamp glow, British cinematic mood",
+    "guidanceScale": 7.5,
+    "tags": [
+      "london",
+      "tower-bridge",
+      "travel",
+      "england",
+      "twilight",
+      "classic"
+    ]
+  },
+  {
+    "slug": "seoul_gangnam",
+    "name": {
+      "en": "Seoul Gangnam",
+      "vi": "Seoul Gangnam",
+      "es": "Seúl Gangnam",
+      "pt": "Seul Gangnam",
+      "ja": "ソウル江南",
+      "ko": "서울 강남"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "female",
+    "style": "K-Style",
+    "badge": null,
+    "premium": false,
+    "prompt": "Stylish K-beauty portrait of {subject} in Seoul Gangnam district, modern Korean architecture and neon signs, trendy fashion district atmosphere, cherry blossom accents, vibrant city lights, soft skin glow, editorial photography",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, western style, old buildings, rural",
+    "styleHint": "K-beauty glow, modern Seoul neon, cherry blossom accents, trendy fashion district",
+    "guidanceScale": 7.5,
+    "tags": [
+      "seoul",
+      "gangnam",
+      "korea",
+      "travel",
+      "k-beauty",
+      "fashion"
+    ]
+  },
+  {
+    "slug": "swiss_alps",
+    "name": {
+      "en": "Swiss Alps",
+      "vi": "Dãy Alps Thụy Sĩ",
+      "es": "Alpes Suizos",
+      "pt": "Alpes Suíços",
+      "ja": "スイスアルプス",
+      "ko": "스위스 알프스"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "male",
+    "style": "Majestic",
+    "badge": null,
+    "premium": false,
+    "prompt": "Majestic portrait of {subject} in the Swiss Alps, snow-capped mountain peaks towering behind, lush green alpine meadows with wildflowers, crystal clear mountain lake reflection, dramatic landscape photography, 35mm wide lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, flat terrain, urban, indoor, desert",
+    "styleHint": "dramatic alpine landscape, snow peaks, green meadows, crystal lake reflections",
+    "guidanceScale": 7.5,
+    "tags": [
+      "swiss",
+      "alps",
+      "mountains",
+      "travel",
+      "nature",
+      "landscape"
+    ]
+  },
+  {
+    "slug": "venice_gondola",
+    "name": {
+      "en": "Venice Gondola",
+      "vi": "Thuyền Gondola Venice",
+      "es": "Góndola Venecia",
+      "pt": "Gôndola Veneza",
+      "ja": "ヴェネツィアゴンドラ",
+      "ko": "베니스 곤돌라"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "couple",
+    "style": "Romantic",
+    "badge": null,
+    "premium": true,
+    "prompt": "Romantic portrait of {subject} on a traditional gondola ride through Venice canals, ancient Italian architecture, golden hour reflections shimmering on canal water, gondolier in striped shirt, Italian charm, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern boats, cold tones, overcast, generic city",
+    "styleHint": "golden hour canal reflections, romantic Italian atmosphere, warm amber tones",
+    "guidanceScale": 7.5,
+    "tags": [
+      "venice",
+      "gondola",
+      "italy",
+      "travel",
+      "romantic",
+      "couple",
+      "canal"
+    ]
+  },
+  {
+    "slug": "singapore_marina",
+    "name": {
+      "en": "Singapore Marina",
+      "vi": "Marina Singapore",
+      "es": "Marina Singapur",
+      "pt": "Marina Singapura",
+      "ja": "シンガポールマリーナ",
+      "ko": "싱가포르 마리나"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "female",
+    "style": "Futuristic",
+    "badge": null,
+    "premium": false,
+    "prompt": "Stunning portrait of {subject} at Marina Bay Sands Singapore, futuristic skyline with Supertree Grove illuminated, infinity pool reflections, purple and blue twilight sky, modern architecture, 35mm lens, ultra-detailed",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, daytime, old buildings, rural, overcast",
+    "styleHint": "futuristic skyline, purple twilight, illuminated Supertrees, modern Singapore glow",
+    "guidanceScale": 8,
+    "tags": [
+      "singapore",
+      "marina-bay",
+      "travel",
+      "futuristic",
+      "skyline",
+      "night"
+    ]
+  },
+  {
+    "slug": "barcelona_sagrada",
+    "name": {
+      "en": "Barcelona Sagrada",
+      "vi": "Barcelona Sagrada",
+      "es": "Barcelona Sagrada",
+      "pt": "Barcelona Sagrada",
+      "ja": "バルセロナ サグラダ",
+      "ko": "바르셀로나 사그라다"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "all",
+    "style": "Artistic",
+    "badge": null,
+    "premium": false,
+    "prompt": "Artistic portrait of {subject} in front of Sagrada Familia Barcelona, Gaudí masterpiece towering behind, stained glass light casting colorful patterns, Gothic-Art Nouveau architecture, warm Spanish sunlight, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern glass buildings, night, cold tones",
+    "styleHint": "colorful stained glass light, Gaudí Art Nouveau architecture, warm Spanish atmosphere",
+    "guidanceScale": 7.5,
+    "tags": [
+      "barcelona",
+      "sagrada-familia",
+      "travel",
+      "spain",
+      "gaudi",
+      "art"
+    ]
+  },
+  {
+    "slug": "cappadocia_balloon",
+    "name": {
+      "en": "Cappadocia Balloon",
+      "vi": "Khinh Khí Cầu Cappadocia",
+      "es": "Globo Capadocia",
+      "pt": "Balão Capadócia",
+      "ja": "カッパドキア気球",
+      "ko": "카파도키아 벌룬"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "female",
+    "style": "Dreamy",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Magical portrait of {subject} with hundreds of colorful hot air balloons rising in Cappadocia Turkey at sunrise, fairy chimney rock formations below, golden pink morning sky, dreamlike atmosphere, 85mm lens, travel photography",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, overcast, night, flat terrain, urban",
+    "styleHint": "golden sunrise glow, colorful balloon array, fairy chimney landscape, dreamlike morning haze",
+    "guidanceScale": 7.5,
+    "tags": [
+      "cappadocia",
+      "balloon",
+      "turkey",
+      "travel",
+      "sunrise",
+      "dreamy"
+    ]
+  },
+  {
+    "slug": "morocco_riad",
+    "name": {
+      "en": "Morocco Riad",
+      "vi": "Riad Morocco",
+      "es": "Riad Marruecos",
+      "pt": "Riad Marrocos",
+      "ja": "モロッコ リアド",
+      "ko": "모로코 리아드"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "female",
+    "style": "Exotic",
+    "badge": null,
+    "premium": false,
+    "prompt": "Exotic portrait of {subject} in a traditional Moroccan riad courtyard, intricate zellige mosaic tiles in blue and white, carved plaster arches, warm lantern light, lush courtyard garden, Marrakech aesthetic, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern interior, cold lighting, minimalist",
+    "styleHint": "intricate Moroccan mosaic patterns, warm lantern glow, exotic Marrakech courtyard charm",
+    "guidanceScale": 7,
+    "tags": [
+      "morocco",
+      "riad",
+      "marrakech",
+      "travel",
+      "exotic",
+      "mosaic"
+    ]
+  },
+  {
+    "slug": "kyoto_bamboo",
+    "name": {
+      "en": "Kyoto Bamboo",
+      "vi": "Rừng Tre Kyoto",
+      "es": "Bambú de Kioto",
+      "pt": "Bambu de Quioto",
+      "ja": "京都竹林",
+      "ko": "교토 대나무"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "female",
+    "style": "Zen",
+    "badge": null,
+    "premium": false,
+    "prompt": "Serene portrait of {subject} walking through the Arashiyama Bamboo Grove in Kyoto, towering green bamboo stalks creating a natural cathedral, soft dappled light filtering through, zen atmosphere, 50mm lens, fine art photography",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, urban, noisy, bright neon, tropical",
+    "styleHint": "soft filtered bamboo light, zen tranquility, green cathedral of bamboo, Japanese serenity",
+    "guidanceScale": 7,
+    "tags": [
+      "kyoto",
+      "bamboo",
+      "japan",
+      "travel",
+      "zen",
+      "nature"
+    ]
+  },
+  {
+    "slug": "amsterdam_canal",
+    "name": {
+      "en": "Amsterdam Canal",
+      "vi": "Kênh Amsterdam",
+      "es": "Canal Ámsterdam",
+      "pt": "Canal Amsterdã",
+      "ja": "アムステルダム運河",
+      "ko": "암스테르담 운하"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "all",
+    "style": "Charming",
+    "badge": null,
+    "premium": false,
+    "prompt": "Charming portrait of {subject} along Amsterdam canals, historic narrow Dutch canal houses with gabled facades, bicycle parked on bridge, colorful tulips, spring atmosphere, soft overcast light, 50mm lens, European travel photography",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern skyscrapers, tropical, night, neon",
+    "styleHint": "charming Dutch canal houses, spring tulip colors, bicycle culture, European old-world charm",
+    "guidanceScale": 7,
+    "tags": [
+      "amsterdam",
+      "canal",
+      "netherlands",
+      "travel",
+      "dutch",
+      "spring"
+    ]
+  },
+  {
+    "slug": "safari_savanna",
+    "name": {
+      "en": "Safari Savanna",
+      "vi": "Safari Thảo Nguyên",
+      "es": "Safari Sabana",
+      "pt": "Safari Savana",
+      "ja": "サファリサバンナ",
+      "ko": "사파리 사바나"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "all",
+    "style": "Adventure",
+    "badge": null,
+    "premium": false,
+    "prompt": "Adventurous portrait of {subject} on African safari, vast golden savanna grasslands stretching to horizon, lone acacia tree silhouette, dramatic orange sunset sky, safari jeep in background, wild landscape photography, 35mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, urban, indoor, snow, cold, forest",
+    "styleHint": "golden savanna grasslands, dramatic African sunset, acacia tree silhouettes, adventure spirit",
+    "guidanceScale": 7.5,
+    "tags": [
+      "safari",
+      "africa",
+      "savanna",
+      "travel",
+      "adventure",
+      "sunset"
+    ]
+  },
+  {
+    "slug": "rio_beach",
+    "name": {
+      "en": "Rio Beach",
+      "vi": "Bãi Biển Rio",
+      "es": "Playa de Río",
+      "pt": "Praia do Rio",
+      "ja": "リオビーチ",
+      "ko": "리오 비치"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "male",
+    "style": "Tropical",
+    "badge": null,
+    "premium": false,
+    "prompt": "Vibrant portrait of {subject} at Copacabana Beach Rio de Janeiro, Sugar Loaf Mountain and Christ the Redeemer in background, golden tropical sunset light, beach volleyball nets, lively Brazilian atmosphere, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cold, winter, overcast, indoor, empty beach",
+    "styleHint": "vibrant tropical golden light, iconic Rio landmarks, lively beach atmosphere",
+    "guidanceScale": 7.5,
+    "tags": [
+      "rio",
+      "brazil",
+      "beach",
+      "travel",
+      "tropical",
+      "copacabana"
+    ]
+  },
+  {
+    "slug": "las_vegas_strip",
+    "name": {
+      "en": "Las Vegas Strip",
+      "vi": "Dải Las Vegas",
+      "es": "Strip Las Vegas",
+      "pt": "Strip Las Vegas",
+      "ja": "ラスベガスストリップ",
+      "ko": "라스베가스 스트립"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "male",
+    "style": "Glamour",
+    "badge": null,
+    "premium": true,
+    "prompt": "Glamorous night portrait of {subject} on the Las Vegas Strip, dazzling casino neon lights, Bellagio fountain show in background, luxury entertainment capital atmosphere, sharp suit, 35mm lens, vibrant night photography",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, daytime, quiet, suburban, natural landscape",
+    "styleHint": "dazzling neon casino lights, Bellagio fountain, luxury Vegas nightlife energy",
+    "guidanceScale": 8,
+    "tags": [
+      "las-vegas",
+      "strip",
+      "casino",
+      "travel",
+      "neon",
+      "night",
+      "glamour"
+    ]
+  },
+  {
+    "slug": "amalfi_coast",
+    "name": {
+      "en": "Amalfi Coast",
+      "vi": "Bờ Biển Amalfi",
+      "es": "Costa Amalfitana",
+      "pt": "Costa Amalfitana",
+      "ja": "アマルフィ海岸",
+      "ko": "아말피 해안"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "female",
+    "style": "Mediterranean",
+    "badge": null,
+    "premium": false,
+    "prompt": "Stunning portrait of {subject} on the Amalfi Coast Italy, colorful pastel cliffside villages cascading down to azure Mediterranean sea, lemon trees in foreground, golden afternoon light, Italian Riviera elegance, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, overcast, cold, flat terrain, urban, modern buildings",
+    "styleHint": "pastel cliffside villages, azure Mediterranean blue, lemon tree accents, Italian golden light",
+    "guidanceScale": 7.5,
+    "tags": [
+      "amalfi",
+      "italy",
+      "coast",
+      "travel",
+      "mediterranean",
+      "village"
+    ]
+  },
+  {
+    "slug": "petra_jordan",
+    "name": {
+      "en": "Petra Jordan",
+      "vi": "Petra Jordan",
+      "es": "Petra Jordania",
+      "pt": "Petra Jordânia",
+      "ja": "ペトラ ヨルダン",
+      "ko": "페트라 요르단"
+    },
+    "category": "travel",
+    "type": "travel",
+    "gender": "all",
+    "style": "Epic",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Epic portrait of {subject} in front of the Treasury Al-Khazneh at Petra Jordan, ancient rose-red sandstone facade carved into cliff, dramatic narrow canyon Siq entrance, warm desert light, archaeological wonder, 35mm lens, cinematic",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern buildings, green forest, ocean, urban",
+    "styleHint": "rose-red ancient sandstone, dramatic canyon light, archaeological grandeur, desert warmth",
+    "guidanceScale": 8,
+    "tags": [
+      "petra",
+      "jordan",
+      "travel",
+      "ancient",
+      "desert",
+      "wonder"
+    ]
+  }
+]

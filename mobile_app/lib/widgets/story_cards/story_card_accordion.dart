@@ -86,7 +86,7 @@ class _StoryCardAccordionState extends State<StoryCardAccordion>
                                         colorFilter: ColorFilter.matrix(
                                           isFocused
                                               ? _brightnessMatrix(1.0)
-                                              : _brightnessMatrix(0.35),
+                                              : _brightnessMatrix(0.5),
                                         ),
                                         child: PlaceholderImage(
                                           index: widget.data.cardIndex + i,

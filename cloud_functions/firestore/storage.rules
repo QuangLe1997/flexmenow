@@ -58,6 +58,15 @@ service firebase.storage {
     }
 
     // =============================================
+    // mockup-images/** — mockup/preview images (banners, templates, onboarding, UI)
+    // Public read; admin-uploaded only.
+    // =============================================
+    match /mockup-images/{allPaths=**} {
+      allow read: if true;
+      allow write: if false;
+    }
+
+    // =============================================
     // uploads/{userId}/** — user-uploaded photos
     // Owner can read and write; max 10 MB, image/* only.
     // =============================================

@@ -1,0 +1,495 @@
+[
+  {
+    "slug": "private_jet",
+    "name": {
+      "en": "Private Jet",
+      "vi": "Máy Bay Riêng",
+      "es": "Jet Privado",
+      "pt": "Jato Privado",
+      "ja": "プライベートジェット",
+      "ko": "프라이빗 제트"
+    },
+    "category": "luxury",
+    "type": "sexy",
+    "gender": "male",
+    "style": "Cinematic",
+    "badge": "HOT",
+    "premium": true,
+    "prompt": "Sophisticated portrait of {subject} boarding a sleek private Gulfstream jet on the tarmac, golden sunset reflecting off aircraft fuselage, luxury aviation lifestyle, tailored suit, confident stride, 50mm lens, cinematic lighting",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, commercial airline, crowded, casual clothing, rainy",
+    "styleHint": "golden tarmac sunset, sleek aircraft reflections, luxury aviation atmosphere, power and sophistication",
+    "guidanceScale": 8,
+    "tags": [
+      "private-jet",
+      "luxury",
+      "aviation",
+      "travel",
+      "wealth",
+      "power"
+    ]
+  },
+  {
+    "slug": "penthouse_view",
+    "name": {
+      "en": "Penthouse View",
+      "vi": "Tầng Penthouse",
+      "es": "Vista Penthouse",
+      "pt": "Vista Penthouse",
+      "ja": "ペントハウスビュー",
+      "ko": "펜트하우스 뷰"
+    },
+    "category": "luxury",
+    "type": "sexy",
+    "gender": "male",
+    "style": "Modern",
+    "badge": null,
+    "premium": false,
+    "prompt": "Opulent portrait of {subject} in a modern penthouse suite with floor-to-ceiling panoramic windows, glittering city skyline at night, designer furniture, ambient mood lighting, champagne on marble counter, 35mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, small room, daytime, cheap furniture, cluttered",
+    "styleHint": "city skyline night glow, luxury interior ambient light, modern minimalist opulence",
+    "guidanceScale": 7.5,
+    "tags": [
+      "penthouse",
+      "luxury",
+      "skyline",
+      "night",
+      "interior",
+      "wealth"
+    ]
+  },
+  {
+    "slug": "casino_monaco",
+    "name": {
+      "en": "Casino Monaco",
+      "vi": "Casino Monaco",
+      "es": "Casino Mónaco",
+      "pt": "Casino Mônaco",
+      "ja": "カジノモナコ",
+      "ko": "카지노 모나코"
+    },
+    "category": "luxury",
+    "type": "sexy",
+    "gender": "male",
+    "style": "Glamour",
+    "badge": null,
+    "premium": true,
+    "prompt": "Glamorous portrait of {subject} at the Monte Carlo Casino in Monaco, ornate Belle Époque gold interior, roulette table with chips, James Bond atmosphere, sharp tuxedo, dramatic chandelier lighting, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, casual clothing, modern interior, bright daylight, cheap casino",
+    "styleHint": "ornate gold Belle Époque interior, James Bond atmosphere, dramatic chandelier glow",
+    "guidanceScale": 8,
+    "tags": [
+      "casino",
+      "monaco",
+      "luxury",
+      "james-bond",
+      "gambling",
+      "glamour"
+    ]
+  },
+  {
+    "slug": "first_class",
+    "name": {
+      "en": "First Class",
+      "vi": "Hạng Nhất",
+      "es": "Primera Clase",
+      "pt": "Primeira Classe",
+      "ja": "ファーストクラス",
+      "ko": "퍼스트 클래스"
+    },
+    "category": "luxury",
+    "type": "business",
+    "gender": "female",
+    "style": "Elegant",
+    "badge": null,
+    "premium": false,
+    "prompt": "Elegant portrait of {subject} in a luxurious first class airplane suite, wide leather seat with privacy partition, champagne flute in hand, soft cabin ambient lighting, personal entertainment screen, pampered travel luxury, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, economy class, crowded, standing, bright overhead light",
+    "styleHint": "soft first class cabin ambiance, leather and champagne luxury, pampered travel elegance",
+    "guidanceScale": 7,
+    "tags": [
+      "first-class",
+      "luxury",
+      "airline",
+      "travel",
+      "elegant",
+      "vip"
+    ]
+  },
+  {
+    "slug": "ferrari_night",
+    "name": {
+      "en": "Ferrari Night",
+      "vi": "Ferrari Đêm",
+      "es": "Ferrari Noche",
+      "pt": "Ferrari Noite",
+      "ja": "フェラーリナイト",
+      "ko": "페라리 나이트"
+    },
+    "category": "luxury",
+    "type": "sexy",
+    "gender": "male",
+    "style": "Cinematic",
+    "badge": "HOT",
+    "premium": true,
+    "prompt": "Cinematic portrait of {subject} leaning on a Ferrari 488 GTB on a neon-lit city street at night, rain-slicked pavement reflections, moody red and gold ambient lighting, dramatic silhouette, 35mm lens, ultra-realistic supercar",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, daytime, dry road, cheap car, bright colors, parking lot",
+    "styleHint": "moody neon reflections on wet pavement, Ferrari red and gold tones, cinematic night atmosphere",
+    "guidanceScale": 8,
+    "tags": [
+      "ferrari",
+      "luxury",
+      "supercar",
+      "night",
+      "neon",
+      "cinematic"
+    ]
+  },
+  {
+    "slug": "rolls_royce",
+    "name": {
+      "en": "Rolls Royce",
+      "vi": "Rolls Royce",
+      "es": "Rolls Royce",
+      "pt": "Rolls Royce",
+      "ja": "ロールスロイス",
+      "ko": "롤스로이스"
+    },
+    "category": "luxury",
+    "type": "sexy",
+    "gender": "male",
+    "style": "Classic",
+    "badge": null,
+    "premium": true,
+    "prompt": "Distinguished portrait of {subject} standing next to a black Rolls Royce Phantom, classic art deco hotel entrance with marble columns, evening golden light, tailored three-piece suit, old-money elegance, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern cheap car, casual clothing, daytime, suburban",
+    "styleHint": "art deco architecture, old-money elegance, evening golden light, Rolls Royce prestige",
+    "guidanceScale": 7.5,
+    "tags": [
+      "rolls-royce",
+      "luxury",
+      "classic",
+      "car",
+      "elegant",
+      "old-money"
+    ]
+  },
+  {
+    "slug": "mansion_pool",
+    "name": {
+      "en": "Mansion Pool",
+      "vi": "Hồ Bơi Biệt Thự",
+      "es": "Piscina Mansión",
+      "pt": "Piscina Mansão",
+      "ja": "マンションプール",
+      "ko": "맨션 풀"
+    },
+    "category": "luxury",
+    "type": "sexy",
+    "gender": "couple",
+    "style": "Bright",
+    "badge": null,
+    "premium": false,
+    "prompt": "Luxurious portrait of {subject} lounging by a stunning infinity pool at a modern hilltop mansion, panoramic ocean view, palm trees swaying, golden hour sunlight, designer swimwear, ultra-vivid tropical colors, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, public pool, crowded, overcast, small pool, indoor",
+    "styleHint": "infinity pool ocean view, vivid tropical colors, golden hour mansion luxury",
+    "guidanceScale": 7,
+    "tags": [
+      "mansion",
+      "pool",
+      "luxury",
+      "ocean",
+      "tropical",
+      "couple"
+    ]
+  },
+  {
+    "slug": "champagne_rooftop",
+    "name": {
+      "en": "Champagne Rooftop",
+      "vi": "Sâm Banh Rooftop",
+      "es": "Champán Azotea",
+      "pt": "Champanhe Rooftop",
+      "ja": "シャンパンルーフトップ",
+      "ko": "샴페인 루프탑"
+    },
+    "category": "luxury",
+    "type": "sexy",
+    "gender": "female",
+    "style": "Glamour",
+    "badge": null,
+    "premium": false,
+    "prompt": "Glamorous rooftop portrait of {subject} holding a champagne glass at a luxury sky bar, panoramic city skyline at golden hour, string lights and candles, elegant cocktail dress, warm sunset glow, bokeh city lights, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, daytime, casual clothing, dirty, cheap bar",
+    "styleHint": "golden hour rooftop glow, champagne sparkle, city skyline bokeh, glamorous evening",
+    "guidanceScale": 7.5,
+    "tags": [
+      "champagne",
+      "rooftop",
+      "luxury",
+      "skyline",
+      "sunset",
+      "glamour"
+    ]
+  },
+  {
+    "slug": "designer_store",
+    "name": {
+      "en": "Designer Store",
+      "vi": "Cửa Hàng Hiệu",
+      "es": "Tienda de Diseño",
+      "pt": "Loja de Grife",
+      "ja": "デザイナーストア",
+      "ko": "디자이너 스토어"
+    },
+    "category": "luxury",
+    "type": "trend",
+    "gender": "female",
+    "style": "Fashion",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Fashion-forward portrait of {subject} in a high-end designer boutique interior, sleek marble floors and glass displays, luxury handbags and accessories on shelves, Chanel-Dior aesthetic, confident shopping pose, editorial photography, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cheap store, messy, discount signs, casual wear",
+    "styleHint": "sleek marble luxury interior, designer brand aesthetic, editorial fashion confidence",
+    "guidanceScale": 7.5,
+    "tags": [
+      "designer",
+      "fashion",
+      "luxury",
+      "shopping",
+      "boutique",
+      "trend"
+    ]
+  },
+  {
+    "slug": "gold_vip_club",
+    "name": {
+      "en": "Gold VIP Club",
+      "vi": "Club VIP Vàng",
+      "es": "Club VIP Oro",
+      "pt": "Clube VIP Ouro",
+      "ja": "ゴールドVIPクラブ",
+      "ko": "골드 VIP 클럽"
+    },
+    "category": "luxury",
+    "type": "sexy",
+    "gender": "all",
+    "style": "Dark",
+    "badge": null,
+    "premium": false,
+    "prompt": "Exclusive portrait of {subject} in a gold-themed VIP nightclub section, velvet ropes and bottle service table, dramatic purple and gold club lighting, luxury night-out aesthetic, confident VIP energy, 35mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cheap bar, bright fluorescent, empty room, casual, daytime",
+    "styleHint": "dramatic purple and gold club lighting, VIP velvet and champagne, exclusive nightlife energy",
+    "guidanceScale": 8,
+    "tags": [
+      "vip",
+      "club",
+      "luxury",
+      "nightlife",
+      "gold",
+      "exclusive"
+    ]
+  },
+  {
+    "slug": "luxury_watch",
+    "name": {
+      "en": "Luxury Watch",
+      "vi": "Đồng Hồ Sang Trọng",
+      "es": "Reloj de Lujo",
+      "pt": "Relógio de Luxo",
+      "ja": "ラグジュアリーウォッチ",
+      "ko": "럭셔리 워치"
+    },
+    "category": "luxury",
+    "type": "business",
+    "gender": "male",
+    "style": "Editorial",
+    "badge": null,
+    "premium": false,
+    "prompt": "Close-up editorial portrait of {subject} with a luxury timepiece prominently featured, detailed watch face catching light, premium tailored suit, sophisticated studio lighting, magazine-quality product photography, 85mm macro lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cheap watch, casual clothing, outdoor, messy background",
+    "styleHint": "sophisticated studio lighting, watch detail catchlights, magazine editorial quality",
+    "guidanceScale": 7.5,
+    "tags": [
+      "watch",
+      "luxury",
+      "fashion",
+      "editorial",
+      "business",
+      "timepiece"
+    ]
+  },
+  {
+    "slug": "supercar_meet",
+    "name": {
+      "en": "Supercar Meet",
+      "vi": "Hội Siêu Xe",
+      "es": "Encuentro Supercoches",
+      "pt": "Encontro Supercarros",
+      "ja": "スーパーカーミート",
+      "ko": "슈퍼카 밋"
+    },
+    "category": "luxury",
+    "type": "sexy",
+    "gender": "all",
+    "style": "Dynamic",
+    "badge": null,
+    "premium": false,
+    "prompt": "Dynamic portrait of {subject} at an exotic supercar meetup, lineup of Lamborghini Aventador, McLaren 720S, Porsche GT3 behind, showroom-quality lighting, automotive enthusiast energy, dramatic low angle, 24mm wide lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, old cars, parking lot, messy, daytime harsh light",
+    "styleHint": "showroom lighting on exotic supercars, dramatic low angle, automotive enthusiast energy",
+    "guidanceScale": 8,
+    "tags": [
+      "supercar",
+      "luxury",
+      "cars",
+      "meetup",
+      "lamborghini",
+      "mclaren"
+    ]
+  },
+  {
+    "slug": "helicopter_ride",
+    "name": {
+      "en": "Helicopter Ride",
+      "vi": "Trực Thăng",
+      "es": "Paseo en Helicóptero",
+      "pt": "Passeio de Helicóptero",
+      "ja": "ヘリコプターライド",
+      "ko": "헬리콥터 라이드"
+    },
+    "category": "luxury",
+    "type": "sexy",
+    "gender": "couple",
+    "style": "Adventure",
+    "badge": null,
+    "premium": true,
+    "prompt": "Aerial lifestyle portrait of {subject} inside a helicopter with glass cabin, dramatic aerial view of coastline and city skyline below, headset on, wind in hair, adventure luxury experience, golden hour light, 35mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, ground level, indoor, small plane, cloudy",
+    "styleHint": "dramatic aerial coastal view, glass cabin golden light, adventure luxury atmosphere",
+    "guidanceScale": 8,
+    "tags": [
+      "helicopter",
+      "luxury",
+      "aerial",
+      "adventure",
+      "couple",
+      "coastline"
+    ]
+  },
+  {
+    "slug": "diamond_gala",
+    "name": {
+      "en": "Diamond Gala",
+      "vi": "Dạ Tiệc Kim Cương",
+      "es": "Gala de Diamantes",
+      "pt": "Gala de Diamantes",
+      "ja": "ダイヤモンドガラ",
+      "ko": "다이아몬드 갈라"
+    },
+    "category": "luxury",
+    "type": "sexy",
+    "gender": "female",
+    "style": "Opulent",
+    "badge": null,
+    "premium": true,
+    "prompt": "Red carpet portrait of {subject} at a diamond-studded gala event, sparkling elegant ball gown with crystal embellishments, grand ballroom with glittering chandeliers, paparazzi flash, exclusive high-society atmosphere, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, casual wear, outdoor, cheap venue, daytime, messy",
+    "styleHint": "sparkling chandelier ballroom, diamond and crystal glamour, red carpet high-society elegance",
+    "guidanceScale": 8,
+    "tags": [
+      "diamond",
+      "gala",
+      "luxury",
+      "red-carpet",
+      "ballroom",
+      "elegant"
+    ]
+  },
+  {
+    "slug": "caviar_dinner",
+    "name": {
+      "en": "Caviar Dinner",
+      "vi": "Tiệc Caviar",
+      "es": "Cena de Caviar",
+      "pt": "Jantar de Caviar",
+      "ja": "キャビアディナー",
+      "ko": "캐비어 디너"
+    },
+    "category": "luxury",
+    "type": "business",
+    "gender": "all",
+    "style": "Refined",
+    "badge": null,
+    "premium": true,
+    "prompt": "Refined portrait of {subject} at an exclusive Michelin-star fine dining experience, candlelit table with crystal glassware and gold cutlery, caviar course presentation, intimate warm ambient lighting, sophisticated atmosphere, 50mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, fast food, bright lights, casual restaurant, plastic plates",
+    "styleHint": "candlelit fine dining warmth, crystal and gold table setting, intimate Michelin-star refinement",
+    "guidanceScale": 7,
+    "tags": [
+      "caviar",
+      "dinner",
+      "luxury",
+      "fine-dining",
+      "michelin",
+      "refined"
+    ]
+  },
+  {
+    "slug": "old_money",
+    "name": {
+      "en": "Old Money",
+      "vi": "Old Money",
+      "es": "Dinero Antiguo",
+      "pt": "Dinheiro Antigo",
+      "ja": "オールドマネー",
+      "ko": "올드머니"
+    },
+    "category": "luxury",
+    "type": "trend",
+    "gender": "couple",
+    "style": "Preppy",
+    "badge": null,
+    "premium": true,
+    "prompt": "Old money aesthetic portrait of {subject} in a grand estate library with floor-to-ceiling mahogany bookshelves, preppy Ralph Lauren-style clothing with cable knit sweater, Persian rug, antique globe, whiskey decanter, inherited wealth sophistication, warm study light",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, flashy logos, streetwear, neon, modern minimalist, loud colors",
+    "styleHint": "mahogany library warmth, preppy cable knit, antique globe and whiskey, quiet wealth",
+    "guidanceScale": 7.5,
+    "tags": [
+      "old-money",
+      "preppy",
+      "estate",
+      "trend",
+      "luxury",
+      "sophistication"
+    ]
+  },
+  {
+    "slug": "quiet_luxury",
+    "name": {
+      "en": "Quiet Luxury",
+      "vi": "Sang Trọng Thầm Lặng",
+      "es": "Lujo Discreto",
+      "pt": "Luxo Discreto",
+      "ja": "クワイエットラグジュアリー",
+      "ko": "콰이어트 럭셔리"
+    },
+    "category": "luxury",
+    "type": "trend",
+    "gender": "male",
+    "style": "Minimal",
+    "badge": null,
+    "premium": false,
+    "prompt": "Quiet luxury portrait of {subject} in understated high-end fashion, neutral beige and cream tones, cashmere overcoat and silk scarf, minimalist Scandinavian interior with designer furniture, no visible logos, stealth wealth sophistication, soft studio-like lighting",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, flashy brands, bright colors, streetwear, messy, cheap materials, outdoor",
+    "styleHint": "neutral beige cashmere tones, no-logo stealth wealth, Scandinavian minimalist sophistication",
+    "guidanceScale": 7,
+    "tags": [
+      "quiet-luxury",
+      "stealth-wealth",
+      "minimalist",
+      "trend",
+      "neutral",
+      "luxury"
+    ]
+  }
+]

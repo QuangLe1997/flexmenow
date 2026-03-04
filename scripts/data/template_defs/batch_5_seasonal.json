@@ -1,0 +1,293 @@
+[
+  {
+    "slug": "halloween",
+    "name": {
+      "en": "Halloween",
+      "vi": "Halloween",
+      "es": "Halloween",
+      "pt": "Halloween",
+      "ja": "ハロウィン",
+      "ko": "할로윈"
+    },
+    "category": "seasonal",
+    "type": "traditional",
+    "gender": "all",
+    "style": "Spooky",
+    "badge": "HOT",
+    "premium": false,
+    "prompt": "Spooky Halloween portrait of {subject} in a creative Halloween costume in a haunted setting, carved jack-o-lanterns glowing orange, eerie fog rolling through, bats silhouetted against a full moon, dark twisted trees, cinematic horror-fun atmosphere",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, bright sunny, cheerful daytime, modern office, summer beach",
+    "styleHint": "glowing jack-o-lanterns, eerie fog and full moon, spooky fun atmosphere, dark twisted trees",
+    "guidanceScale": 8,
+    "tags": [
+      "halloween",
+      "spooky",
+      "seasonal",
+      "costume",
+      "pumpkin",
+      "horror"
+    ]
+  },
+  {
+    "slug": "valentine",
+    "name": {
+      "en": "Valentine",
+      "vi": "Valentine",
+      "es": "San Valentín",
+      "pt": "Dia dos Namorados",
+      "ja": "バレンタイン",
+      "ko": "발렌타인"
+    },
+    "category": "seasonal",
+    "type": "traditional",
+    "gender": "couple",
+    "style": "Romantic",
+    "badge": null,
+    "premium": true,
+    "prompt": "Romantic Valentine portrait of {subject} surrounded by cascading red roses and floating heart-shaped elements, soft dreamy pink lighting, love letters and rose petals scattered, bokeh heart-shaped lights, intimate romantic atmosphere",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, dark horror, cold blue, lonely, harsh light, outdoor winter",
+    "styleHint": "cascading red roses, dreamy pink bokeh hearts, romantic love letter aesthetic",
+    "guidanceScale": 7.5,
+    "tags": [
+      "valentine",
+      "romantic",
+      "roses",
+      "seasonal",
+      "love",
+      "hearts"
+    ]
+  },
+  {
+    "slug": "lunar_new_year",
+    "name": {
+      "en": "Lunar New Year",
+      "vi": "Tết Nguyên Đán",
+      "es": "Año Nuevo Lunar",
+      "pt": "Ano Novo Lunar",
+      "ja": "旧正月",
+      "ko": "설날"
+    },
+    "category": "seasonal",
+    "type": "traditional",
+    "gender": "female",
+    "style": "Festive",
+    "badge": null,
+    "premium": false,
+    "prompt": "Festive Lunar New Year portrait of {subject} in elegant traditional East Asian attire, hundreds of red lanterns overhead, gold calligraphy decorations, fireworks bursting in night sky, auspicious spring festival atmosphere, rich red and gold palette",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, western holiday, Christmas tree, modern casual, summer, dark gloomy",
+    "styleHint": "red lantern glow, gold calligraphy, fireworks night sky, auspicious red and gold festival",
+    "guidanceScale": 8,
+    "tags": [
+      "lunar-new-year",
+      "tet",
+      "festival",
+      "seasonal",
+      "lantern",
+      "traditional"
+    ]
+  },
+  {
+    "slug": "cherry_blossom_japan",
+    "name": {
+      "en": "Cherry Blossom",
+      "vi": "Hoa Anh Đào",
+      "es": "Flor de Cerezo",
+      "pt": "Flor de Cerejeira",
+      "ja": "桜",
+      "ko": "벚꽃"
+    },
+    "category": "seasonal",
+    "type": "traditional",
+    "gender": "female",
+    "style": "Delicate",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Beautiful portrait of {subject} standing under a canopy of blooming cherry blossom sakura trees in Japan, pink petals gently falling like snow, traditional red torii gate in background, soft diffused spring light, hanami festival atmosphere",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, autumn leaves, winter snow, summer harsh sun, indoor, urban concrete",
+    "styleHint": "falling pink sakura petals, soft spring diffused light, torii gate, hanami serenity",
+    "guidanceScale": 7.5,
+    "tags": [
+      "cherry-blossom",
+      "sakura",
+      "japan",
+      "seasonal",
+      "spring",
+      "hanami"
+    ]
+  },
+  {
+    "slug": "summer_tropical",
+    "name": {
+      "en": "Summer Tropical",
+      "vi": "Hè Nhiệt Đới",
+      "es": "Verano Tropical",
+      "pt": "Verão Tropical",
+      "ja": "サマートロピカル",
+      "ko": "서머 트로피컬"
+    },
+    "category": "seasonal",
+    "type": "traditional",
+    "gender": "female",
+    "style": "Vibrant",
+    "badge": null,
+    "premium": false,
+    "prompt": "Vibrant summer portrait of {subject} in a lush tropical paradise, swaying palm trees, crystal turquoise water, colorful tropical flowers like plumeria and hibiscus, bright warm sunshine, fun summer fashion, vacation energy, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cold, winter, snow, indoor, overcast, dark moody",
+    "styleHint": "bright tropical sunshine, crystal turquoise water, lush palm and hibiscus, vacation vibrancy",
+    "guidanceScale": 7,
+    "tags": [
+      "summer",
+      "tropical",
+      "paradise",
+      "seasonal",
+      "beach",
+      "vacation"
+    ]
+  },
+  {
+    "slug": "autumn_leaves",
+    "name": {
+      "en": "Autumn Leaves",
+      "vi": "Lá Thu",
+      "es": "Hojas de Otoño",
+      "pt": "Folhas de Outono",
+      "ja": "紅葉",
+      "ko": "가을 단풍"
+    },
+    "category": "seasonal",
+    "type": "traditional",
+    "gender": "female",
+    "style": "Warm",
+    "badge": null,
+    "premium": false,
+    "prompt": "Atmospheric autumn portrait of {subject} walking through a forest of golden and crimson maple leaves, warm fall afternoon light filtering through canopy, cozy scarf and earth-tone outfit, crunchy leaves underfoot, pumpkin spice aesthetic",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, spring green, summer bright, winter snow, indoor, neon, tropical",
+    "styleHint": "golden crimson maple leaves, warm fall canopy light, cozy earth-tone pumpkin spice mood",
+    "guidanceScale": 7,
+    "tags": [
+      "autumn",
+      "leaves",
+      "fall",
+      "seasonal",
+      "maple",
+      "golden",
+      "cozy"
+    ]
+  },
+  {
+    "slug": "winter_wonderland",
+    "name": {
+      "en": "Winter Wonderland",
+      "vi": "Xứ Sở Mùa Đông",
+      "es": "País de las Maravillas",
+      "pt": "País das Maravilhas",
+      "ja": "ウィンターワンダーランド",
+      "ko": "윈터 원더랜드"
+    },
+    "category": "seasonal",
+    "type": "traditional",
+    "gender": "couple",
+    "style": "Magical",
+    "badge": null,
+    "premium": true,
+    "prompt": "Magical winter wonderland portrait of {subject} in a pristine snowy landscape, delicate snowflakes falling, ice crystal formations sparkling, warm winter coat and fur hat, blue and white palette with touches of warm golden light, frosted pine trees",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, summer, tropical, green grass, indoor, warm weather, rainy",
+    "styleHint": "pristine snow sparkle, delicate falling snowflakes, blue-white frost with warm golden accents",
+    "guidanceScale": 7.5,
+    "tags": [
+      "winter",
+      "snow",
+      "wonderland",
+      "seasonal",
+      "frost",
+      "magical"
+    ]
+  },
+  {
+    "slug": "diwali_festival",
+    "name": {
+      "en": "Diwali Festival",
+      "vi": "Lễ Hội Diwali",
+      "es": "Festival Diwali",
+      "pt": "Festival Diwali",
+      "ja": "ディワリフェスティバル",
+      "ko": "디왈리 축제"
+    },
+    "category": "seasonal",
+    "type": "traditional",
+    "gender": "all",
+    "style": "Radiant",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Radiant Diwali festival portrait of {subject} surrounded by hundreds of glowing clay diyas and candles, rich gold and deep orange rangoli patterns, traditional elegant Indian attire with jewelry, fireworks in background, festival of lights celebration",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, dark gloomy, western holiday, modern casual, cold winter, minimal",
+    "styleHint": "hundreds of glowing diyas, rich gold rangoli, traditional Indian elegance, festival of lights",
+    "guidanceScale": 8,
+    "tags": [
+      "diwali",
+      "festival",
+      "india",
+      "seasonal",
+      "lights",
+      "traditional"
+    ]
+  },
+  {
+    "slug": "eid_moon",
+    "name": {
+      "en": "Eid Moon",
+      "vi": "Trăng Eid",
+      "es": "Luna de Eid",
+      "pt": "Lua de Eid",
+      "ja": "イードムーン",
+      "ko": "이드 문"
+    },
+    "category": "seasonal",
+    "type": "traditional",
+    "gender": "male",
+    "style": "Elegant",
+    "badge": null,
+    "premium": false,
+    "prompt": "Elegant Eid celebration portrait of {subject} under a glowing crescent moon, ornate mosque with illuminated minarets in background, decorative lanterns casting warm light, traditional refined attire, peaceful evening atmosphere, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, daytime harsh sun, western holiday, casual clothing, indoor modern",
+    "styleHint": "glowing crescent moon, illuminated mosque minarets, warm lantern light, peaceful Eid evening",
+    "guidanceScale": 7.5,
+    "tags": [
+      "eid",
+      "moon",
+      "mosque",
+      "seasonal",
+      "lantern",
+      "celebration"
+    ]
+  },
+  {
+    "slug": "carnival",
+    "name": {
+      "en": "Carnival",
+      "vi": "Lễ Hội Carnival",
+      "es": "Carnaval",
+      "pt": "Carnaval",
+      "ja": "カーニバル",
+      "ko": "카니발"
+    },
+    "category": "seasonal",
+    "type": "traditional",
+    "gender": "male",
+    "style": "Festive",
+    "badge": null,
+    "premium": false,
+    "prompt": "Vibrant carnival portrait of {subject} in an elaborate ornate carnival costume with colorful feathers and sparkling sequins, Rio or Venice carnival parade atmosphere, golden confetti flying, festive crowd energy, bold vivid colors, 35mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, plain clothing, quiet, indoor, monochrome, minimal, somber",
+    "styleHint": "colorful feathers and sequins, golden confetti, carnival parade energy, bold vivid celebration",
+    "guidanceScale": 8,
+    "tags": [
+      "carnival",
+      "festival",
+      "feathers",
+      "seasonal",
+      "parade",
+      "vibrant"
+    ]
+  }
+]

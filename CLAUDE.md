@@ -1,4 +1,4 @@
-# FlexMe Project
+ # FlexMe Project
 
 ## Overview
 FlexMe (flexmenow.com) - AI-powered social media content creation app for global users.
@@ -10,65 +10,52 @@ Dark mode default. Mobile-first PWA.
 ```
 flexmenow/
 ├── CLAUDE.md
-├── mobile_app/                    # Flutter app (iOS + Android)
-│   └── lib/
-│       ├── core/                  # Theme, constants, i18n, utils (SHARED FOUNDATION)
-│       ├── data/                  # Models, repositories, services (DATA LAYER)
-│       ├── providers/             # Riverpod state management
-│       ├── widgets/               # Shared UI components (REUSABLE)
-│       └── screens/               # Page-level screens (onboarding, glow, create, story, wow, profile)
-├── cms_web/                       # NextJS CMS deployed on Vercel
-│   └── src/
-│       ├── app/                   # Pages (templates, stories, users, dashboard)
-│       ├── components/            # UI components + forms
-│       ├── lib/                   # Firebase Admin, GCS, auth
-│       └── api/                   # REST API routes (for AI agent automation)
-├── cloud_functions/               # Firebase Cloud Functions Gen 2
-│   └── src/
-│       ├── functions/             # genFlexShot, genFlexTale, checkGeo, handleRevenueCat, onUserCreate
-│       ├── services/              # credits, AI, storage, user (shared logic)
-│       ├── models/                # TypeScript interfaces
-│       └── config/                # Firebase init, AI clients, constants
-├── scripts/                       # Seed data, migration, deploy, tools
 ├── docs/
-│   ├── mockup_app/                # React mockup (SOURCE OF TRUTH for UI design)
-│   ├── BUILD_STRATEGY.md          # Build strategy, component architecture, design system
 │   ├── PROJECT_OVERVIEW.md        # App concept, 3 features, monetization
-│   ├── SYSTEM_ARCHITECTURE.md     # Firebase + Vertex AI + i18n architecture
-│   ├── DATABASE_SCHEMA.md         # Cloud Firestore collections
-│   ├── API_DESIGN.md              # Cloud Functions API design
-│   ├── UI_SPEC_MOBILE.md          # Screen-by-screen mobile UI spec
+│   ├── CORE_FEATURES.md           # Detailed 3 feature specs (FlexLocket/FlexShot/FlexTale)
+│   ├── SYSTEM_ARCHITECTURE.md     # Full Firebase + Vertex AI + i18n architecture
+│   ├── USER_FLOW.md               # UX flows for all 3 features + onboarding
+│   ├── DATABASE_SCHEMA.md         # Cloud Firestore collections (i18n-ready)
+│   ├── API_DESIGN.md              # Cloud Functions (callable + triggers + preview)
 │   ├── TECH_ROADMAP.md            # Phase 1-4 development plan
+│   ├── TEMPLATE_IDEAS.md          # Template & story pack content ideas
+│   ├── DESIGN_SYSTEM.md           # Colors, typography, components, animations
+│   ├── UI_SPEC_MOBILE.md          # Screen-by-screen mobile UI spec (English-first)
 │   ├── COMPETITOR_UI_ANALYSIS.md  # Research on 12+ competitor apps
-│   └── ... (other docs)
+│   ├── PO_REVIEW.md               # Product Owner review & recommendations
+│   ├── FLEXLOCKET_ANALYSIS.md     # FlexLocket positioning deep dive
+│   └── FLEXME_GIOI_THIEU.md       # Vietnamese product introduction
 ├── design/                        # UI mockups, wireframes
-└── public/                        # Static assets
+└── src/                           # Source code (upcoming)
+    └── locales/                   # i18n locale JSON files
+        ├── en.json                # English (primary, source of truth)
+        ├── vi.json                # Vietnamese
+        ├── es.json                # Spanish
+        ├── pt.json                # Portuguese
+        ├── ja.json                # Japanese
+        └── ko.json                # Korean
 ```
 
-## Tech Stack
-- **Mobile App:** Flutter (latest stable) — iOS + Android native
-- **CMS:** Next.js 14+ (App Router) + TailwindCSS — deployed on Vercel
-- **Backend:** Cloud Functions Gen 2 (Node.js 20 / TypeScript)
+## Tech Stack (Full Firebase)
+- **Frontend:** Next.js 14 + TailwindCSS + next-intl (i18n) + Framer Motion (PWA)
+- **Hosting:** Firebase Hosting (global CDN)
+- **Backend:** Cloud Functions Gen 2 (Node.js/TypeScript)
 - **Auth:** Firebase Auth (Google/Apple SSO)
-- **Database:** Cloud Firestore (NoSQL, i18n-ready)
-- **Storage:** Firebase Storage (GCS) → CDN for all media
-- **AI Logic:** Gemini AI SDK (@google/genai) — prompt optimization
-- **AI Image:** Vertex AI Imagen API — image generation
-- **Realtime:** Firestore onSnapshot (credits, generation progress, story progress)
-- **Payment:** RevenueCat (IAP middleware) → webhook to Cloud Function
+- **Database:** Cloud Firestore (NoSQL, multi-locale content fields)
+- **Storage:** Firebase Storage (GCS)
+- **AI Logic:** Gemini AI SDK (@google/genai)
+- **AI Image:** Vertex AI Imagen API
+- **Realtime:** Firestore onSnapshot (built-in)
+- **Payment:** Stripe (via Cloud Functions)
 - **Analytics:** Firebase Analytics + Crashlytics
 - **Push:** Firebase Cloud Messaging (FCM)
-- **Config:** Firebase Remote Config (feature flags, pricing, content URLs)
-- **Face Detection:** Google ML Kit (on-device, pre-upload validation)
-- **i18n:** flutter_localizations + intl (6 languages: EN, VI, ES, PT, JA, KO)
-- **State:** Riverpod (Flutter state management)
-- **Navigation:** GoRouter (Flutter routing)
+- **Config:** Firebase Remote Config
+- **i18n:** next-intl (6 languages: EN, VI, ES, PT, JA, KO)
 
 ## Key Decisions
 - Global audience, English-first, multi-language from Day 1
 - Full Firebase stack (single platform, minimal ops)
-- Flutter native app (iOS + Android) — NOT PWA
-- RevenueCat for IAP subscription + credit packs (webhook → CF)
+- PWA instead of native app (1 codebase, no app store)
 - Gemini SDK for prompt engineering + content moderation
 - Vertex AI Imagen for image generation (no self-hosted GPU)
 - Firestore onSnapshot for realtime (no WebSocket needed)
@@ -77,14 +64,10 @@ flexmenow/
 - Dark mode default (industry standard for AI photo apps)
 - Royal Gold #F59E0B (Zap Amber) brand identity — "Flex" white + "Me" gold, VIP luxury
 - No paywall in onboarding (FlexLocket free hook → paid upgrade later)
-- Tab labels max 5 chars for i18n: Glow / Create / Story / Me
+- Tab labels max 5 chars for i18n: Glow / Create / Story / Me (Saved merged into Me)
+- RTL-ready CSS (start/end not left/right)
 - Icon-driven UI to reduce translation burden
 - Brand names never translated: FlexMe, FlexLocket, FlexShot, FlexTale
-- Design tokens define 1 lần, dùng chung across Flutter + CMS + mockup
-- Component-first: shared widgets → compose into screens
-- Data-driven UI: templates/stories load from JSON (GCS), not hardcoded
-- docs/mockup_app/app.jsx = SOURCE OF TRUTH for all UI design
-- See docs/BUILD_STRATEGY.md for full architecture + component strategy
 
 ## 3 Core Features
 1. **FlexLocket (Glow)** — Subtle, undetectable AI photo enhancement. Retention driver. Free 10/day.

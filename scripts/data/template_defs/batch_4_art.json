@@ -1,0 +1,797 @@
+[
+  {
+    "slug": "vaporwave",
+    "name": {
+      "en": "Vaporwave",
+      "vi": "Vaporwave",
+      "es": "Vaporwave",
+      "pt": "Vaporwave",
+      "ja": "ヴェイパーウェイブ",
+      "ko": "베이퍼웨이브"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "female",
+    "style": "Vaporwave",
+    "badge": "HOT",
+    "premium": false,
+    "prompt": "Vaporwave aesthetic portrait of {subject} with dreamy pink and cyan gradients, Greek marble bust elements, palm tree silhouettes, retro computer graphics grid, glitch scanline effects, 90s internet nostalgia, pastel neon palette",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, realistic photo, natural lighting, outdoor nature, brown tones",
+    "styleHint": "pink and cyan gradient, Greek statue elements, 90s digital nostalgia, pastel neon glitch",
+    "guidanceScale": 9,
+    "tags": [
+      "vaporwave",
+      "aesthetic",
+      "retro",
+      "art",
+      "neon",
+      "glitch",
+      "90s"
+    ]
+  },
+  {
+    "slug": "y2k_retro",
+    "name": {
+      "en": "Y2K Retro",
+      "vi": "Y2K Cổ Điển",
+      "es": "Y2K Retro",
+      "pt": "Y2K Retrô",
+      "ja": "Y2Kレトロ",
+      "ko": "Y2K 레트로"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "female",
+    "style": "Y2K",
+    "badge": null,
+    "premium": false,
+    "prompt": "Y2K aesthetic portrait of {subject} with butterfly hair clips and glossy lip gloss, metallic chrome textures and iridescent materials, early 2000s pop fashion, bubblegum pink and baby blue palette, inflatable furniture vibes, futuristic millennium style",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, matte textures, dark gothic, natural earthy, vintage sepia",
+    "styleHint": "glossy chrome Y2K textures, bubblegum pink and baby blue, millennium pop futurism",
+    "guidanceScale": 9,
+    "tags": [
+      "y2k",
+      "retro",
+      "2000s",
+      "art",
+      "chrome",
+      "pop",
+      "butterfly"
+    ]
+  },
+  {
+    "slug": "dark_academia",
+    "name": {
+      "en": "Dark Academia",
+      "vi": "Dark Academia",
+      "es": "Dark Academia",
+      "pt": "Dark Academia",
+      "ja": "ダークアカデミア",
+      "ko": "다크 아카데미아"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "male",
+    "style": "Academic",
+    "badge": "HOT",
+    "premium": false,
+    "prompt": "Dark academia portrait of {subject} in a grand old university library with towering bookshelves, tweed blazer over turtleneck, antique leather-bound books, flickering candlelight, Oxford-Cambridge Gothic architecture, moody intellectual atmosphere",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern office, bright neon, casual streetwear, outdoor beach",
+    "styleHint": "candlelit Gothic library, tweed and leather, moody intellectual brown and gold tones",
+    "guidanceScale": 8.5,
+    "tags": [
+      "dark-academia",
+      "library",
+      "intellectual",
+      "art",
+      "gothic",
+      "vintage"
+    ]
+  },
+  {
+    "slug": "cottagecore",
+    "name": {
+      "en": "Cottagecore",
+      "vi": "Cottagecore",
+      "es": "Cottagecore",
+      "pt": "Cottagecore",
+      "ja": "コテージコア",
+      "ko": "코티지코어"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "female",
+    "style": "Pastoral",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Dreamy cottagecore portrait of {subject} in a wildflower meadow near a stone cottage, flowing white linen dress, woven flower crown, butterflies and bees, soft golden afternoon light, pastoral romance, hand-picked bouquet, vintage film look",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, urban, modern clothing, night, neon, harsh light, technology",
+    "styleHint": "soft golden meadow light, wildflowers and butterflies, pastoral vintage film romance",
+    "guidanceScale": 8,
+    "tags": [
+      "cottagecore",
+      "meadow",
+      "pastoral",
+      "art",
+      "flowers",
+      "dreamy"
+    ]
+  },
+  {
+    "slug": "steampunk",
+    "name": {
+      "en": "Steampunk",
+      "vi": "Steampunk",
+      "es": "Steampunk",
+      "pt": "Steampunk",
+      "ja": "スチームパンク",
+      "ko": "스팀펑크"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "male",
+    "style": "Steampunk",
+    "badge": null,
+    "premium": false,
+    "prompt": "Steampunk portrait of {subject} wearing brass aviator goggles and Victorian coat, intricate clockwork gear mechanisms and steam pipes in background, airship visible through window, copper and bronze color palette, industrial fantasy atmosphere",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern technology, plastic, neon colors, natural landscape, minimalist",
+    "styleHint": "brass and copper Victorian machinery, clockwork gears, steam and industrial fantasy",
+    "guidanceScale": 9,
+    "tags": [
+      "steampunk",
+      "victorian",
+      "gears",
+      "art",
+      "brass",
+      "fantasy"
+    ]
+  },
+  {
+    "slug": "oil_painting_classic",
+    "name": {
+      "en": "Oil Painting Classic",
+      "vi": "Tranh Sơn Dầu Cổ Điển",
+      "es": "Pintura al Óleo",
+      "pt": "Pintura a Óleo",
+      "ja": "油絵クラシック",
+      "ko": "유화 클래식"
+    },
+    "category": "art",
+    "type": "traditional",
+    "gender": "female",
+    "style": "Classical",
+    "badge": null,
+    "premium": true,
+    "prompt": "Classical oil painting style portrait of {subject} in Renaissance-era velvet and silk clothing, dramatic Rembrandt chiaroscuro lighting, rich deep color palette of burgundy and gold, ornate gilded frame visible, museum-quality masterpiece brushwork",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, photograph, modern clothing, flat lighting, digital art, cartoon",
+    "styleHint": "Rembrandt chiaroscuro, rich oil paint texture, Renaissance velvet and gold, museum masterpiece",
+    "guidanceScale": 9,
+    "tags": [
+      "oil-painting",
+      "classic",
+      "renaissance",
+      "art",
+      "rembrandt",
+      "museum"
+    ]
+  },
+  {
+    "slug": "pop_art",
+    "name": {
+      "en": "Pop Art",
+      "vi": "Pop Art",
+      "es": "Pop Art",
+      "pt": "Pop Art",
+      "ja": "ポップアート",
+      "ko": "팝 아트"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "all",
+    "style": "Pop Art",
+    "badge": null,
+    "premium": false,
+    "prompt": "Bold pop art portrait of {subject} in Andy Warhol and Roy Lichtenstein style, strong black outlines, halftone Ben-Day dots pattern, primary colors red yellow blue, comic speech bubble elements, screen-print aesthetic, bold graphic design",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, realistic photo, soft gradients, muted colors, dark moody, 3D render",
+    "styleHint": "bold primary colors, halftone Ben-Day dots, Warhol screen-print, comic book outlines",
+    "guidanceScale": 9,
+    "tags": [
+      "pop-art",
+      "warhol",
+      "lichtenstein",
+      "art",
+      "comic",
+      "bold"
+    ]
+  },
+  {
+    "slug": "manga_villain",
+    "name": {
+      "en": "Manga Villain",
+      "vi": "Phản Diện Manga",
+      "es": "Villano Manga",
+      "pt": "Vilão Mangá",
+      "ja": "マンガヴィラン",
+      "ko": "만화 빌런"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "male",
+    "style": "Anime",
+    "badge": "HOT",
+    "premium": false,
+    "prompt": "Dramatic manga villain portrait of {subject} with menacing dark aura emanating, glowing crimson red eyes, flowing black cape with red lining, lightning crackling in background, intense detailed anime shading, dark throne room, villainous smirk",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cute, chibi, realistic photo, soft colors, friendly expression, western cartoon",
+    "styleHint": "dark menacing aura, glowing crimson eyes, dramatic anime villain shading, lightning effects",
+    "guidanceScale": 9,
+    "tags": [
+      "manga",
+      "villain",
+      "anime",
+      "art",
+      "dark",
+      "dramatic",
+      "japan"
+    ]
+  },
+  {
+    "slug": "neon_portrait",
+    "name": {
+      "en": "Neon Portrait",
+      "vi": "Chân Dung Neon",
+      "es": "Retrato Neón",
+      "pt": "Retrato Neon",
+      "ja": "ネオンポートレート",
+      "ko": "네온 포트레이트"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "female",
+    "style": "Neon",
+    "badge": null,
+    "premium": false,
+    "prompt": "Striking neon art portrait of {subject} illuminated by colorful neon light tubes, vibrant pink magenta and electric blue glow casting dramatic shadows, dark studio background, contemporary art photography, high contrast, 85mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, natural light, outdoor, flat lighting, muted colors, daytime",
+    "styleHint": "vibrant pink and electric blue neon glow, dramatic shadow casting, dark studio contrast",
+    "guidanceScale": 8.5,
+    "tags": [
+      "neon",
+      "portrait",
+      "art",
+      "glow",
+      "contemporary",
+      "dramatic"
+    ]
+  },
+  {
+    "slug": "graffiti_street",
+    "name": {
+      "en": "Graffiti Street",
+      "vi": "Graffiti Đường Phố",
+      "es": "Grafiti Callejero",
+      "pt": "Grafite de Rua",
+      "ja": "グラフィティストリート",
+      "ko": "그래피티 스트릿"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "male",
+    "style": "Urban Art",
+    "badge": null,
+    "premium": false,
+    "prompt": "Urban street art portrait of {subject} standing against a massive colorful graffiti mural wall, spray paint textures, hip-hop streetwear fashion, bold colors and abstract shapes, urban art gallery atmosphere, 35mm lens",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, clean white wall, formal clothing, indoor gallery, minimalist, rural",
+    "styleHint": "colorful spray paint graffiti textures, hip-hop streetwear, urban art wall boldness",
+    "guidanceScale": 8,
+    "tags": [
+      "graffiti",
+      "street-art",
+      "urban",
+      "art",
+      "hip-hop",
+      "mural"
+    ]
+  },
+  {
+    "slug": "watercolor",
+    "name": {
+      "en": "Watercolor",
+      "vi": "Màu Nước",
+      "es": "Acuarela",
+      "pt": "Aquarela",
+      "ja": "水彩画",
+      "ko": "수채화"
+    },
+    "category": "art",
+    "type": "traditional",
+    "gender": "female",
+    "style": "Watercolor",
+    "badge": null,
+    "premium": false,
+    "prompt": "Delicate watercolor painting portrait of {subject} with flowing transparent paint washes, soft color bleeds and wet-on-wet technique, visible paper texture, artistic brush strokes, dreamy ethereal quality, pastel palette with splashes of vivid color",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, photo-realistic, sharp edges, digital art, dark heavy colors, 3D render",
+    "styleHint": "transparent watercolor washes, soft color bleeds, visible paper texture, dreamy ethereal",
+    "guidanceScale": 8.5,
+    "tags": [
+      "watercolor",
+      "painting",
+      "art",
+      "dreamy",
+      "pastel",
+      "traditional"
+    ]
+  },
+  {
+    "slug": "retro_80s",
+    "name": {
+      "en": "Retro 80s",
+      "vi": "Cổ Điển 80s",
+      "es": "Retro Años 80",
+      "pt": "Retrô Anos 80",
+      "ja": "レトロ80年代",
+      "ko": "레트로 80년대"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "all",
+    "style": "Retro",
+    "badge": null,
+    "premium": false,
+    "prompt": "1980s retro portrait of {subject} with classic neon grid background, palm tree silhouettes against sunset gradient sky, VHS scan lines and grain, retro oversized sunglasses, synthpop era fashion with shoulder pads, Miami Vice color palette",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern fashion, clean digital, minimalist, black and white, medieval",
+    "styleHint": "neon sunset gradient, VHS grain and scanlines, Miami Vice pink and blue, 80s synthpop era",
+    "guidanceScale": 8.5,
+    "tags": [
+      "80s",
+      "retro",
+      "neon",
+      "art",
+      "miami-vice",
+      "synthpop",
+      "vhs"
+    ]
+  },
+  {
+    "slug": "synthwave",
+    "name": {
+      "en": "Synthwave",
+      "vi": "Synthwave",
+      "es": "Synthwave",
+      "pt": "Synthwave",
+      "ja": "シンセウェイブ",
+      "ko": "신스웨이브"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "male",
+    "style": "Synthwave",
+    "badge": "HOT",
+    "premium": false,
+    "prompt": "Synthwave portrait of {subject} in retro-futuristic neon cityscape, chrome DeLorean car reflections, vivid purple and cyan laser grid extending to horizon, sunset with geometric sun, 80s sci-fi movie poster aesthetic, electric atmosphere",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, natural landscape, daytime, realistic modern city, muted colors, cartoon",
+    "styleHint": "purple and cyan neon, chrome reflections, retro laser grid, 80s sci-fi movie poster",
+    "guidanceScale": 9,
+    "tags": [
+      "synthwave",
+      "retro",
+      "neon",
+      "art",
+      "sci-fi",
+      "80s",
+      "laser"
+    ]
+  },
+  {
+    "slug": "gothic_dark",
+    "name": {
+      "en": "Gothic Dark",
+      "vi": "Gothic Tối",
+      "es": "Gótico Oscuro",
+      "pt": "Gótico Dark",
+      "ja": "ゴシックダーク",
+      "ko": "고딕 다크"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "female",
+    "style": "Gothic",
+    "badge": null,
+    "premium": false,
+    "prompt": "Dark gothic portrait of {subject} in an ornate Victorian Gothic cathedral, dramatic moonlight streaming through stained glass, black Victorian dress with lace details, ravens perched nearby, dark roses, mysterious haunting atmosphere, baroque lighting",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, bright sunny, modern clothing, happy cheerful, tropical, colorful",
+    "styleHint": "moonlit Gothic cathedral, Victorian black lace, ravens and dark roses, mysterious baroque",
+    "guidanceScale": 8.5,
+    "tags": [
+      "gothic",
+      "dark",
+      "victorian",
+      "art",
+      "cathedral",
+      "mysterious"
+    ]
+  },
+  {
+    "slug": "fairy_tale",
+    "name": {
+      "en": "Fairy Tale",
+      "vi": "Cổ Tích",
+      "es": "Cuento de Hadas",
+      "pt": "Conto de Fadas",
+      "ja": "フェアリーテイル",
+      "ko": "동화"
+    },
+    "category": "art",
+    "type": "traditional",
+    "gender": "female",
+    "style": "Fantasy",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Enchanting fairy tale portrait of {subject} in a magical enchanted forest, thousands of glowing fireflies, mystical mushroom circles, distant fantasy castle with towers, ethereal soft-focus glow, flowing princess dress, dreamy whimsical atmosphere",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, realistic modern, dark horror, urban city, harsh lighting, scary",
+    "styleHint": "enchanted forest glow, firefly magic, fairy tale castle, ethereal dreamy whimsy",
+    "guidanceScale": 9,
+    "tags": [
+      "fairy-tale",
+      "fantasy",
+      "enchanted",
+      "art",
+      "forest",
+      "magical"
+    ]
+  },
+  {
+    "slug": "fantasy_knight",
+    "name": {
+      "en": "Fantasy Knight",
+      "vi": "Hiệp Sĩ Fantasy",
+      "es": "Caballero Fantasía",
+      "pt": "Cavaleiro Fantasia",
+      "ja": "ファンタジーナイト",
+      "ko": "판타지 나이트"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "male",
+    "style": "Epic Fantasy",
+    "badge": null,
+    "premium": true,
+    "prompt": "Epic fantasy portrait of {subject} as an armored knight in ornate silver and gold plate armor, glowing enchanted sword raised high, dragon fire illuminating the sky behind, medieval battlefield, cinematic epic fantasy, dramatic lighting",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern clothes, peaceful scene, indoor, cartoon style, realistic photo",
+    "styleHint": "dragon fire sky, glowing enchanted sword, ornate silver armor, epic medieval battlefield",
+    "guidanceScale": 9,
+    "tags": [
+      "fantasy",
+      "knight",
+      "dragon",
+      "art",
+      "epic",
+      "medieval",
+      "armor"
+    ]
+  },
+  {
+    "slug": "astronaut_space",
+    "name": {
+      "en": "Astronaut Space",
+      "vi": "Phi Hành Gia",
+      "es": "Astronauta Espacio",
+      "pt": "Astronauta Espaço",
+      "ja": "宇宙飛行士",
+      "ko": "우주비행사"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "all",
+    "style": "Sci-Fi",
+    "badge": null,
+    "premium": true,
+    "prompt": "Stunning portrait of {subject} as an astronaut floating in outer space, Earth reflection visible in helmet visor, stars and colorful nebula clouds in background, zero gravity floating, detailed NASA-style spacesuit, cinematic space photography",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, on ground, indoor, no helmet, cartoon, underwater",
+    "styleHint": "Earth visor reflection, colorful nebula backdrop, zero-gravity float, NASA spacesuit detail",
+    "guidanceScale": 9,
+    "tags": [
+      "astronaut",
+      "space",
+      "nasa",
+      "art",
+      "nebula",
+      "sci-fi"
+    ]
+  },
+  {
+    "slug": "underwater_dream",
+    "name": {
+      "en": "Underwater Dream",
+      "vi": "Giấc Mơ Dưới Nước",
+      "es": "Sueño Submarino",
+      "pt": "Sonho Subaquático",
+      "ja": "アンダーウォータードリーム",
+      "ko": "언더워터 드림"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "couple",
+    "style": "Surreal",
+    "badge": null,
+    "premium": false,
+    "prompt": "Surreal underwater portrait of {subject} floating gracefully in deep blue ocean, bioluminescent jellyfish glowing around them, vibrant coral reef below, ethereal light rays filtering from surface, flowing fabric and hair, dreamlike underwater world",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, on land, dry, harsh lighting, realistic scuba gear, murky water",
+    "styleHint": "bioluminescent jellyfish glow, ethereal underwater light rays, flowing fabric in water, surreal dream",
+    "guidanceScale": 9,
+    "tags": [
+      "underwater",
+      "dream",
+      "ocean",
+      "art",
+      "jellyfish",
+      "surreal"
+    ]
+  },
+  {
+    "slug": "matrix_neo",
+    "name": {
+      "en": "Matrix Neo",
+      "vi": "Matrix Neo",
+      "es": "Matrix Neo",
+      "pt": "Matrix Neo",
+      "ja": "マトリックスネオ",
+      "ko": "매트릭스 네오"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "male",
+    "style": "Cyberpunk",
+    "badge": null,
+    "premium": false,
+    "prompt": "Matrix-inspired portrait of {subject} in iconic long black leather coat, cascading green digital rain code streams, bullet time frozen pose, dark cyberpunk cityscape, round sunglasses reflecting code, the One awakened, cinematic green and black palette",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, colorful, bright happy, natural outdoor, casual clothing, fantasy",
+    "styleHint": "green digital rain code, bullet time frozen motion, dark Matrix cyberpunk, black leather iconic",
+    "guidanceScale": 9,
+    "tags": [
+      "matrix",
+      "neo",
+      "cyberpunk",
+      "art",
+      "code",
+      "sci-fi"
+    ]
+  },
+  {
+    "slug": "ghibli_forest",
+    "name": {
+      "en": "Ghibli Forest",
+      "vi": "Rừng Ghibli",
+      "es": "Bosque Ghibli",
+      "pt": "Floresta Ghibli",
+      "ja": "ジブリの森",
+      "ko": "지브리 숲"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "couple",
+    "style": "Ghibli",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Studio Ghibli-inspired portrait of {subject} in a lush enchanted forest, tiny magical forest spirits among moss-covered trees, soft watercolor-style rendering, dappled sunlight through canopy, Miyazaki-inspired wonder and whimsy, gentle color palette",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, realistic photo, dark horror, urban city, harsh contrast, 3D render",
+    "styleHint": "soft Ghibli watercolor style, magical forest spirits, Miyazaki wonder, gentle dappled light",
+    "guidanceScale": 8.5,
+    "tags": [
+      "ghibli",
+      "forest",
+      "miyazaki",
+      "art",
+      "magical",
+      "spirits",
+      "anime"
+    ]
+  },
+  {
+    "slug": "renaissance",
+    "name": {
+      "en": "Renaissance",
+      "vi": "Phục Hưng",
+      "es": "Renacimiento",
+      "pt": "Renascimento",
+      "ja": "ルネサンス",
+      "ko": "르네상스"
+    },
+    "category": "art",
+    "type": "traditional",
+    "gender": "couple",
+    "style": "Classical",
+    "badge": null,
+    "premium": true,
+    "prompt": "Classical Renaissance painting portrait of {subject} in the style of Botticelli and Raphael, flowing silk robes in rich jewel tones, heavenly golden light from above, cherub and floral details, ornate composition, masterpiece museum quality",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern clothing, photography, digital art, dark gritty, minimalist",
+    "styleHint": "Botticelli golden light, rich silk robes, cherub details, Renaissance masterpiece composition",
+    "guidanceScale": 9,
+    "tags": [
+      "renaissance",
+      "classical",
+      "painting",
+      "art",
+      "botticelli",
+      "museum"
+    ]
+  },
+  {
+    "slug": "glitch_art",
+    "name": {
+      "en": "Glitch Art",
+      "vi": "Nghệ Thuật Glitch",
+      "es": "Arte Glitch",
+      "pt": "Arte Glitch",
+      "ja": "グリッチアート",
+      "ko": "글리치 아트"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "all",
+    "style": "Digital",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Glitch art portrait of {subject} with digital distortion effects, RGB channel splitting and chromatic aberration, pixel sorting creating flowing data streams, corrupted data moshing aesthetic, cyberpunk neon accents, modern digital art exhibition quality",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, clean photo, traditional painting, natural colors, soft focus, analog",
+    "styleHint": "RGB channel split, pixel sorting data streams, corrupted digital aesthetic, cyberpunk neon",
+    "guidanceScale": 9,
+    "tags": [
+      "glitch",
+      "digital",
+      "art",
+      "rgb",
+      "pixel",
+      "cyberpunk",
+      "data"
+    ]
+  },
+  {
+    "slug": "lofi_study",
+    "name": {
+      "en": "Lo-Fi Study",
+      "vi": "Lo-Fi Học Bài",
+      "es": "Lo-Fi Estudio",
+      "pt": "Lo-Fi Estudo",
+      "ja": "ローファイスタディ",
+      "ko": "로파이 스터디"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "couple",
+    "style": "Cozy",
+    "badge": null,
+    "premium": false,
+    "prompt": "Lo-fi study aesthetic portrait of {subject} at a cozy desk with open laptop and stacked books, warm desk lamp glow, rain droplets on window, steaming coffee mug, cat sleeping nearby, anime-inspired soft illustration style, calm study atmosphere",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, harsh lighting, outdoor, action scene, realistic photo, neon bright",
+    "styleHint": "warm desk lamp glow, rain on window, anime-soft illustration, calm cozy study vibes",
+    "guidanceScale": 8,
+    "tags": [
+      "lofi",
+      "study",
+      "cozy",
+      "art",
+      "anime",
+      "rain",
+      "calm"
+    ]
+  },
+  {
+    "slug": "comic_book_hero",
+    "name": {
+      "en": "Comic Book Hero",
+      "vi": "Siêu Anh Hùng Comic",
+      "es": "Héroe de Cómic",
+      "pt": "Herói de Quadrinhos",
+      "ja": "コミックブックヒーロー",
+      "ko": "코믹북 히어로"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "male",
+    "style": "Comic",
+    "badge": null,
+    "premium": false,
+    "prompt": "Dynamic comic book superhero portrait of {subject} in a heroic landing pose, bold action lines radiating outward, vivid primary colors, halftone dot shading, dramatic foreshortening, Marvel and DC comic book art style, speech bubble ready",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, realistic photo, soft pastel, watercolor, dark moody, manga style",
+    "styleHint": "bold action lines, primary color halftone, dramatic comic foreshortening, superhero landing",
+    "guidanceScale": 9,
+    "tags": [
+      "comic",
+      "hero",
+      "superhero",
+      "art",
+      "action",
+      "marvel",
+      "dc"
+    ]
+  },
+  {
+    "slug": "pixel_rpg",
+    "name": {
+      "en": "Pixel RPG",
+      "vi": "Pixel RPG",
+      "es": "Pixel RPG",
+      "pt": "Pixel RPG",
+      "ja": "ピクセルRPG",
+      "ko": "픽셀 RPG"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "all",
+    "style": "Pixel Art",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Retro pixel art portrait of {subject} as a classic RPG hero character, 16-bit game aesthetic with visible pixel grid, health bar and mana bar UI elements, inventory icons, fantasy adventure quest background, nostalgic SNES-era JRPG style",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, realistic, high resolution smooth, 3D render, modern game graphics, photograph",
+    "styleHint": "16-bit pixel grid, JRPG health bar UI, retro game nostalgia, SNES-era fantasy quest",
+    "guidanceScale": 9,
+    "tags": [
+      "pixel",
+      "rpg",
+      "retro",
+      "art",
+      "16-bit",
+      "game",
+      "nostalgia"
+    ]
+  },
+  {
+    "slug": "villain_arc",
+    "name": {
+      "en": "Villain Arc",
+      "vi": "Villain Arc",
+      "es": "Arco Villano",
+      "pt": "Arco Vilão",
+      "ja": "ヴィランアーク",
+      "ko": "빌런 아크"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "male",
+    "style": "Dark",
+    "badge": "HOT",
+    "premium": false,
+    "prompt": "Dramatic villain arc transformation portrait of {subject} emerging from shadows with dark smoke and embers, intense confident expression, sharp all-black outfit, dark power energy radiating outward, cinematic dark anti-hero aesthetic, moody rim lighting",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, friendly smile, bright colors, soft pastel, cute, outdoor nature, cheerful",
+    "styleHint": "dark smoke and embers, intense confidence, anti-hero rim lighting, villain transformation",
+    "guidanceScale": 8.5,
+    "tags": [
+      "villain-arc",
+      "dark",
+      "transformation",
+      "trend",
+      "anti-hero",
+      "power"
+    ]
+  },
+  {
+    "slug": "coquette_pink",
+    "name": {
+      "en": "Coquette Pink",
+      "vi": "Coquette Hồng",
+      "es": "Coquette Rosa",
+      "pt": "Coquette Rosa",
+      "ja": "コケットピンク",
+      "ko": "코켓 핑크"
+    },
+    "category": "art",
+    "type": "trend",
+    "gender": "female",
+    "style": "Feminine",
+    "badge": "NEW",
+    "premium": false,
+    "prompt": "Coquette aesthetic portrait of {subject} with delicate pink satin bows and ribbons in hair, soft pastel pink and cream tones, french lace details, cherry motifs, pearl accessories, romantic hyper-feminine aesthetic, soft dreamy focus, vintage boudoir lighting",
+    "negative": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, masculine, dark colors, sporty, streetwear, harsh contrast, neon",
+    "styleHint": "pink satin bows, soft pastel cream, french lace, cherry and pearl coquette romanticism",
+    "guidanceScale": 8,
+    "tags": [
+      "coquette",
+      "pink",
+      "feminine",
+      "trend",
+      "bows",
+      "lace",
+      "aesthetic"
+    ]
+  }
+]

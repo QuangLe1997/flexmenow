@@ -1,0 +1,1295 @@
+[
+  {
+    "slug": "camping_weekend",
+    "title": [
+      "Weekend Camping Trip",
+      "Cắm Trại Cuối Tuần"
+    ],
+    "desc": [
+      "A weekend escape into the forest — campfire, stars, and good vibes only",
+      "Cuối tuần trốn vào rừng — lửa trại, sao trời, và toàn vibes đẹp"
+    ],
+    "cat": "adventure",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, urban, city",
+    "style": "warm natural forest tones, golden campfire glow, outdoor adventure photography",
+    "gs": 8,
+    "tags": ["camping", "forest", "nature", "weekend", "campfire", "adventure"],
+    "chs": [
+      [
+        "Setting Up Camp",
+        "Dựng Trại",
+        "We're HERE. Tent up, phone off. Let's gooo 🏕️⛺",
+        "Đến nơi rồi. Dựng lều xong, tắt điện thoại. Leeeet's gooo 🏕️⛺",
+        "Portrait of {subject} setting up a camping tent in a lush green forest clearing, golden afternoon light filtering through tall trees, backpack on the ground, focused determined expression, outdoor adventure clothing, pine trees surrounding the campsite"
+      ],
+      [
+        "Trail Walk",
+        "Đi Bộ Trong Rừng",
+        "The trail through the forest hits different when you leave the city behind 🌲✨",
+        "Đường mòn trong rừng thấy khác hẳn khi bỏ lại thành phố phía sau 🌲✨",
+        "Portrait of {subject} walking along a forest trail surrounded by tall green trees, dappled sunlight creating patterns on the path, wearing hiking boots and casual outdoor clothes, peaceful expression, lush ferns and moss along the trail"
+      ],
+      [
+        "River Moment",
+        "Bên Dòng Suối",
+        "Found a stream and just sat there for an hour. Nature therapy is real 💧",
+        "Tìm được con suối và ngồi đó cả tiếng. Thiên nhiên chữa lành thật sự 💧",
+        "Portrait of {subject} sitting on a mossy rock beside a clear forest stream, bare feet dangling near the water, relaxed peaceful expression, afternoon light reflecting off water surface, lush greenery surrounding the stream"
+      ],
+      [
+        "Campfire Vibes",
+        "Bên Lửa Trại",
+        "The campfire crackling while the sun sets. This is the life 🔥🌅",
+        "Tiếng lửa trại tí tách khi mặt trời lặn. Đây mới là cuộc sống 🔥🌅",
+        "Portrait of {subject} sitting by a warm campfire at golden hour, face illuminated by orange firelight, roasting marshmallows on a stick, sunset visible through the trees, cozy camping chair, smoke rising gently"
+      ],
+      [
+        "Starry Night",
+        "Đêm Đầy Sao",
+        "The Milky Way came out tonight and I literally forgot how to breathe 🌌",
+        "Dải Ngân Hà hiện ra tối nay và mình quên cả thở 🌌",
+        "Portrait of {subject} lying on a blanket gazing up at a magnificent starry sky, Milky Way visible overhead, campsite lantern glowing softly nearby, dark forest silhouette, wonder and awe on face, nighttime outdoor photography"
+      ],
+      [
+        "Morning Mist",
+        "Sương Sớm",
+        "Woke up to this. City people will never understand 🌄☕",
+        "Thức dậy thấy cảnh này. Dân thành phố sẽ không bao giờ hiểu 🌄☕",
+        "Portrait of {subject} emerging from tent holding a steaming mug of coffee, misty forest morning, soft golden sunrise light, dewdrops on tent fabric, peaceful sleepy smile, breath visible in cool morning air"
+      ]
+    ]
+  },
+  {
+    "slug": "temple_visit",
+    "title": [
+      "Ancient Temple Journey",
+      "Hành Trình Đến Đền Cổ"
+    ],
+    "desc": [
+      "A spiritual journey through ancient temples — finding peace beyond the noise",
+      "Hành trình tâm linh qua những ngôi đền cổ — tìm bình yên giữa ồn ào"
+    ],
+    "cat": "culture",
+    "type": "travel",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern buildings, neon",
+    "style": "warm spiritual tones, ancient architecture, golden morning light, serene atmosphere",
+    "gs": 8,
+    "tags": ["temple", "spiritual", "culture", "ancient", "peace", "travel"],
+    "chs": [
+      [
+        "Temple Gate",
+        "Cổng Đền",
+        "Stepping through these gates feels like stepping back in time 🏛️",
+        "Bước qua cổng đền như bước ngược thời gian 🏛️",
+        "Portrait of {subject} standing at the ornate entrance gate of an ancient Buddhist temple, grand carved stone archway, incense smoke drifting gently, morning light, respectful traditional attire, looking up at the intricate carvings with reverence"
+      ],
+      [
+        "Prayer Moment",
+        "Khoảnh Khắc Cầu Nguyện",
+        "Sometimes you just need a quiet moment with yourself 🙏",
+        "Đôi khi chỉ cần một khoảnh khắc yên tĩnh với chính mình 🙏",
+        "Portrait of {subject} kneeling in prayer inside a serene temple hall, hands pressed together in prayer position, warm candlelight illuminating face, golden Buddha statue in soft focus background, incense smoke swirling, peaceful closed eyes"
+      ],
+      [
+        "Stone Path",
+        "Lối Đá Cổ",
+        "Every stone here has a thousand years of stories to tell 🪨✨",
+        "Mỗi viên đá nơi đây chứa ngàn năm câu chuyện 🪨✨",
+        "Portrait of {subject} walking along an ancient stone pathway lined with weathered statues and moss-covered lanterns, dappled light through old trees, traditional architecture on both sides, contemplative expression, morning mist"
+      ],
+      [
+        "Bell Tower",
+        "Tháp Chuông",
+        "The sound of the temple bell stays with you forever 🔔",
+        "Tiếng chuông chùa sẽ ở lại với bạn mãi mãi 🔔",
+        "Portrait of {subject} standing beneath a large bronze temple bell in a wooden bell tower, hand reaching up to touch the ancient bell, golden afternoon light streaming through wooden lattice, towering temple architecture visible behind"
+      ],
+      [
+        "Garden Peace",
+        "Bình Yên Vườn Thiền",
+        "Found my peace in this temple garden. No wifi needed 🍃",
+        "Tìm được bình yên trong vườn thiền. Không cần wifi 🍃",
+        "Portrait of {subject} sitting on a stone bench in a beautiful zen temple garden, koi pond with lotus flowers, perfectly raked gravel, bonsai trees, peaceful meditative expression, soft diffused afternoon light"
+      ],
+      [
+        "Sunset Blessing",
+        "Hoàng Hôn An Lành",
+        "Leaving the temple at sunset, feeling lighter than when I came 🌅🙏",
+        "Rời đền lúc hoàng hôn, thấy lòng nhẹ hơn lúc đến 🌅🙏",
+        "Portrait of {subject} walking down ancient temple steps at golden sunset, warm orange light bathing the scene, temple pagoda silhouette behind, serene grateful smile, hands clasped together, long shadows on worn stone steps"
+      ]
+    ]
+  },
+  {
+    "slug": "surfing_lesson",
+    "title": [
+      "First Time Surfing",
+      "Lần Đầu Lướt Sóng"
+    ],
+    "desc": [
+      "Catching waves for the first time — from wipeout to standing up like a pro",
+      "Lần đầu bắt sóng — từ ngã sấp mặt đến đứng vững như dân chuyên"
+    ],
+    "cat": "adventure",
+    "type": "vlog",
+    "gender": "male",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor, city",
+    "style": "bright ocean blue, golden beach light, dynamic water photography, summer vibes",
+    "gs": 8,
+    "tags": ["surfing", "beach", "ocean", "waves", "summer", "adventure"],
+    "chs": [
+      [
+        "Beach Arrival",
+        "Đến Bãi Biển",
+        "Just pulled up to the beach. Today I become a surfer 🏄‍♂️🌊",
+        "Vừa đến bãi biển. Hôm nay mình sẽ thành dân lướt sóng 🏄‍♂️🌊",
+        "Portrait of {subject} standing on a beautiful sandy beach holding a surfboard under one arm, bright blue ocean in background, white sand, excited confident expression, wearing rash guard, morning sunlight, waves crashing in distance"
+      ],
+      [
+        "Wax On",
+        "Chuẩn Bị Ván",
+        "Waxing the board like I know what I'm doing 😂🏄",
+        "Đánh sáp ván như mình biết mình đang làm gì vậy 😂🏄",
+        "Portrait of {subject} kneeling on the beach waxing a surfboard, concentrated expression with slight grin, ocean waves visible in background, surfboard resting on sand, tropical beach setting, bright warm sunlight"
+      ],
+      [
+        "First Wipeout",
+        "Ngã Sóng Đầu Tiên",
+        "First wave: 1, Me: 0. But we getting back up 😤💪",
+        "Sóng đầu tiên: 1, Mình: 0. Nhưng đứng lên lại thôi 😤💪",
+        "Portrait of {subject} emerging from shallow ocean water laughing after a wipeout, wet hair, water splashing around, surfboard floating nearby with leash attached to ankle, bright sunny beach background, genuine laughing expression"
+      ],
+      [
+        "Standing Up",
+        "Đứng Được Rồi",
+        "I DID IT. I actually stood up on the board!! 🤯🏄‍♂️",
+        "LÀM ĐƯỢC RỒI. Mình thật sự đứng được trên ván!! 🤯🏄‍♂️",
+        "Portrait of {subject} standing on a surfboard riding a small wave, arms out for balance, triumphant excited expression, turquoise ocean water, white foam, golden sunlight, dynamic action shot from water level"
+      ],
+      [
+        "Sunset Session",
+        "Phiên Hoàng Hôn",
+        "Last wave of the day. Golden hour surfing is unreal 🌅🏄",
+        "Con sóng cuối ngày. Lướt sóng lúc golden hour đẹp không thật 🌅🏄",
+        "Portrait of {subject} carrying surfboard walking along the shoreline at golden sunset, wet suit glistening, orange sky reflected on wet sand, silhouette of other surfers in background, tired but satisfied smile, warm sunset glow"
+      ],
+      [
+        "Surfer Now",
+        "Giờ Là Dân Lướt Sóng",
+        "Went in a beginner, came out a surfer. Already planning next session 🤙",
+        "Vào là newbie, ra là dân lướt sóng. Đã plan lần tới rồi 🤙",
+        "Portrait of {subject} sitting on surfboard on the beach at dusk, shaka hand sign, relaxed confident smile, colorful sunset sky behind, surfboard fins in sand, post-surf glow, ocean in background"
+      ]
+    ]
+  },
+  {
+    "slug": "family_reunion",
+    "title": [
+      "Family Reunion Day",
+      "Ngày Họp Mặt Gia Đình"
+    ],
+    "desc": [
+      "When the whole family comes together — chaos, laughter, and unconditional love",
+      "Khi cả đại gia đình sum họp — ồn ào, tiếng cười, và tình yêu vô điều kiện"
+    ],
+    "cat": "family",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, studio, cold tones",
+    "style": "warm family gathering, joyful candid moments, golden warm tones, home cooking vibes",
+    "gs": 8,
+    "tags": ["family", "reunion", "love", "gathering", "home", "celebration"],
+    "chs": [
+      [
+        "Everyone's Coming",
+        "Mọi Người Sắp Đến",
+        "The house is ready, food is cooking, everyone's on their way 🏠❤️",
+        "Nhà dọn xong, đồ ăn đang nấu, mọi người đang trên đường đến 🏠❤️",
+        "Portrait of {subject} standing at the front door of a warmly decorated family home, welcoming expression with open arms, festive decorations visible, warm interior lighting, home-cooked food steam drifting from kitchen, excited anticipation"
+      ],
+      [
+        "Kitchen Chaos",
+        "Bếp Hỗn Loạn",
+        "6 aunties in the kitchen and somehow nobody is in charge 😂🍳",
+        "6 bà dì trong bếp mà không ai chỉ huy ai 😂🍳",
+        "Portrait of {subject} in a busy family kitchen helping prepare food, multiple dishes on the counter, steam rising from pots, warm kitchen lighting, laughing while stirring a pot, crowded joyful domestic scene"
+      ],
+      [
+        "Table Full",
+        "Bàn Tiệc Đầy Ắp",
+        "The table is literally bending under all this food. Grandma cooked for an army 🍖🥘",
+        "Bàn ăn sắp gãy vì đồ ăn. Bà nấu cho cả quân đội 🍖🥘",
+        "Portrait of {subject} sitting at a large dining table overflowing with home-cooked dishes, surrounded by family members' hands reaching for food, warm candlelight, traditional family feast setting, joyful grateful expression"
+      ],
+      [
+        "Kids Running Wild",
+        "Bọn Trẻ Chạy Loạn",
+        "The kids have taken over the living room and honestly same energy 😆👶",
+        "Bọn trẻ chiếm phòng khách và thật ra mình cũng muốn chạy theo 😆👶",
+        "Portrait of {subject} sitting on the floor of a living room playing with young children, toys scattered around, genuine hearty laugh, warm family home interior, soft lamp light, candid moment of pure joy and connection"
+      ],
+      [
+        "Old Photos",
+        "Ảnh Ngày Xưa",
+        "Grandma pulled out the old photo album and now everyone is crying 🥲📸",
+        "Bà lấy album ảnh cũ ra và giờ ai cũng khóc 🥲📸",
+        "Portrait of {subject} looking at an old family photo album with elderly grandmother, both seated on a sofa, warm soft lamp light, nostalgic emotional expressions, vintage photos visible in the album, intimate family moment"
+      ],
+      [
+        "Family Photo",
+        "Ảnh Đại Gia Đình",
+        "Took 47 tries to get everyone looking at the camera. Worth it 📷❤️",
+        "Chụp 47 lần mới ai cũng nhìn vào máy ảnh. Xứng đáng 📷❤️",
+        "Portrait of {subject} in the center of a large family group photo, everyone dressed nicely, warm golden home setting, genuine smiles all around, multiple generations visible, festive decorations in background"
+      ]
+    ]
+  },
+  {
+    "slug": "hiking_summit",
+    "title": [
+      "Summit Day",
+      "Ngày Chinh Phục Đỉnh"
+    ],
+    "desc": [
+      "The climb to the top — blood, sweat, and the most epic view of your life",
+      "Hành trình lên đỉnh — mồ hôi, nước mắt, và view đẹp nhất đời"
+    ],
+    "cat": "adventure",
+    "type": "travel",
+    "gender": "all",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor, flat terrain",
+    "style": "epic mountain landscape, dramatic elevation, golden light, adventure photography",
+    "gs": 8,
+    "tags": ["hiking", "mountain", "summit", "adventure", "nature", "trekking"],
+    "chs": [
+      [
+        "Trailhead Start",
+        "Điểm Xuất Phát",
+        "4AM wake up. The mountain is calling and I must go 🏔️⛰️",
+        "Dậy 4 giờ sáng. Núi đang gọi và mình phải đi 🏔️⛰️",
+        "Portrait of {subject} at a mountain trailhead at dawn, headlamp on, hiking backpack secured, misty forest trail ahead, first light breaking through trees, determined focused expression, hiking poles in hand"
+      ],
+      [
+        "Through The Clouds",
+        "Xuyên Qua Mây",
+        "We just passed through the cloud layer. Above the clouds now 🌤️☁️",
+        "Vừa xuyên qua tầng mây. Giờ ở trên mây rồi 🌤️☁️",
+        "Portrait of {subject} hiking above the cloud line on a mountain trail, sea of white clouds below, blue sky above, dramatic mountain terrain, breathless but amazed expression, alpine vegetation, morning golden light"
+      ],
+      [
+        "The Hard Part",
+        "Đoạn Khó Nhất",
+        "My legs said no but my heart said keep going 💪😤",
+        "Chân nói không nhưng tim bảo đi tiếp 💪😤",
+        "Portrait of {subject} climbing a steep rocky mountain section, sweat visible, gripping rock with both hands, intense determination on face, dramatic mountain backdrop, challenging terrain, harsh bright sunlight"
+      ],
+      [
+        "Summit Reached",
+        "Đã Lên Đỉnh",
+        "I MADE IT TO THE TOP!! The view is INSANE 🏔️🎉🔥",
+        "LÊN ĐỈNH RỒI!! View ĐIÊN KHÙNG luôn 🏔️🎉🔥",
+        "Portrait of {subject} standing triumphantly at a mountain summit, arms raised in victory, panoramic mountain range view stretching to horizon, dramatic clouds below, epic golden hour light, summit marker or flag visible, pure euphoria on face"
+      ],
+      [
+        "Cloud Kingdom",
+        "Vương Quốc Mây",
+        "Sitting on top of the world watching clouds roll by. No words needed 🌄",
+        "Ngồi trên đỉnh thế giới nhìn mây trôi. Không cần nói gì 🌄",
+        "Portrait of {subject} sitting on a rocky mountain summit edge, legs dangling over the cliff, vast mountain landscape with rolling clouds below, serene contemplative expression, warm sunset light, breathtaking panoramic view"
+      ],
+      [
+        "Golden Descent",
+        "Xuống Núi Hoàng Hôn",
+        "Coming down at sunset. Different person than the one who went up 🌅🙏",
+        "Xuống núi lúc hoàng hôn. Khác hẳn người lúc leo lên 🌅🙏",
+        "Portrait of {subject} descending mountain trail at golden sunset, warm orange light casting long shadows, mountain silhouettes in background, tired but deeply satisfied peaceful expression, hiking gear, golden glow on face"
+      ],
+      [
+        "Back to Earth",
+        "Trở Về Mặt Đất",
+        "Legs are destroyed but soul is recharged. Already planning the next summit 🥾💛",
+        "Chân nát nhưng tâm hồn đầy năng lượng. Đã plan đỉnh tiếp theo 🥾💛",
+        "Portrait of {subject} at the base of the mountain at dusk, removing hiking boots, exhausted but glowing smile, mountain visible behind in fading light, headlamp around neck, sense of accomplishment radiating"
+      ]
+    ]
+  },
+  {
+    "slug": "cultural_festival",
+    "title": [
+      "Festival Vibes",
+      "Lễ Hội Rực Rỡ"
+    ],
+    "desc": [
+      "Immersed in a vibrant cultural festival — colors, music, and traditions come alive",
+      "Đắm mình trong lễ hội văn hoá rực rỡ — sắc màu, âm nhạc, và truyền thống sống động"
+    ],
+    "cat": "culture",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, empty, deserted",
+    "style": "vibrant festival colors, dynamic crowd energy, warm cultural tones, lively atmosphere",
+    "gs": 8,
+    "tags": ["festival", "culture", "tradition", "celebration", "music", "colors"],
+    "chs": [
+      [
+        "Festival Entrance",
+        "Cổng Lễ Hội",
+        "The energy hits you before you even walk in 🎊🎭",
+        "Năng lượng ập đến trước cả khi bước vào 🎊🎭",
+        "Portrait of {subject} standing at a decorated festival entrance gate, colorful banners and lanterns overhead, crowds of people, festive traditional clothing, excited wide-eyed expression, vibrant daytime lighting"
+      ],
+      [
+        "Traditional Dance",
+        "Điệu Múa Truyền Thống",
+        "The traditional dancers are absolutely mesmerizing. Can't look away 💃🪘",
+        "Các vũ công truyền thống múa đẹp mê hồn. Không thể rời mắt 💃🪘",
+        "Portrait of {subject} watching a traditional dance performance at the festival, face illuminated by stage lights, awestruck captivated expression, colorful costumed dancers blurred in background, festive decorations, warm evening lights"
+      ],
+      [
+        "Street Food Heaven",
+        "Thiên Đường Ẩm Thực",
+        "I tried everything at the food stalls and I regret NOTHING 🍢🤤",
+        "Ăn hết các quầy đồ ăn và KHÔNG HỐI HẬN gì cả 🍢🤤",
+        "Portrait of {subject} at a bustling festival food stall, holding traditional street food in both hands, delighted expression with mouth slightly open about to eat, colorful food stalls and lanterns behind, steam rising from cooking, warm golden lighting"
+      ],
+      [
+        "Dressed Up",
+        "Mặc Đồ Truyền Thống",
+        "When in Rome... or in this case, when at the festival. Fully committed 🎎✨",
+        "Đã đi lễ hội thì phải hết mình. Full đồ truyền thống luôn 🎎✨",
+        "Portrait of {subject} wearing beautiful traditional festival clothing, standing in a vibrant festival marketplace, colorful stalls and decorations surrounding, proud confident smile, intricate traditional patterns on outfit, warm festive lighting"
+      ],
+      [
+        "Lantern Night",
+        "Đêm Hoa Đăng",
+        "When the lanterns lit up the night sky... I felt something I can't explain 🏮✨",
+        "Khi đèn lồng thắp sáng bầu trời đêm... mình cảm nhận điều không thể diễn tả 🏮✨",
+        "Portrait of {subject} surrounded by hundreds of glowing paper lanterns at night, warm golden light reflecting on face, magical dreamy atmosphere, festival crowd silhouettes, lanterns floating upward into dark sky, wonder and emotion on face"
+      ],
+      [
+        "Festival Farewell",
+        "Tạm Biệt Lễ Hội",
+        "Best cultural experience of my life. Heart is SO full right now 🧡🎆",
+        "Trải nghiệm văn hoá đỉnh nhất đời. Lòng đang TRÀN ĐẦY ngay lúc này 🧡🎆",
+        "Portrait of {subject} walking away from the festival at night, looking back over shoulder with a warm grateful smile, festival lights and fireworks in background, colorful bokeh, slightly tired but deeply happy expression"
+      ]
+    ]
+  },
+  {
+    "slug": "kayak_adventure",
+    "title": [
+      "Kayak Adventure",
+      "Phiêu Lưu Chèo Kayak"
+    ],
+    "desc": [
+      "Paddling through stunning waters — limestone cliffs, hidden caves, and pure freedom",
+      "Chèo kayak qua vùng nước tuyệt đẹp — vách đá vôi, hang ẩn, và tự do tuyệt đối"
+    ],
+    "cat": "adventure",
+    "type": "travel",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor, pool",
+    "style": "vivid turquoise water, limestone karst landscape, bright tropical light, adventure photography",
+    "gs": 8,
+    "tags": ["kayak", "water", "adventure", "nature", "limestone", "paddle"],
+    "chs": [
+      [
+        "Launch Time",
+        "Xuất Phát",
+        "Kayak loaded. Paddle in hand. Let's explore 🛶💪",
+        "Kayak sẵn sàng. Mái chèo cầm tay. Khám phá thôi 🛶💪",
+        "Portrait of {subject} pushing a kayak into calm turquoise water from a sandy shore, life vest on, paddle resting across the kayak, bright tropical morning light, limestone cliffs in the distance, eager adventurous expression"
+      ],
+      [
+        "Emerald Waters",
+        "Dòng Nước Ngọc",
+        "The water is SO green it doesn't look real. Earth is insane 🌊💎",
+        "Nước XANH đến mức trông không thật. Trái đất quá đẹp 🌊💎",
+        "Portrait of {subject} paddling a kayak through crystal clear emerald green water, tall limestone karst formations rising on both sides, reflections in still water, bright sunshine, amazed expression looking at the scenery"
+      ],
+      [
+        "Hidden Cave",
+        "Hang Ẩn",
+        "Found a hidden cave entrance. Had to paddle in. No regrets 🕳️🛶",
+        "Phát hiện cửa hang ẩn. Phải chèo vào. Không hối hận 🕳️🛶",
+        "Portrait of {subject} paddling kayak into a dimly lit cave entrance, dramatic light streaming in from the opening behind, stalactites visible above, turquoise water glowing in cave light, curious excited expression"
+      ],
+      [
+        "Cliff Views",
+        "View Vách Đá",
+        "Floating between these massive cliffs feeling incredibly small and incredibly alive 🏔️✨",
+        "Trôi giữa những vách đá khổng lồ cảm thấy vô cùng nhỏ bé và vô cùng sống động 🏔️✨",
+        "Portrait of {subject} resting paddle across kayak looking up at towering limestone cliffs, dramatic scale contrast, lush tropical vegetation on cliff faces, calm reflective water, golden afternoon light, sense of awe"
+      ],
+      [
+        "Sunset Paddle",
+        "Chèo Lúc Hoàng Hôn",
+        "Paddling back at sunset. This is peak living 🌅🛶",
+        "Chèo về lúc hoàng hôn. Đây là đỉnh cao cuộc sống 🌅🛶",
+        "Portrait of {subject} paddling kayak on calm water at golden sunset, orange and pink sky reflecting on water surface, silhouettes of limestone formations, peaceful satisfied expression, warm golden light on face and water"
+      ]
+    ]
+  },
+  {
+    "slug": "grandma_cooking",
+    "title": [
+      "Cooking with Grandma",
+      "Nấu Ăn Cùng Bà"
+    ],
+    "desc": [
+      "Learning grandma's secret recipe — the taste of home that no restaurant can replicate",
+      "Học công thức bí mật của bà — vị nhà mà không nhà hàng nào có được"
+    ],
+    "cat": "family",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, restaurant, outdoor",
+    "style": "warm cozy kitchen, home cooking, golden domestic light, intimate family moment",
+    "gs": 8,
+    "tags": ["cooking", "grandma", "family", "recipe", "home", "tradition"],
+    "chs": [
+      [
+        "Grandma's Kitchen",
+        "Bếp Của Bà",
+        "Walked into grandma's kitchen and instantly felt 5 years old again 🥺🏠",
+        "Bước vào bếp bà và lập tức thấy mình như 5 tuổi lại 🥺🏠",
+        "Portrait of {subject} stepping into a cozy traditional kitchen where an elderly grandmother is already cooking, warm golden kitchen light, pots simmering on stove, herbs and spices on counter, nostalgic emotional expression"
+      ],
+      [
+        "Secret Ingredients",
+        "Nguyên Liệu Bí Mật",
+        "Grandma said 'a pinch' but that was definitely half the jar 😂🧂",
+        "Bà bảo 'một chút' nhưng chắc chắn đó là nửa lọ rồi 😂🧂",
+        "Portrait of {subject} watching grandmother add seasoning to a pot, leaning in closely with amused curious expression, grandmother's weathered hands visible holding spices, warm kitchen steam, ingredients spread on wooden counter"
+      ],
+      [
+        "Hands On",
+        "Tự Tay Làm",
+        "She's finally letting me try. No pressure, just grandma watching my every move 😅🥘",
+        "Cuối cùng bà cho mình thử. Không áp lực, chỉ có bà nhìn từng động tác 😅🥘",
+        "Portrait of {subject} carefully stirring a large pot on the stove with a wooden spoon, slightly nervous concentrated expression, grandmother standing beside watching with arms crossed and a knowing smile, warm cozy kitchen, steam rising"
+      ],
+      [
+        "Taste Test",
+        "Nếm Thử",
+        "THE TASTE. It's exactly like I remember from childhood. I'm not crying, you're crying 🥲",
+        "CÁI VỊ NÀY. Y hệt như mình nhớ từ hồi nhỏ. Mình không khóc, bạn khóc đó 🥲",
+        "Portrait of {subject} tasting food from a spoon with eyes closed in bliss, one hand on chest, emotional overwhelmed expression, grandmother watching proudly in background, warm kitchen glow, steaming dishes on counter"
+      ],
+      [
+        "Together at Table",
+        "Cùng Nhau Bên Bàn Ăn",
+        "Eating grandma's food at her table hits different. This is what life is about 💛🍜",
+        "Ăn cơm bà nấu tại bàn ăn nhà bà khác biệt lắm. Đây mới là cuộc sống 💛🍜",
+        "Portrait of {subject} sitting at a simple wooden dining table with grandmother, both enjoying the meal they cooked together, warm lamp light, home-cooked dishes on table, genuine warm smiles, intimate cozy dining room"
+      ],
+      [
+        "Recipe Written",
+        "Ghi Công Thức",
+        "Made grandma write down the recipe. This is a family treasure now 📝👵",
+        "Bắt bà viết công thức ra giấy. Đây là báu vật gia đình rồi 📝👵",
+        "Portrait of {subject} holding a handwritten recipe card while hugging grandmother from the side, both looking at camera with loving smiles, cozy kitchen background, warm golden lighting, grandmother's handwriting visible on the card"
+      ]
+    ]
+  },
+  {
+    "slug": "rock_climbing",
+    "title": [
+      "Rock Climbing Challenge",
+      "Thử Thách Leo Vách Đá"
+    ],
+    "desc": [
+      "First time at the climbing gym — from sweaty palms to reaching the top",
+      "Lần đầu đến phòng leo vách — từ tay ướt mồ hôi đến chạm đỉnh"
+    ],
+    "cat": "adventure",
+    "type": "vlog",
+    "gender": "male",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, outdoor nature, mountain",
+    "style": "dynamic indoor climbing, colorful holds, dramatic upward angles, athletic lighting",
+    "gs": 8,
+    "tags": ["climbing", "gym", "fitness", "challenge", "indoor", "sport"],
+    "chs": [
+      [
+        "Gearing Up",
+        "Chuẩn Bị",
+        "Harness on, chalk up. Hands are already sweating and I haven't started 😅🧗",
+        "Đeo dây xong, phấn tay rồi. Tay đã ướt mà chưa bắt đầu 😅🧗",
+        "Portrait of {subject} at the base of an indoor climbing wall putting chalk on hands, harness buckled, looking up at the towering colorful climbing wall, slightly nervous but determined expression, climbing gym environment with colored holds"
+      ],
+      [
+        "First Moves",
+        "Những Bước Đầu",
+        "Okay this is way harder than it looks on YouTube 💀🪨",
+        "Okay cái này khó hơn trên YouTube NHIỀU 💀🪨",
+        "Portrait of {subject} clinging to colorful holds on an indoor climbing wall about 3 meters up, muscles tensed, focused intense expression looking for next hold, chalk on hands, dynamic climbing pose, gym lighting from above"
+      ],
+      [
+        "The Crux",
+        "Đoạn Khó Nhất",
+        "Stuck on this one move for 10 minutes. My forearms are ON FIRE 🔥😤",
+        "Kẹt ở động tác này 10 phút rồi. Cẳng tay CHÁY rồi 🔥😤",
+        "Portrait of {subject} hanging from a difficult overhang section on climbing wall, one hand reaching for a far hold, muscles visibly strained, gritting teeth with determination, dramatic upward camera angle, colorful climbing holds"
+      ],
+      [
+        "Top Out",
+        "Lên Đỉnh",
+        "TOUCHED THE TOP. The dopamine rush is UNREAL right now 🎉🧗‍♂️",
+        "CHẠM ĐỈNH RỒI. Dopamine đang ĐỈNH luôn 🎉🧗‍♂️",
+        "Portrait of {subject} at the very top of an indoor climbing wall, one hand touching the top hold triumphantly, other fist pumping in celebration, ecstatic expression, view looking down at the climbing gym below, bright overhead lighting"
+      ],
+      [
+        "Post Climb",
+        "Sau Khi Leo",
+        "Arms are jelly but the feeling is elite. Already addicted 💪🤙",
+        "Tay mềm như bún nhưng cảm giác thì đỉnh. Nghiện rồi 💪🤙",
+        "Portrait of {subject} sitting on a mat at the base of the climbing wall, arms resting on knees, tired but deeply satisfied grin, chalk dust on shirt and hands, other climbers in background, relaxed post-exercise glow"
+      ]
+    ]
+  },
+  {
+    "slug": "hanoi_old_quarter",
+    "title": [
+      "Hanoi Old Quarter Walk",
+      "Dạo Phố Cổ Hà Nội"
+    ],
+    "desc": [
+      "Getting lost in Hanoi's 36 ancient streets — chaos, charm, and the best street food",
+      "Lạc trong 36 phố phường Hà Nội — hỗn loạn, duyên dáng, và đồ ăn vỉa hè ngon nhất"
+    ],
+    "cat": "culture",
+    "type": "travel",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern skyscrapers, rural",
+    "style": "warm Vietnamese street photography, colonial architecture, bustling street life, golden morning light",
+    "gs": 8,
+    "tags": ["hanoi", "vietnam", "oldquarter", "streetfood", "culture", "travel"],
+    "chs": [
+      [
+        "Morning Phở",
+        "Phở Sáng",
+        "Started the day right. Sidewalk phở at 6AM with the locals 🍜🇻🇳",
+        "Bắt đầu ngày đúng cách. Phở vỉa hè 6h sáng cùng dân local 🍜🇻🇳",
+        "Portrait of {subject} sitting on a tiny plastic stool at a sidewalk phở stall in Hanoi Old Quarter, steaming bowl of phở in front, chopsticks in hand, early morning golden light, authentic Vietnamese street food scene, local vendors and motorbikes in background"
+      ],
+      [
+        "36 Streets",
+        "36 Phố Phường",
+        "Every street here has its own personality. I could walk forever 🚶‍♂️✨",
+        "Mỗi con phố nơi đây có cá tính riêng. Mình có thể đi bộ mãi 🚶‍♂️✨",
+        "Portrait of {subject} walking through a narrow bustling Hanoi Old Quarter street, yellow colonial buildings on both sides, hanging power lines, motorbikes passing, Vietnamese shop signs, dappled morning light, curious exploring expression"
+      ],
+      [
+        "Egg Coffee",
+        "Cà Phê Trứng",
+        "Egg coffee is REAL and it's the best thing I've ever tasted ☕🥚",
+        "Cà phê trứng Hà Nội xứng đáng là best thứ từng uống ☕🥚",
+        "Portrait of {subject} in a cozy vintage Hanoi café, holding a cup of traditional egg coffee, small round table by a window overlooking the Old Quarter street below, warm interior with antique decor, delighted expression after first sip"
+      ],
+      [
+        "Hoàn Kiếm Lake",
+        "Hồ Hoàn Kiếm",
+        "Hoàn Kiếm Lake at golden hour. Hanoi's soul lives here 🏯🌅",
+        "Hồ Hoàn Kiếm giờ vàng. Linh hồn Hà Nội ở đây 🏯🌅",
+        "Portrait of {subject} standing by the shore of Hoàn Kiếm Lake at golden hour, Turtle Tower visible across the water, weeping willows, warm sunset reflection on lake, Hanoi Old Quarter architecture in distance, peaceful contemplative expression"
+      ],
+      [
+        "Night Market",
+        "Chợ Đêm",
+        "The night market is ALIVE. Everything here makes you smile 🌙🎪",
+        "Chợ đêm SỐNG ĐỘNG quá. Mọi thứ nơi đây đều khiến bạn cười 🌙🎪",
+        "Portrait of {subject} walking through Hanoi's Old Quarter night market, colorful lanterns strung overhead, busy vendors and shoppers, street food stalls glowing, warm night market lighting, excited joyful expression, vibrant nighttime atmosphere"
+      ],
+      [
+        "Goodbye Hanoi",
+        "Tạm Biệt Hà Nội",
+        "Leaving Hanoi but Hanoi will never leave me. See you again soon 💛🇻🇳",
+        "Rời Hà Nội nhưng Hà Nội không bao giờ rời mình. Hẹn gặp lại sớm 💛🇻🇳",
+        "Portrait of {subject} standing on a quiet early morning Hanoi Old Quarter street, soft dawn light, vintage yellow buildings, a cyclo passing gently, warm nostalgic expression, holding a Vietnamese iced coffee, peaceful farewell moment"
+      ]
+    ]
+  },
+  {
+    "slug": "diving_paradise",
+    "title": [
+      "Diving Paradise",
+      "Thiên Đường Lặn Biển"
+    ],
+    "desc": [
+      "Descending into crystal clear waters — coral reefs, tropical fish, and underwater magic",
+      "Lặn xuống vùng nước trong vắt — san hô, cá nhiệt đới, và phép màu dưới nước"
+    ],
+    "cat": "adventure",
+    "type": "travel",
+    "gender": "all",
+    "dur": "many",
+    "badge": "NEW",
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, pool, murky water",
+    "style": "crystal clear underwater, vivid coral colors, tropical ocean blue, underwater photography",
+    "gs": 8,
+    "tags": ["diving", "ocean", "coral", "underwater", "tropical", "scuba"],
+    "chs": [
+      [
+        "Boat Ride Out",
+        "Ra Khơi",
+        "Heading to the dive site. The water is getting bluer by the minute 🚤🌊",
+        "Đang ra điểm lặn. Nước xanh hơn từng phút 🚤🌊",
+        "Portrait of {subject} sitting on the edge of a dive boat heading to open ocean, wearing wetsuit top, hair blowing in wind, turquoise ocean stretching to horizon, bright tropical sunshine, excited anticipation on face"
+      ],
+      [
+        "Gear Check",
+        "Kiểm Tra Thiết Bị",
+        "Mask on, tank up, buddy check done. Time to go under 🤿✅",
+        "Kính xong, bình oxy xong, check buddy xong. Xuống nước thôi 🤿✅",
+        "Portrait of {subject} on dive boat fully suited in scuba gear, adjusting mask on forehead, BCD and tank on back, sitting on boat edge ready for backward roll entry, clear blue ocean below, focused expression"
+      ],
+      [
+        "First Descent",
+        "Lần Đầu Lặn Xuống",
+        "Descending into another world. The silence underwater is everything 🫧🐠",
+        "Lặn xuống một thế giới khác. Sự yên lặng dưới nước là tất cả 🫧🐠",
+        "Portrait of {subject} descending underwater surrounded by streams of air bubbles, crystal clear blue water, sunbeams penetrating from surface above, scuba gear, coral reef becoming visible below, wide amazed eyes behind dive mask"
+      ],
+      [
+        "Coral Garden",
+        "Vườn San Hô",
+        "The colors down here don't exist on land. Nature is the greatest artist 🪸🎨",
+        "Những màu sắc dưới này không tồn tại trên cạn. Thiên nhiên là nghệ sĩ vĩ đại nhất 🪸🎨",
+        "Portrait of {subject} floating above a magnificent coral reef garden, vibrant colors of coral in orange purple and pink, tropical fish swimming around, clear underwater visibility, gentle underwater lighting, awestruck expression visible through dive mask"
+      ],
+      [
+        "Sea Turtle",
+        "Rùa Biển",
+        "Swam with a sea turtle today. Life = complete 🐢💚",
+        "Bơi cùng rùa biển hôm nay. Cuộc đời = trọn vẹn 🐢💚",
+        "Portrait of {subject} swimming alongside a graceful sea turtle underwater, crystal clear turquoise water, sun rays filtering down, coral reef below, both moving gently through the water, magical underwater moment, wonder on face"
+      ],
+      [
+        "Surface Smile",
+        "Nụ Cười Mặt Nước",
+        "Back on the surface and I already want to go back down. The ocean has my heart 💙🤿",
+        "Lên mặt nước rồi và đã muốn lặn lại. Đại dương có trái tim mình 💙🤿",
+        "Portrait of {subject} at the ocean surface after a dive, mask pushed up on forehead, biggest smile, sparkling blue ocean around, dive boat in background, wet hair, golden sunlight on face, pure joy and exhilaration"
+      ]
+    ]
+  },
+  {
+    "slug": "family_photo_day",
+    "title": [
+      "Family Photo Day",
+      "Ngày Chụp Ảnh Gia Đình"
+    ],
+    "desc": [
+      "Getting the whole family together for portraits — chaos, laughter, and frame-worthy moments",
+      "Tập trung cả nhà chụp ảnh — hỗn loạn, tiếng cười, và khoảnh khắc đáng đóng khung"
+    ],
+    "cat": "family",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, dark, gloomy",
+    "style": "bright family portrait, warm studio/outdoor light, matching outfits, joyful candid",
+    "gs": 8,
+    "tags": ["family", "portrait", "photo", "love", "together", "memories"],
+    "chs": [
+      [
+        "Getting Ready",
+        "Chuẩn Bị",
+        "Matching outfits. 2 hours of arguing about colors but we made it 👨‍👩‍👧‍👦😂",
+        "Đồng phục gia đình. Cãi nhau 2 tiếng về màu nhưng xong rồi 👨‍👩‍👧‍👦😂",
+        "Portrait of {subject} at home adjusting outfit in a mirror, wearing matching family color scheme clothing, other family members visible getting ready in background, warm home lighting, excited but slightly stressed expression"
+      ],
+      [
+        "Location Arrived",
+        "Đến Địa Điểm",
+        "Found the perfect spot. The light is *chef's kiss* today 📸✨",
+        "Tìm được spot hoàn hảo. Ánh sáng hôm nay *chef's kiss* 📸✨",
+        "Portrait of {subject} standing in a beautiful outdoor location for family photos, golden hour light, lush green park or garden setting, looking around appreciating the scenery, family members walking in from the parking area behind"
+      ],
+      [
+        "Herding Cats",
+        "Tập Trung Mọi Người",
+        "Trying to get everyone to look at the camera at the same time is an Olympic sport 🏅😅",
+        "Cố làm mọi người nhìn máy ảnh cùng lúc là môn thể thao Olympic 🏅😅",
+        "Portrait of {subject} in the middle of family members trying to organize everyone for a group photo, animated gesturing expression, some family members looking different directions, warm golden outdoor light, comedic chaotic energy"
+      ],
+      [
+        "The Perfect Shot",
+        "Bức Ảnh Hoàn Hảo",
+        "After 100 takes, we got THE ONE. Sending this to everyone 📷💛",
+        "Sau 100 lần chụp, cuối cùng có BỨC ĐÓ. Gửi cho tất cả mọi người 📷💛",
+        "Portrait of {subject} in the center of a beautiful family group portrait, everyone smiling perfectly, warm golden hour light, coordinated outfits, natural outdoor backdrop, genuine warm smiles, picture-perfect family moment"
+      ],
+      [
+        "Candid Moments",
+        "Khoảnh Khắc Tự Nhiên",
+        "Honestly the candid shots are always better than the posed ones 😂📸",
+        "Thật ra ảnh chụp tự nhiên luôn đẹp hơn ảnh pose 😂📸",
+        "Portrait of {subject} caught in a candid laughing moment during the family photo session, head thrown back laughing, family members laughing around, natural unposed joy, beautiful outdoor setting, golden backlight creating warm glow"
+      ],
+      [
+        "Frame Worthy",
+        "Đáng Đóng Khung",
+        "New family photo for the wall. These people are my everything 🖼️❤️",
+        "Ảnh gia đình mới treo tường. Những người này là tất cả của mình 🖼️❤️",
+        "Portrait of {subject} holding up a printed family photo proudly, emotional happy expression, family members gathered around looking at the photo too, warm indoor home lighting, framed family photos on the wall behind, heartwarming moment"
+      ]
+    ]
+  },
+  {
+    "slug": "waterfall_chase",
+    "title": [
+      "Hidden Waterfall Trek",
+      "Tìm Thác Nước Bí Ẩn"
+    ],
+    "desc": [
+      "Trekking through jungle to find a hidden waterfall — the journey is the reward",
+      "Băng rừng tìm thác nước ẩn giấu — hành trình chính là phần thưởng"
+    ],
+    "cat": "adventure",
+    "type": "travel",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, urban, dry desert",
+    "style": "lush tropical jungle, crystal waterfall, dramatic natural light, adventure trek photography",
+    "gs": 8,
+    "tags": ["waterfall", "trekking", "jungle", "nature", "hidden", "adventure"],
+    "chs": [
+      [
+        "Into The Jungle",
+        "Vào Rừng",
+        "The trail starts here. GPS says 3 hours. My excitement says 2 🌴🥾",
+        "Đường mòn bắt đầu từ đây. GPS bảo 3 tiếng. Sự hào hứng bảo 2 🌴🥾",
+        "Portrait of {subject} at the entrance of a dense tropical jungle trail, lush green canopy overhead, narrow dirt path disappearing into the forest, wearing trekking gear, backpack on, excited determined expression, morning mist"
+      ],
+      [
+        "River Crossing",
+        "Vượt Suối",
+        "Had to cross the river stepping on slippery rocks. Almost fell twice. Almost 😬🌊",
+        "Phải vượt suối bước trên đá trơn. Suýt ngã 2 lần. Suýt thôi 😬🌊",
+        "Portrait of {subject} carefully stepping across mossy rocks in a jungle stream, arms out for balance, water rushing below, tropical vegetation on both banks, nervous but thrilled expression, bright filtered jungle light"
+      ],
+      [
+        "Can You Hear It",
+        "Nghe Thấy Chưa",
+        "Wait... do you hear that? THE WATERFALL IS CLOSE 👀🌊",
+        "Khoan... nghe thấy không? THÁC GẦN RỒI 👀🌊",
+        "Portrait of {subject} on a jungle trail pausing with hand cupped to ear, listening intently, mist visible ahead through dense vegetation, excited wide-eyed expression, lush tropical plants and vines, mysterious filtered light"
+      ],
+      [
+        "First Sight",
+        "Lần Đầu Thấy",
+        "OH. MY. GOD. It's more beautiful than any photo could ever show 😭🏞️",
+        "TRỜI ƠI. Đẹp hơn bất kỳ bức ảnh nào có thể thể hiện 😭🏞️",
+        "Portrait of {subject} emerging from the jungle into a clearing, jaw dropped in awe at a magnificent multi-tiered waterfall cascading down mossy rocks into a crystal pool, rainbow in the mist, lush tropical surroundings, dramatic natural light"
+      ],
+      [
+        "Waterfall Swim",
+        "Tắm Thác",
+        "Jumped right in. The water is freezing and I DON'T CARE 🏊💦",
+        "Nhảy vào luôn. Nước lạnh cóng và KHÔNG QUAN TÂM 🏊💦",
+        "Portrait of {subject} swimming in the crystal clear pool at the base of the waterfall, water cascading behind creating mist, arms spread wide, exhilarated laughing expression, surrounded by lush tropical scenery, sparkling water droplets"
+      ],
+      [
+        "Worth Every Step",
+        "Xứng Đáng Từng Bước",
+        "3 hours of trekking for THIS view. Would do it again in a heartbeat 💚🏞️",
+        "3 tiếng băng rừng cho VIEW NÀY. Sẽ đi lại ngay lập tức 💚🏞️",
+        "Portrait of {subject} sitting on a rock beside the waterfall pool, feet in water, peaceful satisfied smile, majestic waterfall flowing behind, golden light breaking through the jungle canopy, serene natural paradise"
+      ]
+    ]
+  },
+  {
+    "slug": "tet_homecoming",
+    "title": [
+      "Lunar New Year Celebration",
+      "Mừng Tết Nguyên Đán"
+    ],
+    "desc": [
+      "Celebrating Lunar New Year — red envelopes, family feasts, and new beginnings",
+      "Đón Tết Nguyên Đán — lì xì, tiệc gia đình, và khởi đầu mới"
+    ],
+    "cat": "culture",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, dark gloomy, western christmas",
+    "style": "festive red and gold, warm family celebration, traditional Lunar New Year decorations, joyful atmosphere",
+    "gs": 8,
+    "tags": ["tet", "lunarnewyear", "family", "celebration", "tradition", "vietnam"],
+    "chs": [
+      [
+        "New Year's Eve",
+        "Đêm Giao Thừa",
+        "House is decorated, food is prepped, family is together. Ready for a new year 🏮🧧",
+        "Nhà trang trí xong, đồ ăn chuẩn bị xong, gia đình sum họp. Sẵn sàng đón năm mới 🏮🧧",
+        "Portrait of {subject} in beautiful traditional áo dài or festive outfit, standing in a home decorated with red and gold Lunar New Year decorations, mai/đào blossoms, red lanterns, warm festive lighting, proud joyful expression"
+      ],
+      [
+        "Midnight Countdown",
+        "Đếm Ngược Giao Thừa",
+        "3... 2... 1... HAPPY NEW YEAR!! Fireworks everywhere!! 🎆🎊",
+        "3... 2... 1... CHÚC MỪNG NĂM MỚI!! Pháo hoa khắp nơi!! 🎆🎊",
+        "Portrait of {subject} outside at midnight with spectacular fireworks bursting in the dark sky behind, face illuminated by colorful fireworks light, arms raised in celebration, festive outfit, pure joy and excitement, red decorations visible"
+      ],
+      [
+        "Red Envelopes",
+        "Lì Xì",
+        "Giving and receiving red envelopes. The best tradition ever invented 🧧💰",
+        "Cho và nhận lì xì. Truyền thống hay nhất từng được phát minh 🧧💰",
+        "Portrait of {subject} exchanging red envelopes (lì xì) with family elder, both hands respectfully giving or receiving, warm indoor family setting, Lunar New Year decorations, golden warm lighting, grateful respectful smile"
+      ],
+      [
+        "Family Feast",
+        "Bữa Tiệc Gia Đình",
+        "The Tet feast table is INSANE. Bánh chưng, thịt kho, dưa hành — ALL OF IT 🍽️🤤",
+        "Mâm cỗ Tết KHỦNG. Bánh chưng, thịt kho, dưa hành — ĐẦY ĐỦ HẾT 🍽️🤤",
+        "Portrait of {subject} sitting at a large family dining table overflowing with traditional Lunar New Year dishes including bánh chưng and other festive foods, surrounded by family members, red and gold decorations, warm festive atmosphere, happy expression"
+      ],
+      [
+        "Flower Street",
+        "Đường Hoa",
+        "Walking the flower street on New Year's Day. Everywhere is color and joy 🌸🌼",
+        "Đi đường hoa ngày mùng Một. Khắp nơi là sắc màu và niềm vui 🌸🌼",
+        "Portrait of {subject} walking through a vibrant Lunar New Year flower street market, surrounded by yellow mai blossoms and pink peach blossoms, festive crowds, colorful decorations, bright sunny New Year's Day, wearing traditional festive clothes, happy smile"
+      ],
+      [
+        "New Year Blessings",
+        "Lời Chúc Năm Mới",
+        "New year, new blessings, same grateful heart. Wishing everyone health and happiness 💛🙏",
+        "Năm mới, phước mới, trái tim biết ơn vẫn vậy. Chúc mọi người sức khoẻ bình an 💛🙏",
+        "Portrait of {subject} at a temple on New Year's morning, hands together in prayer, incense smoke rising, red Lunar New Year banners, peaceful morning light, serene grateful expression, traditional festive atmosphere"
+      ]
+    ]
+  },
+  {
+    "slug": "paragliding_sky",
+    "title": [
+      "First Time Paragliding",
+      "Lần Đầu Bay Dù Lượn"
+    ],
+    "desc": [
+      "Taking flight for the first time — fear, freedom, and the view of a lifetime",
+      "Lần đầu bay lên — sợ hãi, tự do, và tầm nhìn đẹp nhất đời"
+    ],
+    "cat": "adventure",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "many",
+    "badge": "NEW",
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor, ground level",
+    "style": "dramatic aerial views, bright blue sky, epic height perspective, adventure photography",
+    "gs": 8,
+    "tags": ["paragliding", "flying", "sky", "adventure", "extreme", "freedom"],
+    "chs": [
+      [
+        "Hilltop Prep",
+        "Chuẩn Bị Trên Đồi",
+        "Standing at the launch point. Looking down. Questioning all my life choices 😅🪂",
+        "Đứng ở điểm xuất phát. Nhìn xuống. Đang xét lại mọi quyết định trong đời 😅🪂",
+        "Portrait of {subject} standing at a paragliding launch point on a hilltop, wearing harness and helmet, paraglider canopy laid out behind, vast valley and landscape stretching below, nervous anxious expression looking down, bright blue sky"
+      ],
+      [
+        "Running Start",
+        "Chạy Đà",
+        "The instructor said RUN so I ran. No turning back now 🏃‍♂️💨",
+        "Huấn luyện viên hét CHẠY nên mình chạy. Không quay lại được nữa 🏃‍♂️💨",
+        "Portrait of {subject} running down a grassy hillside slope during paragliding takeoff, canopy inflating above, legs mid-stride, intense focused expression, green hillside, dramatic action moment, wind in hair"
+      ],
+      [
+        "Liftoff",
+        "Cất Cánh",
+        "MY FEET LEFT THE GROUND. I'M FLYING. I'M ACTUALLY FLYING 🤯🕊️",
+        "CHÂN RỜI MẶT ĐẤT RỒI. MÌNH ĐANG BAY. ĐANG BAY THẬT 🤯🕊️",
+        "Portrait of {subject} in the air just after paragliding takeoff, feet dangling above the hillside, paraglider canopy above, landscape falling away below, shocked exhilarated expression, blue sky, dramatic perspective"
+      ],
+      [
+        "Cloud Level",
+        "Ngang Tầm Mây",
+        "I can see the entire valley from up here. This is what birds feel 🦅☁️",
+        "Nhìn thấy cả thung lũng từ trên này. Đây là cảm giác của chim 🦅☁️",
+        "Portrait of {subject} paragliding high above a magnificent valley landscape, wispy clouds at eye level, patchwork of green fields and river below, paraglider canopy above, pure ecstatic freedom on face, breathtaking aerial panorama"
+      ],
+      [
+        "Selfie in the Sky",
+        "Selfie Trên Trời",
+        "Took a selfie at 1000m altitude. Casual Tuesday 😎✈️",
+        "Chụp selfie ở độ cao 1000m. Thứ Ba bình thường 😎✈️",
+        "Portrait of {subject} during paragliding flight with arm extended toward camera, mountain landscape far below, blue sky with scattered clouds around, confident exhilarated smile, harness visible, epic aerial background"
+      ],
+      [
+        "Safe Landing",
+        "Hạ Cánh An Toàn",
+        "Back on solid ground. My legs are shaking but my soul is FREE. Doing this again 🪂❤️",
+        "Lại đứng trên đất. Chân run nhưng tâm hồn TỰ DO. Sẽ bay lại 🪂❤️",
+        "Portrait of {subject} just after landing from paragliding, paraglider canopy settling on the ground behind, standing in an open field, knees slightly bent, huge relieved triumphant smile, windswept hair, golden afternoon light"
+      ]
+    ]
+  },
+  {
+    "slug": "pottery_class",
+    "title": [
+      "Pottery Class Day",
+      "Lớp Học Gốm Sứ"
+    ],
+    "desc": [
+      "First time on the pottery wheel — messy hands, calm mind, and unexpected art",
+      "Lần đầu ngồi bàn xoay gốm — tay bẩn, tâm an, và nghệ thuật bất ngờ"
+    ],
+    "cat": "culture",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, outdoor, bright harsh light",
+    "style": "warm earthy studio tones, soft natural light, artisan workshop, zen creative atmosphere",
+    "gs": 8,
+    "tags": ["pottery", "ceramics", "art", "creative", "class", "handmade"],
+    "chs": [
+      [
+        "The Studio",
+        "Xưởng Gốm",
+        "Walking into the pottery studio and instantly feeling calm. The vibes are immaculate 🏺✨",
+        "Bước vào xưởng gốm và lập tức thấy bình yên. Vibes hoàn hảo 🏺✨",
+        "Portrait of {subject} entering a beautiful pottery studio, shelves of handmade ceramics on walls, pottery wheels visible, soft natural light from large windows, warm earthy tones, serene appreciative expression, clay dust in the air"
+      ],
+      [
+        "First Touch",
+        "Chạm Đất Sét",
+        "Wet clay between your fingers is therapeutic. I get it now 🤲🪴",
+        "Đất sét ướt giữa các ngón tay là liệu pháp chữa lành. Giờ mình hiểu rồi 🤲🪴",
+        "Portrait of {subject} kneading a ball of wet clay on a wooden worktable, sleeves rolled up, apron on, focused gentle expression, hands covered in clay, pottery tools scattered on table, warm studio lighting"
+      ],
+      [
+        "On The Wheel",
+        "Trên Bàn Xoay",
+        "The wheel is spinning and I'm CONCENTRATING. Nobody talk to me right now 🫠🎯",
+        "Bàn xoay đang quay và mình đang TẬP TRUNG. Không ai nói chuyện với mình lúc này 🫠🎯",
+        "Portrait of {subject} at a pottery wheel with hands shaping wet spinning clay, intense concentration on face, clay-covered hands forming a vessel shape, wheel spinning, soft focused studio light, apron splattered with clay"
+      ],
+      [
+        "Oops Moment",
+        "Khoảnh Khắc Oops",
+        "It was ALMOST a vase. Then it became... abstract art? 😂🫠",
+        "Nó GẦN LÀ bình hoa. Sau đó nó thành... nghệ thuật trừu tượng? 😂🫠",
+        "Portrait of {subject} looking at a lopsided clay creation on the pottery wheel with an amused embarrassed laugh, one hand on cheek, clay smudge on face, the wonky pottery piece in front, warm studio atmosphere, genuine funny moment"
+      ],
+      [
+        "Glazing Time",
+        "Tráng Men",
+        "Painting glaze on my piece. Choosing colors was harder than making the pot 🎨🖌️",
+        "Sơn men lên tác phẩm. Chọn màu khó hơn làm cái bình 🎨🖌️",
+        "Portrait of {subject} carefully painting colorful glaze onto a dried pottery piece with a fine brush, tongue slightly out in concentration, palette of glaze colors on table, other finished ceramics drying nearby, warm creative studio light"
+      ],
+      [
+        "My Masterpiece",
+        "Kiệt Tác Của Mình",
+        "It's not perfect but I MADE THIS with my own hands. Keeping it forever 🏺💛",
+        "Không hoàn hảo nhưng MÌNH TỰ TAY LÀM. Giữ mãi mãi 🏺💛",
+        "Portrait of {subject} proudly holding up a finished glazed pottery piece, beaming with pride, clay still on apron, warm studio background with shelves of ceramics, soft golden light, genuine accomplishment and joy on face"
+      ]
+    ]
+  },
+  {
+    "slug": "night_fishing",
+    "title": [
+      "Night Fishing",
+      "Câu Cá Đêm"
+    ],
+    "desc": [
+      "A quiet night by the lake with a fishing rod — patience, stars, and peace",
+      "Một đêm yên tĩnh bên hồ với cần câu — kiên nhẫn, sao trời, và bình yên"
+    ],
+    "cat": "adventure",
+    "type": "vlog",
+    "gender": "male",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, daytime, city, indoor",
+    "style": "moody night lake, warm lantern glow, peaceful nocturnal atmosphere, reflective water",
+    "gs": 8,
+    "tags": ["fishing", "night", "lake", "peace", "nature", "patience"],
+    "chs": [
+      [
+        "Sunset Setup",
+        "Chuẩn Bị Lúc Hoàng Hôn",
+        "Getting to the lake before sunset. Best seat in the house tonight 🌅🎣",
+        "Đến hồ trước hoàng hôn. Chỗ ngồi đẹp nhất tối nay 🌅🎣",
+        "Portrait of {subject} setting up fishing gear by a calm lake at sunset, fishing rod being assembled, tackle box open on the ground, orange sunset reflecting on still water, peaceful anticipation, lakeside reeds and trees"
+      ],
+      [
+        "Cast Out",
+        "Thả Câu",
+        "Line's in the water. Now we wait. This is the life 🎣😌",
+        "Dây đã thả. Giờ chờ thôi. Đây mới là cuộc sống 🎣😌",
+        "Portrait of {subject} sitting in a folding chair by the lake holding fishing rod, line cast into dark water, warm lantern glowing beside, twilight sky with last traces of sunset, relaxed content expression, cooler box and snacks nearby"
+      ],
+      [
+        "Starlit Patience",
+        "Kiên Nhẫn Dưới Sao",
+        "The stars came out and the fish haven't. But honestly... who cares 🌌✨",
+        "Sao đã lên mà cá chưa cắn. Nhưng thật ra... ai quan tâm 🌌✨",
+        "Portrait of {subject} leaning back in chair by the lake under a starry night sky, fishing rod propped up, warm orange lantern light on face, Milky Way faintly visible, peaceful meditative expression, still dark lake reflecting stars"
+      ],
+      [
+        "The Bite",
+        "Cá Cắn Câu",
+        "WAIT. THE ROD IS BENDING. WE GOT ONE 🎣😤🔥",
+        "KHOAN. CẦN CÂU CONG RỒI. CÓ CÁ 🎣😤🔥",
+        "Portrait of {subject} standing up suddenly from chair gripping bent fishing rod with both hands, excited intense expression, rod bending dramatically, night lake scene, lantern light, adrenaline rush visible, water splashing where line enters"
+      ],
+      [
+        "The Catch",
+        "Chiến Lợi Phẩm",
+        "LOOK AT THIS BEAUTY. All that waiting was worth it 🐟🏆",
+        "NHÌN EM NÀY. Chờ đợi bao lâu đều xứng đáng 🐟🏆",
+        "Portrait of {subject} proudly holding up a caught fish by the night lake, huge triumphant grin, lantern light illuminating the scene, fishing rod in other hand, dark lake and starry sky background, genuine pride and excitement"
+      ],
+      [
+        "Night Peace",
+        "Bình Yên Đêm",
+        "Packed up under the stars. No wifi, no stress, just peace. We need more nights like this 🌙🎣",
+        "Thu dọn dưới trời sao. Không wifi, không stress, chỉ có bình yên. Cần nhiều đêm như này hơn 🌙🎣",
+        "Portrait of {subject} packing up fishing gear by the lake at late night, content peaceful smile, warm lantern glow, starry sky reflected in calm dark water, cooler and tackle box being closed, tranquil end-of-night atmosphere"
+      ]
+    ]
+  },
+  {
+    "slug": "flower_market",
+    "title": [
+      "Morning Flower Market",
+      "Chợ Hoa Sáng Sớm"
+    ],
+    "desc": [
+      "Waking up at dawn to explore the flower market — colors, scents, and hidden beauty",
+      "Dậy sớm khám phá chợ hoa — sắc màu, hương thơm, và vẻ đẹp ẩn giấu"
+    ],
+    "cat": "culture",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, night, dark, wilted flowers",
+    "style": "soft dawn light, vibrant flower colors, fresh morning atmosphere, floral market photography",
+    "gs": 8,
+    "tags": ["flowers", "market", "morning", "beauty", "fresh", "culture"],
+    "chs": [
+      [
+        "Dawn Arrival",
+        "Đến Lúc Rạng Đông",
+        "4:30AM alarm for this. The market is already buzzing 🌅🌸",
+        "Báo thức 4:30 sáng cho hôm nay. Chợ đã nhộn nhịp rồi 🌅🌸",
+        "Portrait of {subject} arriving at a bustling flower market at dawn, first light of day breaking, vendors unloading colorful flowers from trucks, wearing a light dress, sleepy but excited expression, pre-dawn blue and pink sky"
+      ],
+      [
+        "Flower Ocean",
+        "Biển Hoa",
+        "Rows and rows of flowers as far as you can see. My heart is SO full 🌺🌷🌻",
+        "Hoa hàng dãy dãy xa tận mắt nhìn. Lòng mình TRÀN ĐẦY 🌺🌷🌻",
+        "Portrait of {subject} walking through endless rows of colorful flowers at the market, surrounded by roses, lilies, sunflowers, and orchids in every color, arms gently touching flower petals, soft early morning golden light, pure delight on face"
+      ],
+      [
+        "Rose Selection",
+        "Chọn Hoa Hồng",
+        "Choosing roses when every single one is perfect is impossible 🌹😩",
+        "Chọn hoa hồng khi bông nào cũng đẹp thì không thể 🌹😩",
+        "Portrait of {subject} carefully examining roses at a flower vendor stall, holding one perfect rose close to face, surrounded by buckets of various colored roses, warm golden morning light, thoughtful appreciative expression, vendor arranging flowers in background"
+      ],
+      [
+        "Bouquet Building",
+        "Kết Bó Hoa",
+        "The aunty showed me how to arrange a bouquet and now I feel like an artist 💐✨",
+        "Cô bán hoa chỉ mình cách kết bó hoa và giờ mình thấy mình như nghệ sĩ 💐✨",
+        "Portrait of {subject} standing at a flower stall learning to arrange a bouquet from an experienced vendor, hands holding various stems, colorful mixed flowers, warm morning sunlight streaming through market, focused learning expression"
+      ],
+      [
+        "Lotus Moment",
+        "Khoảnh Khắc Sen",
+        "Found the lotus section. There's something sacred about these flowers 🪷🙏",
+        "Tìm được khu bán sen. Có gì đó linh thiêng trong những bông hoa này 🪷🙏",
+        "Portrait of {subject} holding a bunch of pink lotus flowers at the market, soft morning light illuminating the delicate petals, water droplets on lotus buds, gentle reverent expression, buckets of lotus flowers surrounding"
+      ],
+      [
+        "Walking Home",
+        "Đi Bộ Về Nhà",
+        "Walking home with arms full of flowers at sunrise. Best morning decision ever 🌸☀️",
+        "Đi bộ về nhà tay đầy hoa lúc bình minh. Quyết định sáng tốt nhất từ trước đến giờ 🌸☀️",
+        "Portrait of {subject} walking along a quiet morning street carrying a large beautiful bouquet of mixed flowers, golden sunrise light, long shadows, flower petals slightly scattered, serene happy smile, dewdrops on flowers, peaceful morning atmosphere"
+      ]
+    ]
+  },
+  {
+    "slug": "skateboard_park",
+    "title": [
+      "Skatepark Session",
+      "Buổi Chiều Ở Skatepark"
+    ],
+    "desc": [
+      "Hitting the skatepark — learning tricks, eating concrete, and getting back up",
+      "Đến skatepark — học tricks, ăn bê tông, và đứng dậy lại"
+    ],
+    "cat": "adventure",
+    "type": "vlog",
+    "gender": "male",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor, formal clothing",
+    "style": "urban skatepark, golden afternoon light, dynamic action, street culture photography",
+    "gs": 8,
+    "tags": ["skateboard", "skatepark", "tricks", "urban", "sport", "youth"],
+    "chs": [
+      [
+        "Park Arrival",
+        "Đến Skatepark",
+        "Board under arm, headphones in. It's session time 🛹🎧",
+        "Ván dưới nách, tai nghe đeo. Giờ chiến thôi 🛹🎧",
+        "Portrait of {subject} walking into a concrete skatepark carrying a skateboard under one arm, wearing casual streetwear, headphones around neck, afternoon golden light, other skaters in background, confident relaxed expression"
+      ],
+      [
+        "Warm Up Cruising",
+        "Khởi Động",
+        "Cruising around the park first. Gotta feel the concrete 🛹💨",
+        "Lướt quanh park trước. Phải cảm nhận bê tông đã 🛹💨",
+        "Portrait of {subject} cruising on a skateboard through the skatepark, relaxed low stance, wind in hair, golden afternoon sunlight casting long shadows, concrete bowls and ramps in background, casual confident expression"
+      ],
+      [
+        "Learning Kickflip",
+        "Học Kickflip",
+        "Attempt #47 at the kickflip. My shins hate me but we don't quit 😤🛹",
+        "Lần thứ 47 tập kickflip. Ống chân ghét mình nhưng không bỏ cuộc 😤🛹",
+        "Portrait of {subject} mid-attempt at a skateboard trick, board flipping beneath feet, determined intense expression, skatepark ramp in background, golden hour light, dynamic action pose, slight motion blur conveying movement"
+      ],
+      [
+        "The Fall",
+        "Cú Ngã",
+        "Ate it HARD but got right back up. That's the skater way 💀🤣",
+        "Ngã SẤP MẶT nhưng đứng lên ngay. Đó là tinh thần skater 💀🤣",
+        "Portrait of {subject} sitting on concrete skatepark ground after a fall, laughing while brushing off, minor scrape on knee, skateboard rolled away nearby, other skaters watching, genuine tough laughter, afternoon light"
+      ],
+      [
+        "Nailed It",
+        "Làm Được Rồi",
+        "FINALLY LANDED IT CLEAN. The park erupted. Best feeling ever 🛹🔥🎉",
+        "CUỐI CÙNG LAND SẠCH. Cả park hú hét. Cảm giác đỉnh nhất 🛹🔥🎉",
+        "Portrait of {subject} celebrating after landing a skateboard trick, fist pump in the air, skateboard rolling beneath feet, euphoric victorious expression, other skaters clapping in background, golden sunset light, dynamic celebratory moment"
+      ],
+      [
+        "Golden Hour Chill",
+        "Chill Giờ Vàng",
+        "Session over. Sitting on the ramp watching the sunset. Sore but happy 🌅🛹",
+        "Hết buổi. Ngồi trên ramp ngắm hoàng hôn. Đau nhưng vui 🌅🛹",
+        "Portrait of {subject} sitting on the edge of a skatepark halfpipe at sunset, skateboard beside them, legs dangling, tired satisfied smile, golden sunset painting the concrete park, silhouettes of other skaters, peaceful end-of-session vibe"
+      ]
+    ]
+  },
+  {
+    "slug": "heritage_walk",
+    "title": [
+      "Heritage District Walk",
+      "Dạo Khu Phố Di Sản"
+    ],
+    "desc": [
+      "Walking through a heritage district — colonial architecture, hidden stories, and timeless charm",
+      "Dạo bước qua khu phố di sản — kiến trúc cổ, câu chuyện ẩn giấu, và nét duyên vượt thời gian"
+    ],
+    "cat": "culture",
+    "type": "travel",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, modern skyscrapers, rural farmland",
+    "style": "warm heritage tones, colonial architecture, morning golden light, cultural street photography",
+    "gs": 8,
+    "tags": ["heritage", "architecture", "culture", "walking", "history", "district"],
+    "chs": [
+      [
+        "First Impressions",
+        "Ấn Tượng Đầu Tiên",
+        "Every building here has a story older than your grandparents 🏛️✨",
+        "Mỗi toà nhà nơi đây có câu chuyện già hơn ông bà bạn 🏛️✨",
+        "Portrait of {subject} standing on a heritage district street looking up at beautiful colonial-era architecture, ornate facades and shuttered windows, warm morning light on old buildings, curious admiring expression, cobblestone street"
+      ],
+      [
+        "Hidden Alley",
+        "Hẻm Ẩn",
+        "Turned into a random alley and found THIS. The best discoveries are unplanned 📸🧡",
+        "Rẽ vào hẻm bất kỳ và tìm thấy ĐÂY. Khám phá đẹp nhất là không plan trước 📸🧡",
+        "Portrait of {subject} standing in a charming narrow heritage alley, colorful old doors and weathered walls on both sides, vintage lanterns hanging, vines growing on walls, dappled light, delighted surprised expression at the hidden beauty"
+      ],
+      [
+        "Café in History",
+        "Cà Phê Trong Lịch Sử",
+        "Having coffee in a 100-year-old building. The walls have seen things 🏚️☕",
+        "Uống cà phê trong toà nhà 100 tuổi. Những bức tường đã chứng kiến nhiều thứ 🏚️☕",
+        "Portrait of {subject} sitting at a small table in a heritage café inside an old colonial building, high ceilings with antique fans, vintage wooden furniture, large arched windows, warm filtered light, contemplative expression holding coffee cup"
+      ],
+      [
+        "Temple Discovery",
+        "Khám Phá Đền Cổ",
+        "Found an ancient temple hidden between modern shops. Time stands still here 🏯🕰️",
+        "Phát hiện đền cổ ẩn giữa các cửa hàng hiện đại. Thời gian ngừng trôi nơi đây 🏯🕰️",
+        "Portrait of {subject} at the entrance of a small ancient temple squeezed between heritage shophouses, incense smoke curling, ornate carved doorway, warm golden light from inside, respectful curious expression, contrast of old temple and surrounding shops"
+      ],
+      [
+        "Street Art Meets History",
+        "Nghệ Thuật Gặp Lịch Sử",
+        "When street art meets heritage walls. Old and new living together perfectly 🎨🏛️",
+        "Khi street art gặp tường di sản. Cũ và mới sống chung hoàn hảo 🎨🏛️",
+        "Portrait of {subject} standing in front of a large colorful mural painted on a heritage building wall, vibrant street art contrasting with weathered old architecture, fascinated expression, warm afternoon light, cultural blend of old and new"
+      ],
+      [
+        "Golden Hour Heritage",
+        "Di Sản Giờ Vàng",
+        "Heritage district at golden hour is a whole different world. Coming back again for sure 🌅🏛️",
+        "Khu phố di sản lúc golden hour là thế giới khác. Chắc chắn sẽ quay lại 🌅🏛️",
+        "Portrait of {subject} walking along a heritage district street at golden sunset, long shadows on cobblestones, warm orange light illuminating old building facades, peaceful grateful expression, vintage street lamps beginning to glow, timeless atmosphere"
+      ]
+    ]
+  }
+]

@@ -1,0 +1,2106 @@
+[
+  {
+    "slug": "dubai_luxury",
+    "title": [
+      "Dubai Luxury Trip",
+      "Du Lịch Dubai Sang Chảnh"
+    ],
+    "desc": [
+      "7 days living the luxury life in Dubai — from desert to skyline",
+      "7 ngày sống sang chảnh tại Dubai — từ sa mạc đến toà nhà chọc trời"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "male",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, indoor, studio",
+    "style": "warm golden luxury, Dubai skyline, cinematic travel",
+    "gs": 8,
+    "tags": [
+      "dubai",
+      "luxury",
+      "travel",
+      "skyline",
+      "desert",
+      "burj-khalifa"
+    ],
+    "chs": [
+      [
+        "Touchdown Dubai",
+        "Đáp Xuống Dubai",
+        "Just landed in Dubai. Let the flex begin ✈️🇦🇪",
+        "Vừa đáp Dubai. Bắt đầu flex thôi ✈️🇦🇪",
+        "Portrait of {subject} walking through Dubai International Airport arrival hall, modern architecture, luxury travel outfit, rolling designer luggage, bright terminal, excited expression"
+      ],
+      [
+        "Burj Khalifa View",
+        "Ngắm Burj Khalifa",
+        "Standing on top of the world. Burj Khalifa hits different at sunset 🌅",
+        "Đứng trên đỉnh thế giới. Burj Khalifa hoàng hôn đẹp khác biệt 🌅",
+        "Cinematic portrait of {subject} on observation deck with Burj Khalifa towering behind at golden sunset, Dubai skyline panorama, warm golden light, dramatic sky"
+      ],
+      [
+        "Desert Safari",
+        "Safari Sa Mạc",
+        "Desert vibes go crazy. The golden hour in the dunes 🐪",
+        "Vibes sa mạc quá đỉnh. Golden hour trên đồi cát 🐪",
+        "Epic portrait of {subject} standing on golden sand dunes in Dubai desert at sunset, dramatic shadows, camel caravan in background, warm orange light, adventure travel"
+      ],
+      [
+        "Marina Night",
+        "Đêm Marina",
+        "Dubai Marina at night is a whole movie 🎬✨",
+        "Dubai Marina ban đêm như phim 🎬✨",
+        "Night portrait of {subject} at Dubai Marina with illuminated skyscrapers reflecting on water, luxury yachts, city lights, neon reflections, cinematic night photography"
+      ],
+      [
+        "Pool Day",
+        "Ngày Hồ Bơi",
+        "Infinity pool with a view. This is living 🏊‍♂️",
+        "Hồ bơi vô cực với view đỉnh. Đây mới là sống 🏊‍♂️",
+        "Luxury portrait of {subject} at rooftop infinity pool overlooking Dubai skyline, crystal blue water, palm trees, bright sunshine, designer swimwear"
+      ],
+      [
+        "Gold Souk",
+        "Chợ Vàng",
+        "Everything that glitters IS gold here 🥇",
+        "Ở đây tất cả lấp lánh ĐỀU là vàng thật 🥇",
+        "Portrait of {subject} browsing the famous Dubai Gold Souk market, glittering gold jewelry displays, warm market lighting, traditional Arabian architecture"
+      ],
+      [
+        "Goodbye Dubai",
+        "Tạm Biệt Dubai",
+        "Until next time Dubai. You changed me forever 💛",
+        "Hẹn gặp lại Dubai. Bạn thay đổi tôi mãi mãi 💛",
+        "Sunset portrait of {subject} on Dubai beach looking at skyline from distance, peaceful farewell moment, orange sky, silhouette of Burj Khalifa, reflective mood"
+      ]
+    ]
+  },
+  {
+    "slug": "paris_romance",
+    "title": [
+      "Paris Love Story",
+      "Chuyện Tình Paris"
+    ],
+    "desc": [
+      "A romantic journey through the City of Light — 8 magical moments",
+      "Hành trình lãng mạn qua Kinh Đô Ánh Sáng — 8 khoảnh khắc diệu kỳ"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "couple",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cold tones, overcast",
+    "style": "warm romantic Parisian light, film grain, golden tones",
+    "gs": 7.5,
+    "tags": [
+      "paris",
+      "romance",
+      "travel",
+      "france",
+      "eiffel",
+      "couple"
+    ],
+    "chs": [
+      [
+        "Bonjour Paris",
+        "Bonjour Paris",
+        "We made it to Paris! Dreams do come true 🗼",
+        "Chúng tôi đến Paris rồi! Giấc mơ thành hiện thực 🗼",
+        "Portrait of {subject} arriving at Charles de Gaulle airport Paris, excited couple moment, travel outfits, Parisian arrival hall"
+      ],
+      [
+        "Eiffel Magic",
+        "Phép Màu Eiffel",
+        "First sight of Eiffel Tower and we both cried 🥺",
+        "Lần đầu thấy tháp Eiffel và cả hai đều khóc 🥺",
+        "Romantic portrait of {subject} in front of Eiffel Tower during golden hour, warm sunset glow, Trocadéro view, couple embrace, Paris skyline"
+      ],
+      [
+        "Café Culture",
+        "Văn Hoá Café",
+        "Croissant + café au lait = perfection ☕🥐",
+        "Croissant + café au lait = hoàn hảo ☕🥐",
+        "Cozy portrait of {subject} at a charming Parisian sidewalk café, croissants on table, café au lait, morning light, French architecture"
+      ],
+      [
+        "Louvre Day",
+        "Ngày Ở Louvre",
+        "Got lost in art and found ourselves 🎨",
+        "Lạc trong nghệ thuật và tìm thấy nhau 🎨",
+        "Portrait of {subject} inside the Louvre Museum, glass pyramid visible, classical art galleries, dramatic museum lighting, cultural exploration"
+      ],
+      [
+        "Seine Sunset",
+        "Hoàng Hôn Sông Seine",
+        "Sunset cruise on the Seine. Life is beautiful 🌅",
+        "Du thuyền hoàng hôn trên sông Seine. Cuộc đời thật đẹp 🌅",
+        "Romantic portrait of {subject} on a Seine River cruise boat at sunset, Notre-Dame silhouette, golden water reflections, Parisian bridges"
+      ],
+      [
+        "Montmartre Walk",
+        "Dạo Montmartre",
+        "Lost in the streets of Montmartre. Every corner is art 🎭",
+        "Lạc trong phố Montmartre. Mỗi góc là nghệ thuật 🎭",
+        "Portrait of {subject} walking cobblestone streets of Montmartre, Sacré-Cœur in background, artist easels, charming Parisian neighborhood"
+      ],
+      [
+        "Night Lights",
+        "Đêm Ánh Sáng",
+        "Paris at night — the city of light lives up to its name ✨",
+        "Paris ban đêm — kinh đô ánh sáng xứng danh ✨",
+        "Night portrait of {subject} with sparkling Eiffel Tower behind, Paris city lights, romantic evening atmosphere, warm street lamp glow"
+      ],
+      [
+        "Au Revoir",
+        "Au Revoir",
+        "Leaving a piece of our hearts in Paris forever 💕",
+        "Để lại một phần trái tim ở Paris mãi mãi 💕",
+        "Emotional portrait of {subject} at Paris train station, farewell moment, vintage Parisian architecture, morning soft light, bittersweet smile"
+      ]
+    ]
+  },
+  {
+    "slug": "tokyo_street",
+    "title": [
+      "Tokyo Street Style",
+      "Phong Cách Đường Phố Tokyo"
+    ],
+    "desc": [
+      "7 days exploring Tokyo — from Harajuku to Shibuya, anime to ramen",
+      "7 ngày khám phá Tokyo — từ Harajuku đến Shibuya, anime đến ramen"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "female",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, western city, european",
+    "style": "vibrant Tokyo neon, Japanese urban energy, anime-inspired",
+    "gs": 8,
+    "tags": [
+      "tokyo",
+      "japan",
+      "street-style",
+      "travel",
+      "harajuku",
+      "shibuya",
+      "anime"
+    ],
+    "chs": [
+      [
+        "Konnichiwa Tokyo",
+        "Konnichiwa Tokyo",
+        "Tokyo I'm here! The energy is insane 🇯🇵⚡",
+        "Tokyo tôi đến đây! Năng lượng điên khùng 🇯🇵⚡",
+        "Portrait of {subject} at Narita Airport arrival, Japanese signage, excited expression, trendy travel outfit, bright modern terminal"
+      ],
+      [
+        "Shibuya Crossing",
+        "Ngã Tư Shibuya",
+        "Standing in the world's busiest crossing. Main character moment 🚶‍♀️",
+        "Đứng giữa ngã tư đông nhất thế giới. Khoảnh khắc nhân vật chính 🚶‍♀️",
+        "Dynamic portrait of {subject} at Shibuya Crossing with crowds and neon billboards, night time, urban energy, Japanese advertisements"
+      ],
+      [
+        "Harajuku Fashion",
+        "Thời Trang Harajuku",
+        "Harajuku is a whole fashion universe 🌈👗",
+        "Harajuku là cả một vũ trụ thời trang 🌈👗",
+        "Colorful portrait of {subject} on Takeshita Street Harajuku, kawaii fashion shops, colorful storefronts, vibrant Japanese street style"
+      ],
+      [
+        "Ramen Time",
+        "Giờ Ăn Ramen",
+        "Best ramen of my life. I'm not crying, you're crying 🍜",
+        "Tô ramen ngon nhất đời. Tôi không khóc, bạn khóc đó 🍜",
+        "Portrait of {subject} at a cozy Tokyo ramen shop, steaming bowl of ramen, warm intimate restaurant lighting, Japanese decor, chopsticks"
+      ],
+      [
+        "Temple Peace",
+        "An Yên Đền Chùa",
+        "Found peace at Senso-ji. Tokyo has soul 🙏",
+        "Tìm thấy bình yên ở Senso-ji. Tokyo có linh hồn 🙏",
+        "Serene portrait of {subject} at Senso-ji Temple Asakusa, traditional Japanese gate, incense smoke, red lanterns, spiritual atmosphere"
+      ],
+      [
+        "Akihabara Geek",
+        "Akihabara Mê Anime",
+        "Anime paradise! My inner geek is screaming 🎮🎌",
+        "Thiên đường anime! Con mọt sách trong tôi đang hét 🎮🎌",
+        "Fun portrait of {subject} in Akihabara electric town, anime billboards, manga shops, colorful arcade lights, otaku culture"
+      ],
+      [
+        "Sayonara Tokyo",
+        "Sayonara Tokyo",
+        "Sayonara Tokyo. You're forever in my heart 🗼💜",
+        "Sayonara Tokyo. Bạn mãi trong tim tôi 🗼💜",
+        "Sunset portrait of {subject} overlooking Tokyo skyline from observation deck, Tokyo Tower glowing, golden hour, city panorama, farewell mood"
+      ]
+    ]
+  },
+  {
+    "slug": "bali_healing",
+    "title": [
+      "Bali Healing Retreat",
+      "Bali Chữa Lành"
+    ],
+    "desc": [
+      "A spiritual healing journey through Bali — find your inner peace",
+      "Hành trình chữa lành tâm hồn tại Bali — tìm lại bình yên nội tâm"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, urban, city, cold",
+    "style": "warm tropical Bali light, spiritual zen, lush green",
+    "gs": 7,
+    "tags": [
+      "bali",
+      "healing",
+      "travel",
+      "spiritual",
+      "yoga",
+      "tropical",
+      "wellness"
+    ],
+    "chs": [
+      [
+        "Arrival in Paradise",
+        "Đến Thiên Đường",
+        "Bali, take all my stress away 🌴✨",
+        "Bali ơi, lấy hết stress của tôi đi 🌴✨",
+        "Portrait of {subject} arriving at Bali villa entrance with tropical flowers, lush green garden, Balinese stone carvings, warm welcome"
+      ],
+      [
+        "Rice Terrace Morning",
+        "Buổi Sáng Ruộng Bậc Thang",
+        "Tegallalang at sunrise. Nature is the best therapy 🌾",
+        "Tegallalang lúc bình minh. Thiên nhiên là liệu pháp tốt nhất 🌾",
+        "Stunning portrait of {subject} at Tegallalang Rice Terraces at sunrise, lush green layers, morning mist, golden light, peaceful Bali landscape"
+      ],
+      [
+        "Yoga at Sunrise",
+        "Yoga Lúc Bình Minh",
+        "Found my center on this yoga deck overlooking the jungle 🧘‍♀️",
+        "Tìm thấy trung tâm mình trên sàn yoga nhìn ra rừng 🧘‍♀️",
+        "Peaceful portrait of {subject} doing yoga on wooden deck overlooking Bali jungle canopy, sunrise golden light, meditation pose, wellness atmosphere"
+      ],
+      [
+        "Waterfall Magic",
+        "Phép Màu Thác Nước",
+        "Standing under Tegenungan waterfall. Pure magic 💧",
+        "Đứng dưới thác Tegenungan. Phép màu thuần khiết 💧",
+        "Mystical portrait of {subject} at a beautiful Bali waterfall, tropical lush greenery, cascading water, natural light rays, spiritual cleansing moment"
+      ],
+      [
+        "Temple Blessing",
+        "Ban Phước Đền Thờ",
+        "Received a blessing at Tirta Empul. Feeling renewed 🙏",
+        "Nhận ban phước tại Tirta Empul. Cảm giác tái sinh 🙏",
+        "Spiritual portrait of {subject} at Tirta Empul water temple, holy spring water, traditional Balinese offerings, sacred atmosphere, flowing white clothes"
+      ],
+      [
+        "Sunset Beach",
+        "Hoàng Hôn Bãi Biển",
+        "Bali sunsets heal something words can't explain 🌅",
+        "Hoàng hôn Bali chữa lành điều ngôn từ không giải thích được 🌅",
+        "Beautiful portrait of {subject} on Bali beach at sunset, golden orange sky, silhouetted palm trees, ocean waves, peaceful contemplative mood"
+      ],
+      [
+        "Reborn",
+        "Tái Sinh",
+        "Leaving Bali a different person. Healed and whole 🦋",
+        "Rời Bali như một con người mới. Được chữa lành và trọn vẹn 🦋",
+        "Glowing portrait of {subject} at Bali airport departure, peaceful confident smile, flower in hair, white outfit, inner peace radiating, soft natural light"
+      ]
+    ]
+  },
+  {
+    "slug": "nyc_boss",
+    "title": [
+      "NYC Boss Mode",
+      "NYC Chế Độ Boss"
+    ],
+    "desc": [
+      "Conquering New York City like a boss — 6 iconic moments",
+      "Chinh phục New York như một boss — 6 khoảnh khắc iconic"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "all",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, rural, nature only, small town",
+    "style": "dramatic NYC urban energy, cinematic city vibes",
+    "gs": 8,
+    "tags": [
+      "nyc",
+      "new-york",
+      "travel",
+      "boss",
+      "urban",
+      "manhattan"
+    ],
+    "chs": [
+      [
+        "Welcome to NYC",
+        "Chào Mừng Đến NYC",
+        "New York, New York! The city that never sleeps 🗽",
+        "New York, New York! Thành phố không bao giờ ngủ 🗽",
+        "Portrait of {subject} in Times Square NYC with bright neon billboards, yellow taxi, bustling crowd, excited first arrival, urban energy"
+      ],
+      [
+        "Central Park",
+        "Central Park",
+        "Found peace in the middle of chaos. Central Park magic 🌳",
+        "Tìm thấy bình yên giữa hỗn loạn. Phép màu Central Park 🌳",
+        "Portrait of {subject} in Central Park with Manhattan skyline behind, autumn trees, peaceful lake, contrast of nature and city"
+      ],
+      [
+        "Brooklyn Bridge",
+        "Cầu Brooklyn",
+        "Walking the Brooklyn Bridge at golden hour. Iconic 🌉",
+        "Đi bộ trên cầu Brooklyn lúc golden hour. Iconic 🌉",
+        "Cinematic portrait of {subject} walking Brooklyn Bridge at golden hour, dramatic cables, Manhattan skyline, warm sunset light"
+      ],
+      [
+        "Wall Street Energy",
+        "Năng Lượng Wall Street",
+        "Standing where money moves the world. Big energy 💰",
+        "Đứng nơi tiền bạc điều khiển thế giới. Năng lượng lớn 💰",
+        "Power portrait of {subject} on Wall Street with NYSE building, bull statue nearby, financial district architecture, confident business pose"
+      ],
+      [
+        "Pizza & Views",
+        "Pizza & Cảnh Đẹp",
+        "NYC pizza on a rooftop. Life doesn't get better 🍕",
+        "Pizza NYC trên rooftop. Cuộc sống không thể tốt hơn 🍕",
+        "Fun portrait of {subject} on NYC rooftop eating pizza slice, Empire State Building in background, casual urban moment, city views"
+      ],
+      [
+        "City Never Sleeps",
+        "Thành Phố Không Ngủ",
+        "Midnight in Manhattan. This city is my soulmate 🌃",
+        "Nửa đêm ở Manhattan. Thành phố này là tri kỷ 🌃",
+        "Night portrait of {subject} on Manhattan street at midnight, neon signs, steam rising from grates, cinematic NYC night, reflective moment"
+      ]
+    ]
+  },
+  {
+    "slug": "santorini_dream",
+    "title": [
+      "Santorini Dream",
+      "Giấc Mơ Santorini"
+    ],
+    "desc": [
+      "Living the Greek island dream — blue domes and endless sunsets",
+      "Sống giấc mơ đảo Hy Lạp — mái vòm xanh và hoàng hôn bất tận"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cold, overcast, urban",
+    "style": "warm Mediterranean blue and white, golden sunset tones",
+    "gs": 7.5,
+    "tags": [
+      "santorini",
+      "greece",
+      "travel",
+      "island",
+      "sunset",
+      "mediterranean"
+    ],
+    "chs": [
+      [
+        "Island Arrival",
+        "Đến Đảo",
+        "Stepping off the ferry into paradise. Santorini I'm yours 🇬🇷",
+        "Bước xuống phà vào thiên đường. Santorini tôi thuộc về bạn 🇬🇷",
+        "Portrait of {subject} arriving at Santorini port, white buildings cascading on cliffs, deep blue Aegean Sea, bright Mediterranean sun"
+      ],
+      [
+        "Blue Dome Magic",
+        "Phép Màu Mái Vòm Xanh",
+        "These blue domes are even more stunning in person 💙",
+        "Những mái vòm xanh còn đẹp hơn ngoài đời thật 💙",
+        "Portrait of {subject} next to iconic Santorini blue dome churches, white-washed walls, deep blue sea background, bright sunny day, postcard-perfect"
+      ],
+      [
+        "Oia Sunset",
+        "Hoàng Hôn Oia",
+        "The famous Oia sunset. No filter needed 🌅",
+        "Hoàng hôn Oia nổi tiếng. Không cần filter 🌅",
+        "Stunning portrait of {subject} watching sunset from Oia village, orange pink sky, white buildings glowing golden, Aegean Sea, crowd on cliffs"
+      ],
+      [
+        "Wine Tasting",
+        "Thử Rượu Vang",
+        "Volcanic wine with this view? Yes please 🍷",
+        "Rượu vang núi lửa với view này? Cho tôi xin 🍷",
+        "Elegant portrait of {subject} at Santorini winery terrace, wine glass in hand, caldera view, volcanic landscape, golden afternoon light"
+      ],
+      [
+        "Beach Day",
+        "Ngày Biển",
+        "Red Beach Santorini. Nature is the best artist 🏖️",
+        "Bãi Biển Đỏ Santorini. Thiên nhiên là nghệ sĩ giỏi nhất 🏖️",
+        "Portrait of {subject} at Red Beach Santorini, dramatic red volcanic cliffs, turquoise water, unique beach landscape, bright Mediterranean sun"
+      ],
+      [
+        "Stairway Wander",
+        "Lang Thang Bậc Thang",
+        "Every alley is a postcard here. I'm never leaving 📮",
+        "Mỗi con hẻm là một tấm bưu thiếp. Tôi không bao giờ rời đi 📮",
+        "Portrait of {subject} walking narrow white stairways of Santorini village, bougainvillea flowers, blue doors, charming Greek architecture"
+      ],
+      [
+        "Greek Goodbye",
+        "Tạm Biệt Hy Lạp",
+        "Antio Santorini. My heart stays on this island 🏝️💙",
+        "Antio Santorini. Trái tim tôi ở lại hòn đảo này 🏝️💙",
+        "Farewell portrait of {subject} on Santorini ferry deck looking back at island, white cliffs fading, sunset golden light, wistful beautiful moment"
+      ]
+    ]
+  },
+  {
+    "slug": "london_classic",
+    "title": [
+      "London Classic",
+      "London Cổ Điển"
+    ],
+    "desc": [
+      "A classic British experience — tea, bridges, and royal vibes",
+      "Trải nghiệm Anh Quốc cổ điển — trà, cầu, và vibes hoàng gia"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "male",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, tropical, desert, bright neon",
+    "style": "classic British atmosphere, moody London tones, elegant",
+    "gs": 7.5,
+    "tags": [
+      "london",
+      "england",
+      "travel",
+      "british",
+      "classic",
+      "royal"
+    ],
+    "chs": [
+      [
+        "Hello London",
+        "Xin Chào London",
+        "London calling! Big Ben is even bigger in real life 🇬🇧",
+        "London gọi! Big Ben còn to hơn ngoài đời thật 🇬🇧",
+        "Portrait of {subject} near Big Ben and Houses of Parliament, classic London scene, British architecture, dramatic cloudy sky"
+      ],
+      [
+        "Tower Bridge",
+        "Cầu Tower",
+        "Walking across Tower Bridge. Feeling like James Bond 🕵️",
+        "Đi qua cầu Tower. Cảm giác như James Bond 🕵️",
+        "Elegant portrait of {subject} on Tower Bridge London, Thames River below, Victorian architecture, twilight atmosphere"
+      ],
+      [
+        "Afternoon Tea",
+        "Trà Chiều",
+        "Proper British afternoon tea. Pinky up! 🫖",
+        "Trà chiều Anh đúng chuẩn. Nâng ngón út! 🫖",
+        "Refined portrait of {subject} at luxury afternoon tea in London, tiered cake stand, fine china, elegant hotel interior, British tradition"
+      ],
+      [
+        "Abbey Road",
+        "Đường Abbey",
+        "Had to recreate THE photo. Beatles forever 🎸",
+        "Phải chụp lại BỨC ẢNH huyền thoại. Beatles mãi mãi 🎸",
+        "Portrait of {subject} crossing Abbey Road zebra crossing in Beatles style, iconic London street, nostalgic music history moment"
+      ],
+      [
+        "Camden Vibes",
+        "Vibes Camden",
+        "Camden Market energy is unmatched. Found some gems 🎭",
+        "Năng lượng Camden Market không gì sánh. Tìm được vài món đỉnh 🎭",
+        "Portrait of {subject} at Camden Market London, colorful storefronts, street art, eclectic British market atmosphere, alternative culture"
+      ],
+      [
+        "London Eye Night",
+        "Mắt London Đêm",
+        "London from above. This city sparkles different at night ✨",
+        "London từ trên cao. Thành phố lấp lánh khác biệt ban đêm ✨",
+        "Night portrait of {subject} at London Eye with city lights panorama, Thames River glowing, Big Ben illuminated, dramatic night skyline"
+      ]
+    ]
+  },
+  {
+    "slug": "seoul_kbeauty",
+    "title": [
+      "Seoul K-Beauty Trip",
+      "Seoul K-Beauty"
+    ],
+    "desc": [
+      "Exploring K-beauty, K-food, and K-culture in Seoul",
+      "Khám phá K-beauty, K-food, và K-culture tại Seoul"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "female",
+    "dur": "many",
+    "badge": "NEW",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, western city, european",
+    "style": "K-beauty glow, vibrant Seoul neon, modern Korean aesthetic",
+    "gs": 7.5,
+    "tags": [
+      "seoul",
+      "korea",
+      "travel",
+      "k-beauty",
+      "k-pop",
+      "gangnam"
+    ],
+    "chs": [
+      [
+        "Annyeong Seoul",
+        "Annyeong Seoul",
+        "Seoul I'm here for the K-beauty and K-food 🇰🇷💄",
+        "Seoul tôi đến vì K-beauty và K-food 🇰🇷💄",
+        "Portrait of {subject} at Incheon Airport arrival, Korean signage, modern terminal, K-beauty excited expression, trendy outfit"
+      ],
+      [
+        "Myeongdong Shopping",
+        "Mua Sắm Myeongdong",
+        "Myeongdong haul! My skincare game is about to level up 🧴",
+        "Haul Myeongdong! Game skincare sắp lên level 🧴",
+        "Portrait of {subject} shopping in Myeongdong district, Korean beauty shops, neon signs, shopping bags, vibrant market atmosphere"
+      ],
+      [
+        "Hanbok Day",
+        "Ngày Mặc Hanbok",
+        "Wearing a hanbok at Gyeongbokgung. Living my K-drama life 👸",
+        "Mặc hanbok ở Gyeongbokgung. Sống đời K-drama 👸",
+        "Beautiful portrait of {subject} wearing traditional Korean hanbok at Gyeongbokgung Palace, historical Korean architecture, cherry blossoms"
+      ],
+      [
+        "Korean BBQ",
+        "Thịt Nướng Hàn",
+        "Korean BBQ hits different in Korea. Obviously 🥩🔥",
+        "Thịt nướng Hàn ở Hàn Quốc khác biệt. Đương nhiên 🥩🔥",
+        "Portrait of {subject} at authentic Korean BBQ restaurant, sizzling meat on grill, side dishes, warm restaurant atmosphere, foodie moment"
+      ],
+      [
+        "Gangnam Style",
+        "Gangnam Style",
+        "Walking through Gangnam feeling like a K-pop idol 💃",
+        "Đi dạo Gangnam cảm giác như idol K-pop 💃",
+        "Stylish portrait of {subject} in Gangnam district, modern Korean architecture, luxury shops, K-fashion style, city lights"
+      ],
+      [
+        "Bukchon Hanok",
+        "Bukchon Hanok",
+        "Lost in the traditional hanok village. Old meets new 🏘️",
+        "Lạc trong làng hanok truyền thống. Cổ gặp mới 🏘️",
+        "Portrait of {subject} walking through Bukchon Hanok Village, traditional Korean houses, Seoul Tower visible, charming narrow alley"
+      ],
+      [
+        "Seoul Tower Love",
+        "Tình Yêu Seoul Tower",
+        "Locked our love at N Seoul Tower. K-drama ending achieved 🔒💕",
+        "Khóa tình yêu ở N Seoul Tower. Kết thúc K-drama đạt được 🔒💕",
+        "Romantic portrait of {subject} at N Seoul Tower observation deck, love locks, Seoul city panorama, sunset, K-drama romantic atmosphere"
+      ]
+    ]
+  },
+  {
+    "slug": "iceland_adventure",
+    "title": [
+      "Iceland Adventure",
+      "Phiêu Lưu Iceland"
+    ],
+    "desc": [
+      "Chasing Northern Lights and volcanoes in the land of ice and fire",
+      "Săn Bắc Cực Quang và núi lửa ở xứ sở băng và lửa"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "male",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, tropical, warm, urban city",
+    "style": "dramatic Iceland landscape, aurora lights, volcanic terrain",
+    "gs": 8,
+    "tags": [
+      "iceland",
+      "adventure",
+      "travel",
+      "aurora",
+      "northern-lights",
+      "volcano"
+    ],
+    "chs": [
+      [
+        "Land of Ice",
+        "Xứ Sở Băng",
+        "Iceland doesn't feel real. It's like another planet 🌍❄️",
+        "Iceland không có thật. Như hành tinh khác 🌍❄️",
+        "Portrait of {subject} standing in vast Icelandic lava field landscape, dramatic sky, volcanic terrain, otherworldly atmosphere, adventure gear"
+      ],
+      [
+        "Blue Lagoon",
+        "Hồ Xanh",
+        "Blue Lagoon hits different when it's snowing outside 🧊♨️",
+        "Blue Lagoon khác biệt khi tuyết rơi bên ngoài 🧊♨️",
+        "Portrait of {subject} relaxing in Blue Lagoon geothermal spa, milky blue water, steam rising, snowy landscape around, Iceland winter"
+      ],
+      [
+        "Waterfall Power",
+        "Sức Mạnh Thác Nước",
+        "Skógafoss waterfall. Nature flexing its power 💪🌊",
+        "Thác Skógafoss. Thiên nhiên flex sức mạnh 💪🌊",
+        "Epic portrait of {subject} at Skógafoss waterfall Iceland, massive cascading water, rainbow in mist, dramatic cliffs, adventure photography"
+      ],
+      [
+        "Northern Lights",
+        "Bắc Cực Quang",
+        "THE moment. Northern Lights dancing above me. Speechless 🌌",
+        "KHOẢNH KHẮC đó. Bắc Cực Quang nhảy múa trên đầu. Không lời 🌌",
+        "Magical portrait of {subject} under vivid Northern Lights aurora borealis, green purple lights dancing in dark sky, snowy Iceland landscape"
+      ],
+      [
+        "Glacier Walk",
+        "Đi Trên Sông Băng",
+        "Walking on a glacier. Climate change is real, see it while you can 🏔️",
+        "Đi trên sông băng. Biến đổi khí hậu là thật, hãy đi khi còn có thể 🏔️",
+        "Adventure portrait of {subject} walking on Vatnajökull glacier, blue ice formations, crampons and gear, dramatic ice landscape, expedition mood"
+      ],
+      [
+        "Viking Spirit",
+        "Tinh Thần Viking",
+        "Channeling my inner Viking. This land made warriors 🛡️",
+        "Kênh gọi Viking bên trong. Vùng đất tạo ra chiến binh 🛡️",
+        "Portrait of {subject} at dramatic black sand beach Reynisfjara, basalt columns, crashing waves, moody Icelandic sky, powerful nature"
+      ]
+    ]
+  },
+  {
+    "slug": "thailand_beach",
+    "title": [
+      "Thailand Island Hop",
+      "Nhảy Đảo Thái Lan"
+    ],
+    "desc": [
+      "Island hopping through Thailand — turquoise water and street food paradise",
+      "Nhảy đảo qua Thái Lan — nước xanh ngọc và thiên đường ẩm thực đường phố"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cold, winter, urban only",
+    "style": "tropical Thai beach vibes, warm turquoise, vibrant street energy",
+    "gs": 7.5,
+    "tags": [
+      "thailand",
+      "beach",
+      "travel",
+      "island",
+      "street-food",
+      "tropical"
+    ],
+    "chs": [
+      [
+        "Sawadee Thailand",
+        "Sawadee Thái Lan",
+        "Thailand here we go! The land of smiles 🇹🇭😊",
+        "Thái Lan xuất phát! Xứ sở nụ cười 🇹🇭😊",
+        "Portrait of {subject} at Bangkok Suvarnabhumi Airport, Thai welcome decorations, golden Buddha accents, excited traveler arrival"
+      ],
+      [
+        "Bangkok Temple",
+        "Chùa Bangkok",
+        "Wat Arun at sunrise. Pure gold ✨🙏",
+        "Wat Arun lúc bình minh. Vàng ròng ✨🙏",
+        "Portrait of {subject} at Wat Arun temple Bangkok at sunrise, ornate Thai architecture, golden spires, morning light, spiritual atmosphere"
+      ],
+      [
+        "Street Food King",
+        "Vua Ẩm Thực Đường Phố",
+        "Thai street food > everything else. Pad Thai on the street 🍜",
+        "Ẩm thực đường phố Thái > tất cả. Pad Thai ngoài đường 🍜",
+        "Portrait of {subject} at bustling Bangkok street food market, sizzling wok flames, pad thai stall, neon signs, vibrant night market"
+      ],
+      [
+        "Phi Phi Paradise",
+        "Thiên Đường Phi Phi",
+        "Phi Phi Islands are a dream. Pinch me 🏝️💎",
+        "Đảo Phi Phi là giấc mơ. Véo tôi đi 🏝️💎",
+        "Stunning portrait of {subject} at Maya Bay Phi Phi Islands, crystal turquoise water, dramatic limestone cliffs, tropical paradise, longtail boat"
+      ],
+      [
+        "Full Moon Party",
+        "Tiệc Trăng Tròn",
+        "Full Moon Party Koh Phangan! The energy is INSANE 🌕🎉",
+        "Full Moon Party Koh Phangan! Năng lượng ĐIÊN CUỒNG 🌕🎉",
+        "Energetic portrait of {subject} at Full Moon Party beach, neon body paint, fire dancers in background, festival crowd, colorful night"
+      ],
+      [
+        "Floating Market",
+        "Chợ Nổi",
+        "Floating market breakfast. Only in Thailand 🛶🥥",
+        "Bữa sáng chợ nổi. Chỉ có ở Thái Lan 🛶🥥",
+        "Portrait of {subject} at Thai floating market, colorful boats with fruits, canal market atmosphere, traditional Thai hats, morning light"
+      ],
+      [
+        "Thai Sunset",
+        "Hoàng Hôn Thái",
+        "Last sunset in Thailand. This country stole my heart 💛🌅",
+        "Hoàng hôn cuối ở Thái Lan. Đất nước này lấy cắp trái tim tôi 💛🌅",
+        "Beautiful portrait of {subject} on Thai beach at sunset, longtail boat silhouette, palm trees, orange pink sky, peaceful farewell moment"
+      ]
+    ]
+  },
+  {
+    "slug": "italy_food",
+    "title": [
+      "Italy Food Journey",
+      "Hành Trình Ẩm Thực Ý"
+    ],
+    "desc": [
+      "Eat Pray Love through Italy — 8 delicious chapters",
+      "Ăn Cầu Nguyện Yêu qua nước Ý — 8 chương ngon tuyệt"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "female",
+    "dur": "many",
+    "badge": null,
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cold, fast food, modern generic",
+    "style": "warm Italian golden light, rustic Mediterranean, food photography",
+    "gs": 7.5,
+    "tags": [
+      "italy",
+      "food",
+      "travel",
+      "rome",
+      "florence",
+      "pasta",
+      "gelato"
+    ],
+    "chs": [
+      [
+        "Ciao Roma",
+        "Ciao Roma",
+        "Rome wasn't built in a day but I fell in love in 1 second 🇮🇹",
+        "Rome không xây trong 1 ngày nhưng tôi yêu trong 1 giây 🇮🇹",
+        "Portrait of {subject} at the Colosseum Rome, ancient Roman architecture, warm golden light, excited first impression, Italian charm"
+      ],
+      [
+        "Pasta Perfection",
+        "Pasta Hoàn Hảo",
+        "Fresh handmade pasta in Rome. I can die happy now 🍝",
+        "Pasta tươi làm tay ở Rome. Chết cũng mãn nguyện 🍝",
+        "Portrait of {subject} at charming Roman trattoria, beautiful pasta dish, rustic Italian interior, candle light, foodie paradise"
+      ],
+      [
+        "Trevi Wish",
+        "Ước Nguyện Trevi",
+        "Threw a coin in Trevi Fountain. Coming back for sure 💰🪙",
+        "Ném xu vào đài phun Trevi. Chắc chắn quay lại 💰🪙",
+        "Portrait of {subject} at Trevi Fountain, baroque architecture, blue water, coin toss moment, romantic Roman atmosphere"
+      ],
+      [
+        "Florence Art",
+        "Nghệ Thuật Florence",
+        "Florence is what happens when art becomes a city 🎨",
+        "Florence là khi nghệ thuật trở thành thành phố 🎨",
+        "Portrait of {subject} on Ponte Vecchio bridge Florence, Arno River, Renaissance architecture, golden afternoon light, artistic atmosphere"
+      ],
+      [
+        "Gelato Therapy",
+        "Gelato Trị Liệu",
+        "Italian gelato is medicine for the soul. 3rd cone today 🍦",
+        "Gelato Ý là thuốc cho tâm hồn. Cây thứ 3 hôm nay 🍦",
+        "Fun portrait of {subject} eating colorful gelato in Italian piazza, charming Italian square, summer atmosphere, joyful expression"
+      ],
+      [
+        "Tuscan Sunset",
+        "Hoàng Hôn Tuscany",
+        "Tuscan countryside at sunset. Paintings can't capture this 🌅",
+        "Vùng quê Tuscany hoàng hôn. Tranh vẽ không thể tả 🌅",
+        "Portrait of {subject} in Tuscan countryside, rolling hills, cypress trees, vineyard, golden sunset, warm Italian landscape"
+      ],
+      [
+        "Venice Magic",
+        "Phép Màu Venice",
+        "Venice canals at golden hour. Is this even real? 🛶✨",
+        "Kênh Venice lúc golden hour. Có thật không? 🛶✨",
+        "Romantic portrait of {subject} on Venice gondola ride, ancient buildings reflecting on canal, golden hour light, venetian architecture"
+      ],
+      [
+        "Arrivederci Italia",
+        "Arrivederci Italia",
+        "Arrivederci Italy. I'm coming back with a bigger appetite 🇮🇹❤️",
+        "Arrivederci Italy. Tôi sẽ quay lại với bụng lớn hơn 🇮🇹❤️",
+        "Farewell portrait of {subject} at Italian train station, vintage European architecture, suitcase, looking back with love, warm evening light"
+      ]
+    ]
+  },
+  {
+    "slug": "maldives_paradise",
+    "title": [
+      "Maldives Paradise",
+      "Thiên Đường Maldives"
+    ],
+    "desc": [
+      "Living the overwater bungalow dream in the Maldives",
+      "Sống giấc mơ biệt thự trên nước ở Maldives"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "couple",
+    "dur": "many",
+    "badge": null,
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cold, urban, overcast",
+    "style": "crystal turquoise water, tropical luxury, pristine paradise",
+    "gs": 7,
+    "tags": [
+      "maldives",
+      "paradise",
+      "travel",
+      "tropical",
+      "luxury",
+      "couple",
+      "overwater"
+    ],
+    "chs": [
+      [
+        "Seaplane Arrival",
+        "Đến Bằng Thuỷ Phi Cơ",
+        "Arriving by seaplane. The water is actually this blue 🛩️💎",
+        "Đến bằng thuỷ phi cơ. Nước thực sự xanh như này 🛩️💎",
+        "Portrait of {subject} arriving by seaplane in Maldives, crystal turquoise water from above, tiny island resort, tropical paradise aerial view"
+      ],
+      [
+        "Overwater Villa",
+        "Biệt Thự Trên Nước",
+        "Waking up with the ocean under our bed. Unreal 🏠🌊",
+        "Thức dậy với đại dương dưới giường. Không thể tin 🏠🌊",
+        "Luxury portrait of {subject} on overwater bungalow deck, glass floor showing tropical fish below, turquoise lagoon, sunny paradise morning"
+      ],
+      [
+        "Underwater World",
+        "Thế Giới Dưới Nước",
+        "Snorkeling with sea turtles. Nature is incredible 🐢💙",
+        "Lặn với rùa biển. Thiên nhiên thật tuyệt vời 🐢💙",
+        "Portrait of {subject} snorkeling in crystal clear Maldives water, colorful coral reef, tropical fish, sunlight filtering through water"
+      ],
+      [
+        "Sandbank Picnic",
+        "Picnic Bãi Cát",
+        "Private sandbank picnic. Just us and the ocean 🏝️🍾",
+        "Picnic bãi cát riêng. Chỉ có chúng tôi và đại dương 🏝️🍾",
+        "Romantic portrait of {subject} on private Maldives sandbank, white sand surrounded by turquoise water, champagne setup, secluded paradise"
+      ],
+      [
+        "Sunset Dolphin",
+        "Cá Heo Hoàng Hôn",
+        "Dolphins at sunset. Crying happy tears right now 🐬🌅",
+        "Cá heo lúc hoàng hôn. Đang khóc vì hạnh phúc 🐬🌅",
+        "Stunning portrait of {subject} on boat at sunset in Maldives, dolphins jumping, orange golden sky, Indian Ocean, magical moment"
+      ],
+      [
+        "Stargazing",
+        "Ngắm Sao",
+        "Stargazing in the Maldives. Zero light pollution, million stars ⭐",
+        "Ngắm sao ở Maldives. Không ô nhiễm ánh sáng, triệu vì sao ⭐",
+        "Night portrait of {subject} on beach under brilliant Milky Way sky, starry night, overwater villa lights, bioluminescent beach glow"
+      ],
+      [
+        "Paradise Found",
+        "Thiên Đường Tìm Thấy",
+        "We found paradise and it's real. Never want to leave 💙🌴",
+        "Chúng tôi tìm thấy thiên đường và nó có thật. Không muốn rời đi 💙🌴",
+        "Final portrait of {subject} on Maldives beach at golden hour, pristine white sand, palm tree swing, couple moment, perfect paradise farewell"
+      ]
+    ]
+  },
+  {
+    "slug": "african_safari",
+    "title": [
+      "African Safari",
+      "Safari Châu Phi"
+    ],
+    "desc": [
+      "Wild African adventure — lions, sunsets, and the savanna calling",
+      "Phiêu lưu hoang dã Châu Phi — sư tử, hoàng hôn, và tiếng gọi thảo nguyên"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, urban, snow, ocean, tropical beach",
+    "style": "golden African savanna, dramatic sunset, wild nature",
+    "gs": 8,
+    "tags": [
+      "safari",
+      "africa",
+      "travel",
+      "wildlife",
+      "savanna",
+      "adventure"
+    ],
+    "chs": [
+      [
+        "Welcome to Africa",
+        "Chào Châu Phi",
+        "Africa! The motherland is calling and I answered 🌍🦁",
+        "Châu Phi! Đất mẹ đang gọi và tôi đáp lời 🌍🦁",
+        "Portrait of {subject} arriving at African safari lodge, thatched roof, baobab trees, warm African welcome, golden savanna light"
+      ],
+      [
+        "First Game Drive",
+        "Chuyến Xe Đầu Tiên",
+        "First game drive and we spotted a lion pride. SHAKING 🦁",
+        "Chuyến xe đầu tiên và thấy bầy sư tử. RUN 🦁",
+        "Portrait of {subject} in open safari jeep, golden savanna grassland, acacia trees, wildlife spotting pose, binoculars, adventure clothing"
+      ],
+      [
+        "Elephant Encounter",
+        "Gặp Voi",
+        "Face to face with elephants. They're so gentle and wise 🐘",
+        "Mặt đối mặt với voi. Chúng hiền lành và khôn ngoan 🐘",
+        "Stunning portrait of {subject} near African elephants in savanna, large elephant walking nearby, golden light, respectful distance, wildlife photography"
+      ],
+      [
+        "Savanna Sunset",
+        "Hoàng Hôn Thảo Nguyên",
+        "African sunset hits different. Colors you can't even imagine 🌅",
+        "Hoàng hôn Châu Phi khác biệt. Màu sắc không tưởng tượng được 🌅",
+        "Epic portrait of {subject} silhouetted against dramatic African sunset, lone acacia tree, orange red sky, vast savanna, cinematic landscape"
+      ],
+      [
+        "Masai Culture",
+        "Văn Hoá Masai",
+        "Learning from the Masai warriors. Respect to the culture 🙏",
+        "Học từ chiến binh Masai. Kính trọng văn hoá 🙏",
+        "Portrait of {subject} with Masai cultural setting, traditional beadwork, warm village atmosphere, cultural exchange moment"
+      ],
+      [
+        "Hot Air Balloon",
+        "Khinh Khí Cầu",
+        "Hot air balloon over the Serengeti at sunrise. Peak life moment 🎈",
+        "Khinh khí cầu trên Serengeti lúc bình minh. Đỉnh cao cuộc đời 🎈",
+        "Breathtaking portrait of {subject} in hot air balloon basket over African savanna at sunrise, herds of wildebeest below, golden morning light"
+      ],
+      [
+        "Africa Forever",
+        "Châu Phi Mãi Mãi",
+        "Africa changed my soul. This continent has magic in its soil ❤️🌍",
+        "Châu Phi thay đổi tâm hồn tôi. Châu lục này có phép màu trong đất ❤️🌍",
+        "Emotional portrait of {subject} at safari camp at sunset, campfire glow, stars appearing, looking at vast African landscape, gratitude moment"
+      ]
+    ]
+  },
+  {
+    "slug": "swiss_alps",
+    "title": [
+      "Swiss Alps Escape",
+      "Trốn Đến Alps Thụy Sĩ"
+    ],
+    "desc": [
+      "Mountain therapy in the Swiss Alps — peaks, lakes, and pure air",
+      "Liệu pháp núi non ở Alps Thụy Sĩ — đỉnh núi, hồ, và không khí trong lành"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "male",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, tropical, desert, urban",
+    "style": "majestic alpine landscape, crisp mountain air, dramatic peaks",
+    "gs": 7.5,
+    "tags": [
+      "swiss",
+      "alps",
+      "mountains",
+      "travel",
+      "nature",
+      "hiking"
+    ],
+    "chs": [
+      [
+        "Alpine Arrival",
+        "Đến Vùng Núi",
+        "The Swiss Alps in person. Photos don't do it justice 🏔️",
+        "Alps Thụy Sĩ ngoài đời thật. Ảnh không thể diễn tả 🏔️",
+        "Portrait of {subject} arriving in Swiss Alps village, snow-capped peaks behind, green meadows, wooden chalets, crystal clear air"
+      ],
+      [
+        "Lake Mirror",
+        "Hồ Gương",
+        "Swiss lakes are literal mirrors. This isn't Photoshop 🏞️",
+        "Hồ Thụy Sĩ là gương thật sự. Đây không phải Photoshop 🏞️",
+        "Portrait of {subject} at Swiss alpine lake with perfect mountain reflection, crystal clear turquoise water, surrounding peaks, stunning landscape"
+      ],
+      [
+        "Peak Summit",
+        "Đỉnh Núi",
+        "Made it to the top! The view was worth every step 🥾⛰️",
+        "Lên đến đỉnh! View xứng đáng mỗi bước chân 🥾⛰️",
+        "Triumphant portrait of {subject} at Swiss mountain summit, panoramic alpine view, dramatic clouds below, achievement moment, hiking gear"
+      ],
+      [
+        "Train Journey",
+        "Hành Trình Tàu",
+        "The Glacier Express. Most scenic train ride in the world 🚂",
+        "Glacier Express. Tuyến tàu đẹp nhất thế giới 🚂",
+        "Portrait of {subject} on panoramic Swiss train, mountain scenery passing by window, luxury rail travel, dramatic alpine viaducts"
+      ],
+      [
+        "Cheese & Chocolate",
+        "Phô Mai & Sô-cô-la",
+        "Swiss fondue + Swiss chocolate = Swiss happiness 🫕🍫",
+        "Fondue Thụy Sĩ + Sô-cô-la Thụy Sĩ = Hạnh phúc Thụy Sĩ 🫕🍫",
+        "Cozy portrait of {subject} at traditional Swiss chalet restaurant, fondue pot on table, mountain view from window, warm wooden interior"
+      ],
+      [
+        "Mountain Goodbye",
+        "Tạm Biệt Núi",
+        "Leaving the mountains healed. The Alps fixed my soul 🏔️💚",
+        "Rời núi đã được chữa lành. Alps sửa lại tâm hồn tôi 🏔️💚",
+        "Peaceful portrait of {subject} looking at Swiss Alps panorama at sunset, wildflower meadow, golden alpine light, farewell reflection"
+      ]
+    ]
+  },
+  {
+    "slug": "vietnam_discovery",
+    "title": [
+      "Vietnam Discovery",
+      "Khám Phá Việt Nam"
+    ],
+    "desc": [
+      "8 unforgettable moments across Vietnam — from Hanoi to Saigon",
+      "8 khoảnh khắc khó quên dọc Việt Nam — từ Hà Nội đến Sài Gòn"
+    ],
+    "cat": "travel",
+    "type": "travel",
+    "gender": "female",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, western city, cold climate",
+    "style": "warm Vietnamese culture, vibrant colors, authentic travel",
+    "gs": 7.5,
+    "tags": [
+      "vietnam",
+      "travel",
+      "hanoi",
+      "saigon",
+      "halong",
+      "hoian",
+      "culture"
+    ],
+    "chs": [
+      [
+        "Hanoi Old Quarter",
+        "Phố Cổ Hà Nội",
+        "The chaos of Hanoi Old Quarter is beautiful. Organized madness 🏍️",
+        "Sự hỗn loạn của phố cổ Hà Nội thật đẹp. Điên có tổ chức 🏍️",
+        "Vibrant portrait of {subject} in Hanoi Old Quarter, narrow streets with motorbikes, colorful shop fronts, Vietnamese lanterns, bustling energy"
+      ],
+      [
+        "Pho Morning",
+        "Sáng Ăn Phở",
+        "Vietnamese pho for breakfast. Best food decision of my life 🍜",
+        "Phở sáng. Quyết định ẩm thực tốt nhất đời 🍜",
+        "Portrait of {subject} at Hanoi street pho stall, steaming bowl of pho, tiny plastic stools, authentic Vietnamese street food, morning atmosphere"
+      ],
+      [
+        "Ha Long Bay",
+        "Vịnh Hạ Long",
+        "Ha Long Bay is a real-life painting. 3000 islands of magic 🏝️",
+        "Vịnh Hạ Long là bức tranh thật. 3000 hòn đảo phép màu 🏝️",
+        "Stunning portrait of {subject} on traditional junk boat in Ha Long Bay, limestone karst islands, emerald green water, misty atmosphere"
+      ],
+      [
+        "Hoi An Lanterns",
+        "Đèn Lồng Hội An",
+        "Hoi An Ancient Town at night. Lanterns making everything magical 🏮",
+        "Phố cổ Hội An ban đêm. Đèn lồng làm mọi thứ diệu kỳ 🏮",
+        "Magical portrait of {subject} in Hoi An Ancient Town at night, hundreds of colorful lanterns, Thu Bon River reflections, traditional Vietnamese architecture"
+      ],
+      [
+        "Rice Terrace",
+        "Ruộng Bậc Thang",
+        "Sapa rice terraces. Vietnam's hidden masterpiece 🌾💚",
+        "Ruộng bậc thang Sapa. Kiệt tác ẩn giấu của Việt Nam 🌾💚",
+        "Portrait of {subject} at Sapa rice terraces, layered green paddies cascading down mountains, misty peaks, traditional Vietnamese landscape"
+      ],
+      [
+        "Ao Dai Beauty",
+        "Đẹp Áo Dài",
+        "Wearing ao dai in Hue. Feeling the Vietnamese heritage 👗",
+        "Mặc áo dài ở Huế. Cảm nhận di sản Việt Nam 👗",
+        "Elegant portrait of {subject} wearing traditional Vietnamese ao dai at Hue Imperial Citadel, Vietnamese architecture, lotus pond, cultural pride"
+      ],
+      [
+        "Saigon Nights",
+        "Đêm Sài Gòn",
+        "Saigon never sleeps and neither do I tonight 🌃",
+        "Sài Gòn không bao giờ ngủ và tôi cũng vậy tối nay 🌃",
+        "Night portrait of {subject} in Ho Chi Minh City, Nguyen Hue walking street, modern skyline, neon lights, vibrant nightlife energy"
+      ],
+      [
+        "Vietnam Forever",
+        "Việt Nam Mãi Mãi",
+        "Vietnam, you surprised me in every way. See you again soon 🇻🇳❤️",
+        "Việt Nam, bạn làm tôi ngạc nhiên mọi cách. Hẹn gặp lại sớm 🇻🇳❤️",
+        "Farewell portrait of {subject} at Vietnamese coffee shop, egg coffee on table, looking out at street life, warm grateful expression, authentic Vietnam moment"
+      ]
+    ]
+  },
+  {
+    "slug": "ceo_day",
+    "title": [
+      "CEO for a Day",
+      "Làm CEO Một Ngày"
+    ],
+    "desc": [
+      "Living the CEO lifestyle from morning power moves to night celebrations",
+      "Sống đời CEO từ sáng quyền lực đến đêm ăn mừng"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "male",
+    "dur": "once",
+    "badge": "HOT",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, casual messy, outdoor nature",
+    "style": "corporate power, luxury office, cinematic business",
+    "gs": 8,
+    "tags": [
+      "ceo",
+      "boss",
+      "wealth",
+      "business",
+      "luxury",
+      "power"
+    ],
+    "chs": [
+      [
+        "Morning Routine",
+        "Buổi Sáng Quyền Lực",
+        "CEO morning routine. Up before the sun rises 🌅💼",
+        "Routine sáng CEO. Dậy trước khi mặt trời mọc 🌅💼",
+        "Portrait of {subject} in luxury penthouse bathroom getting ready, marble counters, city skyline view, premium grooming, power morning routine"
+      ],
+      [
+        "Corner Office",
+        "Văn Phòng Góc",
+        "My corner office energy. The view from the top 🏢",
+        "Năng lượng văn phòng góc. View từ đỉnh 🏢",
+        "Power portrait of {subject} in modern corner office with floor-to-ceiling windows, city panorama, sleek desk, tailored suit, boss energy"
+      ],
+      [
+        "Board Meeting",
+        "Họp Hội Đồng",
+        "Boardroom moves. Everyone listened when I spoke 🎯",
+        "Phòng họp hội đồng. Ai cũng lắng nghe khi tôi nói 🎯",
+        "Professional portrait of {subject} leading a boardroom meeting, long conference table, executive team, presentation screen, authoritative pose"
+      ],
+      [
+        "Power Lunch",
+        "Bữa Trưa Quyền Lực",
+        "Power lunch at a Michelin restaurant. Deals over dessert 🍽️",
+        "Bữa trưa quyền lực ở nhà hàng Michelin. Deal bên món tráng miệng 🍽️",
+        "Elegant portrait of {subject} at high-end restaurant, business lunch setting, fine dining, city view, confident executive dining"
+      ],
+      [
+        "Supercar Exit",
+        "Ra Xe Siêu Xe",
+        "Pulling up in the Ferrari. Working hard has its perks 🏎️",
+        "Lái Ferrari đến. Làm việc chăm chỉ có phần thưởng 🏎️",
+        "Cinematic portrait of {subject} stepping out of a Ferrari in front of office tower, valet parking, power suit, dramatic evening light"
+      ],
+      [
+        "Rooftop Celebrate",
+        "Ăn Mừng Rooftop",
+        "Closed the biggest deal of my life. Champagne on the rooftop 🍾",
+        "Chốt deal lớn nhất đời. Champagne trên rooftop 🍾",
+        "Celebration portrait of {subject} on luxury rooftop bar, champagne toast, city skyline at night, string lights, victory moment"
+      ],
+      [
+        "Late Night Hustle",
+        "Cày Đêm",
+        "The grind never stops. But tonight, we celebrate tomorrow 🌃",
+        "Cày không bao giờ dừng. Nhưng tối nay, ăn mừng ngày mai 🌃",
+        "Moody portrait of {subject} in back of luxury car at night, city lights through window, contemplative powerful expression, late night boss energy"
+      ]
+    ]
+  },
+  {
+    "slug": "private_jet",
+    "title": [
+      "Private Jet Life",
+      "Đời Máy Bay Riêng"
+    ],
+    "desc": [
+      "From tarmac to touchdown — living the private jet lifestyle",
+      "Từ đường băng đến hạ cánh — sống đời máy bay riêng"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "male",
+    "dur": "once",
+    "badge": null,
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, commercial airline, economy class",
+    "style": "luxury aviation, golden tarmac light, VIP travel",
+    "gs": 8,
+    "tags": [
+      "private-jet",
+      "luxury",
+      "wealth",
+      "aviation",
+      "travel",
+      "vip"
+    ],
+    "chs": [
+      [
+        "Tarmac Walk",
+        "Đi Trên Đường Băng",
+        "Walking to my private jet. Monday motivation 💼✈️",
+        "Đi bộ ra máy bay riêng. Động lực thứ Hai 💼✈️",
+        "Powerful portrait of {subject} walking on airport tarmac toward private jet, golden sunset, luxury luggage, confident stride, aviation lifestyle"
+      ],
+      [
+        "Cabin Luxury",
+        "Cabin Sang Trọng",
+        "This is what first class looks like. JK, this is MY plane 😏",
+        "Đây là hạng nhất. Đùa thôi, đây là máy bay CỦA TÔI 😏",
+        "Portrait of {subject} inside luxury private jet cabin, cream leather seats, champagne, personal suite, warm cabin lighting"
+      ],
+      [
+        "Above the Clouds",
+        "Trên Mây",
+        "Office above the clouds. Wifi hits different at 40,000 feet ☁️💻",
+        "Văn phòng trên mây. Wifi khác biệt ở 40,000 feet ☁️💻",
+        "Portrait of {subject} working on laptop inside private jet, clouds visible through oval window, productive luxury, aerial view"
+      ],
+      [
+        "Sunset Landing",
+        "Hạ Cánh Hoàng Hôn",
+        "Touchdown in a new city. Life of a jet setter 🌅",
+        "Hạ cánh ở thành phố mới. Đời jet setter 🌅",
+        "Portrait of {subject} descending private jet stairs at sunset, destination city in background, VIP arrival, golden tarmac light"
+      ],
+      [
+        "VIP Transfer",
+        "Xe VIP",
+        "Rolls Royce waiting on the tarmac. This is how we roll 🚗",
+        "Rolls Royce chờ trên đường băng. Đây là cách chúng tôi di chuyển 🚗",
+        "Portrait of {subject} walking from private jet to waiting Rolls Royce, tarmac transfer, luxury car, bodyguard nearby, VIP treatment"
+      ],
+      [
+        "Destination Flex",
+        "Flex Điểm Đến",
+        "Arrived. Time to make moves in a new city 🏙️💰",
+        "Đã đến. Thời gian tạo sóng ở thành phố mới 🏙️💰",
+        "Portrait of {subject} in luxury hotel penthouse looking at city skyline, just arrived, designer bags, floor-to-ceiling windows, conquest energy"
+      ]
+    ]
+  },
+  {
+    "slug": "supercar_reveal",
+    "title": [
+      "Supercar Reveal",
+      "Ra Mắt Siêu Xe"
+    ],
+    "desc": [
+      "The moment I picked up my dream car — from showroom to first drive",
+      "Khoảnh khắc nhận xe mơ ước — từ showroom đến chuyến lái đầu tiên"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "male",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cheap car, old vehicle, messy",
+    "style": "showroom lighting, supercar reflections, cinematic automotive",
+    "gs": 8,
+    "tags": [
+      "supercar",
+      "car",
+      "wealth",
+      "ferrari",
+      "lambo",
+      "flex"
+    ],
+    "chs": [
+      [
+        "Showroom Visit",
+        "Đến Showroom",
+        "Walking into the dealership. Today is THE day 🏎️🔑",
+        "Bước vào đại lý. Hôm nay là NGÀY ĐÓ 🏎️🔑",
+        "Portrait of {subject} entering luxury car showroom, exotic supercars on display, sleek showroom lighting, excited anticipation"
+      ],
+      [
+        "The Reveal",
+        "Khoảnh Khắc Ra Mắt",
+        "They pulled the cover off. My jaw dropped 😱🏎️",
+        "Họ kéo tấm phủ ra. Hàm tôi rơi 😱🏎️",
+        "Dramatic portrait of {subject} next to revealed supercar, dramatic showroom spotlight, gleaming paint, emotional first sight, car enthusiast dream"
+      ],
+      [
+        "Key Ceremony",
+        "Nhận Chìa Khoá",
+        "Got the keys to my dream. Hard work pays off 🔑💪",
+        "Nhận chìa khoá giấc mơ. Nỗ lực được đền đáp 🔑💪",
+        "Portrait of {subject} receiving supercar keys from dealer, handshake moment, luxury showroom, milestone achievement, proud smile"
+      ],
+      [
+        "First Start",
+        "Lần Khởi Động Đầu",
+        "That engine sound. THAT engine sound. Goosebumps 🔊💨",
+        "Tiếng động cơ ĐÓ. TIẾNG ĐỘNG CƠ ĐÓ. Nổi da gà 🔊💨",
+        "Portrait of {subject} sitting in supercar driver seat first time, hands on steering wheel, interior dashboard glow, emotional first start"
+      ],
+      [
+        "First Drive",
+        "Chuyến Lái Đầu",
+        "First drive through the city. Everyone stopped and stared 👀",
+        "Lần lái đầu qua phố. Ai cũng dừng lại nhìn 👀",
+        "Dynamic portrait of {subject} driving supercar through city street, motion blur, neon reflections on car, cinematic night driving"
+      ],
+      [
+        "The Photo",
+        "Bức Ảnh",
+        "Had to get THE photo with my new baby. Flex complete ✅",
+        "Phải chụp BỨC ẢNH với em bé mới. Flex hoàn tất ✅",
+        "Portrait of {subject} posing proudly with supercar, dramatic lighting, car parked in scenic location, hero shot, pride of ownership"
+      ],
+      [
+        "Night Cruise",
+        "Cruising Đêm",
+        "Night cruise through the city. Living the dream at 200mph 🌃",
+        "Cruising đêm qua phố. Sống giấc mơ ở 200mph 🌃",
+        "Cinematic night portrait of {subject} with supercar on empty city road, neon lights reflecting on wet pavement, dramatic night atmosphere"
+      ]
+    ]
+  },
+  {
+    "slug": "first_million",
+    "title": [
+      "My First Million",
+      "Triệu Đầu Tiên"
+    ],
+    "desc": [
+      "The journey to my first million — from zero to hero",
+      "Hành trình đến triệu đầu tiên — từ con số 0 đến hero"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "all",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, poverty, dirty, sad",
+    "style": "cinematic success story, dramatic lighting, triumphant",
+    "gs": 8,
+    "tags": [
+      "million",
+      "success",
+      "wealth",
+      "hustle",
+      "entrepreneur",
+      "money"
+    ],
+    "chs": [
+      [
+        "The Humble Start",
+        "Khởi Đầu Khiêm Tốn",
+        "Started from the bottom. Small room, big dreams 🏠💭",
+        "Bắt đầu từ dưới đáy. Phòng nhỏ, giấc mơ lớn 🏠💭",
+        "Portrait of {subject} in small modest room with laptop, simple workspace, determined expression, humble beginnings, soft window light"
+      ],
+      [
+        "The Grind",
+        "Cày Cuốc",
+        "Late nights and early mornings. Nobody saw the struggle 💻🌙",
+        "Thức khuya dậy sớm. Không ai thấy sự vật lộn 💻🌙",
+        "Portrait of {subject} working late at night, multiple screens, coffee cups, determined focus, midnight hustle, desk lamp glow"
+      ],
+      [
+        "First Win",
+        "Chiến Thắng Đầu",
+        "First big check cleared. The grind is paying off 💰📈",
+        "Séc lớn đầu tiên về. Cày cuốc đang được đền đáp 💰📈",
+        "Excited portrait of {subject} looking at laptop screen with joy, celebrating first big income, simple office, breakthrough moment"
+      ],
+      [
+        "Level Up",
+        "Lên Level",
+        "Upgraded everything. New office, new car, new energy 🚀",
+        "Nâng cấp tất cả. Văn phòng mới, xe mới, năng lượng mới 🚀",
+        "Portrait of {subject} in upgraded modern office, better equipment, city view, growth visible, leveling up in life"
+      ],
+      [
+        "The Team",
+        "Đội Ngũ",
+        "Built a team of killers. Can't do it alone, won't do it alone 🤝",
+        "Xây đội ngũ sát thủ. Không thể một mình, không muốn một mình 🤝",
+        "Portrait of {subject} with team in modern office, collaborative energy, whiteboard with plans, leadership moment"
+      ],
+      [
+        "Million Moment",
+        "Khoảnh Khắc Triệu Đô",
+        "It happened. $1,000,000. The number I dreamed about every night 💎",
+        "Nó đã xảy ra. $1,000,000. Con số tôi mơ mỗi đêm 💎",
+        "Triumphant portrait of {subject} in luxury setting, celebratory moment, looking at phone/screen with milestone number, emotional achievement"
+      ],
+      [
+        "New Chapter",
+        "Chương Mới",
+        "First million was just the beginning. The best is yet to come 🔥",
+        "Triệu đầu tiên chỉ là khởi đầu. Điều tốt nhất còn ở phía trước 🔥",
+        "Powerful portrait of {subject} on rooftop looking at city skyline, sunset, confident posture, ready for next chapter, visionary moment"
+      ]
+    ]
+  },
+  {
+    "slug": "penthouse_tour",
+    "title": [
+      "Penthouse Tour",
+      "Tour Penthouse"
+    ],
+    "desc": [
+      "Welcome to my penthouse — every room is a flex",
+      "Chào mừng đến penthouse của tôi — mỗi phòng là một flex"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "female",
+    "dur": "moment",
+    "badge": null,
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, small apartment, cheap furniture",
+    "style": "luxury interior design, modern penthouse, opulent",
+    "gs": 7.5,
+    "tags": [
+      "penthouse",
+      "luxury",
+      "home",
+      "wealth",
+      "interior",
+      "tour"
+    ],
+    "chs": [
+      [
+        "The Entrance",
+        "Lối Vào",
+        "Welcome to my penthouse. Please remove your shoes 👠🏠",
+        "Chào mừng đến penthouse. Xin bỏ giày 👠🏠",
+        "Portrait of {subject} at grand penthouse entrance, marble foyer, designer chandelier, panoramic city view through glass, luxury welcome"
+      ],
+      [
+        "Living Room",
+        "Phòng Khách",
+        "Living room with THAT view. Netflix hits different here 🛋️🌃",
+        "Phòng khách với VIEW ĐÓ. Netflix khác biệt ở đây 🛋️🌃",
+        "Portrait of {subject} in spacious penthouse living room, designer furniture, floor-to-ceiling windows, city skyline night view, cozy luxury"
+      ],
+      [
+        "Closet Goals",
+        "Tủ Đồ Mơ Ước",
+        "Walk-in closet tour. Designer everything 👗👜",
+        "Tour tủ đồ walk-in. Toàn đồ hiệu 👗👜",
+        "Portrait of {subject} in massive walk-in closet, organized designer bags and shoes, LED-lit shelves, fashion collection, luxury dressing room"
+      ],
+      [
+        "Kitchen Flex",
+        "Flex Bếp",
+        "This kitchen makes me want to cook. Almost 🍳😂",
+        "Cái bếp này làm tôi muốn nấu ăn. Gần như vậy 🍳😂",
+        "Portrait of {subject} in modern luxury kitchen, marble island counter, high-end appliances, wine fridge, penthouse kitchen goals"
+      ],
+      [
+        "Rooftop Pool",
+        "Hồ Bơi Sân Thượng",
+        "Private rooftop pool. This is what dreams are made of 🏊‍♀️✨",
+        "Hồ bơi riêng sân thượng. Đây là giấc mơ thành hiện thực 🏊‍♀️✨",
+        "Portrait of {subject} at private rooftop pool, infinity edge, city skyline, sunset, luxury swimwear, penthouse living"
+      ],
+      [
+        "Sunset View",
+        "View Hoàng Hôn",
+        "Watching the sunset from my penthouse. Grateful every single day 🌅",
+        "Ngắm hoàng hôn từ penthouse. Biết ơn mỗi ngày 🌅",
+        "Portrait of {subject} on penthouse terrace watching sunset, panoramic city view, wine glass, peaceful luxury evening, gratitude moment"
+      ]
+    ]
+  },
+  {
+    "slug": "shopping_spree",
+    "title": [
+      "Shopping Spree",
+      "Mua Sắm Thả Ga"
+    ],
+    "desc": [
+      "Designer shopping spree — haul of a lifetime",
+      "Mua sắm hàng hiệu thả ga — chiến lợi phẩm cả đời"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "female",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cheap store, discount, messy",
+    "style": "luxury shopping aesthetic, designer boutique, fashion flex",
+    "gs": 7.5,
+    "tags": [
+      "shopping",
+      "designer",
+      "wealth",
+      "fashion",
+      "haul",
+      "luxury"
+    ],
+    "chs": [
+      [
+        "The List",
+        "Danh Sách",
+        "Made a shopping list. Credit card: prepare yourself 💳📝",
+        "Lập danh sách mua sắm. Thẻ tín dụng: chuẩn bị tinh thần 💳📝",
+        "Portrait of {subject} in back of luxury car heading to shopping district, phone with shopping list, excited anticipation, designer sunglasses"
+      ],
+      [
+        "Chanel Stop",
+        "Ghé Chanel",
+        "First stop: Chanel. The classic never goes wrong 🖤",
+        "Điểm đầu tiên: Chanel. Cổ điển không bao giờ sai 🖤",
+        "Portrait of {subject} in Chanel boutique, trying on accessories, elegant marble interior, luxury shopping experience, VIP treatment"
+      ],
+      [
+        "Bag Queen",
+        "Nữ Hoàng Túi Xách",
+        "Found THE bag. It chose me, honestly 👜💕",
+        "Tìm được TÚI ĐÓ. Nó chọn tôi, thật sự 👜💕",
+        "Portrait of {subject} holding luxury designer handbag in boutique, admiring new purchase, beautiful bag display, shopping triumph"
+      ],
+      [
+        "Shoe Heaven",
+        "Thiên Đường Giày",
+        "Shoe shopping is my cardio. 5 pairs later... 👠",
+        "Mua giày là cardio của tôi. 5 đôi sau... 👠",
+        "Portrait of {subject} surrounded by luxury shoe boxes, trying on designer heels, high-end shoe boutique, indulgent shopping moment"
+      ],
+      [
+        "Try On Queen",
+        "Nữ Hoàng Thử Đồ",
+        "Fitting room fashion show for an audience of one 💃🪞",
+        "Show thời trang phòng thử cho khán giả một người 💃🪞",
+        "Portrait of {subject} in luxury fitting room, trying on designer outfit, multiple mirror reflections, confident pose, fashion moment"
+      ],
+      [
+        "The Haul",
+        "Chiến Lợi Phẩm",
+        "The damage is done. But look at this haul! Worth it 🛍️😍",
+        "Thiệt hại đã xong. Nhưng nhìn chiến lợi phẩm! Xứng đáng 🛍️😍",
+        "Portrait of {subject} surrounded by luxury shopping bags from multiple brands, back of luxury car loaded, satisfied smile, epic haul"
+      ],
+      [
+        "Unboxing Night",
+        "Đêm Mở Hộp",
+        "Unboxing everything tonight. This is my therapy 📦✨",
+        "Mở hộp tất cả tối nay. Đây là liệu pháp của tôi 📦✨",
+        "Portrait of {subject} at home unboxing designer purchases, tissue paper and boxes spread out, luxury bedroom, excited unboxing moment"
+      ]
+    ]
+  },
+  {
+    "slug": "casino_night",
+    "title": [
+      "Casino Night Monaco",
+      "Đêm Casino Monaco"
+    ],
+    "desc": [
+      "High roller night at Monte Carlo — where fortunes are made",
+      "Đêm high roller ở Monte Carlo — nơi tạo ra gia tài"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "male",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cheap casino, casual, daytime",
+    "style": "glamorous casino, gold and velvet, James Bond atmosphere",
+    "gs": 8,
+    "tags": [
+      "casino",
+      "monaco",
+      "wealth",
+      "gambling",
+      "luxury",
+      "nightlife"
+    ],
+    "chs": [
+      [
+        "Monaco Arrival",
+        "Đến Monaco",
+        "Monaco. Where the rich come to play 🇲🇨💰",
+        "Monaco. Nơi người giàu đến chơi 🇲🇨💰",
+        "Portrait of {subject} arriving at Monte Carlo, luxury cars parked outside, Monaco harbor with yachts, evening atmosphere, sharp tuxedo"
+      ],
+      [
+        "Casino Entrance",
+        "Vào Casino",
+        "Walking into the Monte Carlo Casino. James Bond energy activated 🕵️",
+        "Bước vào Casino Monte Carlo. Năng lượng James Bond kích hoạt 🕵️",
+        "Portrait of {subject} at ornate Monte Carlo Casino entrance, Belle Époque architecture, gold details, chandelier glow, confident entrance"
+      ],
+      [
+        "At the Table",
+        "Tại Bàn Chơi",
+        "Roulette table. Betting on black. Always 🎰⚫",
+        "Bàn roulette. Đặt đen. Luôn luôn 🎰⚫",
+        "Portrait of {subject} at casino roulette table, chips stacked, intense focused expression, other players, dramatic casino lighting"
+      ],
+      [
+        "Winning Streak",
+        "Chuỗi Thắng",
+        "On a winning streak. The table is HOT tonight 🔥💰",
+        "Đang thắng liên tiếp. Bàn NÓNG tối nay 🔥💰",
+        "Excited portrait of {subject} celebrating casino win, chips flying, excited expression, casino atmosphere, winning moment"
+      ],
+      [
+        "Champagne Toast",
+        "Nâng Ly Champagne",
+        "Winner's champagne. The house is buying tonight 🍾🥂",
+        "Champagne người thắng. Casino đãi tối nay 🍾🥂",
+        "Portrait of {subject} toasting champagne at VIP casino lounge, velvet seating, celebratory mood, luxury nightlife, gold and red interior"
+      ],
+      [
+        "Monaco Night",
+        "Đêm Monaco",
+        "Monaco at night from the harbor. Money city never sleeps 🌃💎",
+        "Monaco ban đêm từ bến cảng. Thành phố tiền không ngủ 🌃💎",
+        "Night portrait of {subject} at Monaco harbor, superyachts lit up, casino building illuminated, Mediterranean night, glamorous lifestyle"
+      ],
+      [
+        "Until Next Time",
+        "Hẹn Gặp Lại",
+        "Left Monaco with more than I came with. Not just money — memories 🎲",
+        "Rời Monaco nhiều hơn khi đến. Không chỉ tiền — kỷ niệm 🎲",
+        "Portrait of {subject} walking away from Monte Carlo Casino at dawn, first morning light, satisfied smile, Monaco sunrise, reflective moment"
+      ]
+    ]
+  },
+  {
+    "slug": "vip_club",
+    "title": [
+      "VIP Club Night",
+      "Đêm VIP Club"
+    ],
+    "desc": [
+      "Bottle service and velvet ropes — the VIP nightlife experience",
+      "Rượu và dây nhung — trải nghiệm đêm VIP"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, daytime, outdoor, cheap bar",
+    "style": "dramatic club lighting, VIP nightlife, purple and gold",
+    "gs": 8,
+    "tags": [
+      "vip",
+      "club",
+      "nightlife",
+      "wealth",
+      "party",
+      "bottle-service"
+    ],
+    "chs": [
+      [
+        "Getting Ready",
+        "Chuẩn Bị",
+        "Getting ready for the biggest night out. Fit check ✅🪞",
+        "Chuẩn bị cho đêm lớn nhất. Check outfit ✅🪞",
+        "Portrait of {subject} getting ready in luxury bathroom, mirror reflection, sharp outfit, grooming, pre-party energy, warm lighting"
+      ],
+      [
+        "VIP Entrance",
+        "Cửa VIP",
+        "Skipping the line. VIP has its perks 😏🚪",
+        "Bỏ qua hàng đợi. VIP có đặc quyền 😏🚪",
+        "Portrait of {subject} at exclusive nightclub VIP entrance, velvet rope lifted, bouncer, line of people waiting, confident walk-in"
+      ],
+      [
+        "Bottle Pop",
+        "Mở Chai",
+        "Bottle service activated. Sparklers and all 🍾🎆",
+        "Mở chai. Pháo sáng và tất cả 🍾🎆",
+        "Dramatic portrait of {subject} at VIP table, champagne bottles with sparklers, club lights, bottle service, celebration energy"
+      ],
+      [
+        "Dance Floor",
+        "Sàn Nhảy",
+        "Owning the dance floor. Main character of the club tonight 💃🕺",
+        "Chiếm sàn nhảy. Nhân vật chính của club tối nay 💃🕺",
+        "Dynamic portrait of {subject} on dance floor, dramatic club lighting, laser beams, crowd energy, dancing, VIP nightlife"
+      ],
+      [
+        "Late Night Vibes",
+        "Vibes Đêm Khuya",
+        "3AM and the energy is still unmatched. What a night 🌙",
+        "3 giờ sáng và năng lượng vẫn không gì sánh. Đêm tuyệt vời 🌙",
+        "Portrait of {subject} at VIP lounge area, late night atmosphere, moody purple lighting, relaxed confidence, elite nightlife"
+      ],
+      [
+        "Sunrise Exit",
+        "Ra Về Lúc Bình Minh",
+        "Left the club at sunrise. Zero regrets, maximum memories ☀️🎶",
+        "Rời club lúc bình minh. Không hối tiếc, kỷ niệm tối đa ☀️🎶",
+        "Portrait of {subject} exiting club at sunrise, morning golden light, city waking up, satisfied tired smile, epic night ending"
+      ]
+    ]
+  },
+  {
+    "slug": "yacht_party",
+    "title": [
+      "Yacht Party",
+      "Tiệc Du Thuyền"
+    ],
+    "desc": [
+      "Living the yacht life — sun, sea, and champagne on the Mediterranean",
+      "Sống đời du thuyền — nắng, biển, và champagne trên Địa Trung Hải"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "couple",
+    "dur": "once",
+    "badge": null,
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, small boat, rain, cold, cheap",
+    "style": "Mediterranean yacht luxury, bright vivid, sun-drenched",
+    "gs": 7.5,
+    "tags": [
+      "yacht",
+      "party",
+      "wealth",
+      "mediterranean",
+      "luxury",
+      "sea",
+      "couple"
+    ],
+    "chs": [
+      [
+        "All Aboard",
+        "Tất Cả Lên Tàu",
+        "Welcome aboard our yacht. The Mediterranean is calling 🛥️🌊",
+        "Chào mừng lên du thuyền. Địa Trung Hải đang gọi 🛥️🌊",
+        "Portrait of {subject} boarding luxury yacht at marina, sparkling Mediterranean sea, white yacht deck, designer swimwear, exciting departure"
+      ],
+      [
+        "Deck Life",
+        "Cuộc Sống Trên Boong",
+        "Sunbathing on the yacht deck. This is peak living ☀️🛥️",
+        "Tắm nắng trên boong du thuyền. Đây là đỉnh cao cuộc sống ☀️🛥️",
+        "Portrait of {subject} lounging on yacht deck, crystal blue sea, bright sunshine, champagne nearby, luxury sunbathing"
+      ],
+      [
+        "Ocean Swim",
+        "Bơi Đại Dương",
+        "Jumping into crystal clear Mediterranean water. Freedom 🏊‍♂️💎",
+        "Nhảy xuống nước trong vắt Địa Trung Hải. Tự do 🏊‍♂️💎",
+        "Portrait of {subject} on yacht swim platform, turquoise water, about to dive in, tropical island in background, joyful moment"
+      ],
+      [
+        "Champagne O'Clock",
+        "Giờ Champagne",
+        "Champagne on a yacht. Regular Thursday 🍾😌",
+        "Champagne trên du thuyền. Thứ Năm bình thường 🍾😌",
+        "Portrait of {subject} holding champagne on yacht bow, sea spray, sun behind, golden hour, luxury toast moment"
+      ],
+      [
+        "Island Stop",
+        "Ghé Đảo",
+        "Anchored at a private cove. Paradise found 🏝️",
+        "Neo ở vịnh riêng. Tìm thấy thiên đường 🏝️",
+        "Portrait of {subject} at secluded island cove from yacht, pristine white beach, turquoise water, exclusive paradise, adventurous exploration"
+      ],
+      [
+        "Sunset Sail",
+        "Chèo Hoàng Hôn",
+        "Sailing into the sunset. A movie scene for real 🌅⛵",
+        "Chèo vào hoàng hôn. Cảnh phim ngoài đời thật 🌅⛵",
+        "Romantic portrait of {subject} at yacht bow during sunset, golden orange sky reflecting on calm sea, silhouette, cinematic sailing moment"
+      ],
+      [
+        "Captain's Dinner",
+        "Bữa Tối Thuyền Trưởng",
+        "Captain's dinner under the stars. Candlelit on the sea 🕯️⭐",
+        "Bữa tối thuyền trưởng dưới sao. Nến trên biển 🕯️⭐",
+        "Portrait of {subject} at elegant candlelit dinner on yacht deck, starry night sky, calm sea, fine dining, romantic atmosphere"
+      ],
+      [
+        "Harbor Return",
+        "Về Bến",
+        "Back to harbor. The yacht life spoiled us forever 💙🛥️",
+        "Về bến. Đời du thuyền làm hư chúng tôi mãi mãi 💙🛥️",
+        "Portrait of {subject} on yacht returning to harbor at twilight, marina lights, luxury yachts, Mediterranean evening, fulfilled happy ending"
+      ]
+    ]
+  },
+  {
+    "slug": "luxury_brunch",
+    "title": [
+      "Luxury Brunch",
+      "Brunch Sang Chảnh"
+    ],
+    "desc": [
+      "Sunday brunch at the most exclusive spots — champagne and caviar",
+      "Brunch Chủ Nhật ở nơi sang nhất — champagne và trứng cá"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "female",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, fast food, cheap restaurant, messy",
+    "style": "luxury brunch aesthetic, soft pastel, golden morning light",
+    "gs": 7,
+    "tags": [
+      "brunch",
+      "luxury",
+      "wealth",
+      "champagne",
+      "food",
+      "sunday"
+    ],
+    "chs": [
+      [
+        "Sunday Mood",
+        "Mood Chủ Nhật",
+        "Sunday brunch > everything. Got my best outfit on 👗☀️",
+        "Brunch Chủ Nhật > tất cả. Đã mặc đồ đẹp nhất 👗☀️",
+        "Portrait of {subject} getting ready for brunch, luxury apartment, elegant outfit choice, morning golden light, Sunday mood"
+      ],
+      [
+        "The Arrival",
+        "Đến Nơi",
+        "Arriving at the hottest brunch spot in town. Table for one queen 👑",
+        "Đến nơi brunch hot nhất thành phố. Bàn cho một nữ hoàng 👑",
+        "Portrait of {subject} arriving at luxury restaurant entrance, elegant exterior, doorman welcome, exclusive brunch spot"
+      ],
+      [
+        "Champagne Pour",
+        "Rót Champagne",
+        "Started with champagne because it's Sunday and I deserve it 🍾",
+        "Bắt đầu với champagne vì là Chủ Nhật và tôi xứng đáng 🍾",
+        "Portrait of {subject} at beautifully set brunch table, champagne being poured, fresh flowers, elegant table setting, luxury ambiance"
+      ],
+      [
+        "The Spread",
+        "Bàn Tiệc",
+        "The brunch spread is giving main character energy 🥐🍓",
+        "Bàn brunch toát năng lượng nhân vật chính 🥐🍓",
+        "Portrait of {subject} with luxury brunch spread, avocado toast, fresh berries, pastries, aesthetic flat lay, beautiful food presentation"
+      ],
+      [
+        "Selfie Moment",
+        "Khoảnh Khắc Selfie",
+        "Golden hour lighting + champagne glow = perfect selfie 📸",
+        "Ánh sáng golden hour + champagne glow = selfie hoàn hảo 📸",
+        "Portrait of {subject} taking selfie at brunch, beautiful natural light, champagne glass, restaurant decor, social media moment"
+      ],
+      [
+        "Sunday Well Spent",
+        "Chủ Nhật Đáng Giá",
+        "A Sunday well spent brings a week of content. Literally 💅",
+        "Chủ Nhật đáng giá mang lại tuần content. Theo nghĩa đen 💅",
+        "Portrait of {subject} leaving brunch restaurant, satisfied smile, shopping bags, sunny street, fulfilled Sunday, luxury lifestyle"
+      ]
+    ]
+  },
+  {
+    "slug": "watch_collection",
+    "title": [
+      "Watch Collection",
+      "Bộ Sưu Tập Đồng Hồ"
+    ],
+    "desc": [
+      "My luxury watch collection — time is money, literally",
+      "Bộ sưu tập đồng hồ sang trọng — thời gian là tiền, theo nghĩa đen"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "male",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, cheap watch, plastic, casual",
+    "style": "luxury watch macro photography, editorial, sophisticated",
+    "gs": 7.5,
+    "tags": [
+      "watch",
+      "collection",
+      "wealth",
+      "luxury",
+      "rolex",
+      "timepiece"
+    ],
+    "chs": [
+      [
+        "The Collection",
+        "Bộ Sưu Tập",
+        "My watch collection. Every piece tells a story ⌚📖",
+        "Bộ sưu tập đồng hồ. Mỗi chiếc kể một câu chuyện ⌚📖",
+        "Portrait of {subject} opening luxury watch box collection, multiple timepieces displayed, velvet lining, warm lighting, collector pride"
+      ],
+      [
+        "The Daily",
+        "Chiếc Hàng Ngày",
+        "Today's pick: the Rolex Submariner. Classic choice 🖤",
+        "Lựa chọn hôm nay: Rolex Submariner. Chọn lựa cổ điển 🖤",
+        "Close-up portrait of {subject} putting on luxury Rolex watch, detailed watch face, wrist shot, premium suit cuff, editorial quality"
+      ],
+      [
+        "Wrist Check",
+        "Check Cổ Tay",
+        "Wrist check! Let me see yours 📸⌚",
+        "Check cổ tay! Cho tôi xem của bạn 📸⌚",
+        "Stylish portrait of {subject} doing wrist check pose, luxury watch catching light, elegant outfit, confident gesture, watch flex"
+      ],
+      [
+        "The Grail",
+        "Chiếc Mơ Ước",
+        "The grail piece finally arrived. Years of hunting 🏆",
+        "Chiếc mơ ước cuối cùng đã đến. Nhiều năm săn lùng 🏆",
+        "Emotional portrait of {subject} unboxing a rare luxury watch, special edition, excitement, watch box, collector achievement moment"
+      ],
+      [
+        "Matched Outfit",
+        "Phối Outfit",
+        "Watch matched to the outfit. Details matter 👔⌚",
+        "Đồng hồ phối với outfit. Chi tiết quan trọng 👔⌚",
+        "Full portrait of {subject} in premium tailored suit with matching luxury watch, coordinated styling, attention to detail, sophisticated flex"
+      ],
+      [
+        "Time Well Spent",
+        "Thời Gian Xứng Đáng",
+        "They say time is money. I say time is art 🎨⏰",
+        "Người ta nói thời gian là tiền. Tôi nói thời gian là nghệ thuật 🎨⏰",
+        "Portrait of {subject} admiring watch collection in display case, warm spotlight on watches, appreciative moment, luxury lifestyle"
+      ]
+    ]
+  },
+  {
+    "slug": "red_carpet",
+    "title": [
+      "Red Carpet Night",
+      "Đêm Thảm Đỏ"
+    ],
+    "desc": [
+      "Walking the red carpet — from getting ready to the grand entrance",
+      "Đi trên thảm đỏ — từ chuẩn bị đến lối vào đại sảnh"
+    ],
+    "cat": "wealth",
+    "type": "flex",
+    "gender": "female",
+    "dur": "once",
+    "badge": "NEW",
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality, casual wear, daytime, outdoor casual",
+    "style": "glamorous red carpet, paparazzi flash, celebrity elegance",
+    "gs": 8,
+    "tags": [
+      "red-carpet",
+      "gala",
+      "wealth",
+      "celebrity",
+      "glamour",
+      "fashion"
+    ],
+    "chs": [
+      [
+        "Glam Team",
+        "Đội Làm Đẹp",
+        "Glam team working their magic. 3 hours to perfection 💄✨",
+        "Đội làm đẹp đang thi triển phép thuật. 3 giờ để hoàn hảo 💄✨",
+        "Portrait of {subject} getting makeup done by professional glam team, Hollywood vanity mirror lights, beauty preparation, behind-the-scenes"
+      ],
+      [
+        "The Dress",
+        "Chiếc Đầm",
+        "THE dress is on. Custom-made and worth every penny 👗💎",
+        "CHIẾC ĐẦM đã xong. Đặt riêng và xứng đáng từng xu 👗💎",
+        "Portrait of {subject} in stunning designer gown, full-length mirror, getting final adjustments, couture fashion, breathtaking dress reveal"
+      ],
+      [
+        "Limo Arrival",
+        "Đến Bằng Limousine",
+        "Pulling up in the limo. This is my moment 🚗✨",
+        "Đến bằng limousine. Đây là khoảnh khắc của tôi 🚗✨",
+        "Portrait of {subject} stepping out of limousine, red carpet visible, photographers waiting, elegant exit, celebrity arrival moment"
+      ],
+      [
+        "Red Carpet Walk",
+        "Đi Trên Thảm Đỏ",
+        "Walking the red carpet. Cameras flashing, confidence maxed 📸",
+        "Đi trên thảm đỏ. Máy ảnh chớp, tự tin tối đa 📸",
+        "Glamorous portrait of {subject} walking red carpet, paparazzi flash lights, press wall backdrop, confident stride, celebrity pose"
+      ],
+      [
+        "Strike a Pose",
+        "Tạo Dáng",
+        "Giving the photographers what they want. This angle is IT 📷",
+        "Cho nhiếp ảnh gia điều họ muốn. Góc này là CHÍNH NÓ 📷",
+        "Portrait of {subject} posing on red carpet, over-the-shoulder look, designer gown flowing, flashbulbs, iconic pose moment"
+      ],
+      [
+        "Inside the Gala",
+        "Bên Trong Dạ Tiệc",
+        "Inside the gala. Chandeliers and champagne everywhere 🥂✨",
+        "Bên trong dạ tiệc. Đèn chùm và champagne khắp nơi 🥂✨",
+        "Portrait of {subject} inside grand gala ballroom, crystal chandeliers, elegant guests, champagne toast, exclusive event atmosphere"
+      ],
+      [
+        "Night to Remember",
+        "Đêm Đáng Nhớ",
+        "A night I'll never forget. Red carpet dreams came true 💫",
+        "Một đêm không bao giờ quên. Giấc mơ thảm đỏ thành hiện thực 💫",
+        "Portrait of {subject} at end of gala night, holding award or gift bag, tired but glowing smile, limousine waiting, fairy tale ending"
+      ]
+    ]
+  }
+]

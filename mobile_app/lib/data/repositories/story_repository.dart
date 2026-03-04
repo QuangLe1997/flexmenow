@@ -29,33 +29,48 @@ class StoryRepository {
   /// If the cached version matches the remote version, returns cached data.
   /// Otherwise fetches fresh data from the URL.
   Future<StoriesResponse> loadStories(String jsonUrl) async {
+    // ignore: avoid_print
+    print('[StoryRepo] loadStories called, url=${jsonUrl.length > 40 ? '${jsonUrl.substring(0, 40)}...' : jsonUrl}');
+
     // Return in-memory cache if available.
-    if (_cached != null) return _cached!;
+    if (_cached != null) {
+      // ignore: avoid_print
+      print('[StoryRepo] returning in-memory cache (${_cached!.stories.length} stories)');
+      return _cached!;
+    }
 
     // Try to load from local file cache first.
     final localData = await _loadFromLocalCache();
     if (localData != null) {
+      // ignore: avoid_print
+      print('[StoryRepo] loaded from local cache (${localData.stories.length} stories)');
       _cached = localData;
     }
 
     // Fetch remote data and compare version.
     try {
       final remoteData = await _fetchRemote(jsonUrl);
+      // ignore: avoid_print
+      print('[StoryRepo] remote fetch result: ${remoteData != null ? '${remoteData.stories.length} stories' : 'null'}');
       if (remoteData != null) {
         final localVersion = await _getCachedVersion();
-        if (localVersion != remoteData.version) {
-          // Remote has a newer version — update local cache.
+        final versionChanged = localVersion != remoteData.version;
+        final contentChanged = _cached != null &&
+            _cached!.stories.length != remoteData.stories.length;
+        if (versionChanged || contentChanged || _cached == null) {
+          // Remote has newer/different data — update local cache.
           await _saveToLocalCache(remoteData);
           await _setCachedVersion(remoteData.version);
           _cached = remoteData;
-        } else if (_cached == null) {
-          // Same version but no in-memory cache — use remote data.
-          _cached = remoteData;
         }
       }
-    } catch (_) {
-      // Network error — fall back to local cache silently.
+    } catch (e) {
+      // ignore: avoid_print
+      print('[StoryRepo] fetch error: $e');
     }
+
+    // ignore: avoid_print
+    print('[StoryRepo] final result: ${_cached?.stories.length ?? 0} stories');
 
     // If everything failed, return an empty response.
     return _cached ?? const StoriesResponse(

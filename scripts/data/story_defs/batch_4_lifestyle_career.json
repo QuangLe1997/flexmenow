@@ -1,0 +1,1410 @@
+[
+  {
+    "slug": "fitness_journey",
+    "title": [
+      "Fitness Journey",
+      "Hành Trình Fitness"
+    ],
+    "desc": [
+      "Day 1 vs Day 100. The results speak",
+      "Ngày 1 vs Ngày 100. Kết quả nói lên"
+    ],
+    "cat": "lifestyle",
+    "type": "journey",
+    "gender": "all",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Dynamic fitness photography",
+    "gs": 7.5,
+    "tags": [
+      "fitness",
+      "gym",
+      "transformation",
+      "health",
+      "motivation",
+      "workout"
+    ],
+    "chs": [
+      [
+        "Day One",
+        "Ngày Một",
+        "Everyone starts somewhere. Today is my Day 1 💪📅",
+        "Ai cũng bắt đầu từ đâu đó. Hôm nay là Ngày 1 💪📅",
+        "Portrait of {subject} at gym on first day, nervous but determined, beginner energy, fresh start, fitness journey begins"
+      ],
+      [
+        "Morning Run",
+        "Chạy Sáng",
+        "First 5K done. Thought I was going to die. Worth it 🏃‍♀️🌅",
+        "Chạy 5K đầu tiên. Tưởng sẽ chết. Đáng lắm 🏃‍♀️🌅",
+        "Portrait of {subject} finishing morning run, sweating but triumphant, sunrise backdrop, first achievement, runner high"
+      ],
+      [
+        "Meal Prep",
+        "Chuẩn Bị Đồ Ăn",
+        "Meal prep Sunday. Clean eating is a lifestyle now 🥗🍱",
+        "Chủ nhật chuẩn bị đồ ăn. Ăn sạch là lối sống rồi 🥗🍱",
+        "Portrait of {subject} doing meal prep in kitchen, healthy colorful food containers, organized fitness lifestyle, nutrition game strong"
+      ],
+      [
+        "PR Day",
+        "Ngày Kỷ Lục",
+        "New personal record! My past self could never 🏋️🎉",
+        "Kỷ lục cá nhân mới! Tôi ngày xưa không bao giờ được 🏋️🎉",
+        "Portrait of {subject} celebrating personal record at gym, excited victorious, weights or achievement board, milestone moment"
+      ],
+      [
+        "Mirror Check",
+        "Soi Gương",
+        "The mirror is finally showing what the scale cant 💪🪞",
+        "Gương cuối cùng cũng thể hiện điều cân không nói 💪🪞",
+        "Portrait of {subject} checking progress in gym mirror, visible transformation, proud of progress, body recomposition, results showing"
+      ],
+      [
+        "Gym Family",
+        "Gia Đình Gym",
+        "Found my gym family. They keep me accountable and motivated 🤝💪",
+        "Tìm được gia đình gym. Họ giữ tôi có trách nhiệm và động lực 🤝💪",
+        "Portrait of {subject} with gym workout partners, fist bump or group photo, fitness community, support system, gym friendship"
+      ],
+      [
+        "Progress Pic",
+        "Ảnh Tiến Trình",
+        "Before vs After. Hard work always pays off 📸🔥",
+        "Trước vs Sau. Cố gắng luôn có kết quả 📸🔥",
+        "Portrait of {subject} showing amazing before-and-after transformation, confident proud pose, dramatic fitness results, motivation for others"
+      ],
+      [
+        "New Lifestyle",
+        "Lối Sống Mới",
+        "Its not a diet anymore. Its who I am now 🏃‍♂️❤️",
+        "Không còn là diet. Đó là tôi bây giờ 🏃‍♂️❤️",
+        "Portrait of {subject} living healthy active lifestyle naturally, athletic confident, fitness as identity, healthy happy glow"
+      ]
+    ]
+  },
+  {
+    "slug": "street_food",
+    "title": [
+      "Street Food Tour",
+      "Tour Ẩm Thực Đường Phố"
+    ],
+    "desc": [
+      "Eating my way through the city",
+      "Ăn hết thành phố"
+    ],
+    "cat": "lifestyle",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Vibrant food photography",
+    "gs": 7,
+    "tags": [
+      "street-food",
+      "foodie",
+      "city",
+      "eating",
+      "tour",
+      "culture"
+    ],
+    "chs": [
+      [
+        "First Stop",
+        "Điểm Đầu",
+        "Starting the food tour strong. Street food > fancy restaurant 🍜🔥",
+        "Bắt đầu tour ăn mạnh. Đồ đường phố > nhà hàng sang 🍜🔥",
+        "Portrait of {subject} at first street food stall, excited to eat, colorful food display, bustling street food scene"
+      ],
+      [
+        "Noodle King",
+        "Vua Mì",
+        "These noodles are life-changing. I need a moment 🍝😭",
+        "Mì này thay đổi cuộc đời. Cho tôi phút lặng 🍝😭",
+        "Portrait of {subject} eating incredible noodles at street stall, pure food bliss expression, steam rising, authentic street food"
+      ],
+      [
+        "BBQ Stop",
+        "Điểm BBQ",
+        "Grilled perfection on a stick. Simple but deadly 🍖✨",
+        "Nướng hoàn hảo trên que. Đơn giản nhưng chí mạng 🍖✨",
+        "Portrait of {subject} eating grilled street food, smoky grill behind, delicious food on stick, night market vibes"
+      ],
+      [
+        "Sweet Treat",
+        "Đồ Ngọt",
+        "Dessert street food is an art form. Look at this 🧁🎨",
+        "Đồ ngọt đường phố là nghệ thuật. Nhìn này 🧁🎨",
+        "Portrait of {subject} holding beautiful street dessert, colorful creative treat, aesthetic food moment, sweet tooth satisfied"
+      ],
+      [
+        "Full Belly",
+        "No Bụng",
+        "Stomach at 200% capacity. No regrets. Only joy 🤰😋",
+        "Bụng 200% sức chứa. Không hối tiếc. Chỉ có vui 🤰😋",
+        "Portrait of {subject} satisfied and full after food tour, happy content expression, street food scene background, food coma incoming"
+      ],
+      [
+        "Night Market",
+        "Chợ Đêm",
+        "Night market round! The best food comes out after dark 🌙🍢",
+        "Vòng chợ đêm! Đồ ăn ngon nhất ra sau khi trời tối 🌙🍢",
+        "Portrait of {subject} at vibrant night market, colorful lights, food stalls, exciting atmosphere, food adventure continues"
+      ],
+      [
+        "Food Coma",
+        "Food Coma",
+        "Tour complete. I need a nap and maybe elastic pants 😴🍜",
+        "Tour xong. Tôi cần ngủ và có thể quần thun 😴🍜",
+        "Portrait of {subject} in food coma after epic food tour, satisfied exhausted, happy belly, perfect food day ending"
+      ]
+    ]
+  },
+  {
+    "slug": "cafe_hopping",
+    "title": [
+      "Cafe Hopping",
+      "Đi Cafe"
+    ],
+    "desc": [
+      "A new cafe every day. Aesthetic collector",
+      "Quán mới mỗi ngày. Sưu tập aesthetic"
+    ],
+    "cat": "lifestyle",
+    "type": "aesthetic",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Aesthetic cafe photography",
+    "gs": 7,
+    "tags": [
+      "cafe",
+      "coffee",
+      "aesthetic",
+      "hopping",
+      "lifestyle",
+      "instagram"
+    ],
+    "chs": [
+      [
+        "Minimalist Cafe",
+        "Quán Minimalist",
+        "First stop: the most minimalist cafe in town. So clean ☕🤍",
+        "Điểm đầu: quán minimalist nhất thành phố. Sạch quá ☕🤍",
+        "Portrait of {subject} at minimalist white cafe, clean aesthetic, perfect latte art, modern design, Instagram-worthy space"
+      ],
+      [
+        "Vintage Vibes",
+        "Vintage Vibes",
+        "This vintage cafe is giving grandma chic and I love it 📻☕",
+        "Quán vintage này cho vibe bà ngoại sang và tôi thích 📻☕",
+        "Portrait of {subject} at vintage retro cafe, old-world charm, warm colors, antique decor, nostalgic aesthetic cafe"
+      ],
+      [
+        "Rooftop View",
+        "View Sân Thượng",
+        "Rooftop cafe with city views. Coffee tastes better up here 🌆☕",
+        "Cafe sân thượng với view thành phố. Cà phê ngon hơn ở đây 🌆☕",
+        "Portrait of {subject} at rooftop cafe, panoramic city view, golden hour, elevated coffee experience, skyline backdrop"
+      ],
+      [
+        "Garden Cafe",
+        "Cafe Vườn",
+        "Hidden garden cafe found. Nature + caffeine = heaven 🌿☕",
+        "Tìm thấy quán cafe vườn ẩn. Thiên nhiên + caffeine = thiên đường 🌿☕",
+        "Portrait of {subject} at lush garden cafe, surrounded by plants, natural light, peaceful green aesthetic, secret garden vibes"
+      ],
+      [
+        "Art Cafe",
+        "Cafe Nghệ Thuật",
+        "This cafe is basically an art gallery. And the coffee is amazing 🎨☕",
+        "Quán này cơ bản là phòng trưng bày. Và cà phê tuyệt 🎨☕",
+        "Portrait of {subject} at art-themed cafe, surrounded by paintings, creative space, artistic ambiance, culture meets coffee"
+      ],
+      [
+        "Best One Yet",
+        "Quán Hay Nhất",
+        "Found my new regular spot. This one hits different ☕❤️",
+        "Tìm được quán quen mới. Quán này khác biệt ☕❤️",
+        "Portrait of {subject} content and happy at favorite new cafe, regular customer energy, found their spot, perfect cafe discovery"
+      ]
+    ]
+  },
+  {
+    "slug": "thrift_haul",
+    "title": [
+      "Thrift Haul Day",
+      "Ngày Đi Thrift"
+    ],
+    "desc": [
+      "One mans trash is my new outfit",
+      "Đồ bỏ của người này là outfit mới của tôi"
+    ],
+    "cat": "lifestyle",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Colorful casual photography",
+    "gs": 7,
+    "tags": [
+      "thrift",
+      "fashion",
+      "sustainable",
+      "shopping",
+      "vintage",
+      "haul"
+    ],
+    "chs": [
+      [
+        "The Hunt",
+        "Đi Săn",
+        "Thrift store treasure hunt begins. Lets find gold 🏪🔍",
+        "Bắt đầu săn kho báu thrift store. Tìm vàng thôi 🏪🔍",
+        "Portrait of {subject} entering thrift store excitedly, racks of colorful clothing, treasure hunt energy, vintage shop adventure"
+      ],
+      [
+        "Hidden Gem",
+        "Viên Ngọc Ẩn",
+        "FOUND IT. Designer piece for $5. Im shaking 💎😱",
+        "TÌM THẤY RỒI. Đồ designer giá $5. Tôi run 💎😱",
+        "Portrait of {subject} finding amazing thrift store item, shocked excited expression, holding up incredible find, thrift store jackpot"
+      ],
+      [
+        "Try On",
+        "Thử Đồ",
+        "Everything fits perfectly. The thrift gods are smiling 👗✨",
+        "Mọi thứ vừa hoàn hảo. Thần thrift đang cười 👗✨",
+        "Portrait of {subject} trying on thrifted outfits, mirror selfie, impressed with finds, vintage fitting room, style discovery"
+      ],
+      [
+        "Style It",
+        "Phối Đồ",
+        "Styled the finds into a whole new outfit. Pinterest could never 📌🔥",
+        "Phối đồ thrift thành outfit mới. Pinterest thua 📌🔥",
+        "Portrait of {subject} wearing styled thrifted outfit, looking fashionable and unique, sustainable fashion, creative styling success"
+      ],
+      [
+        "The Haul",
+        "Chiến Lợi Phẩm",
+        "Full haul for under $30. Fashion on a budget queen 👑💰",
+        "Cả đống đồ dưới 30$. Queen thời trang tiết kiệm 👑💰",
+        "Portrait of {subject} showing full thrift haul spread out, proud of finds, budget fashion win, sustainable shopping success"
+      ],
+      [
+        "Flex It",
+        "Flex Luôn",
+        "Wearing my thrifted fit out. People think its designer 😏🛍️",
+        "Mặc đồ thrift đi chơi. Người ta tưởng hàng hiệu 😏🛍️",
+        "Portrait of {subject} out in public wearing thrifted outfit, looking expensive, nobody knows its thrifted, sustainable fashion flex"
+      ]
+    ]
+  },
+  {
+    "slug": "music_festival",
+    "title": [
+      "Music Festival",
+      "Lễ Hội Âm Nhạc"
+    ],
+    "desc": [
+      "3 days of music, friends, and zero sleep",
+      "3 ngày nhạc, bạn bè, và zero ngủ"
+    ],
+    "cat": "lifestyle",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "many",
+    "badge": "NEW",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Festival photography with neon and crowd energy",
+    "gs": 7.5,
+    "tags": [
+      "festival",
+      "music",
+      "concert",
+      "vibes",
+      "friends",
+      "party"
+    ],
+    "chs": [
+      [
+        "Outfit Ready",
+        "Outfit Sẵn",
+        "Festival outfit took 3 hours. And Im not sorry 🎪👗",
+        "Outfit lễ hội mất 3 tiếng. Và tôi không sorry 🎪👗",
+        "Portrait of {subject} in creative festival outfit, body glitter, accessories, ready to go, festival fashion, colorful expressive style"
+      ],
+      [
+        "Gates Open",
+        "Cổng Mở",
+        "Were IN! The energy is already insane 🎶🔥",
+        "VÀO RỒI! Năng lượng đã điên rồi 🎶🔥",
+        "Portrait of {subject} entering music festival, excited crowd, festival gates, colorful decorations, energy and excitement, first moment"
+      ],
+      [
+        "Main Stage",
+        "Sân Khấu Chính",
+        "Front row at the main stage. My ears are gone but worth it 🎤🎸",
+        "Hàng đầu sân khấu chính. Tai tôi mất rồi nhưng đáng 🎤🎸",
+        "Portrait of {subject} at main stage concert, crowd behind, stage lights, artist performing, epic concert moment, music euphoria"
+      ],
+      [
+        "Dance Circle",
+        "Vòng Nhảy",
+        "Found the best dance circle. These are my people now 💃🕺",
+        "Tìm được vòng nhảy hay nhất. Đây là người của tôi 💃🕺",
+        "Portrait of {subject} dancing in crowd at festival, neon lights, happy carefree, dance circle energy, festival vibes peak"
+      ],
+      [
+        "Food Lane",
+        "Phố Ăn",
+        "Festival food hits different at midnight 🌮🌙",
+        "Đồ ăn lễ hội lúc nửa đêm khác biệt 🌮🌙",
+        "Portrait of {subject} at festival food stall, late night eating, neon food truck lights, midnight munchies, festival food scene"
+      ],
+      [
+        "Sunrise Set",
+        "Set Bình Minh",
+        "Caught the sunrise DJ set. Magic doesnt describe it 🌅🎧",
+        "Bắt được set DJ bình minh. Phép màu không tả nổi 🌅🎧",
+        "Portrait of {subject} at sunrise DJ set, crowd silhouettes, beautiful sunrise, electronic music vibes, magical festival morning"
+      ],
+      [
+        "After Festival",
+        "Sau Lễ Hội",
+        "Voice gone. Feet destroyed. Soul recharged. See you next year 🎪❤️",
+        "Hết giọng. Chân tàn. Linh hồn nạp đầy. Hẹn năm sau 🎪❤️",
+        "Portrait of {subject} exhausted but happy after festival, glitter still on, tired smile, post-festival glow, memories made"
+      ],
+      [
+        "Recap",
+        "Recap",
+        "Festival recap: best weekend of my life. Every single year 📸✨",
+        "Recap lễ hội: weekend hay nhất đời. Mỗi năm đều vậy 📸✨",
+        "Portrait of {subject} looking at festival photos on phone, nostalgic smile, post-festival blues, already planning next year"
+      ]
+    ]
+  },
+  {
+    "slug": "cozy_night",
+    "title": [
+      "Cozy Night In",
+      "Đêm Ấm Áp Ở Nhà"
+    ],
+    "desc": [
+      "Sometimes staying in is the best plan",
+      "Đôi khi ở nhà là kế hoạch tốt nhất"
+    ],
+    "cat": "lifestyle",
+    "type": "aesthetic",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Warm cozy indoor photography",
+    "gs": 7,
+    "tags": [
+      "cozy",
+      "home",
+      "night-in",
+      "comfort",
+      "aesthetic",
+      "relax"
+    ],
+    "chs": [
+      [
+        "Candle Lit",
+        "Thắp Nến",
+        "Candles lit. Mood set. Phone off. Tonight is for me 🕯️✨",
+        "Nến thắp. Mood set. Phone tắt. Tối nay dành cho tôi 🕯️✨",
+        "Portrait of {subject} lighting candles in cozy room, warm ambient glow, peaceful atmosphere, self-care night beginning"
+      ],
+      [
+        "Comfort Food",
+        "Đồ Ăn Comfort",
+        "Made my favorite comfort meal. Calories dont exist tonight 🍝🤤",
+        "Nấu món comfort yêu thích. Calo không tồn tại tối nay 🍝🤤",
+        "Portrait of {subject} enjoying comfort food at home, cozy kitchen, warm lighting, happy eating, homemade meal satisfaction"
+      ],
+      [
+        "Blanket Fort",
+        "Pháo Đài Chăn",
+        "Built a blanket fort like Im 8. Best decision as an adult 🏰🧣",
+        "Xây pháo đài chăn như lúc 8 tuổi. Quyết định đúng nhất người lớn 🏰🧣",
+        "Portrait of {subject} in cozy blanket fort with fairy lights, warm comfortable, childlike joy, cozy nest, playful adult moment"
+      ],
+      [
+        "Movie Time",
+        "Giờ Phim",
+        "Perfect movie, perfect snacks, perfect night 🎬🍿",
+        "Phim hay, snack ngon, đêm hoàn hảo 🎬🍿",
+        "Portrait of {subject} watching movie with snacks, cozy blanket, screen glow, relaxed comfortable, perfect movie night setup"
+      ],
+      [
+        "Hot Cocoa",
+        "Cacao Nóng",
+        "Hot cocoa with extra marshmallows. Adult life done right ☕🫧",
+        "Cacao nóng thêm marshmallow. Người lớn biết sống ☕🫧",
+        "Portrait of {subject} holding mug of hot cocoa with marshmallows, cozy pajamas, warm lighting, content peaceful expression"
+      ],
+      [
+        "Sleep Happy",
+        "Ngủ Vui",
+        "Best night ever and I didnt even leave the house 😴💕",
+        "Đêm tuyệt nhất mà không cần ra khỏi nhà 😴💕",
+        "Portrait of {subject} falling asleep peacefully in cozy setting, fairy lights, warm blankets, perfect cozy night ending"
+      ]
+    ]
+  },
+  {
+    "slug": "day_to_night",
+    "title": [
+      "Day to Night",
+      "Ngày Sang Đêm"
+    ],
+    "desc": [
+      "Same person, two completely different vibes",
+      "Cùng người, hai vibes hoàn toàn khác"
+    ],
+    "cat": "lifestyle",
+    "type": "flex",
+    "gender": "female",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Fashion photography, dual lighting",
+    "gs": 7.5,
+    "tags": [
+      "day-night",
+      "fashion",
+      "transformation",
+      "style",
+      "versatile",
+      "outfit"
+    ],
+    "chs": [
+      [
+        "Morning Look",
+        "Look Sáng",
+        "Daytime look: clean, fresh, effortless chic ☀️👗",
+        "Look ban ngày: sạch sẽ, tươi, chic dễ dàng ☀️👗",
+        "Portrait of {subject} woman in chic daytime outfit, natural light, fresh clean look, morning style, effortless fashion"
+      ],
+      [
+        "Lunch Meeting",
+        "Ăn Trưa",
+        "Power lunch outfit. Business meets fashion 💼👠",
+        "Outfit ăn trưa quyền lực. Công việc gặp thời trang 💼👠",
+        "Portrait of {subject} woman in power lunch outfit at upscale restaurant, professional stylish, business chic, confident"
+      ],
+      [
+        "Quick Change",
+        "Thay Đồ Nhanh",
+        "The transformation begins. Day me is leaving the chat 🔄✨",
+        "Biến hình bắt đầu. Tôi ban ngày rời chat 🔄✨",
+        "Portrait of {subject} woman getting ready for night out, makeup and outfit transition, glam preparation, day-to-night transformation"
+      ],
+      [
+        "Night Look",
+        "Look Đêm",
+        "Night version activated. Same me but make it glamorous 🌙💅",
+        "Phiên bản đêm activate. Cùng tôi nhưng thêm glamorous 🌙💅",
+        "Portrait of {subject} woman in stunning night outfit, dramatic makeup, evening glamour, completely different vibe, night version"
+      ],
+      [
+        "Night Out",
+        "Đi Chơi Đêm",
+        "The city looks different at night. And so do I 🌃✨",
+        "Thành phố khác lắm vào đêm. Và tôi cũng vậy 🌃✨",
+        "Portrait of {subject} woman out in city at night, stunning night look, city lights, glamorous night life, head-turning style"
+      ],
+      [
+        "Spotlight",
+        "Spotlight",
+        "All eyes on me tonight. As they should be 💃🔥",
+        "Tối nay mọi mắt đổ về tôi. Đúng rồi 💃🔥",
+        "Portrait of {subject} woman in spotlight at club or event, center of attention, glamorous confident, night out peak moment"
+      ],
+      [
+        "Uber Home",
+        "Về Nhà",
+        "Great night. But the best part is coming home to comfy clothes 🚗😌",
+        "Đêm tuyệt. Nhưng phần hay nhất là về nhà mặc đồ thoải mái 🚗😌",
+        "Portrait of {subject} woman heading home after great night, satisfied smile, city lights passing by, perfect day-to-night complete"
+      ]
+    ]
+  },
+  {
+    "slug": "art_gallery",
+    "title": [
+      "Art Gallery Day",
+      "Ngày Triển Lãm Nghệ Thuật"
+    ],
+    "desc": [
+      "Pretending I understand art. Looking good doing it",
+      "Giả vờ hiểu nghệ thuật. Nhưng đẹp"
+    ],
+    "cat": "lifestyle",
+    "type": "aesthetic",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Museum aesthetic photography",
+    "gs": 7,
+    "tags": [
+      "art",
+      "gallery",
+      "museum",
+      "aesthetic",
+      "culture",
+      "intellectual"
+    ],
+    "chs": [
+      [
+        "Entrance",
+        "Lối Vào",
+        "Art gallery fit: all black everything. Looking intellectual 🎨🖤",
+        "Outfit gallery: đen tuyền. Trông trí thức 🎨🖤",
+        "Portrait of {subject} at art gallery entrance, all black outfit, intellectual aesthetic, grand museum architecture, cultural day"
+      ],
+      [
+        "The Stare",
+        "Cái Nhìn",
+        "Staring at art like I know what its about. I dont. But I look good 🧐🎭",
+        "Nhìn tranh như hiểu. Không hiểu. Nhưng đẹp 🧐🎭",
+        "Portrait of {subject} contemplating artwork at gallery, thoughtful pose, classic museum stare, intellectual aesthetic, culture moment"
+      ],
+      [
+        "Photo Op",
+        "Chụp Ảnh",
+        "This painting matches my outfit. Not a coincidence 📸🎨",
+        "Tranh này hợp outfit tôi. Không phải trùng hợp 📸🎨",
+        "Portrait of {subject} posing next to art that matches their outfit, aesthetic coordination, museum photo opportunity, Instagram moment"
+      ],
+      [
+        "Sculpture Garden",
+        "Vườn Tượng",
+        "The sculpture garden is giving main character energy 🗿✨",
+        "Vườn tượng cho năng lượng nhân vật chính 🗿✨",
+        "Portrait of {subject} in museum sculpture garden, artistic backdrop, posed among sculptures, cultural aesthetic, timeless beauty"
+      ],
+      [
+        "Gift Shop",
+        "Cửa Hàng",
+        "Spent more at the gift shop than the ticket. Art lover things 🛍️📚",
+        "Tiêu ở gift shop nhiều hơn vé. Yêu nghệ thuật mà 🛍️📚",
+        "Portrait of {subject} at museum gift shop with art books and prints, intellectual shopping, cultural purchases, art appreciation"
+      ],
+      [
+        "Cultured",
+        "Có Văn Hoá",
+        "Art gallery day complete. I am now cultured. Thank you 🎓🎨",
+        "Ngày gallery xong. Tôi giờ có văn hoá. Cảm ơn 🎓🎨",
+        "Portrait of {subject} leaving art gallery satisfied, cultured expression, intellectual day complete, museum steps, art appreciation done"
+      ]
+    ]
+  },
+  {
+    "slug": "farmers_market",
+    "title": [
+      "Farmers Market",
+      "Chợ Nông Sản"
+    ],
+    "desc": [
+      "Fresh vibes and fresher produce",
+      "Vibes tươi và nông sản tươi hơn"
+    ],
+    "cat": "lifestyle",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Fresh outdoor market photography",
+    "gs": 7,
+    "tags": [
+      "farmers-market",
+      "fresh",
+      "healthy",
+      "morning",
+      "organic",
+      "lifestyle"
+    ],
+    "chs": [
+      [
+        "Early Bird",
+        "Dậy Sớm",
+        "Up at 7am on a Saturday for the market. Who even am I 🌅🛒",
+        "Dậy 7h sáng thứ 7 đi chợ. Tôi là ai vậy 🌅🛒",
+        "Portrait of {subject} arriving at farmers market early morning, fresh morning light, market stalls setting up, early bird energy"
+      ],
+      [
+        "Flower Stand",
+        "Quầy Hoa",
+        "Started with flowers because priorities 💐🌸",
+        "Bắt đầu với hoa vì priorities 💐🌸",
+        "Portrait of {subject} choosing flowers at market flower stand, surrounded by colorful blooms, beautiful fresh flowers, market shopping"
+      ],
+      [
+        "Fresh Picks",
+        "Hái Tươi",
+        "Look at these colors! Nature is the best artist 🥕🍅",
+        "Nhìn những màu này! Thiên nhiên là nghệ sĩ giỏi nhất 🥕🍅",
+        "Portrait of {subject} holding basket of colorful fresh produce, vibrant fruits and vegetables, farmers market aesthetic"
+      ],
+      [
+        "Taste Test",
+        "Nếm Thử",
+        "Free samples are the best part. Dont @ me 🫐😋",
+        "Mẫu miễn phí là phần hay nhất. Đừng @ tôi 🫐😋",
+        "Portrait of {subject} tasting samples at market stand, delicious reaction, trying local products, market food experience"
+      ],
+      [
+        "Full Basket",
+        "Giỏ Đầy",
+        "Basket full of goodness. My kitchen is going to be SO happy 🧺✨",
+        "Giỏ đầy đồ tốt. Bếp tôi sẽ RẤT vui 🧺✨",
+        "Portrait of {subject} with full market basket, proud of fresh haul, healthy lifestyle, colorful produce, successful market trip"
+      ],
+      [
+        "Home Chef",
+        "Đầu Bếp Nhà",
+        "Cooking with fresh market ingredients. I am basically a chef now 👨‍🍳🥗",
+        "Nấu với nguyên liệu tươi từ chợ. Tôi cơ bản là đầu bếp 👨‍🍳🥗",
+        "Portrait of {subject} cooking at home with fresh market ingredients, colorful kitchen scene, homemade healthy meal, market to table"
+      ]
+    ]
+  },
+  {
+    "slug": "gaming_marathon",
+    "title": [
+      "Gaming Marathon",
+      "Marathon Gaming"
+    ],
+    "desc": [
+      "12 hours of gaming. Zero regrets",
+      "12 giờ gaming. Zero hối tiếc"
+    ],
+    "cat": "lifestyle",
+    "type": "vlog",
+    "gender": "male",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Neon gaming room photography",
+    "gs": 7.5,
+    "tags": [
+      "gaming",
+      "gamer",
+      "setup",
+      "marathon",
+      "esports",
+      "neon"
+    ],
+    "chs": [
+      [
+        "Setup Ready",
+        "Setup Sẵn",
+        "RGB lit. Snacks stacked. Lets GO 🎮💜",
+        "RGB bật. Snack đầy. Chiến thôi 🎮💜",
+        "Portrait of {subject} man at epic gaming setup, RGB lighting, multiple monitors, gaming chair, snacks ready, gamer ready"
+      ],
+      [
+        "Warm Up",
+        "Khởi Động",
+        "Warm-up rounds. Getting the fingers ready for war 🖱️⚡",
+        "Ván khởi động. Làm nóng ngón tay cho chiến tranh 🖱️⚡",
+        "Portrait of {subject} man intensely gaming, warm-up session, focused expression, neon lit face, competitive gamer energy"
+      ],
+      [
+        "Squad Up",
+        "Lên Team",
+        "The squad is online. Time to dominate 🎯👊",
+        "Team online rồi. Giờ thống trị 🎯👊",
+        "Portrait of {subject} man with gaming headset, communicating with team, multiplayer gaming, squad coordination, teamwork"
+      ],
+      [
+        "Victory!",
+        "Chiến Thắng!",
+        "LETS GOOO! That clutch play was insane 🏆🔥",
+        "LÊN NÀO! Play clutch đó điên thật 🏆🔥",
+        "Portrait of {subject} man celebrating gaming victory, arms raised, screen showing win, triumphant moment, gamer celebration"
+      ],
+      [
+        "Rage Quit",
+        "Rage Quit",
+        "OK that round didnt happen. We dont talk about that one 😤🎮",
+        "OK ván đó không xảy ra. Chúng ta không nói về nó 😤🎮",
+        "Portrait of {subject} man frustrated at gaming desk, rage moment, headset off, dramatic gamer reaction, temporary defeat"
+      ],
+      [
+        "Late Night",
+        "Đêm Muộn",
+        "Its 3am and I have ONE more game mentality 🌙🎮",
+        "Đã 3h sáng và tôi có mentality MỘT VÁN NỮA 🌙🎮",
+        "Portrait of {subject} man gaming late at night, monitor glow in dark room, energy drinks, one more game, dedicated gamer"
+      ],
+      [
+        "GG",
+        "GG",
+        "Marathon complete. My K/D ratio is chef kiss. GG everyone 🏆✌️",
+        "Marathon xong. K/D ratio tôi đỉnh. GG mọi người 🏆✌️",
+        "Portrait of {subject} man leaning back in gaming chair satisfied, marathon complete, stats on screen, accomplished gamer, GG"
+      ]
+    ]
+  },
+  {
+    "slug": "graduation_day",
+    "title": [
+      "Graduation Day",
+      "Ngày Tốt Nghiệp"
+    ],
+    "desc": [
+      "Years of hard work. One perfect day",
+      "Nhiều năm cố gắng. Một ngày hoàn hảo"
+    ],
+    "cat": "career",
+    "type": "journey",
+    "gender": "all",
+    "dur": "once",
+    "badge": "HOT",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Celebratory bright photography",
+    "gs": 7,
+    "tags": [
+      "graduation",
+      "achievement",
+      "education",
+      "celebration",
+      "milestone",
+      "proud"
+    ],
+    "chs": [
+      [
+        "Cap & Gown",
+        "Mũ & Áo",
+        "Putting on the cap and gown. Years of tears led to this 🎓✨",
+        "Mặc áo cử nhân. Bao năm nước mắt dẫn đến đây 🎓✨",
+        "Portrait of {subject} putting on graduation cap and gown, emotional proud moment, mirror reflection, years of hard work paying off"
+      ],
+      [
+        "Campus Last",
+        "Campus Lần Cuối",
+        "Walking through campus one last time as a student. Emotional 🏛️💕",
+        "Đi qua campus lần cuối là sinh viên. Xúc động 🏛️💕",
+        "Portrait of {subject} walking through university campus, graduation day, nostalgic, beautiful campus architecture, last walk as student"
+      ],
+      [
+        "The Walk",
+        "Bước Lên",
+        "Walking across that stage. This is MY moment 🎓🔥",
+        "Bước lên sân khấu. Đây là khoảnh khắc CỦA TÔI 🎓🔥",
+        "Portrait of {subject} walking across graduation stage, proud powerful moment, diploma ceremony, crowd cheering, peak achievement"
+      ],
+      [
+        "Diploma",
+        "Bằng Tốt Nghiệp",
+        "This piece of paper cost me blood sweat and tears. Worth every drop 📜💪",
+        "Mảnh giấy này tốn máu mồ hôi nước mắt. Đáng từng giọt 📜💪",
+        "Portrait of {subject} holding diploma proudly, graduation cap, beaming smile, achievement unlocked, proof of dedication"
+      ],
+      [
+        "Family Proud",
+        "Gia Đình Tự Hào",
+        "The look in my familys eyes. Thats why I did it 👨‍👩‍👧❤️",
+        "Ánh mắt gia đình tôi. Đó là lý do tôi làm 👨‍👩‍👧❤️",
+        "Portrait of {subject} with proud family at graduation, parents emotional, group celebration, family achievement, generational pride"
+      ],
+      [
+        "Cap Toss",
+        "Tung Mũ",
+        "CAPS IN THE AIR! We did it! We really did it! 🎓🎉",
+        "TUNG MŨ! Chúng tôi làm được! Thật sự làm được! 🎓🎉",
+        "Portrait of {subject} tossing graduation cap in air, group celebration, caps flying, blue sky, pure joy and freedom, milestone"
+      ],
+      [
+        "Future Starts",
+        "Tương Lai Bắt Đầu",
+        "Chapter closed. A new one begins. Ready for anything 🌟🚀",
+        "Chương đóng. Chương mới bắt đầu. Sẵn sàng cho mọi thứ 🌟🚀",
+        "Portrait of {subject} looking forward confidently after graduation, sunset, new beginning, future ahead, ready for the world"
+      ]
+    ]
+  },
+  {
+    "slug": "first_job",
+    "title": [
+      "First Job Day",
+      "Ngày Đi Làm Đầu"
+    ],
+    "desc": [
+      "Corporate life begins. Adulting level: unlocked",
+      "Đời công sở bắt đầu. Level người lớn: mở khoá"
+    ],
+    "cat": "career",
+    "type": "story",
+    "gender": "all",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Professional lifestyle photography",
+    "gs": 7,
+    "tags": [
+      "first-job",
+      "career",
+      "office",
+      "adulting",
+      "professional",
+      "milestone"
+    ],
+    "chs": [
+      [
+        "Outfit Ready",
+        "Outfit Sẵn",
+        "First day outfit: planned for 3 weeks. Ironed twice 👔✨",
+        "Outfit ngày đầu: lên kế hoạch 3 tuần. Ủi 2 lần 👔✨",
+        "Portrait of {subject} in first day work outfit, mirror check, professional nervous excited, new clothes, career beginning"
+      ],
+      [
+        "Office Entry",
+        "Vào Văn Phòng",
+        "Walking into MY office for the first time. Im an adult now 🏢😳",
+        "Bước vào văn phòng CỦA TÔI lần đầu. Tôi là người lớn rồi 🏢😳",
+        "Portrait of {subject} entering office building, new employee energy, modern office lobby, nervous excitement, professional world entry"
+      ],
+      [
+        "My Desk",
+        "Bàn Của Tôi",
+        "They gave me a DESK. With my NAME on it. This is real 🪑📛",
+        "Họ cho tôi BÀN. Có TÊN tôi. Đây là thật 🪑📛",
+        "Portrait of {subject} at new desk, setting up workspace, name placard, personal touches, first desk pride, office setup"
+      ],
+      [
+        "Lunch Break",
+        "Giờ Ăn Trưa",
+        "First adult lunch break. Eating like a real professional now 🍱☕",
+        "Giờ ăn trưa người lớn đầu tiên. Ăn như dân chuyên nghiệp 🍱☕",
+        "Portrait of {subject} on first lunch break, eating at nearby cafe or office cafeteria, professional lifestyle, new routine"
+      ],
+      [
+        "After Work",
+        "Sau Giờ Làm",
+        "Survived day one. I deserve everything good tonight 🌆🍕",
+        "Sống sót ngày đầu. Tôi xứng đáng mọi thứ tốt tối nay 🌆🍕",
+        "Portrait of {subject} leaving office after first day, sunset, relieved happy, city skyline, first day survival, celebration coming"
+      ],
+      [
+        "First Pay",
+        "Lương Đầu",
+        "First paycheck just hit. Im literally crying in the club 💰😭",
+        "Lương đầu vừa về. Tôi đang khóc trong club 💰😭",
+        "Portrait of {subject} looking at phone with first paycheck notification, emotional happy, financial independence, milestone moment"
+      ],
+      [
+        "Treat Myself",
+        "Tự Thưởng",
+        "First salary splurge. I earned this and I deserve this 🛍️👑",
+        "Tiêu lương đầu. Tôi kiếm được và tôi xứng đáng 🛍️👑",
+        "Portrait of {subject} treating self with first salary purchase, proud happy, self-reward, earning independence, career milestone treat"
+      ]
+    ]
+  },
+  {
+    "slug": "entrepreneur",
+    "title": [
+      "Entrepreneur Life",
+      "Đời Khởi Nghiệp"
+    ],
+    "desc": [
+      "Building my empire one day at a time",
+      "Xây đế chế mỗi ngày một chút"
+    ],
+    "cat": "career",
+    "type": "journey",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Ambitious professional photography",
+    "gs": 7.5,
+    "tags": [
+      "entrepreneur",
+      "startup",
+      "hustle",
+      "boss",
+      "business",
+      "ambition"
+    ],
+    "chs": [
+      [
+        "The Idea",
+        "Ý Tưởng",
+        "Started with just an idea and a lot of audacity 💡🔥",
+        "Bắt đầu với chỉ ý tưởng và nhiều táo bạo 💡🔥",
+        "Portrait of {subject} brainstorming with notebook and laptop, late night, startup idea, creative energy, entrepreneur origin"
+      ],
+      [
+        "Garage Days",
+        "Garage Days",
+        "Working from my room. Every empire starts somewhere small 🏠💻",
+        "Làm việc từ phòng. Mỗi đế chế bắt đầu từ nhỏ 🏠💻",
+        "Portrait of {subject} working from humble space, laptop and coffee, startup grind, humble beginnings, big dreams small room"
+      ],
+      [
+        "First Client",
+        "Khách Hàng Đầu",
+        "FIRST CLIENT! Someone believes in my vision 🤝🎉",
+        "KHÁCH HÀNG ĐẦU! Ai đó tin vào vision của tôi 🤝🎉",
+        "Portrait of {subject} celebrating first client, handshake or deal moment, breakthrough, first business success, validation"
+      ],
+      [
+        "All Nighter",
+        "Thức Đêm",
+        "Another all-nighter. The grind never stops when youre building 🌙☕",
+        "Thêm đêm thức trắng. Cày không dừng khi bạn đang xây 🌙☕",
+        "Portrait of {subject} working through the night, multiple screens, coffee cups, dedicated entrepreneur, hustle mode, burning midnight oil"
+      ],
+      [
+        "The Setback",
+        "Thất Bại",
+        "Hit a wall. But walls are just problems to solve 🧱💪",
+        "Đụng tường. Nhưng tường chỉ là bài toán cần giải 🧱💪",
+        "Portrait of {subject} facing business challenge, determined expression, setback but not giving up, resilient entrepreneur"
+      ],
+      [
+        "Breakthrough",
+        "Bước Đột Phá",
+        "IT WORKED. The breakthrough moment Ive been waiting for 🚀🎯",
+        "ĐƯỢC RỒI. Khoảnh khắc đột phá tôi chờ đợi 🚀🎯",
+        "Portrait of {subject} experiencing business breakthrough, excited victorious, growth charts, milestone achievement, entrepreneur success"
+      ],
+      [
+        "My Office",
+        "Văn Phòng Của Tôi",
+        "From my bedroom to MY office. Dreams do come true 🏢👑",
+        "Từ phòng ngủ đến văn phòng CỦA TÔI. Giấc mơ thành hiện thực 🏢👑",
+        "Portrait of {subject} in own office, proud entrepreneur, business growth visible, from humble to professional, dream realized"
+      ],
+      [
+        "Boss Life",
+        "Đời Boss",
+        "Built this from nothing. And were just getting started 💼🔥",
+        "Xây từ con số 0. Và chúng tôi mới bắt đầu 💼🔥",
+        "Portrait of {subject} as established entrepreneur, confident powerful, business empire, self-made success, boss life achieved"
+      ]
+    ]
+  },
+  {
+    "slug": "digital_nomad",
+    "title": [
+      "Digital Nomad",
+      "Du Mục Kỹ Thuật Số"
+    ],
+    "desc": [
+      "My office is wherever the WiFi is",
+      "Văn phòng tôi ở đâu có WiFi"
+    ],
+    "cat": "career",
+    "type": "travel",
+    "gender": "all",
+    "dur": "many",
+    "badge": "NEW",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Travel lifestyle photography",
+    "gs": 7.5,
+    "tags": [
+      "digital-nomad",
+      "remote-work",
+      "travel",
+      "laptop",
+      "freedom",
+      "work-travel"
+    ],
+    "chs": [
+      [
+        "Airport Office",
+        "Văn Phòng Sân Bay",
+        "Working from the airport lounge. My commute is a flight ✈️💻",
+        "Làm việc từ lounge sân bay. Đi làm bằng máy bay ✈️💻",
+        "Portrait of {subject} working on laptop at airport lounge, digital nomad lifestyle, travel and work blend, modern professional"
+      ],
+      [
+        "Beach Desk",
+        "Bàn Bãi Biển",
+        "Todays office: beachfront. Not bad for a Monday 🏖️💻",
+        "Văn phòng hôm nay: bãi biển. Không tệ cho thứ hai 🏖️💻",
+        "Portrait of {subject} working on laptop at beach, ocean view, tropical work setup, digital nomad dream, paradise office"
+      ],
+      [
+        "Cafe Work",
+        "Làm Ở Quán",
+        "Found a cozy cafe in a new city. Productivity level: MAX ☕🏙️",
+        "Tìm quán cà phê ấm áp ở thành phố mới. Năng suất: MAX ☕🏙️",
+        "Portrait of {subject} working at cafe in foreign city, laptop and coffee, local atmosphere, remote work culture, global citizen"
+      ],
+      [
+        "Cowork Space",
+        "Cowork Space",
+        "Coworking space in Bali. Met 5 entrepreneurs today alone 🤝🌴",
+        "Coworking space ở Bali. Gặp 5 entrepreneurs chỉ hôm nay 🤝🌴",
+        "Portrait of {subject} at tropical coworking space, networking, modern work environment, digital nomad community, global connections"
+      ],
+      [
+        "Sunset Close",
+        "Đóng Laptop Hoàng Hôn",
+        "Closing the laptop at sunset. This is why I chose this life 🌅💻",
+        "Đóng laptop lúc hoàng hôn. Đây là lý do tôi chọn cuộc sống này 🌅💻",
+        "Portrait of {subject} closing laptop at sunset spot, beautiful view, work-life balance, digital nomad reward, freedom lifestyle"
+      ],
+      [
+        "New Country",
+        "Nước Mới",
+        "New country, same WiFi password search. Nomad life 🗺️😂",
+        "Nước mới, cùng tìm mật khẩu WiFi. Đời nomad 🗺️😂",
+        "Portrait of {subject} exploring new destination with laptop bag, travel adventure, digital nomad in new country, wanderlust worker"
+      ],
+      [
+        "Rooftop Work",
+        "Làm Trên Sân Thượng",
+        "Rooftop in Bangkok at golden hour. My office view today 🏙️✨",
+        "Sân thượng Bangkok giờ vàng. View văn phòng hôm nay 🏙️✨",
+        "Portrait of {subject} working on laptop on rooftop, city skyline at golden hour, panoramic view, digital nomad dream office"
+      ],
+      [
+        "Freedom Life",
+        "Đời Tự Do",
+        "No cubicle. No commute. Just freedom and WiFi. This is the way 🌍❤️",
+        "Không cubicle. Không đi làm. Chỉ tự do và WiFi. Đây là con đường 🌍❤️",
+        "Portrait of {subject} happy free digital nomad, world traveler, laptop lifestyle, ultimate work freedom, living the dream"
+      ]
+    ]
+  },
+  {
+    "slug": "got_promoted",
+    "title": [
+      "Got Promoted",
+      "Được Thăng Chức"
+    ],
+    "desc": [
+      "Hard work recognized. New title unlocked",
+      "Cố gắng được công nhận. Chức danh mới mở khoá"
+    ],
+    "cat": "career",
+    "type": "flex",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Professional celebration photography",
+    "gs": 7,
+    "tags": [
+      "promotion",
+      "career",
+      "success",
+      "achievement",
+      "celebration",
+      "boss"
+    ],
+    "chs": [
+      [
+        "The Call",
+        "Cuộc Gọi",
+        "Boss called me in. Heart was RACING 📞😰",
+        "Sếp gọi vào. Tim ĐẬP NHANH 📞😰",
+        "Portrait of {subject} getting called into office, nervous anticipation, professional setting, moment before big news"
+      ],
+      [
+        "The News",
+        "Tin Vui",
+        "YOU GOT PROMOTED. Three words that changed everything 🎉💼",
+        "BẠN ĐƯỢC THĂNG CHỨC. Ba từ thay đổi mọi thứ 🎉💼",
+        "Portrait of {subject} receiving promotion news, shocked happy expression, office celebration, career milestone, life-changing moment"
+      ],
+      [
+        "New Title",
+        "Chức Danh Mới",
+        "Updated my LinkedIn before I even left the office 📱😂",
+        "Update LinkedIn trước khi rời văn phòng 📱😂",
+        "Portrait of {subject} proudly updating professional profile, new title, career upgrade, professional pride, digital celebration"
+      ],
+      [
+        "Team Toast",
+        "Team Mừng",
+        "The team surprised me with a celebration. Im not crying 🥂😭",
+        "Team bất ngờ mừng. Tôi không khóc 🥂😭",
+        "Portrait of {subject} celebrating promotion with team, office celebration, champagne toast, team appreciation, proud moment"
+      ],
+      [
+        "Call Home",
+        "Gọi Về Nhà",
+        "Called my parents first. Their reaction was everything 📱❤️",
+        "Gọi bố mẹ đầu tiên. Phản ứng của họ là tất cả 📱❤️",
+        "Portrait of {subject} on phone sharing good news, emotional happy, family pride, sharing success with loved ones, grateful"
+      ],
+      [
+        "Celebration",
+        "Ăn Mừng",
+        "Celebrating tonight because I DESERVE this. New chapter begins 🍾🎉",
+        "Ăn mừng tối nay vì tôi XỨNG ĐÁNG. Chương mới bắt đầu 🍾🎉",
+        "Portrait of {subject} at celebration dinner, dressed up, champagne, promotion celebration, career success, well-deserved reward"
+      ]
+    ]
+  },
+  {
+    "slug": "own_business",
+    "title": [
+      "My Own Business",
+      "Doanh Nghiệp Của Tôi"
+    ],
+    "desc": [
+      "Grand opening day. My dream is real",
+      "Ngày khai trương. Giấc mơ thành sự thật"
+    ],
+    "cat": "career",
+    "type": "flex",
+    "gender": "all",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Proud business photography",
+    "gs": 7,
+    "tags": [
+      "business",
+      "own-boss",
+      "grand-opening",
+      "dream",
+      "entrepreneur",
+      "success"
+    ],
+    "chs": [
+      [
+        "Before Open",
+        "Trước Khai Trương",
+        "Last preparations before the big day. Everything has to be perfect 🏪✨",
+        "Chuẩn bị cuối trước ngày lớn. Mọi thứ phải hoàn hảo 🏪✨",
+        "Portrait of {subject} preparing shop or business for opening, final touches, nervous excitement, dream becoming reality"
+      ],
+      [
+        "The Sign",
+        "Biển Hiệu",
+        "MY name on MY business. Read that again 📛👑",
+        "TÊN TÔI trên DOANH NGHIỆP CỦA TÔI. Đọc lại đi 📛👑",
+        "Portrait of {subject} proudly standing under business sign with their name, achievement moment, business owner pride, dream realized"
+      ],
+      [
+        "Doors Open",
+        "Mở Cửa",
+        "WERE OPEN! First customer just walked in and Im shaking 🚪🎉",
+        "MỞ CỬA! Khách đầu tiên vừa bước vào và tôi run 🚪🎉",
+        "Portrait of {subject} opening business for first time, welcoming customers, grand opening excitement, entrepreneur dream, doors open"
+      ],
+      [
+        "First Sale",
+        "Đơn Hàng Đầu",
+        "FIRST SALE! This is real. This is really happening 💰😭",
+        "ĐƠN ĐẦU TIÊN! Đây là thật. Đang thật sự xảy ra 💰😭",
+        "Portrait of {subject} making first sale, emotional moment, register ringing, first business transaction, dream validated"
+      ],
+      [
+        "Busy Day",
+        "Ngày Bận",
+        "Look at all these customers! My dream is working 🏪🔥",
+        "Nhìn bao nhiêu khách! Giấc mơ tôi đang hoạt động 🏪🔥",
+        "Portrait of {subject} busy with customers at thriving business, successful day, business in action, owner pride, dream working"
+      ],
+      [
+        "Close Up",
+        "Đóng Cửa",
+        "Closing up after the best first day. My face hurts from smiling 🔐😊",
+        "Đóng cửa sau ngày đầu tuyệt nhất. Mặt đau vì cười 🔐😊",
+        "Portrait of {subject} closing up business after successful first day, satisfied proud, tired but happy, business owner life begins"
+      ],
+      [
+        "Dream Real",
+        "Giấc Mơ Thật",
+        "I built this. From a dream to reality. This is mine 🏪❤️",
+        "Tôi xây cái này. Từ giấc mơ thành hiện thực. Đây là của tôi 🏪❤️",
+        "Portrait of {subject} standing proudly in front of their business, owner portrait, self-made success, dream achieved, proud entrepreneur"
+      ]
+    ]
+  },
+  {
+    "slug": "content_creator",
+    "title": [
+      "Content Creator",
+      "Nhà Sáng Tạo"
+    ],
+    "desc": [
+      "Turning passion into a career. Living the dream",
+      "Biến đam mê thành sự nghiệp. Sống trong mơ"
+    ],
+    "cat": "career",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Modern creator lifestyle photography",
+    "gs": 7.5,
+    "tags": [
+      "content-creator",
+      "influencer",
+      "social-media",
+      "creative",
+      "youtube",
+      "career"
+    ],
+    "chs": [
+      [
+        "First Video",
+        "Video Đầu",
+        "Posted my first video. 3 views and theyre all me 📱😅",
+        "Đăng video đầu tiên. 3 views và đều là tôi 📱😅",
+        "Portrait of {subject} recording first video content, ring light, camera setup, nervous beginner creator, humble beginning"
+      ],
+      [
+        "Setup Upgrade",
+        "Nâng Cấp Setup",
+        "Invested in better equipment. Time to level up the content 🎬💻",
+        "Đầu tư thiết bị tốt hơn. Giờ nâng level content 🎬💻",
+        "Portrait of {subject} with upgraded creator setup, camera equipment, lights, microphone, professional content creation space"
+      ],
+      [
+        "Going Viral",
+        "Viral",
+        "ONE video went viral and everything changed overnight 📈🤯",
+        "MỘT video viral và mọi thứ thay đổi qua đêm 📈🤯",
+        "Portrait of {subject} shocked looking at phone with viral notification, explosive growth, viral moment, life-changing views"
+      ],
+      [
+        "Brand Deal",
+        "Hợp Đồng",
+        "First brand deal! Someone wants to pay ME to create 🤝💰",
+        "Hợp đồng brand đầu! Ai đó muốn TRẢ TIỀN cho tôi tạo content 🤝💰",
+        "Portrait of {subject} with brand products for collaboration, professional creator, brand partnership, monetization milestone"
+      ],
+      [
+        "Meet Fans",
+        "Gặp Fan",
+        "Someone recognized me on the street. IM FAMOUS? 😱🥺",
+        "Ai đó nhận ra tôi trên phố. TÔI NỔI TIẾNG? 😱🥺",
+        "Portrait of {subject} being recognized by fans, surprised happy, creator fame, public recognition, surreal moment"
+      ],
+      [
+        "Studio Tour",
+        "Studio Tour",
+        "From my bedroom to a real studio. The glow up is real 🎬✨",
+        "Từ phòng ngủ đến studio thật. Glow up thật sự 🎬✨",
+        "Portrait of {subject} in professional studio, content creation headquarters, major upgrade, creator career growth"
+      ],
+      [
+        "Full Time",
+        "Toàn Thời Gian",
+        "Quit my day job. Content creation is my career now 🎉🎬",
+        "Nghỉ việc. Sáng tạo nội dung là sự nghiệp bây giờ 🎉🎬",
+        "Portrait of {subject} celebrating full-time creator status, freedom, following passion, career achievement, living the dream"
+      ],
+      [
+        "1M Milestone",
+        "Cột Mốc 1M",
+        "1 MILLION followers. Started with 0. Dreams are real 🎯🏆",
+        "1 TRIỆU followers. Bắt đầu từ 0. Giấc mơ là thật 🎯🏆",
+        "Portrait of {subject} celebrating 1 million milestone, play button or milestone award, creator success, viral fame, achievement"
+      ]
+    ]
+  },
+  {
+    "slug": "dream_job",
+    "title": [
+      "Dream Job",
+      "Công Việc Mơ Ước"
+    ],
+    "desc": [
+      "Landed the job I always wanted. Pinch me",
+      "Có được công việc luôn muốn. Véo tôi đi"
+    ],
+    "cat": "career",
+    "type": "story",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Inspirational professional photography",
+    "gs": 7,
+    "tags": [
+      "dream-job",
+      "career",
+      "goal",
+      "achievement",
+      "inspiration",
+      "passion"
+    ],
+    "chs": [
+      [
+        "The Email",
+        "Email",
+        "THE email. You have been selected. I read it 47 times 📧😱",
+        "EMAIL ĐÓ. Bạn đã được chọn. Tôi đọc 47 lần 📧😱",
+        "Portrait of {subject} reading acceptance email on laptop, shocked happy expression, dream job offer, life-changing notification"
+      ],
+      [
+        "First Day",
+        "Ngày Đầu",
+        "Walking into my dream job on day one. Is this even real? 🏢🌟",
+        "Bước vào công việc mơ ước ngày đầu. Đây có thật không? 🏢🌟",
+        "Portrait of {subject} walking into dream workplace, awestruck expression, impressive office or workplace, first day at dream job"
+      ],
+      [
+        "In My Element",
+        "Trong Yếu Tố",
+        "Doing what I love and getting PAID for it. What a concept 💡💰",
+        "Làm điều yêu thích và được TRẢ TIỀN. Concept hay 💡💰",
+        "Portrait of {subject} fully engaged in dream work, passionate focused, in their element, doing what they love, workplace happiness"
+      ],
+      [
+        "Making Impact",
+        "Tạo Ảnh Hưởng",
+        "My work actually matters here. Every day feels meaningful 🎯❤️",
+        "Công việc tôi thật sự quan trọng ở đây. Mỗi ngày đều có ý nghĩa 🎯❤️",
+        "Portrait of {subject} making meaningful impact at work, proud accomplishment, purpose-driven career, making a difference"
+      ],
+      [
+        "Dream Realized",
+        "Giấc Mơ Thành Thật",
+        "Little me would be so proud of where I am now 🥹🌟",
+        "Tôi nhỏ sẽ rất tự hào về tôi bây giờ 🥹🌟",
+        "Portrait of {subject} at dream job looking fulfilled, reflection on journey, dream realized, grateful and proud, inspirational career moment"
+      ],
+      [
+        "Thank You",
+        "Cảm Ơn",
+        "Thank you to everyone who believed. And to me for never giving up 🙏✨",
+        "Cảm ơn ai đã tin. Và cảm ơn tôi vì không bỏ cuộc 🙏✨",
+        "Portrait of {subject} grateful at dream workplace, thankful peaceful, career achievement, persistence rewarded, dream job earned"
+      ]
+    ]
+  }
+]

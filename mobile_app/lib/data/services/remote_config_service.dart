@@ -20,16 +20,23 @@ class RemoteConfigService {
   Future<void> initialize() async {
     await _remoteConfig.setConfigSettings(RemoteConfigSettings(
       fetchTimeout: const Duration(seconds: 10),
-      minimumFetchInterval: const Duration(hours: 1),
+      minimumFetchInterval: const Duration(seconds: 10),
     ));
 
     await _remoteConfig.setDefaults(_defaultValues);
 
     // Fetch and activate in background — don't block app startup.
     try {
-      await _remoteConfig.fetchAndActivate();
-    } catch (_) {
-      // Use cached/default values if fetch fails.
+      final activated = await _remoteConfig.fetchAndActivate();
+      // ignore: avoid_print
+      print('[RemoteConfig] fetchAndActivate: activated=$activated');
+      // ignore: avoid_print
+      print('[RemoteConfig] flexshot_json_url=${flexshotJsonUrl.length > 30 ? '${flexshotJsonUrl.substring(0, 30)}...' : flexshotJsonUrl}');
+      // ignore: avoid_print
+      print('[RemoteConfig] flextale_json_url=${flextaleJsonUrl.length > 30 ? '${flextaleJsonUrl.substring(0, 30)}...' : flextaleJsonUrl}');
+    } catch (e) {
+      // ignore: avoid_print
+      print('[RemoteConfig] fetchAndActivate FAILED: $e');
     }
   }
 

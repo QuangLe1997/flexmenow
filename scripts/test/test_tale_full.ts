@@ -15,7 +15,11 @@ const REGION = "asia-southeast1";
 const CF_BASE = `https://${REGION}-${PROJECT_ID}.cloudfunctions.net`;
 const FS_BASE = `https://firestore.googleapis.com/v1/projects/${PROJECT_ID}/databases/(default)/documents`;
 
-const gcloudToken = execSync("gcloud auth print-access-token", { encoding: "utf8" }).trim();
+let gcloudToken = execSync("gcloud auth print-access-token", { encoding: "utf8" }).trim();
+
+function refreshToken() {
+  gcloudToken = execSync("gcloud auth print-access-token", { encoding: "utf8" }).trim();
+}
 
 // ── Firestore helpers ──
 
@@ -176,6 +180,9 @@ async function main() {
   const totalElapsed = ((Date.now() - startTime) / 1000).toFixed(1);
 
   console.log(`\n  Total time: ${totalElapsed}s`);
+
+  // Refresh gcloud token — old one's fetch connections go stale after long curl wait
+  refreshToken();
 
   if (cfOk && cfBody?.result) {
     const r = cfBody.result;

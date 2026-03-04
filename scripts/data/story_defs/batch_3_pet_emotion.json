@@ -1,0 +1,1561 @@
+[
+  {
+    "slug": "dog_mom",
+    "title": [
+      "Dog Mom Life",
+      "Mẹ Chó Đây"
+    ],
+    "desc": [
+      "My fur baby is my whole world",
+      "Boss lông xù là cả thế giới của tôi"
+    ],
+    "cat": "pet",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "once",
+    "badge": "HOT",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Warm lifestyle photography",
+    "gs": 7,
+    "tags": [
+      "dog",
+      "pet-mom",
+      "fur-baby",
+      "puppy-love",
+      "dog-life",
+      "cute"
+    ],
+    "chs": [
+      [
+        "Morning Cuddles",
+        "Ôm Sáng",
+        "Waking up to puppy kisses. Best alarm clock ever 🐶💕",
+        "Thức dậy với nụ hôn cún. Đồng hồ báo thức tốt nhất 🐶💕",
+        "Portrait of {subject} woman cuddling with cute dog in bed, morning sunlight, cozy blankets, puppy kisses, warm loving moment"
+      ],
+      [
+        "Walk Time",
+        "Đi Dạo",
+        "Our morning walk routine. Matching outfits of course 🐕‍🦺🌸",
+        "Đi dạo buổi sáng. Đồ đôi là phải 🐕‍🦺🌸",
+        "Portrait of {subject} woman walking dog in park, morning light, matching accessories, stylish dog mom, happy healthy lifestyle"
+      ],
+      [
+        "Dog Park Bestie",
+        "Bạn Ở Công Viên",
+        "Made friends at the park! Social butterfly baby 🦋🐾",
+        "Kết bạn ở công viên! Bé xã giao lắm 🦋🐾",
+        "Portrait of {subject} woman at dog park, dog playing with other dogs, happy socialization, community vibes, joyful moment"
+      ],
+      [
+        "Matching Nails",
+        "Móng Đôi",
+        "Got matching nail art with my baby. Yes Im that dog mom 💅🐾",
+        "Làm móng đôi với bé. Đúng rồi tôi là dog mom kiểu đó 💅🐾",
+        "Portrait of {subject} woman showing matching nail art next to dogs paw, cute aesthetic, dog mom vibes, pampered lifestyle"
+      ],
+      [
+        "Spa Day",
+        "Spa Ngày",
+        "Spa day for both of us! My baby deserves the best ✨🛁",
+        "Spa cho cả hai! Bé xứng đáng điều tốt nhất ✨🛁",
+        "Portrait of {subject} woman and dog at pet spa, both being pampered, luxurious pet care, matching robes, cute and funny"
+      ],
+      [
+        "Treat Time",
+        "Giờ Ăn Vặt",
+        "Homemade treats for my bestie. Chef mom mode ON 🍪🐕",
+        "Làm bánh cho bestie. Mode mẹ đầu bếp ON 🍪🐕",
+        "Portrait of {subject} woman baking dog treats in kitchen, dog watching excitedly, warm kitchen, homemade with love"
+      ],
+      [
+        "Sunset Walk",
+        "Đi Dạo Hoàng Hôn",
+        "Golden hour with my golden baby. Life is beautiful 🌅🐶",
+        "Golden hour với bé cưng. Cuộc sống thật đẹp 🌅🐶",
+        "Portrait of {subject} woman walking dog at sunset, golden hour, silhouette, beach or park, peaceful beautiful moment"
+      ]
+    ]
+  },
+  {
+    "slug": "cat_dad",
+    "title": [
+      "Cat Dad Vibes",
+      "Bố Mèo Đây"
+    ],
+    "desc": [
+      "My cat chose me. I just pay the rent",
+      "Mèo chọn tôi. Tôi chỉ trả tiền nhà"
+    ],
+    "cat": "pet",
+    "type": "vlog",
+    "gender": "male",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Cozy lifestyle photography",
+    "gs": 7,
+    "tags": [
+      "cat",
+      "cat-dad",
+      "feline",
+      "cat-life",
+      "cozy",
+      "funny"
+    ],
+    "chs": [
+      [
+        "Wake Up Call",
+        "Báo Thức",
+        "Cat sitting on my face at 5am. Every single day 😤🐱",
+        "Mèo ngồi lên mặt lúc 5h sáng. Mỗi ngày đều vậy 😤🐱",
+        "Portrait of {subject} man waking up with cat sitting on his chest, morning light, funny annoyed expression, cat being a cat"
+      ],
+      [
+        "Laptop Battle",
+        "Chiến Tranh Laptop",
+        "Trying to work but my cat IS the keyboard 💻🐈",
+        "Cố làm việc nhưng mèo LÀ bàn phím 💻🐈",
+        "Portrait of {subject} man trying to work on laptop with cat lying on keyboard, work from home, funny struggle, cat being needy"
+      ],
+      [
+        "Treat Time",
+        "Giờ Ăn",
+        "The only time he loves me is when I have treats 🐟😂",
+        "Lúc duy nhất nó yêu tôi là khi tôi có đồ ăn 🐟😂",
+        "Portrait of {subject} man feeding cat treats, cat being affectionate, kitchen scene, funny cat dad moment"
+      ],
+      [
+        "Nap Together",
+        "Ngủ Cùng",
+        "We both nap at the same time. Its called synergy 😴🐱",
+        "Cả hai cùng ngủ trưa. Gọi là synergy 😴🐱",
+        "Portrait of {subject} man napping on couch with cat curled up next to him, afternoon light, peaceful, cozy domestic scene"
+      ],
+      [
+        "Cat Cafe",
+        "Cat Cafe",
+        "Took my cat to a cat cafe. He hated every other cat 😾☕",
+        "Đưa mèo đi cat cafe. Nó ghét hết mấy con khác 😾☕",
+        "Portrait of {subject} man at cat cafe holding his cat, surrounded by other cats, funny expression, cat being territorial"
+      ],
+      [
+        "Box Day",
+        "Ngày Hộp",
+        "Bought expensive cat tree. Cat prefers the box 📦🐈",
+        "Mua cat tree đắt tiền. Mèo thích cái hộp hơn 📦🐈",
+        "Portrait of {subject} man with expensive cat tree in background, cat sitting in cardboard box instead, funny ironic moment"
+      ],
+      [
+        "Best Friends",
+        "Bạn Thân",
+        "At the end of the day hes my best friend. Even at 5am 🐱❤️",
+        "Cuối ngày nó là bạn thân nhất. Dù là lúc 5h sáng 🐱❤️",
+        "Portrait of {subject} man relaxing with cat on lap, warm evening light, genuine bond, peaceful happy moment together"
+      ]
+    ]
+  },
+  {
+    "slug": "new_puppy",
+    "title": [
+      "New Puppy Day",
+      "Ngày Đón Cún Mới"
+    ],
+    "desc": [
+      "The day my life changed forever",
+      "Ngày cuộc đời tôi thay đổi mãi mãi"
+    ],
+    "cat": "pet",
+    "type": "journey",
+    "gender": "all",
+    "dur": "moment",
+    "badge": "NEW",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Heartwarming lifestyle photography",
+    "gs": 7,
+    "tags": [
+      "puppy",
+      "new-pet",
+      "adoption",
+      "cute",
+      "puppy-love",
+      "first-day"
+    ],
+    "chs": [
+      [
+        "First Meet",
+        "Gặp Lần Đầu",
+        "Love at first sight. Those eyes got me instantly 🥹🐶",
+        "Yêu từ cái nhìn đầu tiên. Đôi mắt đó hạ gục tôi 🥹🐶",
+        "Portrait of {subject} person meeting puppy for first time, puppy looking up with big eyes, love at first sight, heartwarming adoption moment"
+      ],
+      [
+        "Coming Home",
+        "Về Nhà",
+        "Welcome home baby! Your new kingdom awaits 🏠🐾",
+        "Chào mừng về nhà bé! Vương quốc mới đợi rồi 🏠🐾",
+        "Portrait of {subject} person carrying new puppy into home, puppy looking around curiously, first day home, exciting new chapter"
+      ],
+      [
+        "First Toy",
+        "Đồ Chơi Đầu",
+        "First toy. First destruction. First of many 🧸💀",
+        "Đồ chơi đầu tiên. Phá huỷ đầu tiên. Đầu tiên trong nhiều lần 🧸💀",
+        "Portrait of {subject} person playing with puppy and new toy, puppy chewing excitedly, playful energy, new pet owner joy"
+      ],
+      [
+        "Sleepy Baby",
+        "Bé Ngủ",
+        "Fell asleep in my arms. My heart cant take this 😭💕",
+        "Ngủ trong tay tôi. Tim tôi không chịu nổi 😭💕",
+        "Portrait of {subject} person holding sleeping puppy in arms, soft lighting, tender moment, pure love and warmth"
+      ],
+      [
+        "Name Day",
+        "Đặt Tên",
+        "Official name decided. Welcome to the family! 📝🎉",
+        "Tên chính thức xác nhận. Chào mừng gia nhập gia đình! 📝🎉",
+        "Portrait of {subject} person with puppy wearing new name tag collar, proud moment, new family member, joyful celebration"
+      ],
+      [
+        "Best Decision",
+        "Quyết Định Đúng",
+        "Best decision I ever made. My life is complete now 🐶❤️",
+        "Quyết định đúng nhất đời. Cuộc sống tôi giờ trọn vẹn 🐶❤️",
+        "Portrait of {subject} person and puppy first selfie together, happy faces, beginning of beautiful friendship, pure happiness"
+      ]
+    ]
+  },
+  {
+    "slug": "pet_birthday",
+    "title": [
+      "Pet Birthday Party",
+      "Sinh Nhật Thú Cưng"
+    ],
+    "desc": [
+      "My baby deserves the BEST birthday",
+      "Bé cưng xứng đáng sinh nhật ĐỈNH nhất"
+    ],
+    "cat": "pet",
+    "type": "flex",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Festive colorful photography",
+    "gs": 7,
+    "tags": [
+      "pet-birthday",
+      "party",
+      "celebration",
+      "cute",
+      "pet-parent",
+      "treats"
+    ],
+    "chs": [
+      [
+        "Party Setup",
+        "Chuẩn Bị",
+        "Setting up the pawty! Balloons, banners, everything 🎈🐾",
+        "Chuẩn bị tiệc! Bóng bay, băng rôn, đầy đủ 🎈🐾",
+        "Portrait of {subject} person decorating room for pet birthday party, balloons, pet-themed decorations, excited preparation"
+      ],
+      [
+        "Birthday Outfit",
+        "Đồ Sinh Nhật",
+        "Birthday outfit ON. Looking like a million treats 👑🐶",
+        "Mặc đồ sinh nhật. Trông như triệu cái treat 👑🐶",
+        "Portrait of {subject} person dressing up pet in cute birthday outfit, tiny party hat, adorable moment, pet fashion"
+      ],
+      [
+        "Cake Time",
+        "Giờ Bánh",
+        "Pet-safe cake! The way their eyes lit up 🎂🤩",
+        "Bánh an toàn cho pet! Mắt bé sáng lên 🎂🤩",
+        "Portrait of {subject} person presenting pet birthday cake, pet looking excited, candles, beautiful pet-safe cake, celebration"
+      ],
+      [
+        "Gift Opening",
+        "Mở Quà",
+        "New toys, new treats, new everything! Spoiled rotten 🎁✨",
+        "Đồ chơi mới, snack mới, mới hết! Chiều hết nấc 🎁✨",
+        "Portrait of {subject} person opening gifts with pet, toys scattered around, pet playing excitedly, gift unwrapping joy"
+      ],
+      [
+        "Party Guests",
+        "Khách Mời",
+        "The squad came through! Pet playdate birthday edition 🎉🐾",
+        "Hội bạn tới! Pet playdate phiên bản sinh nhật 🎉🐾",
+        "Portrait of {subject} person at pet birthday party with other pet owners, multiple pets playing, festive atmosphere, social fun"
+      ],
+      [
+        "Best Day Ever",
+        "Ngày Đỉnh Nhất",
+        "Happy birthday to my best friend. Many more to come 🥳❤️",
+        "Sinh nhật vui bạn thân nhất. Còn nhiều năm nữa 🥳❤️",
+        "Portrait of {subject} person cuddling tired happy pet after birthday party, confetti on floor, satisfied smile, love and celebration"
+      ]
+    ]
+  },
+  {
+    "slug": "dog_park",
+    "title": [
+      "Dog Park Day",
+      "Ngày Ở Công Viên Chó"
+    ],
+    "desc": [
+      "Social hour for my social butterfly",
+      "Giờ xã giao cho bé xã giao"
+    ],
+    "cat": "pet",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Outdoor lifestyle photography",
+    "gs": 7,
+    "tags": [
+      "dog-park",
+      "outdoor",
+      "social",
+      "dogs",
+      "exercise",
+      "community"
+    ],
+    "chs": [
+      [
+        "Arrival",
+        "Đến Nơi",
+        "We pulled up and the tail went CRAZY 🚗🐕",
+        "Vừa tới nơi đuôi vẫy ĐIÊN 🚗🐕",
+        "Portrait of {subject} person arriving at dog park with excited dog pulling on leash, tail wagging, eager anticipation"
+      ],
+      [
+        "Off Leash",
+        "Tháo Xích",
+        "Freedom! Watch them run like they own the place 🏃🐶",
+        "Tự do! Xem bé chạy như chủ cả công viên 🏃🐶",
+        "Portrait of {subject} person releasing dog off leash at park, dog running joyfully, green open space, freedom moment"
+      ],
+      [
+        "New Friends",
+        "Bạn Mới",
+        "Making friends in 0.5 seconds. Social skills level 999 🐕🐕",
+        "Kết bạn trong 0.5 giây. Social skills level 999 🐕🐕",
+        "Portrait of {subject} person watching dog play with other dogs at park, dogs socializing, happy community moment"
+      ],
+      [
+        "Fetch King",
+        "Vua Bắt Bóng",
+        "Best fetcher in the park. Thats my baby! 🎾👑",
+        "Bắt bóng giỏi nhất công viên. Bé của tôi đó! 🎾👑",
+        "Portrait of {subject} person throwing ball for dog, dog leaping to catch, action shot, athletic impressive moment at park"
+      ],
+      [
+        "Tired Baby",
+        "Bé Mệt",
+        "Mission accomplished. One tired happy pupper 😴🐶",
+        "Nhiệm vụ hoàn thành. Một bé mệt nhưng vui 😴🐶",
+        "Portrait of {subject} person sitting with tired happy dog after play, dog panting with smile, satisfied after fun day at park"
+      ],
+      [
+        "Car Nap",
+        "Ngủ Trên Xe",
+        "Knocked out before we even left the parking lot 💤🚗",
+        "Ngủ gật trước khi rời bãi đỗ xe 💤🚗",
+        "Portrait of {subject} person in car with dog sleeping in back seat, tired from park, peaceful car nap, adorable exhaustion"
+      ]
+    ]
+  },
+  {
+    "slug": "cat_cafe",
+    "title": [
+      "Cat Cafe Date",
+      "Hẹn Hò Cat Cafe"
+    ],
+    "desc": [
+      "Coffee and cats. Peak happiness",
+      "Cà phê và mèo. Đỉnh cao hạnh phúc"
+    ],
+    "cat": "pet",
+    "type": "aesthetic",
+    "gender": "female",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Cute aesthetic photography",
+    "gs": 7,
+    "tags": [
+      "cat-cafe",
+      "aesthetic",
+      "coffee",
+      "cats",
+      "cute",
+      "date"
+    ],
+    "chs": [
+      [
+        "Cafe Arrival",
+        "Đến Quán",
+        "Found the cutest cat cafe in town! Aesthetic overload ☕🐱",
+        "Tìm thấy cat cafe dễ thương nhất! Aesthetic quá tải ☕🐱",
+        "Portrait of {subject} woman arriving at aesthetic cat cafe, cozy interior, cats lounging, warm lighting, cute atmosphere"
+      ],
+      [
+        "Latte Art",
+        "Latte Art",
+        "Cat-shaped latte art. Too cute to drink... jk I drank it 🐱☕",
+        "Latte hình mèo. Dễ thương quá không uống nổi... đùa uống rồi 🐱☕",
+        "Portrait of {subject} woman holding cat-shaped latte art, cute cafe aesthetic, Instagram-worthy moment, kawaii vibes"
+      ],
+      [
+        "Cat Magnet",
+        "Nam Châm Mèo",
+        "All the cats came to me. Im the chosen one 😌🐈",
+        "Tất cả mèo đều đến với tôi. Tôi là người được chọn 😌🐈",
+        "Portrait of {subject} woman surrounded by multiple cats at cafe, cats cuddling her, cat magnet energy, cozy wholesome"
+      ],
+      [
+        "Paw Shake",
+        "Bắt Tay Chân",
+        "This one shook my hand. We are bonded for life now 🤝🐱",
+        "Con này bắt tay tôi. Chúng tôi kết nghĩa rồi 🤝🐱",
+        "Portrait of {subject} woman shaking paw with cat, funny cute interaction, sweet bonding moment at cat cafe"
+      ],
+      [
+        "Nap Buddy",
+        "Bạn Ngủ",
+        "Cat fell asleep on my lap. I live here now. No choice 😴🐱",
+        "Mèo ngủ trên đùi. Tôi sống ở đây luôn. Không lựa chọn 😴🐱",
+        "Portrait of {subject} woman with cat sleeping on her lap at cafe, cant move, happy prisoner, peaceful cozy moment"
+      ],
+      [
+        "Come Back Soon",
+        "Sẽ Quay Lại",
+        "Goodbye babies. See you next week. Or tomorrow 🥺👋",
+        "Tạm biệt các bé. Hẹn tuần sau. Hoặc ngày mai 🥺👋",
+        "Portrait of {subject} woman saying goodbye to cats at cafe door, looking back, already planning return, bittersweet farewell"
+      ]
+    ]
+  },
+  {
+    "slug": "pet_halloween",
+    "title": [
+      "Pet Halloween",
+      "Halloween Thú Cưng"
+    ],
+    "desc": [
+      "Trick or treat with my furry bestie",
+      "Trick or treat với bestie lông xù"
+    ],
+    "cat": "pet",
+    "type": "flex",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Fun festive photography",
+    "gs": 7.5,
+    "tags": [
+      "halloween",
+      "pet-costume",
+      "festive",
+      "funny",
+      "cute",
+      "seasonal"
+    ],
+    "chs": [
+      [
+        "Costume Try",
+        "Thử Đồ",
+        "Trying on costumes. The DRAMA of getting dressed 🎃😂",
+        "Thử đồ hoá trang. DRAMA của việc mặc đồ 🎃😂",
+        "Portrait of {subject} person trying halloween costume on reluctant pet, funny struggle, pet looking confused, costume fitting drama"
+      ],
+      [
+        "Final Look",
+        "Bộ Final",
+        "The perfect costume chosen! We match and we slay 👻🐶",
+        "Bộ hoàn hảo đã chọn! Đồ đôi slay lắm 👻🐶",
+        "Portrait of {subject} person and pet in matching halloween costumes, proud moment, cute and spooky, photo ready"
+      ],
+      [
+        "Trick or Treat",
+        "Trick or Treat",
+        "Going door to door with the cutest trick or treater 🍬🐾",
+        "Đi gõ cửa với trick or treater dễ thương nhất 🍬🐾",
+        "Portrait of {subject} person trick or treating with costumed pet, neighborhood decorated for halloween, fun festive evening"
+      ],
+      [
+        "Treat Haul",
+        "Thu Hoạch",
+        "Pet treats collected! The neighbors loved us 🍪🎃",
+        "Thu hoạch treats! Hàng xóm yêu chúng tôi lắm 🍪🎃",
+        "Portrait of {subject} person showing off pet treat haul, pet excited about treats, halloween decorations, successful trick or treating"
+      ],
+      [
+        "Spooky Photo",
+        "Ảnh Ma",
+        "Annual halloween photo. Nailed it this year 📸👻",
+        "Ảnh halloween hàng năm. Năm nay đỉnh 📸👻",
+        "Portrait of {subject} person and pet posing for halloween photo, spooky backdrop, pumpkins and decorations, perfect holiday photo"
+      ],
+      [
+        "Sugar Crash",
+        "Mệt Ngọt",
+        "Halloween done. Both crashed on the couch after 💀😴",
+        "Halloween xong. Cả hai gục trên sofa 💀😴",
+        "Portrait of {subject} person and pet exhausted after halloween, costumes half off, candy and treats around, tired but happy on couch"
+      ]
+    ]
+  },
+  {
+    "slug": "hiking_dog",
+    "title": [
+      "Hiking With My Dog",
+      "Leo Núi Với Cún"
+    ],
+    "desc": [
+      "Adventure buddies for life",
+      "Đồng đội phiêu lưu mãi mãi"
+    ],
+    "cat": "pet",
+    "type": "journey",
+    "gender": "all",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Outdoor adventure photography",
+    "gs": 7.5,
+    "tags": [
+      "hiking",
+      "dog",
+      "adventure",
+      "outdoor",
+      "nature",
+      "fitness"
+    ],
+    "chs": [
+      [
+        "Trailhead",
+        "Điểm Xuất Phát",
+        "Starting our adventure! The excitement is unreal 🏔️🐶",
+        "Bắt đầu cuộc phiêu lưu! Phấn khích không tả 🏔️🐶",
+        "Portrait of {subject} person with dog at hiking trailhead, backpack on, dog wearing hiking gear, mountain trail ahead, adventure begins"
+      ],
+      [
+        "Forest Trail",
+        "Đường Rừng",
+        "Through the forest we go. My dog leads the way 🌲🐕",
+        "Xuyên rừng chúng tôi đi. Cún dẫn đường 🌲🐕",
+        "Portrait of {subject} person hiking forest trail with dog leading ahead, dappled sunlight through trees, nature adventure, beautiful path"
+      ],
+      [
+        "River Stop",
+        "Dừng Ở Suối",
+        "Water break at the river. Someone is a water baby 💦🐶",
+        "Nghỉ uống nước ở suối. Ai đó mê nước lắm 💦🐶",
+        "Portrait of {subject} person and dog at mountain river, dog playing in water, scenic rest stop, refreshing nature moment"
+      ],
+      [
+        "The Climb",
+        "Leo Lên",
+        "Steep part! My dog is faster than me obviously 🧗🐕",
+        "Đoạn dốc! Cún nhanh hơn tôi đương nhiên 🧗🐕",
+        "Portrait of {subject} person climbing steep trail with athletic dog, challenging terrain, determination, team effort hiking"
+      ],
+      [
+        "Summit View",
+        "Đỉnh Núi",
+        "We made it! The view from the top is INSANE 🏔️✨",
+        "Chúng tôi làm được! View từ đỉnh ĐIÊN 🏔️✨",
+        "Portrait of {subject} person and dog at mountain summit, panoramic view, accomplishment, breathtaking landscape, victorious pose"
+      ],
+      [
+        "Sunset Descent",
+        "Xuống Núi Hoàng Hôn",
+        "Heading home as the sun sets. Perfect adventure day 🌅🐶",
+        "Về nhà khi mặt trời lặn. Ngày phiêu lưu hoàn hảo 🌅🐶",
+        "Portrait of {subject} person walking down mountain trail with dog at sunset, golden light, silhouette, peaceful end to adventure"
+      ],
+      [
+        "Car Snuggles",
+        "Ôm Trên Xe",
+        "Both exhausted. Best adventure buddy I could ask for 🚗💕",
+        "Cả hai kiệt sức. Bạn phiêu lưu tốt nhất 🚗💕",
+        "Portrait of {subject} person and tired dog in car after hike, dog sleeping on person, exhausted happy, adventure complete"
+      ]
+    ]
+  },
+  {
+    "slug": "villain_arc",
+    "title": [
+      "Villain Arc",
+      "Villain Arc"
+    ],
+    "desc": [
+      "Enough being nice. Its my villain era now",
+      "Hết tốt rồi. Giờ là villain era"
+    ],
+    "cat": "emotion",
+    "type": "story",
+    "gender": "all",
+    "dur": "once",
+    "badge": "HOT",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Dark cinematic photography, dramatic lighting",
+    "gs": 8,
+    "tags": [
+      "villain-arc",
+      "dark",
+      "revenge",
+      "glow-up",
+      "trending",
+      "attitude"
+    ],
+    "chs": [
+      [
+        "The Betrayal",
+        "Bị Phản Bội",
+        "They thought I wouldnt bounce back. Wrong move 🖤💀",
+        "Họ tưởng tôi không quay lại. Sai rồi 🖤💀",
+        "Portrait of {subject} in dark moody setting, looking back with cold expression, dramatic shadows, cinematic betrayal scene, villain origin story"
+      ],
+      [
+        "Cold Silence",
+        "Im Lặng Lạnh",
+        "Silence is the loudest revenge. Let them wonder 🤫🖤",
+        "Im lặng là trả thù to nhất. Để họ tự hỏi 🤫🖤",
+        "Portrait of {subject} in all black outfit, cold expression, looking away, dark aesthetic, mysterious powerful aura, unbothered energy"
+      ],
+      [
+        "Level Up",
+        "Lên Level",
+        "Working on myself in silence. The results will be LOUD 💪🔥",
+        "Tự nâng cấp trong im lặng. Kết quả sẽ RẤT TO 💪🔥",
+        "Portrait of {subject} in dramatic gym or workspace, focused intense expression, dark lighting, self-improvement montage, grinding in silence"
+      ],
+      [
+        "New Look",
+        "Diện Mạo Mới",
+        "New hair, new attitude, new me. They wont recognize me 💇‍♀️✨",
+        "Tóc mới, thái độ mới, tôi mới. Họ sẽ không nhận ra 💇‍♀️✨",
+        "Portrait of {subject} with dramatic new look, confident stance, dark luxury aesthetic, transformation complete, powerful makeover"
+      ],
+      [
+        "Showing Up",
+        "Xuất Hiện",
+        "Showed up where they didnt expect me. Jaws DROPPED 😏💀",
+        "Xuất hiện nơi họ không ngờ. Hàm rơi 😏💀",
+        "Portrait of {subject} making dramatic entrance, all eyes watching, dark glamorous outfit, power walk, confident villain arrival"
+      ],
+      [
+        "No Looking Back",
+        "Không Ngoái Lại",
+        "Villains dont look at explosions. And they dont look back 🚶‍♂️💥",
+        "Villain không nhìn vụ nổ. Và không ngoái lại 🚶‍♂️💥",
+        "Portrait of {subject} walking away confidently, dramatic backlight, cinematic composition, villain arc complete, unbothered powerful"
+      ],
+      [
+        "The Throne",
+        "Ngai Vàng",
+        "Sitting on top now. The villain arc was worth it 👑🖤",
+        "Ngồi trên đỉnh rồi. Villain arc xứng đáng 👑🖤",
+        "Portrait of {subject} sitting in throne-like chair, dark luxury setting, crown energy, victory pose, villain arc complete success"
+      ]
+    ]
+  },
+  {
+    "slug": "main_character",
+    "title": [
+      "Main Character Day",
+      "Ngày Nhân Vật Chính"
+    ],
+    "desc": [
+      "Today the world revolves around ME",
+      "Hôm nay thế giới xoay quanh TÔI"
+    ],
+    "cat": "emotion",
+    "type": "story",
+    "gender": "all",
+    "dur": "once",
+    "badge": "HOT",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Cinematic lifestyle photography with golden light",
+    "gs": 7.5,
+    "tags": [
+      "main-character",
+      "confidence",
+      "aesthetic",
+      "trending",
+      "self-love",
+      "cinematic"
+    ],
+    "chs": [
+      [
+        "Morning Scene",
+        "Cảnh Sáng",
+        "Woke up and chose main character energy ☀️✨",
+        "Thức dậy và chọn năng lượng nhân vật chính ☀️✨",
+        "Portrait of {subject} waking up in beautiful morning light, stretching gracefully, cinematic golden hour, main character morning scene"
+      ],
+      [
+        "Coffee Scene",
+        "Cảnh Cà Phê",
+        "Even my coffee looks cinematic today ☕🎬",
+        "Cà phê hôm nay cũng cinematic ☕🎬",
+        "Portrait of {subject} at cafe with perfect lighting, cinematic framing, main character coffee moment, aesthetic lifestyle"
+      ],
+      [
+        "Walking Scene",
+        "Cảnh Đi Bộ",
+        "Walking like the whole city is my movie set 🚶‍♀️🎵",
+        "Đi bộ như cả thành phố là phim trường 🚶‍♀️🎵",
+        "Portrait of {subject} walking down city street, cinematic slow-motion feel, headphones on, main character walk, golden hour light"
+      ],
+      [
+        "Plot Twist",
+        "Bước Ngoặt",
+        "Plot twist: I looked even better than expected today 😌💕",
+        "Bước ngoặt: Tôi đẹp hơn dự kiến hôm nay 😌💕",
+        "Portrait of {subject} checking reflection, looking amazing, confident smile, cinematic mirror moment, peak main character energy"
+      ],
+      [
+        "Sunset Scene",
+        "Cảnh Hoàng Hôn",
+        "The sunset was literally made for my aesthetic today 🌅✨",
+        "Hoàng hôn hôm nay sinh ra cho aesthetic của tôi 🌅✨",
+        "Portrait of {subject} silhouetted against beautiful sunset, cinematic composition, main character golden hour, breathtaking backdrop"
+      ],
+      [
+        "Credits Roll",
+        "Phim Hết",
+        "And thats a wrap on the best episode yet. See you tomorrow 🎬👑",
+        "Và đó là hết tập hay nhất. Hẹn mai 🎬👑",
+        "Portrait of {subject} looking at camera with confident smile, warm evening light, end credits energy, main character day complete"
+      ],
+      [
+        "After Credits",
+        "Sau Credits",
+        "Post-credits scene: Im doing this again tomorrow 😏🎬",
+        "Cảnh post-credits: Mai tôi làm lại 😏🎬",
+        "Portrait of {subject} walking into the night, city lights, mysterious smile, sequel energy, tomorrow will be even better"
+      ]
+    ]
+  },
+  {
+    "slug": "healing_era",
+    "title": [
+      "Healing Era",
+      "Thời Kỳ Chữa Lành"
+    ],
+    "desc": [
+      "Taking my time to heal and grow",
+      "Dành thời gian chữa lành và phát triển"
+    ],
+    "cat": "emotion",
+    "type": "journey",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Soft warm photography, gentle tones",
+    "gs": 7,
+    "tags": [
+      "healing",
+      "self-care",
+      "growth",
+      "mental-health",
+      "peace",
+      "journey"
+    ],
+    "chs": [
+      [
+        "Let Go",
+        "Buông Bỏ",
+        "Learning to let go of what no longer serves me 🍃💫",
+        "Học cách buông bỏ những gì không còn phù hợp 🍃💫",
+        "Portrait of {subject} releasing paper lantern or butterfly, symbolic letting go, soft sunset light, peaceful emotional release"
+      ],
+      [
+        "Journal Time",
+        "Viết Nhật Ký",
+        "Writing down my thoughts. Healing starts with honesty ✍️🤍",
+        "Viết ra suy nghĩ. Chữa lành bắt đầu từ thành thật ✍️🤍",
+        "Portrait of {subject} writing in journal at peaceful spot, warm light, introspective moment, healing through writing, cozy atmosphere"
+      ],
+      [
+        "Nature Walk",
+        "Đi Dạo Thiên Nhiên",
+        "Nature heals what medicine cant. Fresh air, clear mind 🌿🧘",
+        "Thiên nhiên chữa lành điều thuốc không thể. Không khí trong, tâm sáng 🌿🧘",
+        "Portrait of {subject} walking alone in beautiful nature, peaceful expression, healing through nature, serene forest or garden path"
+      ],
+      [
+        "Tea & Peace",
+        "Trà & Bình Yên",
+        "A warm cup and a quiet moment. This is enough ☕🤍",
+        "Một cốc ấm và khoảnh khắc yên. Thế là đủ ☕🤍",
+        "Portrait of {subject} holding warm cup of tea, window light, peaceful contemplation, simple healing moment, cozy quiet space"
+      ],
+      [
+        "Sunrise New",
+        "Bình Minh Mới",
+        "Every sunrise is a chance to start fresh. Im taking it 🌅💪",
+        "Mỗi bình minh là cơ hội bắt đầu lại. Tôi nhận lấy 🌅💪",
+        "Portrait of {subject} watching sunrise with hopeful expression, new beginning energy, golden light, fresh start motivation"
+      ],
+      [
+        "Self Hug",
+        "Tự Ôm",
+        "Learning to be my own comfort. Im proud of how far Ive come 🤗❤️",
+        "Học cách tự an ủi. Tôi tự hào về đoạn đường đã qua 🤗❤️",
+        "Portrait of {subject} hugging self with gentle smile, warm light, self-love moment, healing progress, inner peace achieved"
+      ],
+      [
+        "Bloom Again",
+        "Nở Lại",
+        "I am blooming again. Stronger and more beautiful than before 🌸✨",
+        "Tôi nở rộ trở lại. Mạnh mẽ và đẹp hơn trước 🌸✨",
+        "Portrait of {subject} surrounded by blooming flowers, radiant smile, transformation complete, healed and glowing, spring renewal energy"
+      ],
+      [
+        "Grateful",
+        "Biết Ơn",
+        "Grateful for the pain that taught me and the peace I found 🙏💕",
+        "Biết ơn nỗi đau đã dạy tôi và sự bình yên tôi tìm được 🙏💕",
+        "Portrait of {subject} in golden hour light, grateful peaceful expression, looking at horizon, healed whole person, beautiful ending"
+      ]
+    ]
+  },
+  {
+    "slug": "comeback_season",
+    "title": [
+      "Comeback Season",
+      "Mùa Comeback"
+    ],
+    "desc": [
+      "They counted me out. Watch this",
+      "Họ bỏ tôi ra ngoài. Xem đây"
+    ],
+    "cat": "emotion",
+    "type": "story",
+    "gender": "all",
+    "dur": "once",
+    "badge": "NEW",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Bold dramatic photography",
+    "gs": 8,
+    "tags": [
+      "comeback",
+      "motivation",
+      "glow-up",
+      "success",
+      "revenge",
+      "boss"
+    ],
+    "chs": [
+      [
+        "Rock Bottom",
+        "Đáy",
+        "Started from the bottom. Like actual bottom 📉😤",
+        "Bắt đầu từ đáy. Đáy thật sự 📉😤",
+        "Portrait of {subject} in humble starting position, determined expression, looking up, underdog energy, the beginning of comeback"
+      ],
+      [
+        "Grind Mode",
+        "Chế Độ Cày",
+        "No one saw me grinding at 4am. They only see the results 💪🌙",
+        "Không ai thấy tôi cày lúc 4h sáng. Họ chỉ thấy kết quả 💪🌙",
+        "Portrait of {subject} working hard late at night, dedicated focused expression, dim lighting, hustle mode, unseen effort"
+      ],
+      [
+        "Small Wins",
+        "Chiến Thắng Nhỏ",
+        "Every small win matters. Stacking them up one by one 📊✊",
+        "Mỗi chiến thắng nhỏ đều quan trọng. Xếp chồng lên từng cái 📊✊",
+        "Portrait of {subject} celebrating small milestone, humble victory, progress visible, building momentum, step by step success"
+      ],
+      [
+        "Transformation",
+        "Biến Đổi",
+        "The transformation is hitting different. Even I am impressed 😤🔥",
+        "Sự biến đổi khác biệt quá. Tôi cũng tự ấn tượng 😤🔥",
+        "Portrait of {subject} showing dramatic physical or style transformation, before vs after energy, impressive change, powerful glow up"
+      ],
+      [
+        "They See Now",
+        "Họ Thấy Rồi",
+        "Now they all want to be my friend. Funny how that works 😏👀",
+        "Giờ ai cũng muốn làm bạn tôi. Buồn cười thật 😏👀",
+        "Portrait of {subject} surrounded by admirers, confident expression, social success, people noticing the change, popular comeback"
+      ],
+      [
+        "On Top",
+        "Trên Đỉnh",
+        "Comeback complete. And Im just getting started 👑🔥",
+        "Comeback hoàn tất. Và tôi mới chỉ bắt đầu 👑🔥",
+        "Portrait of {subject} at peak success, powerful pose, dramatic backdrop, victory achieved, king/queen energy, unstoppable"
+      ],
+      [
+        "Thank You Next",
+        "Cảm Ơn Tiếp",
+        "To everyone who doubted me: thank you for the motivation 😘✌️",
+        "Với ai đã nghi ngờ tôi: cảm ơn vì động lực 😘✌️",
+        "Portrait of {subject} waving goodbye to the past, walking forward confidently, thank you next energy, unbothered successful"
+      ]
+    ]
+  },
+  {
+    "slug": "sad_girl_autumn",
+    "title": [
+      "Sad Girl Autumn",
+      "Thu Buồn"
+    ],
+    "desc": [
+      "Embracing the melancholy aesthetic",
+      "Ôm lấy aesthetic u buồn"
+    ],
+    "cat": "emotion",
+    "type": "aesthetic",
+    "gender": "female",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Moody autumn photography, warm muted tones",
+    "gs": 7,
+    "tags": [
+      "sad-girl",
+      "autumn",
+      "melancholy",
+      "aesthetic",
+      "moody",
+      "vibes"
+    ],
+    "chs": [
+      [
+        "Rainy Window",
+        "Cửa Sổ Mưa",
+        "Watching the rain and feeling everything at once 🌧️💭",
+        "Ngắm mưa và cảm nhận mọi thứ cùng lúc 🌧️💭",
+        "Portrait of {subject} woman looking out rainy window, melancholic beautiful expression, autumn colors outside, sad girl aesthetic"
+      ],
+      [
+        "Coffee Alone",
+        "Cà Phê Một Mình",
+        "Table for one. Sometimes solitude is the best company ☕🍂",
+        "Bàn cho một. Đôi khi cô đơn là bạn tốt nhất ☕🍂",
+        "Portrait of {subject} woman sitting alone at cafe, autumn scene outside, warm drink, thoughtful expression, beautiful loneliness"
+      ],
+      [
+        "Falling Leaves",
+        "Lá Rơi",
+        "Walking through falling leaves like a music video 🍁🎵",
+        "Đi giữa lá rơi như MV 🍁🎵",
+        "Portrait of {subject} woman walking through autumn leaves, scarf and coat, golden fallen leaves, cinematic melancholy, beautiful sad"
+      ],
+      [
+        "Old Photos",
+        "Ảnh Cũ",
+        "Looking at old photos hits different in autumn 📸💔",
+        "Xem ảnh cũ vào mùa thu khác biệt lắm 📸💔",
+        "Portrait of {subject} woman looking at photos on phone, bittersweet expression, cozy autumn setting, nostalgic memories"
+      ],
+      [
+        "Sunset Tears",
+        "Nước Mắt Hoàng Hôn",
+        "Its okay to feel sad. The sunset understands 🌅😢",
+        "Buồn cũng được. Hoàng hôn hiểu mà 🌅😢",
+        "Portrait of {subject} woman at autumn sunset, tears glistening, beautiful emotional moment, raw vulnerability, golden hour sadness"
+      ],
+      [
+        "Cozy Healing",
+        "Ấm Áp Chữa Lành",
+        "Wrapped in blankets and feelings. Tomorrow will be better 🧣🤍",
+        "Quấn trong chăn và cảm xúc. Ngày mai sẽ tốt hơn 🧣🤍",
+        "Portrait of {subject} woman wrapped in cozy blanket with warm drink, evening light, gentle smile through sadness, healing comfort"
+      ],
+      [
+        "Autumn Smile",
+        "Nụ Cười Thu",
+        "Found my smile again. Sadness made me stronger 🍂😊",
+        "Tìm lại nụ cười. Nỗi buồn làm tôi mạnh hơn 🍂😊",
+        "Portrait of {subject} woman with genuine gentle smile in autumn setting, acceptance and peace, beautiful autumn portrait, growth"
+      ]
+    ]
+  },
+  {
+    "slug": "happy_summer",
+    "title": [
+      "Happy Girl Summer",
+      "Hè Vui"
+    ],
+    "desc": [
+      "Sun kissed and living my best life",
+      "Nắng hôn và sống đời đẹp nhất"
+    ],
+    "cat": "emotion",
+    "type": "vlog",
+    "gender": "female",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Bright sunny summer photography",
+    "gs": 7,
+    "tags": [
+      "happy",
+      "summer",
+      "joy",
+      "beach",
+      "sunshine",
+      "good-vibes"
+    ],
+    "chs": [
+      [
+        "Sunshine Wake",
+        "Nắng Thức",
+        "Summer mornings hit different. Vitamin D loading ☀️😊",
+        "Sáng hè khác biệt lắm. Nạp vitamin D ☀️😊",
+        "Portrait of {subject} woman stretching in summer morning sunlight, happy bright expression, warm golden light, summer energy"
+      ],
+      [
+        "Beach Day",
+        "Ngày Biển",
+        "Ocean breeze and zero worries. This is happiness 🏖️💕",
+        "Gió biển và zero lo lắng. Đây là hạnh phúc 🏖️💕",
+        "Portrait of {subject} woman at beautiful beach, sun-kissed skin, happy carefree expression, turquoise water, summer paradise"
+      ],
+      [
+        "Ice Cream",
+        "Kem",
+        "Summer calories dont count. Everyone knows this 🍦😋",
+        "Calo mùa hè không tính. Ai cũng biết 🍦😋",
+        "Portrait of {subject} woman eating colorful ice cream, bright summer backdrop, fun happy moment, carefree summer vibes"
+      ],
+      [
+        "Pool Float",
+        "Phao Bể Bơi",
+        "Living my best float life. Do not disturb 🏊‍♀️✨",
+        "Sống đời phao tốt nhất. Đừng làm phiền 🏊‍♀️✨",
+        "Portrait of {subject} woman on colorful pool float, sunglasses, relaxed happy, bright blue water, summer luxury, carefree"
+      ],
+      [
+        "Summer Friends",
+        "Bạn Hè",
+        "Summer friends are the best friends. Energy is contagious ☀️👯",
+        "Bạn hè là bạn tốt nhất. Năng lượng lây lan ☀️👯",
+        "Portrait of {subject} woman laughing with friends in summer setting, group joy, bright sunny day, infectious happiness"
+      ],
+      [
+        "Golden Hour",
+        "Giờ Vàng",
+        "Golden hour in summer is unmatched. I am glowing 🌅✨",
+        "Golden hour mùa hè không gì bằng. Tôi đang toả sáng 🌅✨",
+        "Portrait of {subject} woman in summer golden hour, glowing sun-kissed skin, genuine happy smile, warm light, peak summer beauty"
+      ],
+      [
+        "Summer Nights",
+        "Đêm Hè",
+        "Summer nights with good music and great vibes 🌙🎵",
+        "Đêm hè với nhạc hay và vibes tốt 🌙🎵",
+        "Portrait of {subject} woman enjoying summer night, string lights, warm evening, content happy expression, perfect summer night"
+      ]
+    ]
+  },
+  {
+    "slug": "moving_on",
+    "title": [
+      "Moving On",
+      "Bước Tiếp"
+    ],
+    "desc": [
+      "Closing this chapter. Opening a better one",
+      "Đóng chương này. Mở chương đẹp hơn"
+    ],
+    "cat": "emotion",
+    "type": "journey",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Emotional cinematic photography",
+    "gs": 7.5,
+    "tags": [
+      "moving-on",
+      "breakup",
+      "growth",
+      "new-chapter",
+      "strength",
+      "healing"
+    ],
+    "chs": [
+      [
+        "Last Look",
+        "Nhìn Lần Cuối",
+        "One last look back. Then Im gone for good 👋💔",
+        "Nhìn lại lần cuối. Rồi tôi đi luôn 👋💔",
+        "Portrait of {subject} looking back one last time, emotional but determined, closing chapter, bittersweet farewell moment"
+      ],
+      [
+        "Delete & Move",
+        "Xoá & Đi",
+        "Deleted the photos. Deleted the number. Moving forward only ⏩🗑️",
+        "Xoá ảnh. Xoá số. Chỉ tiến về phía trước ⏩🗑️",
+        "Portrait of {subject} looking at phone with determined expression, deleting digital memories, clean break, moving forward decision"
+      ],
+      [
+        "Solo Date",
+        "Hẹn Hò Solo",
+        "Taking myself on a date. I deserve flowers too 🌹😌",
+        "Tự đi hẹn hò. Tôi cũng xứng đáng hoa 🌹😌",
+        "Portrait of {subject} on solo date at nice restaurant, self-love moment, flowers on table, confident independent, treating self well"
+      ],
+      [
+        "New City",
+        "Thành Phố Mới",
+        "New city, new energy. Nobody knows my old story here 🌆✨",
+        "Thành phố mới, năng lượng mới. Không ai biết chuyện cũ ở đây 🌆✨",
+        "Portrait of {subject} exploring new city, fresh start energy, excited hopeful expression, new surroundings, adventure awaits"
+      ],
+      [
+        "Stronger Now",
+        "Mạnh Hơn Rồi",
+        "I barely think about it anymore. Growth looks good on me 💪🦋",
+        "Tôi gần như không nghĩ về nó nữa. Trưởng thành hợp tôi 💪🦋",
+        "Portrait of {subject} looking confident and healthy, genuine smile, glowing from within, personal growth visible, strength and beauty"
+      ],
+      [
+        "No Regrets",
+        "Không Hối Tiếc",
+        "No regrets. Everything led me to who I am now 🙏✨",
+        "Không hối tiếc. Mọi thứ dẫn tôi đến hiện tại 🙏✨",
+        "Portrait of {subject} at peace in beautiful setting, acceptance and gratitude, no regrets expression, serene powerful moment"
+      ],
+      [
+        "Best Version",
+        "Phiên Bản Đẹp Nhất",
+        "Plot twist: the best version of me didnt need them 😏👑",
+        "Plot twist: phiên bản đẹp nhất không cần họ 😏👑",
+        "Portrait of {subject} in peak form, confident stylish, living best life, the best version unlocked, independent and thriving"
+      ],
+      [
+        "Open Heart",
+        "Trái Tim Mở",
+        "Heart open again. But this time, I choose wisely ❤️🔓",
+        "Tim mở lại. Nhưng lần này, tôi chọn khôn 🔓",
+        "Portrait of {subject} looking forward with hope, gentle smile, heart open but wise, ready for new love, beautiful peaceful ending"
+      ]
+    ]
+  },
+  {
+    "slug": "self_love",
+    "title": [
+      "Self Love Journey",
+      "Hành Trình Yêu Bản Thân"
+    ],
+    "desc": [
+      "The most important relationship is with myself",
+      "Mối quan hệ quan trọng nhất là với chính mình"
+    ],
+    "cat": "emotion",
+    "type": "journey",
+    "gender": "all",
+    "dur": "many",
+    "badge": null,
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Warm empowering photography",
+    "gs": 7,
+    "tags": [
+      "self-love",
+      "empowerment",
+      "growth",
+      "confidence",
+      "mental-health",
+      "self-care"
+    ],
+    "chs": [
+      [
+        "Mirror Talk",
+        "Nói Với Gương",
+        "You are enough. Repeating until I believe it 🪞💕",
+        "Bạn là đủ rồi. Lặp lại cho đến khi tin 🪞💕",
+        "Portrait of {subject} looking at self in mirror with kindness, positive affirmation moment, warm lighting, self-love practice"
+      ],
+      [
+        "Boundaries",
+        "Ranh Giới",
+        "Setting boundaries is not selfish. Its self-respect ✋🤍",
+        "Đặt ranh giới không ích kỷ. Đó là tự trọng ✋🤍",
+        "Portrait of {subject} in peaceful space, strong confident posture, establishing boundaries, self-respect energy, empowered"
+      ],
+      [
+        "Solo Adventure",
+        "Phiêu Lưu Solo",
+        "Took myself on an adventure. Best company: me 🗺️😊",
+        "Tự mình đi phiêu lưu. Bạn đồng hành tốt nhất: tôi 🗺️😊",
+        "Portrait of {subject} on solo adventure, happy independent, exploring beautiful place alone, self-sufficient and content"
+      ],
+      [
+        "Treat Yourself",
+        "Chiều Bản Thân",
+        "I dont need a reason to treat myself. I am the reason 💅✨",
+        "Không cần lý do chiều bản thân. Tôi LÀ lý do 💅✨",
+        "Portrait of {subject} treating self to something nice, shopping or spa, self-indulgent smile, deserving luxury, self-love spending"
+      ],
+      [
+        "Dance Alone",
+        "Nhảy Một Mình",
+        "Dancing in my room because I can and Im amazing 💃🎵",
+        "Nhảy trong phòng vì tôi có thể và tôi tuyệt vời 💃🎵",
+        "Portrait of {subject} dancing alone in room, carefree joyful, music playing, self-expression, pure happiness alone"
+      ],
+      [
+        "Body Love",
+        "Yêu Cơ Thể",
+        "This body carried me through everything. Time to love it back 🤗💪",
+        "Cơ thể này đã mang tôi qua mọi thứ. Đến lúc yêu nó lại 🤗💪",
+        "Portrait of {subject} appreciating their body, confident comfortable pose, self-acceptance, body positivity, warm empowering light"
+      ],
+      [
+        "Crown Energy",
+        "Năng Lượng Vương Miện",
+        "Fixed my own crown. Nobody else needs to touch it 👑💕",
+        "Tự chỉnh vương miện. Không cần ai khác 👑💕",
+        "Portrait of {subject} with crown energy, confident beautiful, self-assured expression, independent powerful, queen/king of own life"
+      ],
+      [
+        "Full Cup",
+        "Cốc Đầy",
+        "My cup is full. Now I can pour into others from overflow 🫗❤️",
+        "Cốc tôi đầy. Giờ tôi có thể cho người khác từ phần tràn 🫗❤️",
+        "Portrait of {subject} radiating confidence and warmth, helping others, overflow of self-love, generous beautiful spirit, wholeness"
+      ]
+    ]
+  },
+  {
+    "slug": "introvert_recharge",
+    "title": [
+      "Introvert Recharge",
+      "Nạp Năng Introvert"
+    ],
+    "desc": [
+      "My social battery is at 1%. Recharging",
+      "Pin xã giao còn 1%. Đang nạp"
+    ],
+    "cat": "emotion",
+    "type": "vlog",
+    "gender": "all",
+    "dur": "moment",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Cozy indoor photography, warm lighting",
+    "gs": 7,
+    "tags": [
+      "introvert",
+      "recharge",
+      "cozy",
+      "alone-time",
+      "self-care",
+      "home"
+    ],
+    "chs": [
+      [
+        "Cancel Plans",
+        "Huỷ Kế Hoạch",
+        "Sorry cant make it. My bed needs me more 🛏️😌",
+        "Sorry không đi được. Giường cần tôi hơn 🛏️😌",
+        "Portrait of {subject} in comfortable pajamas, cancelling plans on phone, relieved expression, cozy home setting, introvert moment"
+      ],
+      [
+        "Book & Tea",
+        "Sách & Trà",
+        "A good book and warm tea. Peak introvert happiness 📚☕",
+        "Sách hay và trà ấm. Đỉnh cao hạnh phúc introvert 📚☕",
+        "Portrait of {subject} reading book with warm tea, cozy corner, warm lighting, blanket, peaceful solitude, introvert paradise"
+      ],
+      [
+        "Bath Time",
+        "Giờ Tắm",
+        "A 2-hour bath because I have nowhere to be 🛁✨",
+        "Tắm 2 tiếng vì tôi không cần đi đâu 🛁✨",
+        "Portrait of {subject} enjoying luxurious bath, candles, bubbles, relaxed expression, self-care ritual, no rush anywhere"
+      ],
+      [
+        "Cook Solo",
+        "Nấu Solo",
+        "Cooking for one is an art form. Chef mode for me 🍳🎨",
+        "Nấu cho một người là nghệ thuật. Mode đầu bếp cho tôi 🍳🎨",
+        "Portrait of {subject} cooking elaborate meal for one, focused happy, cozy kitchen, self-sufficient, introvert dinner preparation"
+      ],
+      [
+        "Movie Marathon",
+        "Marathon Phim",
+        "Nobody to argue about what to watch. Bliss 🎬🍿",
+        "Không ai cãi xem gì. Thiên đường 🎬🍿",
+        "Portrait of {subject} on couch with snacks and blankets, movie marathon setup, cozy dark room, perfect solo movie night"
+      ],
+      [
+        "Recharge Complete",
+        "Nạp Xong",
+        "Social battery at 100%. Ready to cancel plans again tomorrow 🔋😂",
+        "Pin xã giao 100%. Sẵn sàng huỷ kế hoạch lại ngày mai 🔋😂",
+        "Portrait of {subject} looking refreshed and recharged, morning light, renewed energy, content smile, ready for another day"
+      ]
+    ]
+  },
+  {
+    "slug": "chaotic_energy",
+    "title": [
+      "Chaotic Energy",
+      "Năng Lượng Hỗn Loạn"
+    ],
+    "desc": [
+      "Unhinged and thriving. Chaos is my comfort zone",
+      "Mất kiểm soát và phát triển. Hỗn loạn là vùng an toàn"
+    ],
+    "cat": "emotion",
+    "type": "story",
+    "gender": "all",
+    "dur": "moment",
+    "badge": "NEW",
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Dynamic colorful photography with motion blur",
+    "gs": 7.5,
+    "tags": [
+      "chaotic",
+      "unhinged",
+      "funny",
+      "energy",
+      "gen-z",
+      "spontaneous"
+    ],
+    "chs": [
+      [
+        "3AM Decision",
+        "Quyết Định 3H Sáng",
+        "3am me just booked a flight to somewhere. Sober 🛫😂",
+        "Tôi lúc 3h sáng vừa book vé máy bay. Tỉnh táo 🛫😂",
+        "Portrait of {subject} at 3am with laptop, excited unhinged expression, spontaneous decision, impulsive booking, chaotic good energy"
+      ],
+      [
+        "Hair Change",
+        "Đổi Tóc",
+        "Changed my hair color because a TikTok told me to 💇‍♀️🎨",
+        "Đổi màu tóc vì TikTok bảo 💇‍♀️🎨",
+        "Portrait of {subject} with dramatic new hair color, surprised but happy expression, impulsive makeover, bold chaotic choice"
+      ],
+      [
+        "Cart Full",
+        "Giỏ Hàng Đầy",
+        "Online shopping at 2am hits different. My wallet is crying 🛒💸",
+        "Shopping online lúc 2h sáng khác biệt lắm. Ví khóc 🛒💸",
+        "Portrait of {subject} surrounded by delivery packages, chaotic shopping haul, overwhelmed but excited, impulsive spending"
+      ],
+      [
+        "New Hobby",
+        "Sở Thích Mới",
+        "Started a new hobby today. Will abandon it by Thursday 🎸📉",
+        "Bắt đầu sở thích mới hôm nay. Sẽ bỏ trước thứ năm 🎸📉",
+        "Portrait of {subject} trying new random hobby enthusiastically, beginner energy, chaotic enthusiasm, short-lived passion"
+      ],
+      [
+        "Main Event",
+        "Sự Kiện Chính",
+        "Showed up overdressed and I regret nothing 👗💅",
+        "Ăn diện quá mức và tôi không hối tiếc 👗💅",
+        "Portrait of {subject} overdressed at casual event, standing out confidently, no regrets, chaotic fashion choice, owning it"
+      ],
+      [
+        "No Regrets",
+        "Không Hối Tiếc",
+        "Chaos brought me here and honestly? Its great 🎪✨",
+        "Hỗn loạn đưa tôi đến đây và thật sự? Tuyệt lắm 🎪✨",
+        "Portrait of {subject} in unexpectedly amazing situation, chaotic good outcome, laughing at life, spontaneous adventure, no regrets"
+      ]
+    ]
+  },
+  {
+    "slug": "soft_life",
+    "title": [
+      "Soft Life Era",
+      "Thời Kỳ Sống Nhẹ"
+    ],
+    "desc": [
+      "Choosing peace and luxury. No more struggle",
+      "Chọn bình yên và sang trọng. Hết cực khổ rồi"
+    ],
+    "cat": "emotion",
+    "type": "aesthetic",
+    "gender": "female",
+    "dur": "once",
+    "badge": null,
+    "premium": false,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Soft luxury photography, ethereal lighting",
+    "gs": 7,
+    "tags": [
+      "soft-life",
+      "luxury",
+      "peace",
+      "self-care",
+      "aesthetic",
+      "gentle"
+    ],
+    "chs": [
+      [
+        "Morning Glow",
+        "Sáng Toả Sáng",
+        "Woke up naturally. No alarm. Just peace ☀️🤍",
+        "Thức dậy tự nhiên. Không báo thức. Chỉ bình yên ☀️🤍",
+        "Portrait of {subject} woman waking up naturally in luxurious bed, soft morning light, peaceful expression, no alarm, soft life morning"
+      ],
+      [
+        "Slow Breakfast",
+        "Sáng Chậm",
+        "Taking my time with breakfast. No rush, no stress 🥐☕",
+        "Thong thả ăn sáng. Không vội, không stress 🥐☕",
+        "Portrait of {subject} woman having beautiful breakfast in bed or garden, slow morning, fresh pastries and coffee, luxury lifestyle"
+      ],
+      [
+        "Spa Afternoon",
+        "Chiều Spa",
+        "Spa is not a luxury, its a necessity for soft life 💆‍♀️✨",
+        "Spa không phải xa xỉ, là nhu cầu của soft life 💆‍♀️✨",
+        "Portrait of {subject} woman at luxury spa, serene relaxed, pampered, fluffy robe, soft life self-care, peaceful indulgence"
+      ],
+      [
+        "Garden Tea",
+        "Trà Vườn",
+        "Afternoon tea in the garden. This is what I manifested 🫖🌸",
+        "Trà chiều trong vườn. Đây là điều tôi manifested 🫖🌸",
+        "Portrait of {subject} woman having afternoon tea in beautiful garden, ethereal light, flowers, delicate teacup, soft life aesthetic"
+      ],
+      [
+        "Sunset Bath",
+        "Tắm Hoàng Hôn",
+        "Sunset bath with flowers and candles. I deserve soft things 🛁🌅",
+        "Tắm hoàng hôn với hoa và nến. Tôi xứng đáng những thứ nhẹ nhàng 🛁🌅",
+        "Portrait of {subject} woman in flower bath at sunset, candles, rose petals, golden light, soft life luxury, ethereal beauty"
+      ],
+      [
+        "Silk Pajamas",
+        "Pyjama Lụa",
+        "Silk pajamas and expensive candles. Soft life chosen 🕯️✨",
+        "Pyjama lụa và nến đắt. Chọn soft life 🕯️✨",
+        "Portrait of {subject} woman in silk pajamas, luxury bedroom, scented candles, reading, soft lighting, gentle evening routine"
+      ],
+      [
+        "Grateful Sleep",
+        "Ngủ Biết Ơn",
+        "Going to sleep grateful. Tomorrow will be just as soft 😴🤍",
+        "Đi ngủ biết ơn. Ngày mai cũng sẽ nhẹ nhàng 😴🤍",
+        "Portrait of {subject} woman falling asleep peacefully, soft pillows, serene expression, gratitude, beautiful soft life ending"
+      ]
+    ]
+  },
+  {
+    "slug": "revenge_glow",
+    "title": [
+      "Revenge Glow Up",
+      "Glow Up Trả Thù"
+    ],
+    "desc": [
+      "The best revenge is looking incredible",
+      "Trả thù tốt nhất là đẹp lên"
+    ],
+    "cat": "emotion",
+    "type": "story",
+    "gender": "all",
+    "dur": "many",
+    "badge": "HOT",
+    "premium": true,
+    "neg": "blurry, distorted face, extra limbs, bad anatomy, watermark, text, low quality",
+    "style": "Bold glamorous photography",
+    "gs": 8,
+    "tags": [
+      "revenge",
+      "glow-up",
+      "transformation",
+      "confidence",
+      "breakup",
+      "boss"
+    ],
+    "chs": [
+      [
+        "Before Era",
+        "Trước Đây",
+        "This was me before. Comfortable but complacent 📸😐",
+        "Đây là tôi trước đây. Thoải mái nhưng tự mãn 📸😐",
+        "Portrait of {subject} in casual unremarkable setting, ordinary appearance, before transformation, the starting point of glow up"
+      ],
+      [
+        "Gym Arc",
+        "Gym Arc",
+        "Started hitting the gym like it owed me money 💪🏋️",
+        "Bắt đầu tập gym như nó nợ tôi tiền 💪🏋️",
+        "Portrait of {subject} working out intensely at gym, sweating, determined fierce expression, transformation in progress, gym motivation"
+      ],
+      [
+        "Style Upgrade",
+        "Nâng Cấp Style",
+        "New wardrobe. New confidence. New everything 👔✨",
+        "Tủ đồ mới. Tự tin mới. Mới hết 👔✨",
+        "Portrait of {subject} in stunning new outfit, dramatic style upgrade, fashion transformation, confidence radiating, major upgrade"
+      ],
+      [
+        "Skin Glow",
+        "Da Toả Sáng",
+        "Skin care routine paying off. Glass skin activated 💎🧴",
+        "Skincare routine có kết quả. Glass skin activate 💎🧴",
+        "Portrait of {subject} with glowing clear skin, close-up beauty shot, skin transformation, glass skin glow, beauty upgrade"
+      ],
+      [
+        "The Reveal",
+        "Lộ Diện",
+        "First public appearance post glow-up. The reactions were PRICELESS 😏🔥",
+        "Lần đầu xuất hiện sau glow-up. Phản ứng VÔ GIÁ 😏🔥",
+        "Portrait of {subject} making stunning entrance at event, all eyes on them, dramatic reveal, jaw-dropping transformation, arrival moment"
+      ],
+      [
+        "Ex Who?",
+        "Ex Nào?",
+        "They texted. I left them on read. Growth 📱🚫",
+        "Họ nhắn tin. Tôi để seen. Trưởng thành 📱🚫",
+        "Portrait of {subject} looking at phone with dismissive confident expression, leaving on read, unbothered by ex, moved past it"
+      ],
+      [
+        "Self Made",
+        "Tự Tạo",
+        "The glow up was never for them. It was always for me 👑💕",
+        "Glow up không bao giờ vì họ. Luôn luôn vì tôi 👑💕",
+        "Portrait of {subject} in peak form, powerful beautiful, self-made glow up, confident happy, the best version, living proof"
+      ],
+      [
+        "Unbothered",
+        "Không Quan Tâm",
+        "Living my best life unbothered. The best revenge is massive success 🦋✨",
+        "Sống đời đẹp nhất không quan tâm. Trả thù tốt nhất là thành công khủng 🦋✨",
+        "Portrait of {subject} living glamorous happy life, unbothered successful, revenge glow up complete, thriving and beautiful, ultimate victory"
+      ]
+    ]
+  }
+]
