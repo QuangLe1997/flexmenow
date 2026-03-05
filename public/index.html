@@ -1,0 +1,933 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>FlexMe — Flex Yourself NOW</title>
+<meta name="description" content="FlexMe — the AI creative studio that makes you look insane. Glow up your photos, create viral art, generate story series. No cap, it's free.">
+<meta property="og:title" content="FlexMe — Flex Yourself NOW">
+<meta property="og:description" content="AI glow-ups, viral templates, cinematic stories. Your content era starts here.">
+<meta property="og:type" content="website">
+<meta property="og:url" content="https://flexme-now.web.app">
+<meta name="theme-color" content="#F59E0B">
+<link rel="icon" type="image/png" href="favicon.png">
+<style>
+@import url('https://fonts.googleapis.com/css2?family=Plus+Jakarta+Sans:wght@400;500;600;700;800&family=JetBrains+Mono:wght@400;500;600;700&display=swap');
+
+*,*::before,*::after{margin:0;padding:0;box-sizing:border-box}
+:root{
+  --bg:#09090B;--bg2:#0C0C0F;--card:#18181B;--card2:#1F1F23;
+  --brand:#F59E0B;--brand2:#FBBF24;--brand3:#D97706;
+  --text:#FAFAFA;--text2:#E4E4E7;--muted:#A1A1AA;--dim:#71717A;
+  --border:#27272A;--border2:#3F3F46;
+  --purple:#A78BFA;--green:#34D399;--rose:#FB7185;--cyan:#22D3EE;
+  --glow:rgba(245,158,11,.15);
+}
+html{scroll-behavior:smooth;font-size:16px}
+body{background:var(--bg);color:var(--text);font-family:'Plus Jakarta Sans',sans-serif;overflow-x:hidden;-webkit-font-smoothing:antialiased}
+.mono{font-family:'JetBrains Mono',monospace}
+
+::-webkit-scrollbar{width:6px}
+::-webkit-scrollbar-track{background:var(--bg)}
+::-webkit-scrollbar-thumb{background:var(--border2);border-radius:3px}
+
+/* ─── CUSTOM CURSOR TRAIL ─── */
+.cursor-dot{position:fixed;width:8px;height:8px;background:var(--brand);border-radius:50%;pointer-events:none;z-index:9999;opacity:0;transition:opacity .3s;mix-blend-mode:screen}
+.cursor-ring{position:fixed;width:36px;height:36px;border:2px solid rgba(245,158,11,.3);border-radius:50%;pointer-events:none;z-index:9998;opacity:0;transition:opacity .3s,width .2s,height .2s,border-color .2s}
+body:hover .cursor-dot,body:hover .cursor-ring{opacity:1}
+
+/* ─── MARQUEE ─── */
+.marquee-wrap{overflow:hidden;border-bottom:1px solid var(--border);background:var(--bg2);padding:10px 0;position:fixed;top:0;left:0;right:0;z-index:200}
+.marquee{display:flex;animation:marquee 25s linear infinite;white-space:nowrap;gap:48px}
+.marquee span{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dim);flex-shrink:0}
+.marquee span b{color:var(--brand)}
+@keyframes marquee{0%{transform:translateX(0)}100%{transform:translateX(-50%)}}
+
+/* ─── NAV ─── */
+nav{position:fixed;top:38px;left:0;right:0;z-index:100;padding:0 24px;transition:all .4s cubic-bezier(.22,1,.36,1)}
+nav.scrolled{background:rgba(9,9,11,.9);backdrop-filter:blur(24px);border-bottom:1px solid var(--border)}
+.nav-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;height:64px}
+.nav-logo{font-size:24px;font-weight:800;letter-spacing:-1px;text-decoration:none;color:var(--text)}
+.nav-logo span{color:var(--brand)}
+.nav-links{display:flex;align-items:center;gap:28px}
+.nav-links a{color:var(--muted);text-decoration:none;font-size:14px;font-weight:600;transition:color .2s;letter-spacing:-.2px}
+.nav-links a:hover{color:var(--text)}
+.nav-cta{background:var(--brand);color:var(--bg);padding:10px 28px;border-radius:100px;font-weight:800;font-size:13px;text-decoration:none;transition:all .3s;letter-spacing:.5px;text-transform:uppercase;animation:cta-pulse 3s ease-in-out infinite}
+.nav-cta:hover{background:var(--brand2);transform:translateY(-2px) scale(1.02);box-shadow:0 8px 30px rgba(245,158,11,.4)}
+@keyframes cta-pulse{0%,100%{box-shadow:0 0 0 0 rgba(245,158,11,.4)}50%{box-shadow:0 0 0 8px rgba(245,158,11,0)}}
+
+/* ─── HERO ─── */
+.hero{position:relative;min-height:100vh;display:flex;align-items:center;justify-content:center;overflow:hidden;padding:140px 24px 80px}
+
+.hero-bg{position:absolute;inset:0;overflow:hidden}
+.hero-bg .blob{position:absolute;border-radius:50%;filter:blur(100px);animation:float 18s infinite ease-in-out;will-change:transform}
+.hero-bg .blob:nth-child(1){width:700px;height:700px;background:radial-gradient(circle,rgba(245,158,11,.35),transparent 70%);top:-15%;left:10%;animation-delay:0s}
+.hero-bg .blob:nth-child(2){width:500px;height:500px;background:radial-gradient(circle,rgba(251,113,133,.2),transparent 70%);bottom:-5%;right:5%;animation-delay:-6s;animation-duration:22s}
+.hero-bg .blob:nth-child(3){width:450px;height:450px;background:radial-gradient(circle,rgba(167,139,250,.18),transparent 70%);top:20%;right:15%;animation-delay:-12s;animation-duration:26s}
+.hero-bg .blob:nth-child(4){width:300px;height:300px;background:radial-gradient(circle,rgba(34,211,238,.15),transparent 70%);bottom:20%;left:30%;animation-delay:-9s;animation-duration:20s}
+@keyframes float{0%,100%{transform:translate(0,0) scale(1) rotate(0deg)}33%{transform:translate(60px,-80px) scale(1.15) rotate(120deg)}66%{transform:translate(-50px,60px) scale(.85) rotate(240deg)}}
+
+.hero-grid{position:absolute;inset:0;background-image:linear-gradient(rgba(245,158,11,.04) 1px,transparent 1px),linear-gradient(90deg,rgba(245,158,11,.04) 1px,transparent 1px);background-size:48px 48px;mask-image:radial-gradient(ellipse at center,black 20%,transparent 65%);animation:grid-pulse 8s ease-in-out infinite}
+@keyframes grid-pulse{0%,100%{opacity:1}50%{opacity:.4}}
+
+/* Floating particles */
+.hero-particles{position:absolute;inset:0;overflow:hidden;pointer-events:none}
+.particle{position:absolute;width:3px;height:3px;background:var(--brand);border-radius:50%;opacity:0;animation:rise linear infinite}
+.particle:nth-child(1){left:10%;animation-duration:8s;animation-delay:0s}
+.particle:nth-child(2){left:25%;animation-duration:12s;animation-delay:-2s;width:2px;height:2px}
+.particle:nth-child(3){left:40%;animation-duration:10s;animation-delay:-4s}
+.particle:nth-child(4){left:55%;animation-duration:14s;animation-delay:-1s;width:4px;height:4px;background:var(--rose)}
+.particle:nth-child(5){left:70%;animation-duration:9s;animation-delay:-6s;width:2px;height:2px;background:var(--purple)}
+.particle:nth-child(6){left:85%;animation-duration:11s;animation-delay:-3s}
+.particle:nth-child(7){left:15%;animation-duration:13s;animation-delay:-5s;background:var(--green);width:2px;height:2px}
+.particle:nth-child(8){left:60%;animation-duration:10s;animation-delay:-7s;width:3px;height:3px}
+.particle:nth-child(9){left:35%;animation-duration:15s;animation-delay:-8s;background:var(--cyan);width:2px;height:2px}
+.particle:nth-child(10){left:80%;animation-duration:11s;animation-delay:-4s;background:var(--brand2)}
+@keyframes rise{0%{transform:translateY(100vh) scale(0);opacity:0}10%{opacity:.8}90%{opacity:.6}100%{transform:translateY(-20vh) scale(1);opacity:0}}
+
+.hero-noise{position:absolute;inset:0;opacity:.04;background:url("data:image/svg+xml,%3Csvg viewBox='0 0 256 256' xmlns='http://www.w3.org/2000/svg'%3E%3Cfilter id='n'%3E%3CfeTurbulence type='fractalNoise' baseFrequency='.85' numOctaves='4' stitchTiles='stitch'/%3E%3C/filter%3E%3Crect width='100%25' height='100%25' filter='url(%23n)'/%3E%3C/svg%3E")}
+
+.hero-content{position:relative;z-index:2;text-align:center;max-width:860px}
+
+.hero-pill{display:inline-flex;align-items:center;gap:8px;background:rgba(245,158,11,.08);border:1px solid rgba(245,158,11,.25);padding:8px 22px;border-radius:100px;margin-bottom:36px;font-size:13px;color:var(--brand2);font-weight:600;letter-spacing:.3px;animation:pill-glow 3s ease-in-out infinite}
+.hero-pill .fire{font-style:normal;animation:zap 2s ease-in-out infinite}
+@keyframes pill-glow{0%,100%{box-shadow:0 0 20px rgba(245,158,11,.1)}50%{box-shadow:0 0 40px rgba(245,158,11,.3)}}
+@keyframes zap{0%,100%{transform:scale(1) rotate(0deg)}25%{transform:scale(1.3) rotate(-10deg)}50%{transform:scale(1) rotate(0deg)}75%{transform:scale(1.2) rotate(8deg)}}
+
+.hero-title{font-size:clamp(52px,9vw,110px);font-weight:800;line-height:.9;letter-spacing:-4px;margin-bottom:28px}
+.hero-title .gold{background:linear-gradient(135deg,var(--brand2),var(--brand),var(--rose));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:shimmer 3s ease-in-out infinite}
+@keyframes shimmer{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* Typing cursor effect on subtitle */
+.hero-sub{font-size:clamp(17px,2.2vw,22px);color:var(--muted);max-width:580px;margin:0 auto 44px;line-height:1.55;font-weight:400}
+.hero-sub strong{color:var(--text);font-weight:700}
+
+.hero-buttons{display:flex;gap:16px;justify-content:center;flex-wrap:wrap;margin-bottom:56px}
+.btn-flex{display:inline-flex;align-items:center;gap:10px;background:linear-gradient(135deg,var(--brand),var(--brand3));color:var(--bg);padding:18px 40px;border-radius:100px;font-weight:800;font-size:16px;text-decoration:none;transition:all .3s;text-transform:uppercase;letter-spacing:1px;position:relative;overflow:hidden}
+.btn-flex::before{content:'';position:absolute;top:0;left:-100%;width:100%;height:100%;background:linear-gradient(90deg,transparent,rgba(255,255,255,.3),transparent);transition:left .6s}
+.btn-flex:hover::before{left:100%}
+.btn-flex:hover{transform:translateY(-3px) scale(1.05);box-shadow:0 16px 50px rgba(245,158,11,.5)}
+.btn-flex:active{transform:translateY(0) scale(.98)}
+
+.btn-ghost{display:inline-flex;align-items:center;gap:10px;color:var(--text);padding:18px 40px;border-radius:100px;font-weight:700;font-size:16px;text-decoration:none;transition:all .3s;border:2px solid var(--border2);background:transparent;position:relative;overflow:hidden}
+.btn-ghost::before{content:'';position:absolute;inset:0;background:linear-gradient(135deg,rgba(245,158,11,.08),rgba(167,139,250,.08));opacity:0;transition:opacity .3s}
+.btn-ghost:hover::before{opacity:1}
+.btn-ghost:hover{border-color:var(--brand);transform:translateY(-2px)}
+.btn-icon svg{width:20px;height:20px}
+
+/* Hero Image */
+.hero-showcase{position:relative;max-width:940px;margin:0 auto}
+.hero-showcase-img{border-radius:24px;overflow:hidden;border:1px solid rgba(245,158,11,.15);box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 0 1px rgba(245,158,11,.1),0 0 160px rgba(245,158,11,.06);position:relative;animation:hero-float 6s ease-in-out infinite}
+.hero-showcase-img img{width:100%;height:auto;display:block}
+.hero-showcase-img::after{content:'';position:absolute;inset:0;background:linear-gradient(180deg,transparent 60%,rgba(9,9,11,.4));pointer-events:none}
+@keyframes hero-float{0%,100%{transform:translateY(0) rotateX(0deg)}50%{transform:translateY(-12px) rotateX(1deg)}}
+
+/* Glowing border animation on hero image */
+.hero-showcase-img::before{content:'';position:absolute;inset:-2px;border-radius:26px;background:linear-gradient(45deg,var(--brand),var(--rose),var(--purple),var(--green),var(--brand));background-size:400% 400%;animation:border-dance 8s ease infinite;z-index:-1;opacity:.4}
+@keyframes border-dance{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* Floating badges */
+.hero-float{position:absolute;background:rgba(24,24,27,.9);backdrop-filter:blur(20px);border:1px solid var(--border2);border-radius:16px;padding:12px 18px;font-size:13px;font-weight:700;display:flex;align-items:center;gap:8px;z-index:3;white-space:nowrap;animation:float-badge 6s ease-in-out infinite}
+.hero-float .emoji{font-size:18px;font-style:normal}
+.hero-float:nth-child(2){top:12%;right:-5%;animation-delay:0s;animation:float-badge 6s ease-in-out infinite,badge-enter .8s cubic-bezier(.22,1,.36,1) .6s both}
+.hero-float:nth-child(3){bottom:20%;left:-4%;animation-delay:-2s;animation:float-badge 6s ease-in-out infinite,badge-enter .8s cubic-bezier(.22,1,.36,1) .9s both}
+.hero-float:nth-child(4){bottom:8%;right:8%;animation-delay:-4s;animation:float-badge 6s ease-in-out infinite,badge-enter .8s cubic-bezier(.22,1,.36,1) 1.2s both}
+@keyframes float-badge{0%,100%{transform:translateY(0)}50%{transform:translateY(-12px)}}
+@keyframes badge-enter{0%{opacity:0;transform:translateY(20px) scale(.8)}100%{opacity:1;transform:translateY(0) scale(1)}}
+
+/* Notification pop animation on badges */
+.hero-float::after{content:'';position:absolute;inset:-1px;border-radius:17px;background:linear-gradient(135deg,rgba(245,158,11,.2),transparent);opacity:0;animation:badge-glow 4s ease-in-out infinite}
+.hero-float:nth-child(2)::after{animation-delay:0s}
+.hero-float:nth-child(3)::after{animation-delay:-1.3s}
+.hero-float:nth-child(4)::after{animation-delay:-2.6s}
+@keyframes badge-glow{0%,100%{opacity:0}50%{opacity:1}}
+
+.hero-scroll{position:absolute;bottom:24px;left:50%;transform:translateX(-50%);z-index:2;color:var(--dim);animation:bob 2.5s infinite ease-in-out}
+@keyframes bob{0%,100%{transform:translateX(-50%) translateY(0);opacity:.5}50%{transform:translateX(-50%) translateY(10px);opacity:1}}
+
+/* ─── SECTION ─── */
+section{padding:120px 24px}
+.section-inner{max-width:1200px;margin:0 auto}
+.section-tag{font-family:'JetBrains Mono',monospace;font-size:12px;font-weight:600;letter-spacing:3px;text-transform:uppercase;color:var(--brand);margin-bottom:16px;display:inline-flex;align-items:center;gap:8px}
+.section-tag::before{content:'';width:24px;height:2px;background:var(--brand);display:inline-block;animation:tag-line 2s ease-in-out infinite}
+@keyframes tag-line{0%,100%{width:24px}50%{width:40px}}
+.section-title{font-size:clamp(36px,5.5vw,60px);font-weight:800;letter-spacing:-2px;line-height:1.05;margin-bottom:20px}
+.section-desc{font-size:18px;color:var(--muted);max-width:540px;line-height:1.7;font-weight:400}
+
+/* ─── FEATURES ─── */
+.features{background:var(--bg2);position:relative;overflow:hidden}
+.features::before{content:'';position:absolute;top:0;left:50%;transform:translateX(-50%);width:1px;height:120px;background:linear-gradient(to bottom,transparent,var(--brand),transparent);animation:line-grow 3s ease-in-out infinite}
+@keyframes line-grow{0%,100%{height:80px;opacity:.5}50%{height:140px;opacity:1}}
+
+.features-grid{display:flex;flex-direction:column;gap:120px;margin-top:80px}
+
+.feat{display:grid;grid-template-columns:1fr 1fr;gap:64px;align-items:center}
+.feat.flip{direction:rtl}
+.feat.flip>*{direction:ltr}
+
+.feat-visual{position:relative}
+.feat-img{border-radius:24px;overflow:hidden;border:1px solid var(--border);box-shadow:0 32px 80px rgba(0,0,0,.5);position:relative;transition:all .6s cubic-bezier(.22,1,.36,1)}
+.feat-img:hover{transform:scale(1.03) translateY(-6px);box-shadow:0 40px 100px rgba(0,0,0,.6)}
+.feat-img img{width:100%;height:auto;display:block;transition:transform .6s cubic-bezier(.22,1,.36,1)}
+.feat-img:hover img{transform:scale(1.05)}
+.feat-img::after{content:'';position:absolute;inset:0;box-shadow:inset 0 0 80px rgba(0,0,0,.2);pointer-events:none;border-radius:24px}
+
+/* Animated colored glow behind feature images */
+.feat-visual.glow-gold .feat-img{box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 120px rgba(245,158,11,.08)}
+.feat-visual.glow-gold .feat-img:hover{box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 180px rgba(245,158,11,.15)}
+.feat-visual.glow-purple .feat-img{box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 120px rgba(167,139,250,.08)}
+.feat-visual.glow-purple .feat-img:hover{box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 180px rgba(167,139,250,.15)}
+.feat-visual.glow-green .feat-img{box-shadow:0 32px 80px rgba(0,0,0,.5),0 0 120px rgba(52,211,153,.08)}
+.feat-visual.glow-green .feat-img:hover{box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 180px rgba(52,211,153,.15)}
+
+.feat-text{padding:8px 0}
+.feat-badge{display:inline-flex;align-items:center;gap:6px;padding:6px 14px;border-radius:100px;font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:700;letter-spacing:1.5px;text-transform:uppercase;margin-bottom:20px;transition:all .3s}
+.feat-badge.gold{background:rgba(245,158,11,.1);border:1px solid rgba(245,158,11,.25);color:var(--brand)}
+.feat-badge.purple{background:rgba(167,139,250,.1);border:1px solid rgba(167,139,250,.25);color:var(--purple)}
+.feat-badge.green{background:rgba(52,211,153,.1);border:1px solid rgba(52,211,153,.25);color:var(--green)}
+
+.feat-headline{font-size:clamp(32px,4vw,48px);font-weight:800;letter-spacing:-1.5px;margin-bottom:20px;line-height:1.05}
+.feat-hook{font-size:18px;color:var(--text2);line-height:1.7;margin-bottom:16px;font-weight:500}
+.feat-desc{color:var(--muted);font-size:15px;line-height:1.8;font-weight:400}
+
+/* Story — full-width */
+.feat.story-feat{grid-template-columns:1fr;text-align:center;position:relative}
+.feat.story-feat .feat-text{max-width:720px;margin:0 auto;position:relative;z-index:2}
+.feat.story-feat .feat-headline{background:linear-gradient(135deg,var(--green),var(--brand2),var(--rose));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;background-size:200% 200%;animation:gradient-text 6s ease infinite}
+@keyframes gradient-text{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+.feat.story-feat .feat-hook{font-size:19px;color:var(--text2);line-height:1.7}
+.feat.story-feat .feat-desc{font-size:16px;line-height:1.8;max-width:600px;margin:0 auto}
+
+/* ─── 3D STORY CAROUSEL ─── */
+.story-carousel{margin-top:56px;position:relative;perspective:1200px;-webkit-perspective:1200px}
+
+/* Carousel viewport */
+.carousel-viewport{position:relative;width:100%;overflow:visible;padding:40px 0 60px}
+
+/* 3D Track */
+.carousel-track{position:relative;width:100%;display:flex;align-items:center;justify-content:center;min-height:580px;transform-style:preserve-3d;-webkit-transform-style:preserve-3d}
+
+/* Slides */
+.c-slide{position:absolute;width:55%;max-width:380px;border-radius:24px;overflow:hidden;border:1px solid var(--border);transition:all .8s cubic-bezier(.22,1,.36,1);cursor:pointer;-webkit-user-select:none;user-select:none;aspect-ratio:9/16}
+.c-slide img{width:100%;height:100%;object-fit:cover;display:block;pointer-events:none}
+
+/* Slide states via data attributes — controlled by JS */
+.c-slide[data-pos="0"]{z-index:5;opacity:1;transform:translateX(0) translateZ(0) rotateY(0deg) scale(1);box-shadow:0 40px 100px rgba(0,0,0,.6),0 0 160px rgba(52,211,153,.08);pointer-events:auto}
+.c-slide[data-pos="-1"]{z-index:3;opacity:.6;transform:translateX(-85%) translateZ(-140px) rotateY(15deg) scale(.82);box-shadow:0 20px 60px rgba(0,0,0,.4);pointer-events:auto;filter:brightness(.7)}
+.c-slide[data-pos="1"]{z-index:3;opacity:.6;transform:translateX(85%) translateZ(-140px) rotateY(-15deg) scale(.82);box-shadow:0 20px 60px rgba(0,0,0,.4);pointer-events:auto;filter:brightness(.7)}
+.c-slide[data-pos="-2"]{z-index:1;opacity:.2;transform:translateX(-150%) translateZ(-300px) rotateY(22deg) scale(.6);box-shadow:none;pointer-events:none;filter:brightness(.4)}
+.c-slide[data-pos="2"]{z-index:1;opacity:.2;transform:translateX(150%) translateZ(-300px) rotateY(-22deg) scale(.6);box-shadow:none;pointer-events:none;filter:brightness(.4)}
+.c-slide[data-pos="hidden"]{z-index:0;opacity:0;transform:translateX(0) translateZ(-500px) scale(.5);pointer-events:none}
+
+/* Active slide glow border */
+.c-slide[data-pos="0"]::before{content:'';position:absolute;inset:-2px;border-radius:26px;background:linear-gradient(135deg,var(--green),var(--brand),var(--purple),var(--green));background-size:300% 300%;animation:card-border 6s ease infinite;z-index:-1;opacity:.6}
+@keyframes card-border{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+/* Active slide inner glow */
+.c-slide[data-pos="0"]::after{content:'';position:absolute;inset:0;border-radius:24px;box-shadow:inset 0 0 60px rgba(52,211,153,.06);pointer-events:none}
+
+/* Sequence count badge on slides */
+.c-slide-badge{position:absolute;top:16px;right:16px;z-index:10;display:flex;align-items:center;gap:5px;padding:6px 12px;border-radius:100px;background:rgba(0,0,0,.6);backdrop-filter:blur(12px);border:1px solid rgba(255,255,255,.15);font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;color:var(--text);letter-spacing:.5px;opacity:0;transform:translateY(-8px);transition:all .5s .3s cubic-bezier(.22,1,.36,1)}
+.c-slide[data-pos="0"] .c-slide-badge{opacity:1;transform:translateY(0)}
+.c-slide-badge svg{width:14px;height:14px;color:var(--green)}
+
+/* Hover on side slides */
+.c-slide[data-pos="-1"]:hover,.c-slide[data-pos="1"]:hover{opacity:.75;filter:brightness(.85)}
+
+/* ─── Carousel Label ─── */
+.carousel-label{text-align:center;margin-top:36px;transition:all .5s cubic-bezier(.22,1,.36,1);position:relative}
+.carousel-label-emoji{font-size:36px;font-style:normal;display:block;margin-bottom:8px;animation:label-bounce .6s cubic-bezier(.22,1,.36,1);filter:drop-shadow(0 0 12px rgba(245,158,11,.4))}
+.carousel-label-text{font-size:26px;font-weight:800;letter-spacing:-.5px;color:var(--text);position:relative;display:inline-block}
+.carousel-label-text::after{content:'';position:absolute;bottom:-4px;left:10%;right:10%;height:3px;background:linear-gradient(90deg,transparent,var(--green),var(--brand),transparent);border-radius:100px;opacity:.6}
+.carousel-label-sub{font-size:14px;color:var(--muted);font-weight:500;margin-top:12px;font-family:'JetBrains Mono',monospace;letter-spacing:1px}
+@keyframes label-bounce{0%{transform:scale(.5) translateY(10px);opacity:0}100%{transform:scale(1) translateY(0);opacity:1}}
+
+/* ─── Navigation Arrows ─── */
+.carousel-nav{position:absolute;top:50%;transform:translateY(-50%);z-index:10;width:52px;height:52px;border-radius:50%;border:1px solid var(--border2);background:rgba(24,24,27,.8);backdrop-filter:blur(12px);color:var(--text);display:flex;align-items:center;justify-content:center;cursor:pointer;transition:all .3s;-webkit-user-select:none;user-select:none}
+.carousel-nav:hover{background:rgba(52,211,153,.15);border-color:var(--green);color:var(--green);transform:translateY(-50%) scale(1.1);box-shadow:0 8px 30px rgba(52,211,153,.2)}
+.carousel-nav:active{transform:translateY(-50%) scale(.95)}
+.carousel-nav svg{width:20px;height:20px}
+.carousel-prev{left:-26px}
+.carousel-next{right:-26px}
+
+/* ─── Progress Dots ─── */
+.carousel-dots{display:flex;justify-content:center;gap:10px;margin-top:32px}
+.carousel-dot{width:32px;height:4px;border-radius:100px;background:var(--border2);cursor:pointer;transition:all .4s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden}
+.carousel-dot::after{content:'';position:absolute;left:0;top:0;bottom:0;width:0;background:var(--green);border-radius:100px;transition:width .3s}
+.carousel-dot.active{background:rgba(52,211,153,.2)}
+.carousel-dot.active::after{width:100%;transition:width 4s linear}
+.carousel-dot:hover{background:var(--border)}
+
+/* ─── Progress bar for auto-play ─── */
+.carousel-progress{position:absolute;bottom:0;left:50%;transform:translateX(-50%);width:200px;height:3px;border-radius:100px;background:var(--border);overflow:hidden;opacity:.5}
+.carousel-progress-bar{height:100%;width:0;background:linear-gradient(90deg,var(--green),var(--brand));border-radius:100px;transition:width 4s linear}
+.carousel-progress-bar.running{width:100%}
+.carousel-progress-bar.reset{transition:none;width:0}
+
+@media(max-width:900px){
+  .c-slide{width:48%;max-width:320px}
+  .carousel-track{min-height:500px}
+  .c-slide[data-pos="-1"]{transform:translateX(-75%) translateZ(-100px) rotateY(10deg) scale(.78)}
+  .c-slide[data-pos="1"]{transform:translateX(75%) translateZ(-100px) rotateY(-10deg) scale(.78)}
+  .c-slide[data-pos="-2"],.c-slide[data-pos="2"]{opacity:0}
+  .carousel-prev{left:-8px}
+  .carousel-next{right:-8px}
+  .carousel-nav{width:44px;height:44px}
+}
+@media(max-width:600px){
+  .c-slide{width:60%;max-width:260px}
+  .carousel-track{min-height:420px}
+  .c-slide[data-pos="-1"]{transform:translateX(-65%) translateZ(-60px) rotateY(8deg) scale(.72);opacity:.35}
+  .c-slide[data-pos="1"]{transform:translateX(65%) translateZ(-60px) rotateY(-8deg) scale(.72);opacity:.35}
+  .carousel-prev{left:4px}
+  .carousel-next{right:4px}
+  .carousel-nav{width:40px;height:40px;border:none;background:rgba(24,24,27,.9)}
+}
+
+/* ─── HOW IT WORKS ─── */
+.how{position:relative}
+.how-header{text-align:center;margin-bottom:72px}
+.how-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:32px}
+.how-card{text-align:center;padding:40px 24px;background:var(--card);border:1px solid var(--border);border-radius:24px;transition:all .5s cubic-bezier(.22,1,.36,1);position:relative;overflow:hidden}
+.how-card::before{content:'';position:absolute;top:0;left:0;right:0;height:3px;background:linear-gradient(90deg,var(--brand),var(--rose),var(--purple));background-size:200% 200%;animation:gradient-slide 4s ease infinite;opacity:0;transition:opacity .4s}
+.how-card:hover{transform:translateY(-8px);border-color:var(--border2);box-shadow:0 30px 80px rgba(0,0,0,.5)}
+.how-card:hover::before{opacity:1}
+@keyframes gradient-slide{0%,100%{background-position:0% 50%}50%{background-position:100% 50%}}
+
+.how-num{font-size:56px;font-weight:800;background:linear-gradient(135deg,var(--brand2),var(--brand3));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text;line-height:1;margin-bottom:16px;transition:transform .3s}
+.how-card:hover .how-num{transform:scale(1.1)}
+
+.how-img{width:180px;height:180px;margin:0 auto 24px;border-radius:20px;overflow:hidden;border:1px solid var(--border);transition:all .5s cubic-bezier(.22,1,.36,1)}
+.how-card:hover .how-img{transform:scale(1.05);box-shadow:0 16px 40px rgba(0,0,0,.4)}
+.how-img img{width:100%;height:100%;object-fit:cover;display:block}
+.how-title{font-size:22px;font-weight:800;margin-bottom:8px;letter-spacing:-.5px}
+.how-desc{color:var(--muted);font-size:14px;line-height:1.65;max-width:260px;margin:0 auto}
+
+/* ─── STATS ─── */
+.stats{background:var(--bg2);border-top:1px solid var(--border);border-bottom:1px solid var(--border);overflow:hidden}
+.stats-grid{display:grid;grid-template-columns:repeat(4,1fr);gap:0}
+.stat{text-align:center;padding:56px 24px;position:relative;transition:all .3s}
+.stat:hover{background:rgba(245,158,11,.04)}
+.stat::after{content:'';position:absolute;right:0;top:50%;transform:translateY(-50%);width:1px;height:56px;background:var(--border)}
+.stat:last-child::after{display:none}
+.stat-val{font-size:clamp(40px,5vw,60px);font-weight:800;letter-spacing:-3px;line-height:1;margin-bottom:8px;transition:transform .3s}
+.stat:hover .stat-val{transform:scale(1.1)}
+.stat-val .g{background:linear-gradient(135deg,var(--brand2),var(--brand));-webkit-background-clip:text;-webkit-text-fill-color:transparent;background-clip:text}
+.stat-lbl{font-family:'JetBrains Mono',monospace;font-size:11px;font-weight:600;letter-spacing:2px;text-transform:uppercase;color:var(--dim)}
+
+/* Counter animation */
+.stat-val[data-count]{transition:transform .3s}
+
+/* ─── CTA ─── */
+.cta{position:relative;overflow:hidden}
+.cta-box{position:relative;background:var(--card);border:1px solid var(--border);border-radius:32px;padding:100px 48px;text-align:center;overflow:hidden}
+.cta-box::before{content:'';position:absolute;top:-50%;left:-50%;width:200%;height:200%;background:conic-gradient(from 0deg at 50% 50%,transparent,rgba(245,158,11,.12),transparent,rgba(251,113,133,.08),transparent,rgba(167,139,250,.08),transparent);animation:spin 20s linear infinite}
+@keyframes spin{to{transform:rotate(360deg)}}
+
+/* Radial pulse behind CTA */
+.cta-box::after{content:'';position:absolute;top:50%;left:50%;transform:translate(-50%,-50%);width:400px;height:400px;border-radius:50%;background:radial-gradient(circle,rgba(245,158,11,.08),transparent 70%);animation:radial-pulse 4s ease-in-out infinite}
+@keyframes radial-pulse{0%,100%{transform:translate(-50%,-50%) scale(1);opacity:.5}50%{transform:translate(-50%,-50%) scale(1.3);opacity:1}}
+
+.cta-inner{position:relative;z-index:2}
+.cta-title{font-size:clamp(36px,6vw,72px);font-weight:800;letter-spacing:-3px;margin-bottom:20px;line-height:.95}
+.cta-sub{font-size:18px;color:var(--muted);margin-bottom:44px;font-weight:400}
+.cta-sub strong{color:var(--brand2)}
+.cta-btns{display:flex;gap:16px;justify-content:center;flex-wrap:wrap}
+
+/* ─── FOOTER ─── */
+footer{border-top:1px solid var(--border);padding:48px 24px}
+.footer-inner{max-width:1200px;margin:0 auto;display:flex;align-items:center;justify-content:space-between;flex-wrap:wrap;gap:24px}
+.footer-logo{font-size:20px;font-weight:800;letter-spacing:-.5px}
+.footer-logo span{color:var(--brand)}
+.footer-links{display:flex;gap:24px}
+.footer-links a{color:var(--dim);font-size:13px;text-decoration:none;transition:color .2s}
+.footer-links a:hover{color:var(--muted)}
+.footer-copy{color:var(--dim);font-size:12px;font-family:'JetBrains Mono',monospace}
+
+/* ─── REVEAL ANIMATIONS ─── */
+.rv{opacity:0;transform:translateY(40px);transition:all 1s cubic-bezier(.22,1,.36,1)}
+.rv.vis{opacity:1;transform:translateY(0)}
+.rv-d1{transition-delay:.12s}.rv-d2{transition-delay:.24s}.rv-d3{transition-delay:.36s}.rv-d4{transition-delay:.48s}
+
+/* Slide from left/right for features */
+.rv-left{opacity:0;transform:translateX(-60px);transition:all 1s cubic-bezier(.22,1,.36,1)}
+.rv-right{opacity:0;transform:translateX(60px);transition:all 1s cubic-bezier(.22,1,.36,1)}
+.rv-left.vis,.rv-right.vis{opacity:1;transform:translateX(0)}
+
+/* Scale up entrance */
+.rv-scale{opacity:0;transform:scale(.85);transition:all 1s cubic-bezier(.22,1,.36,1)}
+.rv-scale.vis{opacity:1;transform:scale(1)}
+
+/* Blur entrance */
+.rv-blur{opacity:0;filter:blur(12px);transform:translateY(20px);transition:all 1.2s cubic-bezier(.22,1,.36,1)}
+.rv-blur.vis{opacity:1;filter:blur(0);transform:translateY(0)}
+
+/* ─── MAGNETIC BUTTON ─── */
+.magnetic{transition:transform .2s cubic-bezier(.22,1,.36,1)}
+
+/* ─── RESPONSIVE ─── */
+@media(max-width:900px){
+  .feat{grid-template-columns:1fr;gap:40px}
+  .feat.flip{direction:ltr}
+  .how-grid{grid-template-columns:1fr;gap:20px;max-width:400px;margin:0 auto}
+  .stats-grid{grid-template-columns:repeat(2,1fr)}
+  .stat:nth-child(2)::after{display:none}
+  .nav-links{display:none}
+  .hero-float{display:none}
+  .rv-left,.rv-right{transform:translateY(40px)}
+  .cursor-dot,.cursor-ring{display:none !important}
+}
+@media(max-width:600px){
+  section{padding:80px 16px}
+  .hero{padding:120px 16px 60px}
+  .hero-showcase-img{border-radius:16px}
+  .feat-img{border-radius:16px}
+  .story-visual{border-radius:16px}
+  .how-img{width:140px;height:140px}
+  .cta-box{padding:60px 20px;border-radius:24px}
+  .footer-inner{flex-direction:column;text-align:center}
+  .stats-grid{grid-template-columns:1fr}
+  .stat::after{display:none}
+}
+
+/* ─── REDUCED MOTION ─── */
+@media(prefers-reduced-motion:reduce){
+  *,*::before,*::after{animation-duration:.01ms !important;animation-iteration-count:1 !important;transition-duration:.01ms !important}
+}
+</style>
+</head>
+<body>
+
+<!-- Custom Cursor -->
+<div class="cursor-dot" id="cursorDot"></div>
+<div class="cursor-ring" id="cursorRing"></div>
+
+<!-- MARQUEE TOP BAR -->
+<div class="marquee-wrap">
+  <div class="marquee">
+    <span><b>FLEX</b>ME NOW</span>
+    <span>AI GLOW UPS</span>
+    <span>50+ VIRAL TEMPLATES</span>
+    <span>CINEMATIC STORIES</span>
+    <span>FREE TO START</span>
+    <span>NO CAP</span>
+    <span><b>FLEX</b>ME NOW</span>
+    <span>AI GLOW UPS</span>
+    <span>50+ VIRAL TEMPLATES</span>
+    <span>CINEMATIC STORIES</span>
+    <span>FREE TO START</span>
+    <span>NO CAP</span>
+    <span><b>FLEX</b>ME NOW</span>
+    <span>AI GLOW UPS</span>
+    <span>50+ VIRAL TEMPLATES</span>
+    <span>CINEMATIC STORIES</span>
+    <span>FREE TO START</span>
+    <span>NO CAP</span>
+  </div>
+</div>
+
+<!-- NAV -->
+<nav id="nav">
+  <div class="nav-inner">
+    <a href="/" class="nav-logo">Flex<span>Me</span></a>
+    <div class="nav-links">
+      <a href="#features">Features</a>
+      <a href="#how">How it works</a>
+      <a href="#download" class="nav-cta magnetic">Flex Now</a>
+    </div>
+  </div>
+</nav>
+
+<!-- HERO -->
+<section class="hero" id="top">
+  <div class="hero-bg">
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+    <div class="blob"></div>
+  </div>
+  <div class="hero-grid"></div>
+  <div class="hero-particles">
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div><div class="particle"></div><div class="particle"></div>
+    <div class="particle"></div>
+  </div>
+  <div class="hero-noise"></div>
+
+  <div class="hero-content">
+    <div class="hero-pill rv">
+      <em class="fire">&#9889;</em> your content era starts now
+    </div>
+
+    <h1 class="hero-title rv rv-d1">
+      Flex Yourself<br><span class="gold">NOW.</span>
+    </h1>
+
+    <p class="hero-sub rv-blur rv-d2">
+      AI glow-ups that hit different. <strong>Viral templates</strong> that go crazy. Cinematic stories that make people stop scrolling. <strong>This is your main character moment.</strong>
+    </p>
+
+    <div class="hero-buttons rv rv-d3">
+      <a href="#download" class="btn-flex magnetic">
+        <span class="btn-icon"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M13 2L3 14h9l-1 8 10-12h-9l1-8z"/></svg></span>
+        Start Flexing — Free
+      </a>
+      <a href="#features" class="btn-ghost magnetic">
+        See the magic
+      </a>
+    </div>
+
+    <!-- Hero Image with floating badges -->
+    <div class="hero-showcase rv-scale rv-d4">
+      <div class="hero-showcase-img">
+        <picture>
+          <source srcset="assets/landing/hero_mockup.webp" type="image/webp">
+          <img src="assets/landing/hero_mockup.png" alt="FlexMe — AI glow-ups, viral templates, cinematic stories" loading="eager" width="1920" height="1080">
+        </picture>
+      </div>
+      <div class="hero-float"><em class="emoji">&#128293;</em> 2.4K likes in 1 hour</div>
+      <div class="hero-float"><em class="emoji">&#10024;</em> AI-enhanced, undetectable</div>
+      <div class="hero-float"><em class="emoji">&#127916;</em> Story went viral</div>
+    </div>
+  </div>
+
+  <div class="hero-scroll">
+    <svg width="20" height="20" viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 5v14M5 12l7 7 7-7"/></svg>
+  </div>
+</section>
+
+<!-- FEATURES -->
+<section class="features" id="features">
+  <div class="section-inner">
+    <div class="rv">
+      <div class="section-tag">What's inside</div>
+      <h2 class="section-title">Three ways to<br>break the internet.</h2>
+      <p class="section-desc">Every tool is built to make your content look insane. Zero effort, maximum flex.</p>
+    </div>
+
+    <div class="features-grid">
+
+      <!-- FLEXLOCKET -->
+      <div class="feat">
+        <div class="feat-visual glow-gold rv-left">
+          <div class="feat-img">
+            <picture>
+              <source srcset="assets/landing/feature_glow.webp" type="image/webp">
+              <img src="assets/landing/feature_glow.png" alt="FlexLocket — AI glow-up that nobody can tell" loading="lazy" width="1200" height="800">
+            </picture>
+          </div>
+        </div>
+        <div class="feat-text rv-right">
+          <div class="feat-badge gold">&#9728;&#65039; FlexLocket — Glow</div>
+          <h3 class="feat-headline">Glow up so good,<br>nobody knows.</h3>
+          <p class="feat-hook">One tap. That's it. Your photo goes from "meh" to "how do you always look this good?"</p>
+          <p class="feat-desc">AI enhancement so subtle it's literally undetectable. Better lighting, clearer skin, sharper details — but still 100% you. No weird filters, no uncanny valley. Just your best self in the best light. 10 free glow-ups every single day. Slay.</p>
+        </div>
+      </div>
+
+      <!-- FLEXSHOT -->
+      <div class="feat flip">
+        <div class="feat-visual glow-purple rv-right">
+          <div class="feat-img">
+            <picture>
+              <source srcset="assets/landing/feature_create.webp" type="image/webp">
+              <img src="assets/landing/feature_create.png" alt="FlexShot — viral AI art templates" loading="lazy" width="1200" height="800">
+            </picture>
+          </div>
+        </div>
+        <div class="feat-text rv-left">
+          <div class="feat-badge purple">&#10024; FlexShot — Create</div>
+          <h3 class="feat-headline">Template magic<br>that goes hard.</h3>
+          <p class="feat-hook">Pick a vibe. Drop your photo. Watch AI turn you into anime, renaissance art, cyberpunk, watercolor — literally anything.</p>
+          <p class="feat-desc">50+ handcrafted templates from subtle aesthetic to absolutely unhinged. Every result is unique, high-res, and ready to post. The kind of content that makes people DM you asking "what app is this??" That app is FlexMe. You're welcome.</p>
+        </div>
+      </div>
+
+      <!-- FLEXTALE -->
+      <div class="feat story-feat">
+        <div class="feat-text rv-blur">
+          <div class="feat-badge green">&#127796; FlexTale — Story</div>
+          <h3 class="feat-headline">One moment.<br>Multiple scenes.<br>Unlimited flex.</h3>
+          <p class="feat-hook">AI generates a full visual sequence from your vibe — 4-6 cinematic panels per story. Travel, couple goals, mood boards, body confidence... every moment becomes an Instagram carousel that hits different.</p>
+          <p class="feat-desc">Pick a story type. AI creates multiple stunning scenes — each one a different angle, moment, and mood. Post the whole sequence as a carousel and watch people screenshot every single slide.</p>
+        </div>
+
+        <!-- 3D Story Carousel -->
+        <div class="story-carousel rv-scale" id="storyCarousel">
+          <div class="carousel-viewport">
+            <div class="carousel-track" id="carouselTrack">
+              <div class="c-slide" data-idx="0" data-label="Flex Your Trip" data-emoji="&#9992;&#65039;" data-sub="Airport → Bali → Night market">
+                <div class="c-slide-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>3 scenes</div>
+                <picture>
+                  <source srcset="assets/landing/feature_story.webp" type="image/webp">
+                  <img src="assets/landing/feature_story.png" alt="Flex Your Trip" loading="lazy" width="900" height="1600" draggable="false">
+                </picture>
+              </div>
+              <div class="c-slide" data-idx="1" data-label="Flex Your Bae" data-emoji="&#128149;" data-sub="Selfie → Date → Beach → Flowers">
+                <div class="c-slide-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>4 scenes</div>
+                <picture>
+                  <source srcset="assets/landing/story_girlfriend_v2.webp" type="image/webp">
+                  <img src="assets/landing/story_girlfriend_v2.png" alt="Flex Your Bae" loading="lazy" width="900" height="1600" draggable="false">
+                </picture>
+              </div>
+              <div class="c-slide" data-idx="2" data-label="Flex Your Body" data-emoji="&#128170;" data-sub="Gym → Rooftop → Pool">
+                <div class="c-slide-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/></svg>3 scenes</div>
+                <picture>
+                  <source srcset="assets/landing/story_body_v2.webp" type="image/webp">
+                  <img src="assets/landing/story_body_v2.png" alt="Flex Your Body" loading="lazy" width="900" height="1600" draggable="false">
+                </picture>
+              </div>
+              <div class="c-slide" data-idx="3" data-label="Flex Your Mood" data-emoji="&#9749;" data-sub="Morning → Cafe → Rain → Sunset → Friends">
+                <div class="c-slide-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="7" height="7" rx="1"/><rect x="14" y="3" width="7" height="7" rx="1"/><rect x="3" y="14" width="7" height="7" rx="1"/><rect x="14" y="14" width="7" height="7" rx="1"/></svg>5 scenes</div>
+                <picture>
+                  <source srcset="assets/landing/story_emotion_v2.webp" type="image/webp">
+                  <img src="assets/landing/story_emotion_v2.png" alt="Flex Your Mood" loading="lazy" width="900" height="1600" draggable="false">
+                </picture>
+              </div>
+              <div class="c-slide" data-idx="4" data-label="Flex Anything" data-emoji="&#9889;" data-sub="Unlimited stories. Infinite possibilities.">
+                <div class="c-slide-badge"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><path d="M12 2L2 7l10 5 10-5-10-5z"/><path d="M2 17l10 5 10-5"/><path d="M2 12l10 5 10-5"/></svg>30+ vibes</div>
+                <picture>
+                  <source srcset="assets/landing/story_anything.webp" type="image/webp">
+                  <img src="assets/landing/story_anything.png" alt="Flex Anything" loading="lazy" width="900" height="1600" draggable="false">
+                </picture>
+              </div>
+            </div>
+
+            <!-- Nav Arrows -->
+            <div class="carousel-nav carousel-prev" id="carPrev">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M15 18l-6-6 6-6"/></svg>
+            </div>
+            <div class="carousel-nav carousel-next" id="carNext">
+              <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.5" stroke-linecap="round"><path d="M9 18l6-6-6-6"/></svg>
+            </div>
+          </div>
+
+          <!-- Label -->
+          <div class="carousel-label" id="carLabel">
+            <em class="carousel-label-emoji">&#9992;&#65039;</em>
+            <div class="carousel-label-text">Flex Your Trip</div>
+            <div class="carousel-label-sub">Airport → Bali → Night market</div>
+          </div>
+
+          <!-- Dots -->
+          <div class="carousel-dots" id="carDots">
+            <div class="carousel-dot active" data-idx="0"></div>
+            <div class="carousel-dot" data-idx="1"></div>
+            <div class="carousel-dot" data-idx="2"></div>
+            <div class="carousel-dot" data-idx="3"></div>
+            <div class="carousel-dot" data-idx="4"></div>
+          </div>
+        </div>
+      </div>
+
+    </div>
+  </div>
+</section>
+
+<!-- HOW IT WORKS -->
+<section class="how" id="how">
+  <div class="section-inner">
+    <div class="how-header">
+      <div class="section-tag rv">How it works</div>
+      <h2 class="section-title rv rv-d1">Stupidly simple.<br>Ridiculously powerful.</h2>
+    </div>
+
+    <div class="how-grid">
+      <div class="how-card rv">
+        <div class="how-num">01</div>
+        <div class="how-img">
+          <picture>
+            <source srcset="assets/landing/step_upload.webp" type="image/webp">
+            <img src="assets/landing/step_upload.png" alt="Upload your photo" loading="lazy" width="400" height="400">
+          </picture>
+        </div>
+        <div class="how-title">Drop your pic</div>
+        <p class="how-desc">Snap a selfie or pull from your gallery. Any photo works. Seriously, any.</p>
+      </div>
+      <div class="how-card rv rv-d1">
+        <div class="how-num">02</div>
+        <div class="how-img">
+          <picture>
+            <source srcset="assets/landing/step_magic.webp" type="image/webp">
+            <img src="assets/landing/step_magic.png" alt="AI transforms your photo" loading="lazy" width="400" height="400">
+          </picture>
+        </div>
+        <div class="how-title">AI goes brr</div>
+        <p class="how-desc">Pick your vibe — glow up, transform, or storytell. AI handles the rest in seconds.</p>
+      </div>
+      <div class="how-card rv rv-d2">
+        <div class="how-num">03</div>
+        <div class="how-img">
+          <picture>
+            <source srcset="assets/landing/step_share.webp" type="image/webp">
+            <img src="assets/landing/step_share.png" alt="Share and go viral" loading="lazy" width="400" height="400">
+          </picture>
+        </div>
+        <div class="how-title">Post & flex</div>
+        <p class="how-desc">Download in HD. Post it. Watch your notifications blow up. You earned this.</p>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- STATS -->
+<section class="stats">
+  <div class="section-inner">
+    <div class="stats-grid">
+      <div class="stat rv">
+        <div class="stat-val" data-count="24">0+</div>
+        <div class="stat-lbl">AI Filters</div>
+      </div>
+      <div class="stat rv rv-d1">
+        <div class="stat-val" data-count="50">0+</div>
+        <div class="stat-lbl">Templates</div>
+      </div>
+      <div class="stat rv rv-d2">
+        <div class="stat-val" data-count="6">0</div>
+        <div class="stat-lbl">Languages</div>
+      </div>
+      <div class="stat rv rv-d3">
+        <div class="stat-val"><span class="g">&infin;</span></div>
+        <div class="stat-lbl">Main character energy</div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- CTA -->
+<section class="cta" id="download">
+  <div class="section-inner">
+    <div class="cta-box rv-scale">
+      <div class="cta-inner">
+        <h2 class="cta-title">Stop scrolling.<br>Start <span class="gold">flexing.</span></h2>
+        <p class="cta-sub">Download FlexMe free. <strong>12 welcome credits</strong> on us. No cap.</p>
+        <div class="cta-btns">
+          <a href="#" class="btn-flex magnetic">
+            <span class="btn-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M18.71 19.5c-.83 1.24-1.71 2.45-3.05 2.47-1.34.03-1.77-.79-3.29-.79-1.53 0-2 .77-3.27.82-1.31.05-2.3-1.32-3.14-2.53C4.25 17 2.94 12.45 4.7 9.39c.87-1.52 2.43-2.48 4.12-2.51 1.28-.02 2.5.87 3.29.87.78 0 2.26-1.07 3.8-.91.65.03 2.47.26 3.64 1.98-.09.06-2.17 1.28-2.15 3.81.03 3.02 2.65 4.03 2.68 4.04-.03.07-.42 1.44-1.38 2.83M13 3.5c.73-.83 1.94-1.46 2.94-1.5.13 1.17-.34 2.35-1.04 3.19-.69.85-1.83 1.51-2.95 1.42-.15-1.15.41-2.35 1.05-3.11z"/></svg></span>
+            App Store
+          </a>
+          <a href="#" class="btn-flex magnetic" style="background:linear-gradient(135deg,var(--purple),#7C3AED)">
+            <span class="btn-icon"><svg viewBox="0 0 24 24" fill="currentColor" width="20" height="20"><path d="M3.609 1.814 13.792 12 3.61 22.186a.996.996 0 0 1-.61-.92V2.734a1 1 0 0 1 .609-.92zm10.89 10.893 2.302 2.302-10.937 6.333 8.635-8.635zm3.199-3.199 2.302 2.302a1 1 0 0 1 0 1.38l-1.929 1.12-2.493-2.492 2.12-2.31zM5.864 2.658 16.8 8.99l-2.302 2.302-8.634-8.634z"/></svg></span>
+            Google Play
+          </a>
+        </div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<!-- FOOTER -->
+<footer>
+  <div class="footer-inner">
+    <div class="footer-logo">Flex<span>Me</span></div>
+    <div class="footer-links">
+      <a href="/terms">Terms</a>
+      <a href="/privacy">Privacy</a>
+      <a href="mailto:support@flexmenow.com">Contact</a>
+    </div>
+    <div class="footer-copy">&copy; 2026 FlexMe. All rights reserved.</div>
+  </div>
+</footer>
+
+<script>
+// ─── NAV SCROLL ───
+const nav=document.getElementById('nav');
+window.addEventListener('scroll',()=>{nav.classList.toggle('scrolled',window.scrollY>50)});
+
+// ─── SCROLL REVEAL (multiple animation types) ───
+const obs=new IntersectionObserver(e=>{e.forEach(x=>{if(x.isIntersecting){x.target.classList.add('vis');
+  // Trigger counter animation for stats
+  if(x.target.querySelector('[data-count]')){animateCounters(x.target)}
+}})},{threshold:.08,rootMargin:'0px 0px -60px 0px'});
+document.querySelectorAll('.rv,.rv-left,.rv-right,.rv-scale,.rv-blur').forEach(el=>obs.observe(el));
+
+// ─── PARALLAX BLOBS + HERO TILT ───
+let mx=0,my=0,cx=0,cy=0;
+document.addEventListener('mousemove',e=>{mx=e.clientX;my=e.clientY});
+function lerp(a,b,t){return a+(b-a)*t}
+function animateParallax(){
+  cx=lerp(cx,mx,.06);cy=lerp(cy,my,.06);
+  const x=(cx/window.innerWidth-.5);
+  const y=(cy/window.innerHeight-.5);
+  document.querySelectorAll('.hero-bg .blob').forEach((b,i)=>{
+    const f=[30,22,16,10][i]||15;
+    b.style.transform=`translate(${x*f}px,${y*f}px)`;
+  });
+  // Subtle 3D tilt on hero showcase
+  const sc=document.querySelector('.hero-showcase-img');
+  if(sc){sc.style.transform=`perspective(1200px) rotateY(${x*3}deg) rotateX(${-y*3}deg) translateY(${Math.sin(Date.now()/1000)*6}px)`}
+  requestAnimationFrame(animateParallax);
+}
+animateParallax();
+
+// ─── CUSTOM CURSOR ───
+const dot=document.getElementById('cursorDot');
+const ring=document.getElementById('cursorRing');
+let dx=0,dy=0,rx=0,ry=0;
+function animateCursor(){
+  dx=lerp(dx,mx,.25);dy=lerp(dy,my,.25);
+  rx=lerp(rx,mx,.12);ry=lerp(ry,my,.12);
+  dot.style.transform=`translate(${dx-4}px,${dy-4}px)`;
+  ring.style.transform=`translate(${rx-18}px,${ry-18}px)`;
+  requestAnimationFrame(animateCursor);
+}
+animateCursor();
+
+// Cursor grow on hover interactive elements
+document.querySelectorAll('a,button,.btn-flex,.btn-ghost,.how-card,.feat-img').forEach(el=>{
+  el.addEventListener('mouseenter',()=>{
+    ring.style.width='56px';ring.style.height='56px';
+    ring.style.borderColor='rgba(245,158,11,.5)';
+    dot.style.transform=`translate(${dx-4}px,${dy-4}px) scale(1.5)`;
+  });
+  el.addEventListener('mouseleave',()=>{
+    ring.style.width='36px';ring.style.height='36px';
+    ring.style.borderColor='rgba(245,158,11,.3)';
+  });
+});
+
+// ─── MAGNETIC BUTTONS ───
+document.querySelectorAll('.magnetic').forEach(btn=>{
+  btn.addEventListener('mousemove',e=>{
+    const r=btn.getBoundingClientRect();
+    const bx=e.clientX-r.left-r.width/2;
+    const by=e.clientY-r.top-r.height/2;
+    btn.style.transform=`translate(${bx*.15}px,${by*.15}px)`;
+  });
+  btn.addEventListener('mouseleave',()=>{btn.style.transform=''});
+});
+
+// ─── COUNTER ANIMATION ───
+function animateCounters(container){
+  container.querySelectorAll('[data-count]').forEach(el=>{
+    const target=parseInt(el.dataset.count);
+    const suffix=el.textContent.includes('+')?'+':'';
+    let current=0;
+    const step=Math.ceil(target/40);
+    const timer=setInterval(()=>{
+      current+=step;
+      if(current>=target){current=target;clearInterval(timer)}
+      el.textContent=current+suffix;
+      // Add gold color to + sign
+      if(suffix){
+        el.innerHTML=current+'<span class="g">+</span>';
+      }
+    },30);
+  });
+}
+
+// ─── 3D STORY CAROUSEL ───
+(function(){
+  const slides=document.querySelectorAll('.c-slide');
+  const dots=document.querySelectorAll('.carousel-dot');
+  const label=document.getElementById('carLabel');
+  const total=slides.length;
+  let current=0;
+  let autoTimer=null;
+  let isTransitioning=false;
+
+  function getPos(idx){
+    let diff=idx-current;
+    // Wrap around for circular
+    if(diff>Math.floor(total/2))diff-=total;
+    if(diff<-Math.floor(total/2))diff+=total;
+    if(diff<-2||diff>2)return'hidden';
+    return String(diff);
+  }
+
+  function updateCarousel(animate){
+    if(animate)isTransitioning=true;
+    slides.forEach((s,i)=>{
+      s.setAttribute('data-pos',getPos(i));
+    });
+    dots.forEach((d,i)=>{
+      d.classList.toggle('active',i===current);
+    });
+    // Update label with animation
+    const active=slides[current];
+    label.innerHTML=`<em class="carousel-label-emoji">${active.dataset.emoji}</em><div class="carousel-label-text">${active.dataset.label}</div><div class="carousel-label-sub">${active.dataset.sub}</div>`;
+    if(animate)setTimeout(()=>{isTransitioning=false},800);
+    // Reset dot progress animation
+    dots.forEach(d=>{d.offsetHeight});
+  }
+
+  function goTo(idx){
+    if(isTransitioning)return;
+    current=((idx%total)+total)%total;
+    updateCarousel(true);
+    resetAuto();
+  }
+
+  function next(){goTo(current+1)}
+  function prev(){goTo(current-1)}
+
+  // Arrow clicks
+  document.getElementById('carNext').addEventListener('click',next);
+  document.getElementById('carPrev').addEventListener('click',prev);
+
+  // Dot clicks
+  dots.forEach(d=>{d.addEventListener('click',()=>goTo(+d.dataset.idx))});
+
+  // Click on side slides to navigate
+  slides.forEach(s=>{
+    s.addEventListener('click',()=>{
+      const pos=s.getAttribute('data-pos');
+      if(pos==='-1')prev();
+      else if(pos==='1')next();
+    });
+  });
+
+  // Keyboard
+  document.addEventListener('keydown',e=>{
+    if(e.key==='ArrowRight')next();
+    if(e.key==='ArrowLeft')prev();
+  });
+
+  // Touch/swipe
+  let touchX=0;
+  const track=document.getElementById('carouselTrack');
+  track.addEventListener('touchstart',e=>{touchX=e.touches[0].clientX},{passive:true});
+  track.addEventListener('touchend',e=>{
+    const diff=e.changedTouches[0].clientX-touchX;
+    if(Math.abs(diff)>50){diff>0?prev():next()}
+  },{passive:true});
+
+  // Mouse drag
+  let dragX=0,dragging=false;
+  track.addEventListener('mousedown',e=>{dragX=e.clientX;dragging=true;e.preventDefault()});
+  document.addEventListener('mousemove',e=>{if(dragging)e.preventDefault()});
+  document.addEventListener('mouseup',e=>{
+    if(!dragging)return;
+    dragging=false;
+    const diff=e.clientX-dragX;
+    if(Math.abs(diff)>50){diff>0?prev():next()}
+  });
+
+  // Auto-play
+  function resetAuto(){
+    clearInterval(autoTimer);
+    autoTimer=setInterval(next,4500);
+  }
+  resetAuto();
+
+  // Pause on hover
+  const carousel=document.getElementById('storyCarousel');
+  carousel.addEventListener('mouseenter',()=>clearInterval(autoTimer));
+  carousel.addEventListener('mouseleave',resetAuto);
+
+  // Init
+  updateCarousel(false);
+})();
+
+// ─── SMOOTH SCROLL WITH OFFSET ───
+document.querySelectorAll('a[href^="#"]').forEach(a=>{
+  a.addEventListener('click',e=>{
+    e.preventDefault();
+    const t=document.querySelector(a.getAttribute('href'));
+    if(t){t.scrollIntoView({behavior:'smooth',block:'start'})}
+  });
+});
+</script>
+</body>
+</html>

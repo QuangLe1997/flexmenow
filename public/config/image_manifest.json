@@ -1,0 +1,87 @@
+{
+  "version": "1.0.0",
+  "baseUrl": "https://firebasestorage.googleapis.com/v0/b/flexme-now.firebasestorage.app/o/",
+  "suffix": "?alt=media",
+  "images": {
+    "banners": {
+      "gold_flexshot": "mockup-images/banners/gold_flexshot.png",
+      "gold_flextale": "mockup-images/banners/gold_flextale.png",
+      "viral_flexshot": "mockup-images/banners/viral_flexshot.png",
+      "viral_flextale": "mockup-images/banners/viral_flextale.png"
+    },
+    "onboarding": {
+      "glow_1": "mockup-images/onboarding/glow_1.png",
+      "glow_2": "mockup-images/onboarding/glow_2.png",
+      "glow_3": "mockup-images/onboarding/glow_3.png",
+      "glow_4": "mockup-images/onboarding/glow_4.png",
+      "gold_hero": "mockup-images/onboarding/gold_hero.png",
+      "gold_locket": "mockup-images/onboarding/gold_locket.png",
+      "gold_shot": "mockup-images/onboarding/gold_shot.png",
+      "gold_tale": "mockup-images/onboarding/gold_tale.png",
+      "onb_flexlocket": "mockup-images/onboarding/onb_flexlocket.png",
+      "onb_flexshot": "mockup-images/onboarding/onb_flexshot.png",
+      "onb_flextale": "mockup-images/onboarding/onb_flextale.png",
+      "onb_login_bg": "mockup-images/onboarding/onb_login_bg.png",
+      "onb_personalize_bg": "mockup-images/onboarding/onb_personalize_bg.png",
+      "shot_1": "mockup-images/onboarding/shot_1.png",
+      "shot_2": "mockup-images/onboarding/shot_2.png",
+      "shot_3": "mockup-images/onboarding/shot_3.png",
+      "shot_4": "mockup-images/onboarding/shot_4.png",
+      "shot_5": "mockup-images/onboarding/shot_5.png",
+      "splash_1": "mockup-images/onboarding/splash_1.png",
+      "splash_2": "mockup-images/onboarding/splash_2.png",
+      "splash_3": "mockup-images/onboarding/splash_3.png",
+      "splash_bg": "mockup-images/onboarding/splash_bg.png",
+      "splash_spotlight": "mockup-images/onboarding/splash_spotlight.png",
+      "tale_1": "mockup-images/onboarding/tale_1.png",
+      "tale_2": "mockup-images/onboarding/tale_2.png",
+      "tale_3": "mockup-images/onboarding/tale_3.png",
+      "tale_4": "mockup-images/onboarding/tale_4.png",
+      "tale_d1_arrival": "mockup-images/onboarding/tale_d1_arrival.png",
+      "tale_d1_pool": "mockup-images/onboarding/tale_d1_pool.png",
+      "tale_d2_rice": "mockup-images/onboarding/tale_d2_rice.png",
+      "tale_d2_temple": "mockup-images/onboarding/tale_d2_temple.png",
+      "tale_d3_cliff": "mockup-images/onboarding/tale_d3_cliff.png",
+      "tale_d3_yacht": "mockup-images/onboarding/tale_d3_yacht.png",
+      "tale_timeline": "mockup-images/onboarding/tale_timeline.png",
+      "viral_hero": "mockup-images/onboarding/viral_hero.png",
+      "viral_locket": "mockup-images/onboarding/viral_locket.png",
+      "viral_shot": "mockup-images/onboarding/viral_shot.png",
+      "viral_tale": "mockup-images/onboarding/viral_tale.png"
+    },
+    "templates": {
+      "gold": {
+        "t10_gym_beast": "mockup-images/templates/gold/t10_gym_beast.png",
+        "t11_christmas": "mockup-images/templates/gold/t11_christmas.png",
+        "t12_magazine": "mockup-images/templates/gold/t12_magazine.png",
+        "t1_paris_eiffel": "mockup-images/templates/gold/t1_paris_eiffel.png",
+        "t2_lamborghini": "mockup-images/templates/gold/t2_lamborghini.png",
+        "t3_ceo_office": "mockup-images/templates/gold/t3_ceo_office.png",
+        "t4_anime_hero": "mockup-images/templates/gold/t4_anime_hero.png",
+        "t5_tokyo_neon": "mockup-images/templates/gold/t5_tokyo_neon.png",
+        "t6_yacht_life": "mockup-images/templates/gold/t6_yacht_life.png",
+        "t7_coffee": "mockup-images/templates/gold/t7_coffee.png",
+        "t8_cyberpunk": "mockup-images/templates/gold/t8_cyberpunk.png",
+        "t9_bali_sunset": "mockup-images/templates/gold/t9_bali_sunset.png"
+      },
+      "viral": {
+        "t10_gym_beast": "mockup-images/templates/viral/t10_gym_beast.png",
+        "t11_christmas": "mockup-images/templates/viral/t11_christmas.png",
+        "t12_magazine": "mockup-images/templates/viral/t12_magazine.png",
+        "t1_paris_eiffel": "mockup-images/templates/viral/t1_paris_eiffel.png",
+        "t2_lamborghini": "mockup-images/templates/viral/t2_lamborghini.png",
+        "t3_ceo_office": "mockup-images/templates/viral/t3_ceo_office.png",
+        "t4_anime_hero": "mockup-images/templates/viral/t4_anime_hero.png",
+        "t5_tokyo_neon": "mockup-images/templates/viral/t5_tokyo_neon.png",
+        "t6_yacht_life": "mockup-images/templates/viral/t6_yacht_life.png",
+        "t7_coffee": "mockup-images/templates/viral/t7_coffee.png",
+        "t8_cyberpunk": "mockup-images/templates/viral/t8_cyberpunk.png",
+        "t9_bali_sunset": "mockup-images/templates/viral/t9_bali_sunset.png"
+      }
+    },
+    "ui": {
+      "gold_profile_cover": "mockup-images/ui/gold_profile_cover.png",
+      "viral_profile_cover": "mockup-images/ui/viral_profile_cover.png"
+    }
+  }
+}

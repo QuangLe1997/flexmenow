@@ -1,0 +1,161 @@
+{
+  "version": "1.0.0",
+  "region": "US",
+  "slides": [
+    {
+      "badge": "FlexLocket",
+      "icon": "camera",
+      "title": {
+        "en": "Glow different.",
+        "vi": "Tỏa sáng khác biệt.",
+        "es": "Brilla diferente.",
+        "pt": "Brilhe diferente.",
+        "ja": "輝きが違う。",
+        "ko": "다르게 빛나다."
+      },
+      "slogan": {
+        "en": "Main character energy, zero filter.",
+        "vi": "Năng lượng nhân vật chính, không cần filter.",
+        "es": "Energía de protagonista, sin filtros.",
+        "pt": "Energia de protagonista, sem filtro.",
+        "ja": "主人公のオーラ、フィルターゼロ。",
+        "ko": "주인공 에너지, 필터 제로."
+      },
+      "subtitle": {
+        "en": "AI glow-up so clean even your ex won't know.",
+        "vi": "AI làm đẹp tinh tế đến mức người yêu cũ cũng không nhận ra.",
+        "es": "Un retoque con IA tan limpio que ni tu ex lo notará.",
+        "pt": "Um retoque com IA tão sutil que nem seu ex vai perceber.",
+        "ja": "AIの補正が自然すぎて、元カレも気づかない。",
+        "ko": "AI 보정이 너무 자연스러워 전 애인도 모를 정도."
+      },
+      "accentColor": "#A855F7",
+      "images": [
+        "mockup-images/onboarding/glow_1.png",
+        "mockup-images/onboarding/glow_2.png"
+      ],
+      "animation": "flip3d"
+    },
+    {
+      "badge": "FlexShot",
+      "icon": "sparkles",
+      "title": {
+        "en": "Your face, any scene.",
+        "vi": "Gương mặt bạn, mọi khung cảnh.",
+        "es": "Tu cara, cualquier escena.",
+        "pt": "Seu rosto, qualquer cenário.",
+        "ja": "あなたの顔、どんなシーンにも。",
+        "ko": "내 얼굴, 어떤 장면이든."
+      },
+      "slogan": {
+        "en": "Travel the world without leaving your room.",
+        "vi": "Du lịch thế giới mà không cần rời phòng.",
+        "es": "Viaja por el mundo sin salir de tu habitación.",
+        "pt": "Viaje pelo mundo sem sair do quarto.",
+        "ja": "部屋を出ずに世界を旅しよう。",
+        "ko": "방을 떠나지 않고 세계를 여행하세요."
+      },
+      "subtitle": {
+        "en": "AI puts you in stunning templates — Paris, Tokyo, anywhere.",
+        "vi": "AI đặt bạn vào những template tuyệt đẹp — Paris, Tokyo, bất cứ đâu.",
+        "es": "La IA te coloca en plantillas impresionantes — París, Tokio, donde sea.",
+        "pt": "A IA coloca você em templates incríveis — Paris, Tóquio, qualquer lugar.",
+        "ja": "AIがあなたを素敵なテンプレートに — パリ、東京、どこへでも。",
+        "ko": "AI가 멋진 템플릿에 당신을 — 파리, 도쿄, 어디든지."
+      },
+      "accentColor": "#F59E0B",
+      "images": [
+        "mockup-images/onboarding/shot_1.png",
+        "mockup-images/onboarding/shot_2.png"
+      ],
+      "animation": "slideUp"
+    },
+    {
+      "badge": "FlexTale",
+      "icon": "book",
+      "title": {
+        "en": "Your story, AI-powered.",
+        "vi": "Câu chuyện của bạn, sức mạnh AI.",
+        "es": "Tu historia, potenciada por IA.",
+        "pt": "Sua história, impulsionada por IA.",
+        "ja": "あなたの物語、AIが創る。",
+        "ko": "당신의 이야기, AI가 만든다."
+      },
+      "slogan": {
+        "en": "Every chapter, a new adventure.",
+        "vi": "Mỗi chương, một cuộc phiêu lưu mới.",
+        "es": "Cada capítulo, una nueva aventura.",
+        "pt": "Cada capítulo, uma nova aventura.",
+        "ja": "各章が、新しい冒険。",
+        "ko": "매 챕터, 새로운 모험."
+      },
+      "subtitle": {
+        "en": "AI generates a visual story series starring you.",
+        "vi": "AI tạo ra bộ truyện hình ảnh với bạn là nhân vật chính.",
+        "es": "La IA genera una serie visual de historias protagonizada por ti.",
+        "pt": "A IA gera uma série visual de histórias estrelada por você.",
+        "ja": "AIがあなた主演のビジュアルストーリーを生成。",
+        "ko": "AI가 당신이 주인공인 비주얼 스토리를 생성합니다."
+      },
+      "accentColor": "#3B82F6",
+      "images": [
+        "mockup-images/onboarding/tale_1.png",
+        "mockup-images/onboarding/tale_2.png"
+      ],
+      "animation": "fadeScale"
+    }
+  ],
+  "personalizeOptions": [
+    {
+      "label": {
+        "en": "Glow up my pics",
+        "vi": "Làm đẹp ảnh",
+        "es": "Mejorar mis fotos",
+        "pt": "Melhorar minhas fotos",
+        "ja": "写真を輝かせる",
+        "ko": "사진 보정하기"
+      },
+      "tabTarget": "glow",
+      "accentColor": "#A855F7"
+    },
+    {
+      "label": {
+        "en": "Create AI photos",
+        "vi": "Tạo ảnh AI",
+        "es": "Crear fotos AI",
+        "pt": "Criar fotos AI",
+        "ja": "AI写真を作る",
+        "ko": "AI 사진 만들기"
+      },
+      "tabTarget": "create",
+      "accentColor": "#F59E0B"
+    },
+    {
+      "label": {
+        "en": "Generate AI stories",
+        "vi": "Tạo truyện AI",
+        "es": "Generar historias AI",
+        "pt": "Gerar histórias AI",
+        "ja": "AIストーリーを作る",
+        "ko": "AI 스토리 만들기"
+      },
+      "tabTarget": "story",
+      "accentColor": "#3B82F6"
+    }
+  ],
+  "loginConfig": {
+    "freeCreditsLabel": {
+      "en": "Get 12 free credits to start",
+      "vi": "Nhận 12 credits miễn phí để bắt đầu",
+      "es": "Obtén 12 créditos gratis para empezar",
+      "pt": "Ganhe 12 créditos grátis para começar",
+      "ja": "12クレジットを無料でゲット",
+      "ko": "12크레딧 무료로 시작하세요"
+    },
+    "showGoogle": true,
+    "showApple": true,
+    "showAnonymous": true
+  },
+  "imageBaseUrl": "https://firebasestorage.googleapis.com/v0/b/flexme-now.firebasestorage.app/o/",
+  "imageSuffix": "?alt=media"
+}
