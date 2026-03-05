@@ -80,9 +80,9 @@ class _TaleReaderScreenState extends ConsumerState<TaleReaderScreen>
       backgroundColor: AppColors.bg,
       body: Column(
         children: [
-          // Hero image
-          SizedBox(
-            height: 300,
+          // Hero image — 70% height
+          Expanded(
+            flex: 7,
             child: Stack(fit: StackFit.expand, children: [
               if (sceneImageUrl != null && sceneImageUrl.isNotEmpty)
                 CachedNetworkImage(
@@ -96,8 +96,8 @@ class _TaleReaderScreenState extends ConsumerState<TaleReaderScreen>
               Container(
                 decoration: BoxDecoration(
                   gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter,
-                    colors: [AppColors.bg.withValues(alpha: 0.2), AppColors.bg.withValues(alpha: 0.85), AppColors.bg],
-                    stops: const [0.0, 0.7, 1.0]),
+                    colors: [AppColors.bg.withValues(alpha: 0.1), AppColors.bg.withValues(alpha: 0.15), AppColors.bg.withValues(alpha: 0.85), AppColors.bg],
+                    stops: const [0.0, 0.5, 0.85, 1.0]),
                 ),
               ),
               // Top bar
@@ -129,8 +129,9 @@ class _TaleReaderScreenState extends ConsumerState<TaleReaderScreen>
               )),
             ]),
           ),
-          // Scene content
+          // Scene content — 30% height
           Expanded(
+            flex: 3,
             child: FadeTransition(
               opacity: _fadeController,
               child: SingleChildScrollView(

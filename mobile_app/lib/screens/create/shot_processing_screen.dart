@@ -1,4 +1,7 @@
 import 'dart:math' as math;
+import 'dart:ui' as ui;
+
+import 'package:cached_network_image/cached_network_image.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
@@ -10,8 +13,9 @@ import '../../core/design_tokens.dart';
 import '../../data/mock_data.dart';
 import '../../providers/app_providers.dart';
 
-/// FlexShot processing — premium circular progress ring with glow,
-/// Gen Z motivational text, step checklist, artistic gradient background.
+/// FlexShot processing — Lensa/Remini style photo-centric processing screen.
+/// User's photo dominates with progressive blur reveal, scanning line,
+/// floating particles, grid overlay, and compact step dots.
 class ShotProcessingScreen extends ConsumerStatefulWidget {
   final String generationId;
   const ShotProcessingScreen({super.key, required this.generationId});
@@ -22,8 +26,9 @@ class ShotProcessingScreen extends ConsumerStatefulWidget {
 
 class _ShotProcessingScreenState extends ConsumerState<ShotProcessingScreen>
     with TickerProviderStateMixin {
-  late final AnimationController _ringController;
-  late final AnimationController _glowController;
+  late final AnimationController _scanController;
+  late final AnimationController _particleController;
+  late final AnimationController _pulseController;
   late final AnimationController _vibeController;
   bool _navigated = false;
   int _vibeIndex = 0;
@@ -31,18 +36,11 @@ class _ShotProcessingScreenState extends ConsumerState<ShotProcessingScreen>
   @override
   void initState() {
     super.initState();
-    _ringController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 4),
-    )..repeat();
-    _glowController = AnimationController(
-      vsync: this,
-      duration: const Duration(milliseconds: 2500),
-    )..repeat(reverse: true);
-    _vibeController = AnimationController(
-      vsync: this,
-      duration: const Duration(seconds: 4),
-    )..addStatusListener((status) {
+    _scanController = AnimationController(vsync: this, duration: const Duration(seconds: 2))..repeat();
+    _particleController = AnimationController(vsync: this, duration: const Duration(seconds: 6))..repeat();
+    _pulseController = AnimationController(vsync: this, duration: const Duration(milliseconds: 2500))..repeat(reverse: true);
+    _vibeController = AnimationController(vsync: this, duration: const Duration(seconds: 4))
+      ..addStatusListener((status) {
         if (status == AnimationStatus.completed) {
           setState(() => _vibeIndex = (_vibeIndex + 1) % kShotVibes.length);
           _vibeController.forward(from: 0);
@@ -53,8 +51,9 @@ class _ShotProcessingScreenState extends ConsumerState<ShotProcessingScreen>
 
   @override
   void dispose() {
-    _ringController.dispose();
-    _glowController.dispose();
+    _scanController.dispose();
+    _particleController.dispose();
+    _pulseController.dispose();
     _vibeController.dispose();
     super.dispose();
   }
@@ -73,7 +72,7 @@ class _ShotProcessingScreenState extends ConsumerState<ShotProcessingScreen>
     final genAsync = ref.watch(generationStatusProvider(widget.generationId));
 
     return genAsync.when(
-      loading: () => _buildUI(progress: 0, step: 0),
+      loading: () => _buildUI(progress: 0, step: 0, inputImageUrl: null),
       error: (e, _) => _buildErrorScreen(e.toString()),
       data: (gen) {
         if (gen.isCompleted && !_navigated) {
@@ -89,12 +88,12 @@ class _ShotProcessingScreenState extends ConsumerState<ShotProcessingScreen>
 
         final progress = gen.progress;
         final step = _progressToStep(progress);
-        return _buildUI(progress: progress, step: step);
+        return _buildUI(progress: progress, step: step, inputImageUrl: gen.inputImageUrl);
       },
     );
   }
 
-  Widget _buildUI({required int progress, required int step}) {
+  Widget _buildUI({required int progress, required int step, String? inputImageUrl}) {
     final pct = progress;
     final normalizedProgress = progress / 100.0;
 
@@ -102,323 +101,283 @@ class _ShotProcessingScreenState extends ConsumerState<ShotProcessingScreen>
       backgroundColor: AppColors.bg,
       body: Container(
         decoration: const BoxDecoration(gradient: AppGradients.processing),
-        child: Stack(
-          children: [
-            // Ambient glow orbs
-            AnimatedBuilder(
-              animation: _glowController,
-              builder: (_, __) => Positioned(
-                top: -60 + 20 * _glowController.value,
-                right: -40,
-                child: Container(
-                  width: 200,
-                  height: 200,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    gradient: RadialGradient(
-                      colors: [
-                        AppColors.brand.withValues(alpha: 0.08 + 0.04 * _glowController.value),
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            AnimatedBuilder(
-              animation: _glowController,
-              builder: (_, __) => Positioned(
-                bottom: -80 + 15 * _glowController.value,
-                left: -60,
-                child: Container(
-                  width: 240,
-                  height: 240,
-                  decoration: BoxDecoration(
-                    shape: BoxShape.circle,
-                    gradient: RadialGradient(
-                      colors: [
-                        AppColors.purple.withValues(alpha: 0.06 + 0.03 * _glowController.value),
-                        Colors.transparent,
-                      ],
-                    ),
-                  ),
-                ),
-              ),
-            ),
-
-            SafeArea(
-              child: Padding(
-                padding: const EdgeInsets.symmetric(horizontal: 32),
-                child: Column(
+        child: SafeArea(
+          child: Column(
+            children: [
+              // ── Top bar ──
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
                   children: [
-                    const Spacer(flex: 2),
+                    const SizedBox(width: 44), // balance
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      decoration: BoxDecoration(
+                        color: AppColors.brand.withValues(alpha: 0.08),
+                        borderRadius: BorderRadius.circular(AppSizes.radiusFull),
+                        border: Border.all(color: AppColors.brand.withValues(alpha: 0.2)),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(LucideIcons.sparkles, size: 12, color: AppColors.brand),
+                          const SizedBox(width: 5),
+                          Text('AI Generating', style: TextStyle(fontSize: AppSizes.fontXxsPlus, color: AppColors.brand, fontWeight: FontWeight.w600)),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
-                    // ── Circular progress ring with glow ──
-                    AnimatedBuilder(
-                      animation: _glowController,
-                      builder: (_, child) => Container(
-                        width: 176,
-                        height: 176,
+              const SizedBox(height: 12),
+
+              // ── Hero photo area (60%) ──
+              Expanded(
+                flex: 6,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: AnimatedBuilder(
+                    animation: Listenable.merge([_scanController, _particleController, _pulseController]),
+                    builder: (context, _) {
+                      return Container(
                         decoration: BoxDecoration(
-                          shape: BoxShape.circle,
+                          borderRadius: BorderRadius.circular(20),
                           boxShadow: [
                             BoxShadow(
-                              color: AppColors.brand.withValues(alpha: 0.12 + 0.08 * _glowController.value),
-                              blurRadius: 40 + 20 * _glowController.value,
-                              spreadRadius: 8,
+                              color: AppColors.brand.withValues(alpha: 0.2 + 0.2 * _pulseController.value),
+                              blurRadius: 20 + 15 * _pulseController.value,
+                              spreadRadius: 2,
                             ),
                           ],
                         ),
-                        child: child,
-                      ),
-                      child: Stack(
-                        alignment: Alignment.center,
-                        children: [
-                          // Background ring
-                          CustomPaint(
-                            size: const Size(176, 176),
-                            painter: _RingPainter(progress: 1.0, color: AppColors.zinc800.withValues(alpha: 0.5), strokeWidth: 4),
-                          ),
-                          // Progress ring
-                          AnimatedBuilder(
-                            animation: _ringController,
-                            builder: (_, __) => Transform.rotate(
-                              angle: _ringController.value * 0.3,
-                              child: CustomPaint(
-                                size: const Size(176, 176),
-                                painter: _GlowRingPainter(
-                                  progress: normalizedProgress,
-                                  strokeWidth: 4,
-                                ),
-                              ),
-                            ),
-                          ),
-                          // Center content
-                          Column(
-                            mainAxisSize: MainAxisSize.min,
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Stack(
+                            fit: StackFit.expand,
                             children: [
-                              Text(
-                                '$pct',
-                                style: AppTextStyles.mono.copyWith(
-                                  fontSize: 44,
-                                  fontWeight: FontWeight.w800,
-                                  color: Colors.white,
-                                  height: 1,
+                              // Progressive blur reveal
+                              ImageFiltered(
+                                imageFilter: ui.ImageFilter.blur(
+                                  sigmaX: 8.0 * (1.0 - normalizedProgress),
+                                  sigmaY: 8.0 * (1.0 - normalizedProgress),
+                                ),
+                                child: inputImageUrl != null && inputImageUrl.isNotEmpty
+                                    ? CachedNetworkImage(imageUrl: inputImageUrl, fit: BoxFit.cover)
+                                    : Container(color: AppColors.zinc800),
+                              ),
+
+                              // Grid overlay (AI analysis viz) — fades with progress
+                              CustomPaint(
+                                painter: _GridOverlayPainter(
+                                  opacity: (1.0 - normalizedProgress).clamp(0.0, 0.5),
+                                  color: AppColors.brand,
                                 ),
                               ),
-                              const SizedBox(height: 2),
-                              Container(
-                                padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 3),
-                                decoration: BoxDecoration(
-                                  color: AppColors.brand.withValues(alpha: 0.12),
-                                  borderRadius: BorderRadius.circular(20),
+
+                              // Scanning line
+                              Positioned(
+                                top: 0,
+                                left: 0,
+                                right: 0,
+                                bottom: 0,
+                                child: LayoutBuilder(
+                                  builder: (context, constraints) {
+                                    final scanY = _scanController.value * constraints.maxHeight;
+                                    return Stack(
+                                      children: [
+                                        Positioned(
+                                          top: scanY - 1,
+                                          left: 0,
+                                          right: 0,
+                                          child: Container(
+                                            height: 2,
+                                            decoration: BoxDecoration(
+                                              gradient: LinearGradient(
+                                                colors: [
+                                                  Colors.transparent,
+                                                  AppColors.brand.withValues(alpha: 0.8),
+                                                  Colors.transparent,
+                                                ],
+                                              ),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: AppColors.brand.withValues(alpha: 0.5),
+                                                  blurRadius: 20,
+                                                  spreadRadius: 4,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
+                                        ),
+                                      ],
+                                    );
+                                  },
                                 ),
-                                child: Text(
-                                  'CREATING',
-                                  style: AppTextStyles.mono.copyWith(
-                                    fontSize: AppSizes.font2xs,
-                                    fontWeight: FontWeight.w700,
-                                    color: AppColors.brand,
-                                    letterSpacing: 3,
+                              ),
+
+                              // Floating particles
+                              CustomPaint(
+                                painter: _ParticlePainter(
+                                  progress: _particleController.value,
+                                  color: AppColors.brand,
+                                ),
+                              ),
+
+                              // Percentage badge (bottom-right)
+                              Positioned(
+                                bottom: 12,
+                                right: 12,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.bg.withValues(alpha: 0.85),
+                                    borderRadius: BorderRadius.circular(12),
+                                    border: Border.all(color: AppColors.brand.withValues(alpha: 0.3)),
+                                  ),
+                                  child: Text(
+                                    '$pct%',
+                                    style: AppTextStyles.mono.copyWith(
+                                      fontSize: AppSizes.fontMdPlus,
+                                      fontWeight: FontWeight.w900,
+                                      color: AppColors.brand,
+                                    ),
                                   ),
                                 ),
                               ),
                             ],
                           ),
-                        ],
-                      ),
-                    ),
-
-                    const SizedBox(height: 32),
-
-                    // ── Title ──
-                    Text(
-                      'Creating your',
-                      style: TextStyle(
-                        fontSize: AppSizes.fontBase,
-                        fontWeight: FontWeight.w500,
-                        color: AppColors.textSec,
-                      ),
-                    ),
-                    ShaderMask(
-                      shaderCallback: (bounds) => const LinearGradient(
-                        colors: [AppColors.brand400, AppColors.brand, AppColors.brand400],
-                      ).createShader(bounds),
-                      child: Text(
-                        'FlexShot',
-                        style: TextStyle(
-                          fontSize: AppSizes.font2xlMax,
-                          fontWeight: FontWeight.w900,
-                          fontStyle: FontStyle.italic,
-                          color: Colors.white,
-                          letterSpacing: -1,
-                        ),
-                      ),
-                    ),
-
-                    const SizedBox(height: 8),
-
-                    // ── Rotating vibe text ──
-                    AnimatedSwitcher(
-                      duration: AppDurations.slow,
-                      child: Text(
-                        kShotVibes[_vibeIndex],
-                        key: ValueKey(_vibeIndex),
-                        style: TextStyle(
-                          fontSize: AppSizes.fontSmPlus,
-                          fontWeight: FontWeight.w500,
-                          color: AppColors.textTer,
-                          fontStyle: FontStyle.italic,
-                        ),
-                      ),
-                    ),
-
-                    const SizedBox(height: 32),
-
-                    // ── Step checklist ──
-                    ...List.generate(kShotSteps.length, (i) {
-                      final isDone = i < step;
-                      final isActive = i == step;
-                      return Padding(
-                        padding: const EdgeInsets.only(bottom: 6),
-                        child: Row(
-                          children: [
-                            // Connector line (left side)
-                            SizedBox(
-                              width: 24,
-                              child: Stack(
-                                alignment: Alignment.center,
-                                children: [
-                                  if (i < kShotSteps.length - 1)
-                                    Positioned(
-                                      top: 16,
-                                      bottom: -10,
-                                      child: Container(
-                                        width: 1,
-                                        color: isDone
-                                            ? AppColors.brand.withValues(alpha: 0.3)
-                                            : AppColors.zinc800,
-                                      ),
-                                    ),
-                                  AnimatedContainer(
-                                    duration: AppDurations.medium,
-                                    width: 22,
-                                    height: 22,
-                                    decoration: BoxDecoration(
-                                      shape: BoxShape.circle,
-                                      color: isDone
-                                          ? AppColors.green.withValues(alpha: 0.15)
-                                          : isActive
-                                              ? AppColors.brand.withValues(alpha: 0.15)
-                                              : Colors.transparent,
-                                      border: Border.all(
-                                        color: isDone
-                                            ? AppColors.green.withValues(alpha: 0.6)
-                                            : isActive
-                                                ? AppColors.brand
-                                                : AppColors.zinc700.withValues(alpha: 0.5),
-                                        width: 1.5,
-                                      ),
-                                      boxShadow: isActive
-                                          ? [BoxShadow(color: AppColors.brand.withValues(alpha: 0.3), blurRadius: 8)]
-                                          : null,
-                                    ),
-                                    child: isDone
-                                        ? const Icon(LucideIcons.check, size: 11, color: AppColors.green)
-                                        : isActive
-                                            ? Center(
-                                                child: Container(
-                                                  width: 6,
-                                                  height: 6,
-                                                  decoration: BoxDecoration(
-                                                    shape: BoxShape.circle,
-                                                    color: AppColors.brand,
-                                                    boxShadow: [BoxShadow(color: AppColors.brand.withValues(alpha: 0.6), blurRadius: 6)],
-                                                  ),
-                                                ),
-                                              )
-                                            : null,
-                                  ),
-                                ],
-                              ),
-                            ),
-                            const SizedBox(width: 12),
-                            Expanded(
-                              child: AnimatedDefaultTextStyle(
-                                duration: AppDurations.normal,
-                                style: TextStyle(
-                                  fontSize: AppSizes.fontSmPlus,
-                                  fontWeight: isActive ? FontWeight.w600 : FontWeight.w400,
-                                  color: isDone
-                                      ? AppColors.green
-                                      : isActive
-                                          ? Colors.white
-                                          : AppColors.textTer.withValues(alpha: 0.5),
-                                ),
-                                child: Text(kShotSteps[i]),
-                              ),
-                            ),
-                            if (isDone)
-                              Text(
-                                'DONE',
-                                style: AppTextStyles.mono.copyWith(
-                                  fontSize: AppSizes.font2xs,
-                                  fontWeight: FontWeight.w700,
-                                  color: AppColors.green.withValues(alpha: 0.5),
-                                  letterSpacing: 1,
-                                ),
-                              ),
-                          ],
                         ),
                       );
-                    }),
-
-                    const Spacer(),
-
-                    // ── Progress bar ──
-                    Container(
-                      height: 3,
-                      decoration: BoxDecoration(
-                        borderRadius: BorderRadius.circular(2),
-                        color: AppColors.zinc800.withValues(alpha: 0.5),
-                      ),
-                      child: LayoutBuilder(
-                        builder: (context, constraints) => Stack(
-                          children: [
-                            AnimatedContainer(
-                              duration: AppDurations.medium,
-                              width: constraints.maxWidth * normalizedProgress,
-                              decoration: BoxDecoration(
-                                borderRadius: BorderRadius.circular(2),
-                                gradient: const LinearGradient(
-                                  colors: [AppColors.brand600, AppColors.brand, AppColors.brand400],
-                                ),
-                                boxShadow: [
-                                  BoxShadow(color: AppColors.brand.withValues(alpha: 0.5), blurRadius: 8),
-                                ],
-                              ),
-                            ),
-                          ],
-                        ),
-                      ),
-                    ),
-                    const SizedBox(height: 16),
-
-                    // ── Bottom branding ──
-                    Text(
-                      'FLEXSHOT · GEMINI AI',
-                      style: AppTextStyles.mono.copyWith(
-                        fontSize: AppSizes.fontXxs,
-                        color: AppColors.textTer.withValues(alpha: 0.4),
-                        letterSpacing: 2,
-                      ),
-                    ),
-                    const SizedBox(height: 32),
-                  ],
+                    },
+                  ),
                 ),
               ),
-            ),
-          ],
+
+              const SizedBox(height: 16),
+
+              // ── Bottom info area (40%) ──
+              Expanded(
+                flex: 4,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  child: Column(
+                    children: [
+                      // Title
+                      Text(
+                        'Creating your FlexShot',
+                        style: TextStyle(
+                          fontSize: AppSizes.fontXlPlus,
+                          fontWeight: FontWeight.w800,
+                          color: AppColors.text,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+
+                      // Compact step dots
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(kShotSteps.length, (i) {
+                          final isDone = i < step;
+                          final isActive = i == step;
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 2),
+                            child: AnimatedContainer(
+                              duration: AppDurations.normal,
+                              width: isActive ? 20 : 6,
+                              height: 6,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(3),
+                                color: isDone
+                                    ? AppColors.green
+                                    : isActive
+                                        ? AppColors.brand
+                                        : AppColors.zinc700,
+                              ),
+                            ),
+                          );
+                        }),
+                      ),
+                      const SizedBox(height: 10),
+
+                      // Current step text
+                      AnimatedSwitcher(
+                        duration: AppDurations.normal,
+                        child: Text(
+                          step < kShotSteps.length ? kShotSteps[step] : 'Done!',
+                          key: ValueKey(step),
+                          style: TextStyle(
+                            fontSize: AppSizes.fontSmPlus,
+                            fontWeight: FontWeight.w600,
+                            color: AppColors.brand400,
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 4),
+
+                      // Rotating vibe text
+                      AnimatedSwitcher(
+                        duration: AppDurations.slow,
+                        child: Text(
+                          kShotVibes[_vibeIndex],
+                          key: ValueKey(_vibeIndex),
+                          style: TextStyle(
+                            fontSize: AppSizes.fontXs,
+                            fontWeight: FontWeight.w500,
+                            color: AppColors.textTer,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                      ),
+
+                      const Spacer(),
+
+                      // Thin progress bar
+                      Container(
+                        height: 3,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(2),
+                          color: AppColors.zinc800.withValues(alpha: 0.5),
+                        ),
+                        child: LayoutBuilder(
+                          builder: (context, constraints) => Stack(
+                            children: [
+                              AnimatedContainer(
+                                duration: AppDurations.medium,
+                                width: constraints.maxWidth * normalizedProgress,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(2),
+                                  gradient: const LinearGradient(
+                                    colors: [AppColors.brand600, AppColors.brand, AppColors.brand400],
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(color: AppColors.brand.withValues(alpha: 0.5), blurRadius: 8),
+                                  ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      ),
+                      const SizedBox(height: 12),
+
+                      // Branding
+                      Text(
+                        'FLEXSHOT · GEMINI AI',
+                        style: AppTextStyles.mono.copyWith(
+                          fontSize: AppSizes.fontXxs,
+                          color: AppColors.textTer.withValues(alpha: 0.4),
+                          letterSpacing: 2,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                    ],
+                  ),
+                ),
+              ),
+            ],
+          ),
         ),
       ),
     );
@@ -500,74 +459,72 @@ class _ShotProcessingScreenState extends ConsumerState<ShotProcessingScreen>
   }
 }
 
-/// Draws a simple arc ring.
-class _RingPainter extends CustomPainter {
-  final double progress;
+/// 3×3 grid overlay that fades as AI processing progresses.
+class _GridOverlayPainter extends CustomPainter {
+  final double opacity;
   final Color color;
-  final double strokeWidth;
 
-  _RingPainter({required this.progress, required this.color, required this.strokeWidth});
+  _GridOverlayPainter({required this.opacity, required this.color});
 
   @override
   void paint(Canvas canvas, Size size) {
+    if (opacity <= 0) return;
     final paint = Paint()
-      ..color = color
-      ..strokeWidth = strokeWidth
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round;
+      ..color = color.withValues(alpha: opacity * 0.3)
+      ..strokeWidth = 0.5;
 
-    final rect = Rect.fromLTWH(strokeWidth / 2, strokeWidth / 2, size.width - strokeWidth, size.height - strokeWidth);
-    const startAngle = -math.pi / 2;
-    final sweepAngle = progress * 2 * math.pi;
-
-    canvas.drawArc(rect, startAngle, sweepAngle, false, paint);
+    // Vertical lines
+    for (int i = 1; i <= 2; i++) {
+      final x = size.width * i / 3;
+      canvas.drawLine(Offset(x, 0), Offset(x, size.height), paint);
+    }
+    // Horizontal lines
+    for (int i = 1; i <= 2; i++) {
+      final y = size.height * i / 3;
+      canvas.drawLine(Offset(0, y), Offset(size.width, y), paint);
+    }
   }
 
   @override
-  bool shouldRepaint(covariant _RingPainter oldDelegate) {
-    return oldDelegate.progress != progress || oldDelegate.color != color;
-  }
+  bool shouldRepaint(covariant _GridOverlayPainter old) => old.opacity != opacity;
 }
 
-/// Draws a gradient arc ring with glow effect.
-class _GlowRingPainter extends CustomPainter {
+/// Floating particles that drift upward with pulsing opacity.
+class _ParticlePainter extends CustomPainter {
   final double progress;
-  final double strokeWidth;
+  final Color color;
+  static final _rng = math.Random(42);
+  static final _particles = List.generate(18, (i) => _ParticleData(
+    x: _rng.nextDouble(),
+    y: _rng.nextDouble(),
+    size: 1.5 + _rng.nextDouble() * 2.5,
+    speed: 0.3 + _rng.nextDouble() * 0.7,
+    phase: _rng.nextDouble() * math.pi * 2,
+  ));
 
-  _GlowRingPainter({required this.progress, required this.strokeWidth});
+  _ParticlePainter({required this.progress, required this.color});
 
   @override
   void paint(Canvas canvas, Size size) {
-    if (progress <= 0) return;
-
-    final rect = Rect.fromLTWH(strokeWidth / 2, strokeWidth / 2, size.width - strokeWidth, size.height - strokeWidth);
-    const startAngle = -math.pi / 2;
-    final sweepAngle = progress * 2 * math.pi;
-
-    // Glow layer
-    final glowPaint = Paint()
-      ..strokeWidth = strokeWidth + 6
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round
-      ..color = AppColors.brand.withValues(alpha: 0.3)
-      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 8);
-    canvas.drawArc(rect, startAngle, sweepAngle, false, glowPaint);
-
-    // Main ring
-    final paint = Paint()
-      ..strokeWidth = strokeWidth
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round
-      ..shader = const SweepGradient(
-        startAngle: 0,
-        endAngle: 2 * math.pi,
-        colors: [AppColors.brand600, AppColors.brand, AppColors.brand400, AppColors.brand],
-      ).createShader(rect);
-    canvas.drawArc(rect, startAngle, sweepAngle, false, paint);
+    for (final p in _particles) {
+      final y = (p.y - progress * p.speed) % 1.0;
+      final opacity = (0.3 + 0.4 * math.sin(progress * math.pi * 2 + p.phase)).clamp(0.0, 1.0);
+      final paint = Paint()
+        ..color = color.withValues(alpha: opacity * 0.6)
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1);
+      canvas.drawCircle(
+        Offset(p.x * size.width, y * size.height),
+        p.size,
+        paint,
+      );
+    }
   }
 
   @override
-  bool shouldRepaint(covariant _GlowRingPainter oldDelegate) {
-    return oldDelegate.progress != progress;
-  }
+  bool shouldRepaint(covariant _ParticlePainter old) => old.progress != progress;
+}
+
+class _ParticleData {
+  final double x, y, size, speed, phase;
+  const _ParticleData({required this.x, required this.y, required this.size, required this.speed, required this.phase});
 }

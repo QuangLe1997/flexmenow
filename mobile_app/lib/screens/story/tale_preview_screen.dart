@@ -83,8 +83,8 @@ class _TalePreviewScreenState extends ConsumerState<TalePreviewScreen> {
       body: Column(
         children: [
           // ─── 3D Hero Banner (full bleed, premium) ───
-          SizedBox(
-            height: 360,
+          Expanded(
+            flex: 7,
             child: LayoutBuilder(
               builder: (context, constraints) {
                 final screenW = constraints.maxWidth;
@@ -261,6 +261,7 @@ class _TalePreviewScreenState extends ConsumerState<TalePreviewScreen> {
 
           // ─── Info + Chapters (with blend overlay) ───
           Expanded(
+            flex: 3,
             child: Stack(
               children: [
                 SingleChildScrollView(

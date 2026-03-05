@@ -1,5 +1,6 @@
 import 'dart:io';
 import 'dart:math' as math;
+import 'dart:ui' as ui;
 
 import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
@@ -14,11 +15,10 @@ import '../../core/constants.dart';
 import '../../core/design_tokens.dart';
 import '../../data/mock_data.dart';
 import '../../providers/app_providers.dart';
-import '../../widgets/image_slideshow.dart';
 
-/// Glow processing — premium circular photo with SVG progress ring,
-/// rotating ambient rings, 6-step vertical timeline,
-/// Gen Z motivational text, "Subtle & undetectable" trust badge.
+/// Glow processing — Lensa/Remini style photo-centric processing screen.
+/// User's photo dominates with progressive blur-to-sharp reveal, scanning line,
+/// floating particles, and compact step dots.
 class GlowProcessingScreen extends ConsumerStatefulWidget {
   final String? imagePath;
   final String? enhanceMode;
@@ -32,8 +32,8 @@ class GlowProcessingScreen extends ConsumerStatefulWidget {
 
 class _GlowProcessingScreenState extends ConsumerState<GlowProcessingScreen>
     with TickerProviderStateMixin {
-  late final AnimationController _ringController;
-  late final AnimationController _ambientController;
+  late final AnimationController _scanController;
+  late final AnimationController _particleController;
   late final AnimationController _pulseController;
   late final AnimationController _vibeController;
   double _progress = 0;
@@ -41,21 +41,20 @@ class _GlowProcessingScreenState extends ConsumerState<GlowProcessingScreen>
   int _vibeIndex = 0;
   String? _uploadedImageUrl;
 
-  // Step colors for the timeline — each step has a unique accent
   static const _stepColors = [
-    AppColors.pink,    // Reading your vibe
-    AppColors.brand400, // Matching glow tone
-    AppColors.brand,   // Finding best light
-    AppColors.purple,  // Polishing to perfection
-    AppColors.blue,    // Chef's kiss
-    AppColors.green,   // Serving looks
+    AppColors.pink,
+    AppColors.brand400,
+    AppColors.brand,
+    AppColors.purple,
+    AppColors.blue,
+    AppColors.green,
   ];
 
   @override
   void initState() {
     super.initState();
-    _ringController = AnimationController(vsync: this, duration: const Duration(seconds: 1))..repeat();
-    _ambientController = AnimationController(vsync: this, duration: const Duration(seconds: 12))..repeat();
+    _scanController = AnimationController(vsync: this, duration: const Duration(seconds: 2))..repeat();
+    _particleController = AnimationController(vsync: this, duration: const Duration(seconds: 6))..repeat();
     _pulseController = AnimationController(vsync: this, duration: const Duration(milliseconds: 2500))..repeat(reverse: true);
     _vibeController = AnimationController(vsync: this, duration: const Duration(seconds: 4))
       ..addStatusListener((status) {
@@ -144,8 +143,8 @@ class _GlowProcessingScreenState extends ConsumerState<GlowProcessingScreen>
 
   @override
   void dispose() {
-    _ringController.dispose();
-    _ambientController.dispose();
+    _scanController.dispose();
+    _particleController.dispose();
     _pulseController.dispose();
     _vibeController.dispose();
     super.dispose();
@@ -154,493 +153,369 @@ class _GlowProcessingScreenState extends ConsumerState<GlowProcessingScreen>
   @override
   Widget build(BuildContext context) {
     final pct = (_progress * 100).toInt();
+    final accentColor = _currentStep < _stepColors.length
+        ? _stepColors[_currentStep]
+        : AppColors.brand;
 
     return Scaffold(
       backgroundColor: AppColors.bg,
       body: Container(
         decoration: const BoxDecoration(gradient: AppGradients.processing),
-        child: Stack(
-          children: [
-            // ── Rotating ambient rings ──
-            AnimatedBuilder(
-              animation: _ambientController,
-              builder: (_, __) => Positioned(
-                top: MediaQuery.of(context).size.height * 0.22,
-                left: 0,
-                right: 0,
-                child: Center(
-                  child: Transform.rotate(
-                    angle: _ambientController.value * 2 * math.pi,
-                    child: Container(
-                      width: 300,
-                      height: 300,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: AppColors.brand.withValues(alpha: 0.04 + 0.02 * _pulseController.value),
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-            AnimatedBuilder(
-              animation: _ambientController,
-              builder: (_, __) => Positioned(
-                top: MediaQuery.of(context).size.height * 0.22 - 15,
-                left: 0,
-                right: 0,
-                child: Center(
-                  child: Transform.rotate(
-                    angle: -_ambientController.value * 2 * math.pi * 0.6,
-                    child: Container(
-                      width: 330,
-                      height: 330,
-                      decoration: BoxDecoration(
-                        shape: BoxShape.circle,
-                        border: Border.all(
-                          color: AppColors.purple.withValues(alpha: 0.03),
-                          style: BorderStyle.solid,
-                        ),
-                      ),
-                    ),
-                  ),
-                ),
-              ),
-            ),
-
-            SafeArea(
-              child: Column(
-                children: [
-                  // ── Top: Back button ──
-                  Padding(
-                    padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
-                    child: Align(
-                      alignment: Alignment.centerLeft,
-                      child: Material(
-                        color: Colors.transparent,
-                        child: InkWell(
-                          onTap: () => context.pop(),
-                          customBorder: const CircleBorder(),
-                          child: Container(
-                            width: 44,
-                            height: 44,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: Colors.white.withValues(alpha: 0.04),
-                              border: Border.all(color: AppColors.borderMed),
-                            ),
-                            child: const Icon(LucideIcons.x, size: AppSizes.iconBase, color: AppColors.textTer),
+        child: SafeArea(
+          child: Column(
+            children: [
+              // ── Top bar: close + badge ──
+              Padding(
+                padding: const EdgeInsets.fromLTRB(16, 8, 16, 0),
+                child: Row(
+                  mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                  children: [
+                    Material(
+                      color: Colors.transparent,
+                      child: InkWell(
+                        onTap: () => context.pop(),
+                        customBorder: const CircleBorder(),
+                        child: Container(
+                          width: 44,
+                          height: 44,
+                          decoration: BoxDecoration(
+                            shape: BoxShape.circle,
+                            color: Colors.white.withValues(alpha: 0.04),
+                            border: Border.all(color: AppColors.borderMed),
                           ),
+                          child: const Icon(LucideIcons.x, size: AppSizes.iconBase, color: AppColors.textTer),
                         ),
                       ),
                     ),
-                  ),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 5),
+                      decoration: BoxDecoration(
+                        color: AppColors.green.withValues(alpha: 0.08),
+                        borderRadius: BorderRadius.circular(AppSizes.radiusFull),
+                        border: Border.all(color: AppColors.green.withValues(alpha: 0.2)),
+                      ),
+                      child: Row(
+                        mainAxisSize: MainAxisSize.min,
+                        children: [
+                          Icon(LucideIcons.shield, size: 12, color: AppColors.green.withValues(alpha: 0.7)),
+                          const SizedBox(width: 5),
+                          Text('Undetectable', style: TextStyle(fontSize: AppSizes.fontXxsPlus, color: AppColors.green, fontWeight: FontWeight.w600)),
+                        ],
+                      ),
+                    ),
+                  ],
+                ),
+              ),
 
-                  const Spacer(flex: 2),
+              const SizedBox(height: 12),
 
-                  // ── Center: Photo + circular progress ──
-                  SizedBox(
-                    width: 220,
-                    height: 220,
-                    child: Stack(
-                      alignment: Alignment.center,
-                      children: [
-                        // Outer glow
-                        AnimatedBuilder(
-                          animation: _pulseController,
-                          builder: (_, __) => Container(
-                            width: 220,
-                            height: 220,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              boxShadow: [
-                                BoxShadow(
-                                  color: AppColors.brand.withValues(alpha: 0.08 + 0.06 * _pulseController.value),
-                                  blurRadius: 40 + 20 * _pulseController.value,
-                                  spreadRadius: 4,
+              // ── Hero photo area (60%) ──
+              Expanded(
+                flex: 6,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 24),
+                  child: AnimatedBuilder(
+                    animation: Listenable.merge([_scanController, _particleController, _pulseController]),
+                    builder: (context, _) {
+                      return Container(
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(20),
+                          boxShadow: [
+                            BoxShadow(
+                              color: accentColor.withValues(alpha: 0.2 + 0.2 * _pulseController.value),
+                              blurRadius: 20 + 15 * _pulseController.value,
+                              spreadRadius: 2,
+                            ),
+                          ],
+                        ),
+                        child: ClipRRect(
+                          borderRadius: BorderRadius.circular(20),
+                          child: Stack(
+                            fit: StackFit.expand,
+                            children: [
+                              // Progressive blur reveal
+                              ImageFiltered(
+                                imageFilter: ui.ImageFilter.blur(
+                                  sigmaX: 8.0 * (1.0 - _progress),
+                                  sigmaY: 8.0 * (1.0 - _progress),
                                 ),
-                              ],
-                            ),
-                          ),
-                        ),
+                                child: widget.imagePath != null
+                                    ? Image.file(File(widget.imagePath!), fit: BoxFit.cover)
+                                    : Container(color: AppColors.zinc800),
+                              ),
 
-                        // SVG circular progress ring
-                        CustomPaint(
-                          size: const Size(210, 210),
-                          painter: _GlowProgressRingPainter(
-                            progress: _progress,
-                            stepColor: _currentStep < _stepColors.length
-                                ? _stepColors[_currentStep]
-                                : AppColors.brand,
-                          ),
-                        ),
-
-                        // Circular photo with sweep overlay
-                        AnimatedBuilder(
-                          animation: _pulseController,
-                          builder: (_, child) => Transform.scale(
-                            scale: 1.0 + 0.015 * _pulseController.value,
-                            child: child,
-                          ),
-                          child: Container(
-                            width: 170,
-                            height: 170,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              border: Border.all(color: AppColors.card, width: 3),
-                              boxShadow: [BoxShadow(color: AppColors.brand.withValues(alpha: 0.1), blurRadius: 20)],
-                            ),
-                            child: ClipOval(
-                              child: Stack(
-                                fit: StackFit.expand,
-                                children: [
-                                  widget.imagePath != null
-                                      ? Image.file(File(widget.imagePath!), fit: BoxFit.cover)
-                                      : PlaceholderImage(index: 4, borderRadius: 0, icon: LucideIcons.user),
-                                  // Gold sweep line that moves with progress
-                                  IgnorePointer(
-                                    child: AnimatedContainer(
-                                      duration: AppDurations.slow,
-                                      decoration: BoxDecoration(
-                                        gradient: LinearGradient(
-                                          begin: Alignment(-1 + 2 * _progress, 0),
-                                          end: Alignment(-0.5 + 2 * _progress, 0),
-                                          colors: [
-                                            Colors.transparent,
-                                            AppColors.brand.withValues(alpha: 0.15),
-                                            Colors.transparent,
-                                          ],
+                              // Scanning line
+                              Positioned(
+                                top: 0,
+                                left: 0,
+                                right: 0,
+                                bottom: 0,
+                                child: LayoutBuilder(
+                                  builder: (context, constraints) {
+                                    final scanY = _scanController.value * constraints.maxHeight;
+                                    return Stack(
+                                      children: [
+                                        Positioned(
+                                          top: scanY - 1,
+                                          left: 0,
+                                          right: 0,
+                                          child: Container(
+                                            height: 2,
+                                            decoration: BoxDecoration(
+                                              gradient: LinearGradient(
+                                                colors: [
+                                                  Colors.transparent,
+                                                  accentColor.withValues(alpha: 0.8),
+                                                  Colors.transparent,
+                                                ],
+                                              ),
+                                              boxShadow: [
+                                                BoxShadow(
+                                                  color: accentColor.withValues(alpha: 0.5),
+                                                  blurRadius: 20,
+                                                  spreadRadius: 4,
+                                                ),
+                                              ],
+                                            ),
+                                          ),
                                         ),
-                                      ),
+                                      ],
+                                    );
+                                  },
+                                ),
+                              ),
+
+                              // Floating particles
+                              CustomPaint(
+                                painter: _ParticlePainter(
+                                  progress: _particleController.value,
+                                  color: accentColor,
+                                ),
+                              ),
+
+                              // Percentage badge (bottom-right)
+                              Positioned(
+                                bottom: 12,
+                                right: 12,
+                                child: Container(
+                                  padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 6),
+                                  decoration: BoxDecoration(
+                                    color: AppColors.bg.withValues(alpha: 0.85),
+                                    borderRadius: BorderRadius.circular(12),
+                                    border: Border.all(color: accentColor.withValues(alpha: 0.3)),
+                                  ),
+                                  child: Text(
+                                    '$pct%',
+                                    style: AppTextStyles.mono.copyWith(
+                                      fontSize: AppSizes.fontMdPlus,
+                                      fontWeight: FontWeight.w900,
+                                      color: accentColor,
                                     ),
                                   ),
-                                ],
+                                ),
+                              ),
+                            ],
+                          ),
+                        ),
+                      );
+                    },
+                  ),
+                ),
+              ),
+
+              const SizedBox(height: 16),
+
+              // ── Bottom info area (40%) ──
+              Expanded(
+                flex: 4,
+                child: Padding(
+                  padding: const EdgeInsets.symmetric(horizontal: 32),
+                  child: Column(
+                    children: [
+                      // Title
+                      Text(
+                        'Enhancing your glow',
+                        style: TextStyle(
+                          fontSize: AppSizes.fontXlPlus,
+                          fontWeight: FontWeight.w800,
+                          color: AppColors.text,
+                        ),
+                      ),
+                      const SizedBox(height: 10),
+
+                      // Compact step dots
+                      Row(
+                        mainAxisAlignment: MainAxisAlignment.center,
+                        children: List.generate(kGlowSteps.length, (i) {
+                          final isDone = i < _currentStep;
+                          final isActive = i == _currentStep;
+                          return Padding(
+                            padding: const EdgeInsets.symmetric(horizontal: 2),
+                            child: AnimatedContainer(
+                              duration: AppDurations.normal,
+                              width: isActive ? 20 : 6,
+                              height: 6,
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(3),
+                                color: isDone
+                                    ? AppColors.green
+                                    : isActive
+                                        ? accentColor
+                                        : AppColors.zinc700,
                               ),
                             ),
-                          ),
-                        ),
-
-                        // Percentage badge (bottom-right)
-                        Positioned(
-                          bottom: 8,
-                          right: 8,
-                          child: Container(
-                            width: 48,
-                            height: 48,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: AppColors.bg,
-                              border: Border.all(color: AppColors.brand.withValues(alpha: 0.3), width: 2),
-                              boxShadow: [BoxShadow(color: Colors.black.withValues(alpha: 0.5), blurRadius: 12)],
-                            ),
-                            child: Column(
-                              mainAxisAlignment: MainAxisAlignment.center,
-                              children: [
-                                Text(
-                                  '$pct',
-                                  style: AppTextStyles.monoLarge.copyWith(
-                                    fontSize: AppSizes.fontMdPlus,
-                                    fontWeight: FontWeight.w900,
-                                    color: AppColors.brand,
-                                    height: 1,
-                                  ),
-                                ),
-                                Text(
-                                  '%',
-                                  style: AppTextStyles.captionMono.copyWith(
-                                    fontSize: AppSizes.font3xs,
-                                    fontWeight: FontWeight.w700,
-                                    color: AppColors.textTer,
-                                  ),
-                                ),
-                              ],
-                            ),
-                          ),
-                        ),
-                      ],
-                    ),
-                  ),
-
-                  const SizedBox(height: 24),
-
-                  // ── Title + current step ──
-                  ShaderMask(
-                    shaderCallback: (bounds) => const LinearGradient(
-                      colors: [AppColors.brand400, Colors.white, AppColors.brand400],
-                    ).createShader(bounds),
-                    child: Text(
-                      'Glow Enhancement',
-                      style: TextStyle(
-                        fontSize: AppSizes.font2xl,
-                        fontWeight: FontWeight.w900,
-                        fontStyle: FontStyle.italic,
-                        color: Colors.white,
-                        letterSpacing: -0.5,
+                          );
+                        }),
                       ),
-                    ),
-                  ),
-                  const SizedBox(height: 6),
+                      const SizedBox(height: 10),
 
-                  // Current step with colored dot
-                  AnimatedSwitcher(
-                    duration: AppDurations.normal,
-                    child: Row(
-                      key: ValueKey(_errorMessage ?? _currentStep),
-                      mainAxisAlignment: MainAxisAlignment.center,
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        if (_errorMessage == null && _currentStep < _stepColors.length) ...[
-                          Container(
-                            width: 6,
-                            height: 6,
-                            decoration: BoxDecoration(
-                              shape: BoxShape.circle,
-                              color: _stepColors[_currentStep],
-                              boxShadow: [BoxShadow(color: _stepColors[_currentStep].withValues(alpha: 0.6), blurRadius: 6)],
-                            ),
-                          ),
-                          const SizedBox(width: 8),
-                        ],
-                        Text(
+                      // Current step text
+                      AnimatedSwitcher(
+                        duration: AppDurations.normal,
+                        child: Text(
                           _errorMessage != null
                               ? 'Enhancement failed — showing original'
                               : _currentStep < kGlowSteps.length ? kGlowSteps[_currentStep] : 'Done!',
+                          key: ValueKey(_errorMessage ?? _currentStep),
                           style: TextStyle(
                             fontSize: AppSizes.fontSmPlus,
                             fontWeight: FontWeight.w600,
-                            color: _errorMessage != null ? AppColors.red : AppColors.brand400,
+                            color: _errorMessage != null ? AppColors.red : accentColor,
                           ),
                         ),
-                      ],
-                    ),
-                  ),
-
-                  const SizedBox(height: 4),
-
-                  // Rotating vibe text
-                  AnimatedSwitcher(
-                    duration: AppDurations.slow,
-                    child: Text(
-                      kGlowVibes[_vibeIndex],
-                      key: ValueKey(_vibeIndex),
-                      style: TextStyle(
-                        fontSize: AppSizes.fontXs,
-                        fontWeight: FontWeight.w500,
-                        color: AppColors.textTer,
-                        fontStyle: FontStyle.italic,
                       ),
-                    ),
-                  ),
+                      const SizedBox(height: 4),
 
-                  const SizedBox(height: 24),
+                      // Rotating vibe text
+                      AnimatedSwitcher(
+                        duration: AppDurations.slow,
+                        child: Text(
+                          kGlowVibes[_vibeIndex],
+                          key: ValueKey(_vibeIndex),
+                          style: TextStyle(
+                            fontSize: AppSizes.fontXs,
+                            fontWeight: FontWeight.w500,
+                            color: AppColors.textTer,
+                            fontStyle: FontStyle.italic,
+                          ),
+                        ),
+                      ),
 
-                  // ── Step timeline — vertical checklist ──
-                  Padding(
-                    padding: const EdgeInsets.symmetric(horizontal: 44),
-                    child: Column(
-                      children: List.generate(kGlowSteps.length, (i) {
-                        final isDone = i < _currentStep;
-                        final isActive = i == _currentStep;
-                        final isPending = i > _currentStep;
-                        final stepColor = _stepColors[i];
+                      const Spacer(),
 
-                        return Padding(
-                          padding: const EdgeInsets.only(bottom: 4),
-                          child: Row(
+                      // Thin progress bar
+                      Container(
+                        height: 3,
+                        decoration: BoxDecoration(
+                          borderRadius: BorderRadius.circular(2),
+                          color: AppColors.zinc800.withValues(alpha: 0.5),
+                        ),
+                        child: LayoutBuilder(
+                          builder: (context, constraints) => Stack(
                             children: [
-                              // Connector + indicator
-                              SizedBox(
-                                width: 24,
-                                child: Stack(
-                                  alignment: Alignment.center,
-                                  children: [
-                                    if (i < kGlowSteps.length - 1)
-                                      Positioned(
-                                        top: 16,
-                                        bottom: -8,
-                                        child: Container(
-                                          width: 1,
-                                          color: isDone
-                                              ? AppColors.brand.withValues(alpha: 0.25)
-                                              : AppColors.zinc800.withValues(alpha: 0.5),
-                                        ),
-                                      ),
-                                    AnimatedContainer(
-                                      duration: AppDurations.normal,
-                                      width: 20,
-                                      height: 20,
-                                      decoration: BoxDecoration(
-                                        shape: BoxShape.circle,
-                                        color: isDone
-                                            ? AppColors.green.withValues(alpha: 0.12)
-                                            : isActive
-                                                ? stepColor.withValues(alpha: 0.12)
-                                                : Colors.transparent,
-                                        border: Border.all(
-                                          color: isDone
-                                              ? AppColors.green.withValues(alpha: 0.5)
-                                              : isActive
-                                                  ? stepColor.withValues(alpha: 0.6)
-                                                  : AppColors.zinc700.withValues(alpha: 0.4),
-                                          width: 1.5,
-                                        ),
-                                        boxShadow: isActive
-                                            ? [BoxShadow(color: stepColor.withValues(alpha: 0.3), blurRadius: 8)]
-                                            : null,
-                                      ),
-                                      child: isDone
-                                          ? const Icon(LucideIcons.check, size: 10, color: AppColors.green)
-                                          : isActive
-                                              ? Center(
-                                                  child: Container(
-                                                    width: 6,
-                                                    height: 6,
-                                                    decoration: BoxDecoration(
-                                                      shape: BoxShape.circle,
-                                                      color: stepColor,
-                                                      boxShadow: [BoxShadow(color: stepColor.withValues(alpha: 0.6), blurRadius: 4)],
-                                                    ),
-                                                  ),
-                                                )
-                                              : Center(
-                                                  child: Container(
-                                                    width: 4,
-                                                    height: 4,
-                                                    decoration: BoxDecoration(
-                                                      shape: BoxShape.circle,
-                                                      color: AppColors.textTer.withValues(alpha: 0.3),
-                                                    ),
-                                                  ),
-                                                ),
-                                    ),
+                              AnimatedContainer(
+                                duration: AppDurations.medium,
+                                width: constraints.maxWidth * _progress,
+                                decoration: BoxDecoration(
+                                  borderRadius: BorderRadius.circular(2),
+                                  gradient: LinearGradient(
+                                    colors: [AppColors.brand600, accentColor, AppColors.brand400],
+                                  ),
+                                  boxShadow: [
+                                    BoxShadow(color: accentColor.withValues(alpha: 0.5), blurRadius: 8),
                                   ],
                                 ),
                               ),
-                              const SizedBox(width: 10),
-                              Expanded(
-                                child: Text(
-                                  kGlowSteps[i],
-                                  style: TextStyle(
-                                    fontSize: AppSizes.fontXs,
-                                    fontWeight: isActive ? FontWeight.w600 : FontWeight.w400,
-                                    color: isDone
-                                        ? AppColors.green
-                                        : isActive
-                                            ? stepColor
-                                            : AppColors.textTer.withValues(alpha: isPending ? 0.35 : 1),
-                                  ),
-                                ),
-                              ),
-                              if (isDone)
-                                Text(
-                                  'DONE',
-                                  style: AppTextStyles.captionMono.copyWith(
-                                    fontSize: AppSizes.font3xs,
-                                    fontWeight: FontWeight.w700,
-                                    color: AppColors.green.withValues(alpha: 0.5),
-                                    letterSpacing: 1,
-                                  ),
-                                ),
                             ],
                           ),
-                        );
-                      }),
-                    ),
-                  ),
-
-                  const Spacer(),
-
-                  // ── Bottom: Trust badge + branding ──
-                  Container(
-                    padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
-                    decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.03),
-                      borderRadius: BorderRadius.circular(14),
-                      border: Border.all(color: AppColors.border),
-                    ),
-                    child: Row(
-                      mainAxisSize: MainAxisSize.min,
-                      children: [
-                        Icon(LucideIcons.shield, size: AppSizes.iconXs, color: AppColors.green.withValues(alpha: 0.7)),
-                        const SizedBox(width: 8),
-                        Text(
-                          'Subtle & undetectable — your secret',
-                          style: TextStyle(
-                            fontSize: AppSizes.fontXxsPlus,
-                            color: AppColors.textTer,
-                            fontWeight: FontWeight.w500,
-                          ),
                         ),
-                      ],
-                    ),
+                      ),
+                      const SizedBox(height: 10),
+
+                      // Trust badge
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 14, vertical: 8),
+                        decoration: BoxDecoration(
+                          color: Colors.white.withValues(alpha: 0.03),
+                          borderRadius: BorderRadius.circular(14),
+                          border: Border.all(color: AppColors.border),
+                        ),
+                        child: Row(
+                          mainAxisSize: MainAxisSize.min,
+                          children: [
+                            Icon(LucideIcons.shield, size: AppSizes.iconXs, color: AppColors.green.withValues(alpha: 0.7)),
+                            const SizedBox(width: 8),
+                            Text(
+                              'Subtle & undetectable — your secret',
+                              style: TextStyle(
+                                fontSize: AppSizes.fontXxsPlus,
+                                color: AppColors.textTer,
+                                fontWeight: FontWeight.w500,
+                              ),
+                            ),
+                          ],
+                        ),
+                      ),
+                      const SizedBox(height: 8),
+
+                      // Branding
+                      Text(
+                        'FLEXLOCKET · IMAGEN AI',
+                        style: AppTextStyles.captionMono.copyWith(
+                          fontSize: AppSizes.font2xs,
+                          color: AppColors.textTer.withValues(alpha: 0.3),
+                          letterSpacing: 2,
+                        ),
+                      ),
+                      const SizedBox(height: 16),
+                    ],
                   ),
-                  const SizedBox(height: 10),
-                  Text(
-                    'FLEXLOCKET · IMAGEN AI',
-                    style: AppTextStyles.captionMono.copyWith(
-                      fontSize: AppSizes.font2xs,
-                      color: AppColors.textTer.withValues(alpha: 0.3),
-                      letterSpacing: 2,
-                    ),
-                  ),
-                  const SizedBox(height: 24),
-                ],
+                ),
               ),
-            ),
-          ],
+            ],
+          ),
         ),
       ),
     );
   }
 }
 
-/// Draws a progress ring with glow and color-shifting accent.
-class _GlowProgressRingPainter extends CustomPainter {
+/// Floating particles that drift upward with pulsing opacity.
+class _ParticlePainter extends CustomPainter {
   final double progress;
-  final Color stepColor;
+  final Color color;
+  static final _rng = math.Random(42);
+  static final _particles = List.generate(18, (i) => _ParticleData(
+    x: _rng.nextDouble(),
+    y: _rng.nextDouble(),
+    size: 1.5 + _rng.nextDouble() * 2.5,
+    speed: 0.3 + _rng.nextDouble() * 0.7,
+    phase: _rng.nextDouble() * math.pi * 2,
+  ));
 
-  _GlowProgressRingPainter({required this.progress, required this.stepColor});
+  _ParticlePainter({required this.progress, required this.color});
 
   @override
   void paint(Canvas canvas, Size size) {
-    final rect = Rect.fromLTWH(3, 3, size.width - 6, size.height - 6);
-
-    // Background ring
-    final bgPaint = Paint()
-      ..color = AppColors.zinc800.withValues(alpha: 0.4)
-      ..strokeWidth = 3
-      ..style = PaintingStyle.stroke;
-    canvas.drawArc(rect, 0, 2 * math.pi, false, bgPaint);
-
-    if (progress <= 0) return;
-
-    final sweepAngle = progress * 2 * math.pi;
-
-    // Glow layer
-    final glowPaint = Paint()
-      ..strokeWidth = 8
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round
-      ..color = stepColor.withValues(alpha: 0.2)
-      ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 6);
-    canvas.drawArc(rect, -math.pi / 2, sweepAngle, false, glowPaint);
-
-    // Main progress ring
-    final fgPaint = Paint()
-      ..strokeWidth = 3
-      ..style = PaintingStyle.stroke
-      ..strokeCap = StrokeCap.round
-      ..shader = SweepGradient(
-        startAngle: 0,
-        endAngle: 2 * math.pi,
-        colors: [AppColors.brand600, stepColor, AppColors.brand400, AppColors.brand],
-      ).createShader(rect);
-    canvas.drawArc(rect, -math.pi / 2, sweepAngle, false, fgPaint);
+    for (final p in _particles) {
+      final y = (p.y - progress * p.speed) % 1.0;
+      final opacity = (0.3 + 0.4 * math.sin(progress * math.pi * 2 + p.phase)).clamp(0.0, 1.0);
+      final paint = Paint()
+        ..color = color.withValues(alpha: opacity * 0.6)
+        ..maskFilter = const MaskFilter.blur(BlurStyle.normal, 1);
+      canvas.drawCircle(
+        Offset(p.x * size.width, y * size.height),
+        p.size,
+        paint,
+      );
+    }
   }
 
   @override
-  bool shouldRepaint(covariant _GlowProgressRingPainter old) =>
-      old.progress != progress || old.stepColor != stepColor;
+  bool shouldRepaint(covariant _ParticlePainter old) => old.progress != progress;
+}
+
+class _ParticleData {
+  final double x, y, size, speed, phase;
+  const _ParticleData({required this.x, required this.y, required this.size, required this.speed, required this.phase});
 }
