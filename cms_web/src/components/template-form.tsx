@@ -1,9 +1,22 @@
 "use client";
 
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import { useRouter } from "next/navigation";
 import { TemplatePreview } from "./template-preview";
+import { TestGenerate } from "./test-generate";
 import type { TemplateItem, I18nString } from "@/lib/types";
+
+interface CategoryMeta {
+  id: string;
+  name: Record<string, string>;
+}
+
+interface PromptSnippet {
+  id: string;
+  label: string;
+  category: "negative" | "style" | "base" | "variable";
+  content: string;
+}
 
 const LANGUAGES = ["en", "vi", "es", "pt", "ja", "ko"] as const;
 const LANGUAGE_LABELS: Record<string, string> = {
@@ -116,6 +129,67 @@ export function TemplateForm({ initialData, templateId, readOnly, version }: Pro
   const [uploadingCover, setUploadingCover] = useState(false);
   const [uploadingPreview, setUploadingPreview] = useState<number | null>(null);
   const [tagInput, setTagInput] = useState("");
+  const [translating, setTranslating] = useState(false);
+  const [translateMsg, setTranslateMsg] = useState("");
+  // Meta dropdowns
+  const [categories, setCategories] = useState<CategoryMeta[]>([]);
+  const [typeOptions, setTypeOptions] = useState<string[]>([]);
+  const [genderOptions, setGenderOptions] = useState<string[]>([]);
+  // Prompt snippets
+  const [snippets, setSnippets] = useState<PromptSnippet[]>([]);
+  const [showSnippets, setShowSnippets] = useState(false);
+
+  useEffect(() => {
+    const token = localStorage.getItem("adminToken") || "";
+    fetch("/api/templates/categories", { headers: { Authorization: `Bearer ${token}` } })
+      .then((r) => r.json())
+      .then((d) => {
+        setCategories(d.categories || []);
+        setTypeOptions(d.types || []);
+        setGenderOptions(d.genders || []);
+      })
+      .catch(() => {});
+    fetch("/api/prompt-snippets", { headers: { Authorization: `Bearer ${token}` } })
+      .then((r) => r.json())
+      .then((d) => setSnippets(d.snippets || []))
+      .catch(() => {});
+  }, []);
+
+  async function handleTranslate() {
+    if (!templateId) {
+      setError("Save the template first before translating");
+      return;
+    }
+    if (!data.name.en) {
+      setError("English name is required for translation");
+      return;
+    }
+    setTranslating(true);
+    setTranslateMsg("");
+    try {
+      const token = localStorage.getItem("adminToken") || "";
+      const res = await fetch("/api/translate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ type: "template", id: templateId }),
+      });
+      const result = await res.json();
+      if (!res.ok) throw new Error(result.error);
+
+      // Update local state with translations
+      if (result.name) {
+        setData((prev) => ({ ...prev, name: result.name }));
+      }
+      setTranslateMsg(`Translated to ${result.langs?.join(", ") || "all languages"}`);
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Translation failed");
+    } finally {
+      setTranslating(false);
+    }
+  }
 
   function update<K extends keyof TemplateFormData>(key: K, value: TemplateFormData[K]) {
     setData((prev) => ({ ...prev, [key]: value }));
@@ -285,21 +359,42 @@ export function TemplateForm({ initialData, templateId, readOnly, version }: Pro
           <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-neutral-400">
             Template Name
           </h3>
-          <div className="mb-3 flex gap-1 border-b border-neutral-800">
-            {LANGUAGES.map((lang) => (
+          <div className="mb-3 flex items-center justify-between border-b border-neutral-800">
+            <div className="flex gap-1">
+              {LANGUAGES.map((lang) => (
+                <button
+                  key={lang}
+                  onClick={() => setActiveLang(lang)}
+                  className={`px-3 py-2 text-sm font-medium transition-colors ${
+                    activeLang === lang
+                      ? "border-b-2 border-brand text-brand"
+                      : data.name[lang]
+                      ? "text-green-400 hover:text-green-300"
+                      : "text-neutral-400 hover:text-neutral-200"
+                  }`}
+                >
+                  {lang.toUpperCase()}
+                </button>
+              ))}
+            </div>
+            {templateId && !readOnly && (
               <button
-                key={lang}
-                onClick={() => setActiveLang(lang)}
-                className={`px-3 py-2 text-sm font-medium transition-colors ${
-                  activeLang === lang
-                    ? "border-b-2 border-brand text-brand"
-                    : "text-neutral-400 hover:text-neutral-200"
-                }`}
+                onClick={handleTranslate}
+                disabled={translating}
+                className="mb-1 flex items-center gap-1.5 rounded-md bg-blue-600/20 px-3 py-1.5 text-xs font-medium text-blue-400 transition-colors hover:bg-blue-600/30 disabled:opacity-50"
               >
-                {lang.toUpperCase()}
+                <svg className={`h-3.5 w-3.5 ${translating ? "animate-spin" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                  <path strokeLinecap="round" strokeLinejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+                </svg>
+                {translating ? "Translating..." : "Auto-translate from EN"}
               </button>
-            ))}
+            )}
           </div>
+          {translateMsg && (
+            <div className="mb-3 rounded-lg border border-green-500/30 bg-green-500/10 px-3 py-2 text-xs text-green-400">
+              {translateMsg}
+            </div>
+          )}
           <div>
             <label className="label">{LANGUAGE_LABELS[activeLang]}</label>
             <input
@@ -330,33 +425,72 @@ export function TemplateForm({ initialData, templateId, readOnly, version }: Pro
             </div>
             <div>
               <label className="label">Category</label>
-              <input
-                type="text"
-                value={data.category}
-                onChange={(e) => update("category", e.target.value)}
-                className="input"
-                placeholder="e.g., professional"
-              />
+              {categories.length > 0 ? (
+                <select
+                  value={data.category}
+                  onChange={(e) => update("category", e.target.value)}
+                  className="select"
+                >
+                  <option value="">Select...</option>
+                  {categories.map((c) => (
+                    <option key={c.id} value={c.id}>{c.name.en || c.id}</option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  type="text"
+                  value={data.category}
+                  onChange={(e) => update("category", e.target.value)}
+                  className="input"
+                  placeholder="e.g., professional"
+                />
+              )}
             </div>
             <div>
               <label className="label">Type</label>
-              <input
-                type="text"
-                value={data.type}
-                onChange={(e) => update("type", e.target.value)}
-                className="input"
-                placeholder="e.g., headshot"
-              />
+              {typeOptions.length > 0 ? (
+                <select
+                  value={data.type}
+                  onChange={(e) => update("type", e.target.value)}
+                  className="select"
+                >
+                  <option value="">Select...</option>
+                  {typeOptions.map((t) => (
+                    <option key={t} value={t}>{t}</option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  type="text"
+                  value={data.type}
+                  onChange={(e) => update("type", e.target.value)}
+                  className="input"
+                  placeholder="e.g., headshot"
+                />
+              )}
             </div>
             <div>
               <label className="label">Gender</label>
-              <input
-                type="text"
-                value={data.gender}
-                onChange={(e) => update("gender", e.target.value)}
-                className="input"
-                placeholder="e.g., all"
-              />
+              {genderOptions.length > 0 ? (
+                <select
+                  value={data.gender}
+                  onChange={(e) => update("gender", e.target.value)}
+                  className="select"
+                >
+                  <option value="">Select...</option>
+                  {genderOptions.map((g) => (
+                    <option key={g} value={g}>{g}</option>
+                  ))}
+                </select>
+              ) : (
+                <input
+                  type="text"
+                  value={data.gender}
+                  onChange={(e) => update("gender", e.target.value)}
+                  className="input"
+                  placeholder="e.g., all"
+                />
+              )}
             </div>
             <div>
               <label className="label">Style</label>
@@ -546,9 +680,56 @@ export function TemplateForm({ initialData, templateId, readOnly, version }: Pro
 
         {/* Prompt */}
         <div className="card">
-          <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-neutral-400">
-            Prompt Configuration
-          </h3>
+          <div className="mb-4 flex items-center justify-between">
+            <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-400">
+              Prompt Configuration
+            </h3>
+            {snippets.length > 0 && (
+              <button
+                onClick={() => setShowSnippets(!showSnippets)}
+                className="text-xs text-neutral-400 hover:text-brand transition-colors"
+              >
+                {showSnippets ? "Hide Snippets" : `Snippets (${snippets.length})`}
+              </button>
+            )}
+          </div>
+
+          {/* Snippet Library Panel */}
+          {showSnippets && snippets.length > 0 && (
+            <div className="mb-4 rounded-lg border border-neutral-700 bg-neutral-800/30 p-3">
+              <p className="mb-2 text-xs text-neutral-400">Click to insert into the relevant field:</p>
+              <div className="grid grid-cols-1 gap-2 sm:grid-cols-2 max-h-48 overflow-y-auto">
+                {snippets.map((s) => (
+                  <button
+                    key={s.id}
+                    onClick={() => {
+                      if (s.category === "negative") {
+                        updatePrompt("negative", data.prompt.negative ? `${data.prompt.negative}, ${s.content}` : s.content);
+                      } else if (s.category === "style") {
+                        updatePrompt("styleHint", data.prompt.styleHint ? `${data.prompt.styleHint}, ${s.content}` : s.content);
+                      } else {
+                        updatePrompt("base", data.prompt.base ? `${data.prompt.base}\n${s.content}` : s.content);
+                      }
+                    }}
+                    className="flex items-start gap-2 rounded-lg border border-neutral-700 bg-neutral-800/50 p-2 text-left transition-colors hover:border-brand/40 hover:bg-brand/5"
+                  >
+                    <span className={`mt-0.5 shrink-0 rounded px-1.5 py-0.5 text-[10px] font-medium leading-none ${
+                      s.category === "negative" ? "bg-red-500/20 text-red-400" :
+                      s.category === "style" ? "bg-purple-500/20 text-purple-400" :
+                      s.category === "variable" ? "bg-blue-500/20 text-blue-400" :
+                      "bg-green-500/20 text-green-400"
+                    }`}>
+                      {s.category}
+                    </span>
+                    <div className="min-w-0">
+                      <div className="text-xs font-medium text-white truncate">{s.label}</div>
+                      <p className="text-[10px] text-neutral-500 line-clamp-2">{s.content}</p>
+                    </div>
+                  </button>
+                ))}
+              </div>
+            </div>
+          )}
           <div className="space-y-4">
             <div>
               <div className="flex items-center justify-between">
@@ -690,6 +871,12 @@ export function TemplateForm({ initialData, templateId, readOnly, version }: Pro
             Live Preview
           </h3>
           <TemplatePreview data={previewData} />
+
+          {templateId && !readOnly && (
+            <div className="mt-6">
+              <TestGenerate type="template" id={templateId} />
+            </div>
+          )}
         </div>
       </div>
     </div>

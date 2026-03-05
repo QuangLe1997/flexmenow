@@ -4,6 +4,15 @@ import { useState, useEffect, useRef, useCallback } from "react";
 
 type Engine = "gemini" | "gpu";
 
+interface HistoryItem {
+  id: number;
+  engine: Engine;
+  url: string;
+  path: string;
+  prompt?: string;
+  timestamp: number;
+}
+
 interface Props {
   type: "template" | "story";
   id: string;
@@ -24,6 +33,11 @@ export function TestGenerate({ type, id, chapterCount = 0 }: Props) {
   } | null>(null);
   const [error, setError] = useState("");
   const pollRef = useRef<ReturnType<typeof setInterval> | null>(null);
+  // Prompt history
+  const [history, setHistory] = useState<HistoryItem[]>([]);
+  const [compareIds, setCompareIds] = useState<[number | null, number | null]>([null, null]);
+  const [showHistory, setShowHistory] = useState(false);
+  const nextIdRef = useRef(1);
 
   // Cleanup polling on unmount
   useEffect(() => {
@@ -41,6 +55,25 @@ export function TestGenerate({ type, id, chapterCount = 0 }: Props) {
     reader.readAsDataURL(file);
   }
 
+  function addToHistory(item: Omit<HistoryItem, "id" | "timestamp">) {
+    const newItem: HistoryItem = {
+      ...item,
+      id: nextIdRef.current++,
+      timestamp: Date.now(),
+    };
+    setHistory((prev) => [newItem, ...prev].slice(0, 20)); // Keep last 20
+  }
+
+  function toggleCompare(historyId: number) {
+    setCompareIds((prev) => {
+      if (prev[0] === historyId) return [null, prev[1]];
+      if (prev[1] === historyId) return [prev[0], null];
+      if (prev[0] === null) return [historyId, prev[1]];
+      if (prev[1] === null) return [prev[0], historyId];
+      return [historyId, prev[1]];
+    });
+  }
+
   const pollTaskStatus = useCallback(
     (taskId: string, token: string) => {
       pollRef.current = setInterval(async () => {
@@ -53,10 +86,12 @@ export function TestGenerate({ type, id, chapterCount = 0 }: Props) {
           if (data.status === "done") {
             if (pollRef.current) clearInterval(pollRef.current);
             pollRef.current = null;
-            setResult({
+            const resultData = {
               url: data.image_url,
               path: data.output_gcs_path,
-            });
+            };
+            setResult(resultData);
+            addToHistory({ engine: "gpu", ...resultData });
             setGpuStatus("");
             setGenerating(false);
           } else if (data.status === "error") {
@@ -73,6 +108,7 @@ export function TestGenerate({ type, id, chapterCount = 0 }: Props) {
         }
       }, 3000);
     },
+    // eslint-disable-next-line react-hooks/exhaustive-deps
     []
   );
 
@@ -107,6 +143,7 @@ export function TestGenerate({ type, id, chapterCount = 0 }: Props) {
         const data = await res.json();
         if (!res.ok) throw new Error(data.error);
         setResult(data);
+        addToHistory({ engine: "gemini", url: data.url, path: data.path, prompt: data.prompt });
         setGenerating(false);
       } else {
         // GPU service via Pub/Sub (async with polling)
@@ -128,11 +165,25 @@ export function TestGenerate({ type, id, chapterCount = 0 }: Props) {
     }
   }
 
+  const compareItems = compareIds
+    .map((cid) => history.find((h) => h.id === cid))
+    .filter(Boolean) as HistoryItem[];
+
   return (
     <div className="card">
-      <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-neutral-400">
-        Test Generate
-      </h3>
+      <div className="mb-4 flex items-center justify-between">
+        <h3 className="text-sm font-semibold uppercase tracking-wider text-neutral-400">
+          Test Generate
+        </h3>
+        {history.length > 0 && (
+          <button
+            onClick={() => setShowHistory(!showHistory)}
+            className="text-xs text-neutral-400 hover:text-white transition-colors"
+          >
+            History ({history.length})
+          </button>
+        )}
+      </div>
 
       {/* Engine selector */}
       <div className="mb-4 flex gap-2">
@@ -279,6 +330,92 @@ export function TestGenerate({ type, id, chapterCount = 0 }: Props) {
               {result.prompt}
             </p>
           )}
+        </div>
+      )}
+
+      {/* Prompt History */}
+      {showHistory && history.length > 0 && (
+        <div className="mt-4 border-t border-neutral-800 pt-4">
+          <div className="mb-3 flex items-center justify-between">
+            <h4 className="text-xs font-semibold uppercase tracking-wider text-neutral-400">
+              Generation History
+            </h4>
+            {compareItems.length === 2 && (
+              <span className="text-xs text-brand">Comparing 2 results</span>
+            )}
+          </div>
+
+          {/* Side-by-side compare */}
+          {compareItems.length === 2 && (
+            <div className="mb-4 grid grid-cols-2 gap-3">
+              {compareItems.map((item) => (
+                <div key={item.id} className="rounded-lg border border-neutral-700 p-2">
+                  <img
+                    src={item.url}
+                    alt={`Result #${item.id}`}
+                    className="w-full rounded-lg"
+                  />
+                  <div className="mt-2 text-xs text-neutral-400">
+                    <span className={item.engine === "gemini" ? "text-blue-400" : "text-purple-400"}>
+                      {item.engine}
+                    </span>
+                    {" · "}
+                    {new Date(item.timestamp).toLocaleTimeString()}
+                  </div>
+                  {item.prompt && (
+                    <p className="mt-1 text-[10px] text-neutral-500 line-clamp-3">
+                      {item.prompt}
+                    </p>
+                  )}
+                </div>
+              ))}
+            </div>
+          )}
+
+          {/* History list */}
+          <div className="space-y-2 max-h-60 overflow-y-auto">
+            {history.map((item) => (
+              <div
+                key={item.id}
+                className={`flex items-center gap-3 rounded-lg p-2 transition-colors ${
+                  compareIds.includes(item.id)
+                    ? "bg-brand/10 border border-brand/30"
+                    : "bg-neutral-800/50 hover:bg-neutral-800"
+                }`}
+              >
+                <img
+                  src={item.url}
+                  alt={`#${item.id}`}
+                  className="h-12 w-12 rounded object-cover flex-shrink-0"
+                />
+                <div className="flex-1 min-w-0">
+                  <div className="flex items-center gap-2 text-xs">
+                    <span className={item.engine === "gemini" ? "text-blue-400" : "text-purple-400"}>
+                      {item.engine}
+                    </span>
+                    <span className="text-neutral-500">
+                      {new Date(item.timestamp).toLocaleTimeString()}
+                    </span>
+                  </div>
+                  {item.prompt && (
+                    <p className="text-[10px] text-neutral-500 truncate">
+                      {item.prompt}
+                    </p>
+                  )}
+                </div>
+                <button
+                  onClick={() => toggleCompare(item.id)}
+                  className={`shrink-0 rounded px-2 py-1 text-[10px] font-medium transition-colors ${
+                    compareIds.includes(item.id)
+                      ? "bg-brand text-black"
+                      : "bg-neutral-700 text-neutral-300 hover:bg-neutral-600"
+                  }`}
+                >
+                  {compareIds.includes(item.id) ? "Selected" : "Compare"}
+                </button>
+              </div>
+            ))}
+          </div>
         </div>
       )}
     </div>
