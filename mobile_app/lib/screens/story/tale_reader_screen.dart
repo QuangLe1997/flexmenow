@@ -12,8 +12,8 @@ import '../../data/models/story_model.dart';
 import '../../providers/app_providers.dart';
 import '../../widgets/image_slideshow.dart';
 
-/// Tale reader — Scene image hero, progress strip, chapter heading,
-/// story text, choice buttons (A/B/C), completion screen with Award icon.
+/// Tale reader — Cinematic scene viewer with immersive 3:4 hero image,
+/// film bars, story-strip progress, premium typography.
 ///
 /// The [storyId] is the Firestore document ID. Loads story + scenes data,
 /// uses real scene images from `outputImageUrl` when available.
@@ -55,6 +55,16 @@ class _TaleReaderScreenState extends ConsumerState<TaleReaderScreen>
     }
   }
 
+  void _goPrevScene() {
+    if (_currentScene > 0) {
+      _fadeController.reverse().then((_) {
+        if (!mounted) return;
+        setState(() { _currentScene--; });
+        _fadeController.forward();
+      });
+    }
+  }
+
   @override
   Widget build(BuildContext context) {
     final storyAsync = ref.watch(storyStatusProvider(widget.storyId));
@@ -80,112 +90,339 @@ class _TaleReaderScreenState extends ConsumerState<TaleReaderScreen>
       backgroundColor: AppColors.bg,
       body: Column(
         children: [
-          // Hero image — 70% height
+          // ── Cinematic hero image — 70% ──
           Expanded(
             flex: 7,
-            child: Stack(fit: StackFit.expand, children: [
-              if (sceneImageUrl != null && sceneImageUrl.isNotEmpty)
-                CachedNetworkImage(
-                  imageUrl: sceneImageUrl,
-                  fit: BoxFit.cover,
-                  placeholder: (_, __) => Container(color: AppColors.zinc900, child: const Center(child: CircularProgressIndicator(color: AppColors.brand, strokeWidth: 2))),
-                  errorWidget: (_, __, ___) => PlaceholderImage(index: _currentScene, borderRadius: 0),
-                )
-              else
-                PlaceholderImage(index: _currentScene, borderRadius: 0),
-              Container(
-                decoration: BoxDecoration(
-                  gradient: LinearGradient(begin: Alignment.topCenter, end: Alignment.bottomCenter,
-                    colors: [AppColors.bg.withValues(alpha: 0.1), AppColors.bg.withValues(alpha: 0.15), AppColors.bg.withValues(alpha: 0.85), AppColors.bg],
-                    stops: const [0.0, 0.5, 0.85, 1.0]),
+            child: Stack(
+              fit: StackFit.expand,
+              children: [
+                // Scene image (full bleed)
+                AnimatedSwitcher(
+                  duration: AppDurations.medium,
+                  child: sceneImageUrl != null && sceneImageUrl.isNotEmpty
+                      ? CachedNetworkImage(
+                          key: ValueKey('scene-$_currentScene'),
+                          imageUrl: sceneImageUrl,
+                          fit: BoxFit.cover,
+                          placeholder: (_, __) => Container(
+                            color: AppColors.zinc900,
+                            child: const Center(child: CircularProgressIndicator(color: AppColors.brand, strokeWidth: 2)),
+                          ),
+                          errorWidget: (_, __, ___) => PlaceholderImage(index: _currentScene, borderRadius: 0),
+                        )
+                      : PlaceholderImage(key: ValueKey('ph-$_currentScene'), index: _currentScene, borderRadius: 0),
                 ),
-              ),
-              // Top bar
-              Positioned(top: 0, left: 0, right: 0, child: SafeArea(
-                child: Padding(padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 8),
-                  child: Row(mainAxisAlignment: MainAxisAlignment.spaceBetween, children: [
-                    _circleBtn(LucideIcons.x, () => context.pop()),
-                    Container(
-                      padding: const EdgeInsets.symmetric(horizontal: 10, vertical: 4),
-                      decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.5), borderRadius: BorderRadius.circular(AppSizes.radiusFull)),
-                      child: Text('${_currentScene + 1} / $totalScenes', style: AppTextStyles.monoSmall.copyWith(color: AppColors.text)),
+
+                // Cinematic film bars (top/bottom)
+                Positioned(
+                  top: 0, left: 0, right: 0,
+                  child: Container(
+                    height: 6,
+                    color: Colors.black.withValues(alpha: 0.85),
+                  ),
+                ),
+                Positioned(
+                  bottom: 0, left: 0, right: 0,
+                  child: Container(
+                    height: 6,
+                    color: Colors.black.withValues(alpha: 0.85),
+                  ),
+                ),
+
+                // Bottom gradient — subtle, cinematic
+                Positioned(
+                  bottom: 0, left: 0, right: 0,
+                  height: 120,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          Colors.transparent,
+                          AppColors.bg.withValues(alpha: 0.7),
+                          AppColors.bg,
+                        ],
+                        stops: const [0.0, 0.6, 1.0],
+                      ),
                     ),
-                    _circleBtn(LucideIcons.share, () {
-                      ScaffoldMessenger.of(context).showSnackBar(
-                        const SnackBar(content: Text('Share coming soon')),
-                      );
-                    }),
-                  ])),
-              )),
-              // Progress strip
-              Positioned(top: 0, left: 0, right: 0, child: SafeArea(
-                child: Padding(padding: const EdgeInsets.symmetric(horizontal: 4),
-                  child: Row(children: List.generate(totalScenes, (i) {
-                    return Expanded(child: Container(
-                      height: 3, margin: const EdgeInsets.symmetric(horizontal: 1.5),
-                      decoration: BoxDecoration(color: i <= _currentScene ? AppColors.purple : Colors.white.withValues(alpha: 0.2), borderRadius: BorderRadius.circular(2)),
-                    ));
-                  }))),
-              )),
-            ]),
+                  ),
+                ),
+
+                // Top safe area gradient
+                Positioned(
+                  top: 0, left: 0, right: 0,
+                  height: 100,
+                  child: Container(
+                    decoration: BoxDecoration(
+                      gradient: LinearGradient(
+                        begin: Alignment.topCenter,
+                        end: Alignment.bottomCenter,
+                        colors: [
+                          AppColors.bg.withValues(alpha: 0.6),
+                          Colors.transparent,
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+                // ── Story progress strip (Instagram-style, top) ──
+                Positioned(
+                  top: 0, left: 0, right: 0,
+                  child: SafeArea(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(8, 4, 8, 0),
+                      child: Row(
+                        children: List.generate(totalScenes, (i) {
+                          final isDone = i < _currentScene;
+                          final isActive = i == _currentScene;
+                          return Expanded(
+                            child: Container(
+                              height: 2.5,
+                              margin: const EdgeInsets.symmetric(horizontal: 1.5),
+                              decoration: BoxDecoration(
+                                borderRadius: BorderRadius.circular(2),
+                                color: isDone
+                                    ? AppColors.purple
+                                    : isActive
+                                        ? AppColors.brand
+                                        : Colors.white.withValues(alpha: 0.2),
+                                boxShadow: isActive
+                                    ? [BoxShadow(color: AppColors.brand.withValues(alpha: 0.6), blurRadius: 4)]
+                                    : null,
+                              ),
+                            ),
+                          );
+                        }),
+                      ),
+                    ),
+                  ),
+                ),
+
+                // ── Top navigation bar ──
+                Positioned(
+                  top: 0, left: 0, right: 0,
+                  child: SafeArea(
+                    child: Padding(
+                      padding: const EdgeInsets.fromLTRB(16, 14, 16, 0),
+                      child: Row(
+                        mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                        children: [
+                          _circleBtn(LucideIcons.x, () => context.pop()),
+                          // Scene counter badge
+                          Container(
+                            padding: const EdgeInsets.symmetric(horizontal: 12, vertical: 5),
+                            decoration: BoxDecoration(
+                              color: Colors.black.withValues(alpha: 0.55),
+                              borderRadius: BorderRadius.circular(AppSizes.radiusFull),
+                              border: Border.all(color: Colors.white.withValues(alpha: 0.1)),
+                            ),
+                            child: Row(
+                              mainAxisSize: MainAxisSize.min,
+                              children: [
+                                Icon(LucideIcons.film, size: 11, color: AppColors.purple),
+                                const SizedBox(width: 5),
+                                Text(
+                                  '${_currentScene + 1} / $totalScenes',
+                                  style: AppTextStyles.mono.copyWith(
+                                    fontSize: AppSizes.fontXsPlus,
+                                    fontWeight: FontWeight.w700,
+                                    color: AppColors.text,
+                                  ),
+                                ),
+                              ],
+                            ),
+                          ),
+                          _circleBtn(LucideIcons.share, () {
+                            ScaffoldMessenger.of(context).showSnackBar(
+                              const SnackBar(content: Text('Share coming soon')),
+                            );
+                          }),
+                        ],
+                      ),
+                    ),
+                  ),
+                ),
+
+                // ── Scene name overlay (bottom of image) ──
+                Positioned(
+                  bottom: 12, left: 20, right: 20,
+                  child: FadeTransition(
+                    opacity: _fadeController,
+                    child: Column(
+                      crossAxisAlignment: CrossAxisAlignment.start,
+                      children: [
+                        // Scene label
+                        Container(
+                          padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+                          decoration: BoxDecoration(
+                            color: AppColors.purple.withValues(alpha: 0.8),
+                            borderRadius: BorderRadius.circular(6),
+                          ),
+                          child: Text(
+                            'SCENE ${_currentScene + 1}',
+                            style: AppTextStyles.mono.copyWith(
+                              fontSize: AppSizes.font3xs,
+                              fontWeight: FontWeight.w800,
+                              color: Colors.white,
+                              letterSpacing: 2,
+                            ),
+                          ),
+                        ),
+                        const SizedBox(height: 6),
+                        // Scene title
+                        Text(
+                          currentScene?.sceneName ?? 'Scene ${_currentScene + 1}',
+                          style: TextStyle(
+                            fontSize: AppSizes.fontXlPlus,
+                            fontWeight: FontWeight.w800,
+                            fontStyle: FontStyle.italic,
+                            color: Colors.white,
+                            letterSpacing: -0.5,
+                            shadows: [
+                              Shadow(color: Colors.black.withValues(alpha: 0.8), blurRadius: 12),
+                            ],
+                          ),
+                        ),
+                      ],
+                    ),
+                  ),
+                ),
+
+                // ── Tap zones for prev/next ──
+                Positioned(
+                  left: 0, top: 80, bottom: 80, width: 80,
+                  child: GestureDetector(
+                    onTap: _goPrevScene,
+                    behavior: HitTestBehavior.translucent,
+                  ),
+                ),
+                Positioned(
+                  right: 0, top: 80, bottom: 80, width: 80,
+                  child: GestureDetector(
+                    onTap: () => _goNextScene(totalScenes),
+                    behavior: HitTestBehavior.translucent,
+                  ),
+                ),
+              ],
+            ),
           ),
-          // Scene content — 30% height
+
+          // ── Scene text content — 30% ──
           Expanded(
             flex: 3,
             child: FadeTransition(
               opacity: _fadeController,
-              child: SingleChildScrollView(
-                padding: const EdgeInsets.symmetric(horizontal: 20),
-                child: Column(crossAxisAlignment: CrossAxisAlignment.start, children: [
-                  Text('SCENE ${_currentScene + 1}', style: AppTextStyles.captionMono.copyWith(fontWeight: FontWeight.w700, color: AppColors.purple, letterSpacing: 2)),
-                  const SizedBox(height: 6),
-                  Text(
-                    currentScene?.sceneName ?? 'Scene ${_currentScene + 1}',
-                    style: TextStyle(fontSize: AppSizes.font2xl, fontWeight: FontWeight.w800, fontStyle: FontStyle.italic, color: AppColors.text, letterSpacing: -0.5),
-                  ),
-                  const SizedBox(height: 16),
-                  if (currentScene != null && currentScene.promptUsed.isNotEmpty)
-                    Text(
-                      currentScene.promptUsed,
-                      style: TextStyle(fontSize: AppSizes.fontMdPlus, color: AppColors.textSec, height: 1.7),
-                      maxLines: 5,
-                      overflow: TextOverflow.ellipsis,
+              child: Column(
+                children: [
+                  // Story text (scrollable)
+                  Expanded(
+                    child: SingleChildScrollView(
+                      padding: const EdgeInsets.fromLTRB(20, 12, 20, 0),
+                      child: Column(
+                        crossAxisAlignment: CrossAxisAlignment.start,
+                        children: [
+                          if (currentScene != null && currentScene.promptUsed.isNotEmpty)
+                            Text(
+                              currentScene.promptUsed,
+                              style: TextStyle(
+                                fontSize: AppSizes.fontBase,
+                                color: AppColors.textSec,
+                                height: 1.7,
+                                letterSpacing: 0.2,
+                              ),
+                            )
+                          else
+                            Text(
+                              'The story unfolds...',
+                              style: TextStyle(
+                                fontSize: AppSizes.fontBase,
+                                color: AppColors.textTer,
+                                fontStyle: FontStyle.italic,
+                                height: 1.7,
+                              ),
+                            ),
+                          const SizedBox(height: 12),
+                        ],
+                      ),
                     ),
-                  const SizedBox(height: 24),
-                ]),
+                  ),
+
+                  // ── Navigation bar ──
+                  Container(
+                    padding: const EdgeInsets.fromLTRB(20, 10, 20, 0),
+                    decoration: BoxDecoration(
+                      border: Border(top: BorderSide(color: AppColors.borderMed.withValues(alpha: 0.3))),
+                    ),
+                    child: SafeArea(
+                      top: false,
+                      child: Row(
+                        children: [
+                          // Previous button
+                          if (_currentScene > 0) ...[
+                            SizedBox(
+                              height: 44,
+                              child: OutlinedButton(
+                                onPressed: _goPrevScene,
+                                style: OutlinedButton.styleFrom(
+                                  side: BorderSide(color: AppColors.zinc700),
+                                  shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSizes.radiusMd)),
+                                  padding: const EdgeInsets.symmetric(horizontal: 16),
+                                ),
+                                child: Icon(LucideIcons.chevronLeft, size: AppSizes.iconMd, color: AppColors.text),
+                              ),
+                            ),
+                            const SizedBox(width: 10),
+                          ],
+                          // Continue / Finish button
+                          Expanded(
+                            child: SizedBox(
+                              height: 44,
+                              child: DecoratedBox(
+                                decoration: BoxDecoration(
+                                  gradient: _currentScene == totalScenes - 1
+                                      ? const LinearGradient(colors: [AppColors.purple, AppColors.brand])
+                                      : AppGradients.btn,
+                                  borderRadius: BorderRadius.circular(AppSizes.radiusMd),
+                                ),
+                                child: ElevatedButton(
+                                  onPressed: () => _goNextScene(totalScenes),
+                                  style: ElevatedButton.styleFrom(
+                                    backgroundColor: Colors.transparent,
+                                    shadowColor: Colors.transparent,
+                                    shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSizes.radiusMd)),
+                                  ),
+                                  child: Row(
+                                    mainAxisAlignment: MainAxisAlignment.center,
+                                    children: [
+                                      Text(
+                                        _currentScene == totalScenes - 1 ? 'Finish Story' : 'Continue',
+                                        style: TextStyle(
+                                          fontSize: AppSizes.fontSm,
+                                          fontWeight: FontWeight.w700,
+                                          color: AppColors.bg,
+                                        ),
+                                      ),
+                                      const SizedBox(width: 4),
+                                      Icon(
+                                        _currentScene == totalScenes - 1 ? LucideIcons.award : LucideIcons.chevronRight,
+                                        size: AppSizes.iconMd,
+                                        color: AppColors.bg,
+                                      ),
+                                    ],
+                                  ),
+                                ),
+                              ),
+                            ),
+                          ),
+                        ],
+                      ),
+                    ),
+                  ),
+                ],
               ),
             ),
-          ),
-          // Navigation bar
-          Container(
-            padding: const EdgeInsets.fromLTRB(20, 12, 20, 20),
-            decoration: BoxDecoration(color: AppColors.bg, border: Border(top: BorderSide(color: AppColors.borderMed.withValues(alpha: 0.5)))),
-            child: SafeArea(top: false, child: Row(children: [
-              if (_currentScene > 0) ...[
-                Expanded(child: SizedBox(height: 48, child: OutlinedButton(
-                  onPressed: () { _fadeController.reverse().then((_) { if (!mounted) return; setState(() { _currentScene--; }); _fadeController.forward(); }); },
-                  style: OutlinedButton.styleFrom(side: const BorderSide(color: AppColors.borderMed), shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSizes.radiusMd))),
-                  child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    Icon(LucideIcons.chevronLeft, size: AppSizes.iconMd, color: AppColors.text),
-                    const SizedBox(width: 4),
-                    Text('Previous', style: TextStyle(fontSize: AppSizes.fontSmPlus, fontWeight: FontWeight.w600, color: AppColors.text)),
-                  ]),
-                ))),
-                const SizedBox(width: 10),
-              ],
-              Expanded(child: SizedBox(height: 48, child: DecoratedBox(
-                decoration: BoxDecoration(gradient: AppGradients.btn, borderRadius: BorderRadius.circular(AppSizes.radiusMd)),
-                child: ElevatedButton(
-                  onPressed: () => _goNextScene(totalScenes),
-                  style: ElevatedButton.styleFrom(backgroundColor: Colors.transparent, shadowColor: Colors.transparent, shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSizes.radiusMd))),
-                  child: Row(mainAxisAlignment: MainAxisAlignment.center, children: [
-                    Text(_currentScene == totalScenes - 1 ? 'Finish' : 'Continue', style: TextStyle(fontSize: AppSizes.fontSm, fontWeight: FontWeight.w700, color: AppColors.bg)),
-                    const SizedBox(width: 4),
-                    Icon(LucideIcons.chevronRight, size: AppSizes.iconMd, color: AppColors.bg),
-                  ]),
-                ),
-              ))),
-            ])),
           ),
         ],
       ),
@@ -252,9 +489,20 @@ class _TaleReaderScreenState extends ConsumerState<TaleReaderScreen>
 
   Widget _circleBtn(IconData icon, VoidCallback onTap) => Material(
     color: Colors.transparent,
-    child: InkWell(onTap: onTap, customBorder: const CircleBorder(), child: Container(
-      width: 44, height: 44, decoration: BoxDecoration(color: Colors.black.withValues(alpha: 0.5), shape: BoxShape.circle, border: Border.all(color: AppColors.borderMed)),
-      child: Icon(icon, size: AppSizes.iconBase, color: AppColors.text))));
+    child: InkWell(
+      onTap: onTap,
+      customBorder: const CircleBorder(),
+      child: Container(
+        width: 40, height: 40,
+        decoration: BoxDecoration(
+          color: Colors.black.withValues(alpha: 0.5),
+          shape: BoxShape.circle,
+          border: Border.all(color: Colors.white.withValues(alpha: 0.1)),
+        ),
+        child: Icon(icon, size: AppSizes.iconSm, color: AppColors.text),
+      ),
+    ),
+  );
 
   Widget _completionStat(IconData icon, String value, String label) => Column(children: [
     Icon(icon, size: AppSizes.iconMd, color: AppColors.brand), const SizedBox(height: 4),
