@@ -26,6 +26,7 @@ export const onUserCreate = onCall(
     region: REGION,
     memory: "256MiB",
     timeoutSeconds: 30,
+    enforceAppCheck: true,
   },
   async (request) => {
     // 1. Verify auth

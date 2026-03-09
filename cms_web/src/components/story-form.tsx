@@ -3,6 +3,7 @@
 import { useState } from "react";
 import { useRouter } from "next/navigation";
 import { ChapterEditor } from "./chapter-editor";
+import { TestGenerate } from "./test-generate";
 import type { StoryItem, ChapterItem, I18nString } from "@/lib/types";
 
 const LANGUAGES = ["en", "vi", "es", "pt", "ja", "ko"] as const;
@@ -104,6 +105,67 @@ export function StoryForm({ initialData, storyId, readOnly, version }: Props) {
   const [error, setError] = useState("");
   const [tagInput, setTagInput] = useState("");
   const [uploadingCover, setUploadingCover] = useState(false);
+  const [translating, setTranslating] = useState(false);
+  const [translateMsg, setTranslateMsg] = useState("");
+
+  async function handleTranslate() {
+    if (!storyId) {
+      setError("Save the story first before translating");
+      return;
+    }
+    if (!data.title.en) {
+      setError("English title is required for translation");
+      return;
+    }
+    setTranslating(true);
+    setTranslateMsg("");
+    try {
+      const token = localStorage.getItem("adminToken") || "";
+      const res = await fetch("/api/translate", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+          Authorization: `Bearer ${token}`,
+        },
+        body: JSON.stringify({ type: "story", id: storyId }),
+      });
+      const result = await res.json();
+      if (!res.ok) throw new Error(result.error);
+
+      // Reload the story to get updated translations
+      const storyRes = await fetch(`/api/stories/${storyId}`, {
+        headers: { Authorization: `Bearer ${token}` },
+      });
+      if (storyRes.ok) {
+        const updated = await storyRes.json();
+        setData({
+          slug: updated.slug,
+          title: updated.title,
+          description: updated.description,
+          category: updated.category,
+          type: updated.type,
+          gender: updated.gender,
+          duration: updated.duration,
+          credits: updated.credits,
+          badge: updated.badge || "",
+          premium: updated.premium,
+          isActive: updated.isActive,
+          sortOrder: updated.sortOrder,
+          coverImage: updated.coverImage,
+          previewImages: updated.previewImages || [],
+          chapters: updated.chapters || [],
+          tags: updated.tags || [],
+        });
+      }
+      setTranslateMsg(
+        `Translated ${result.fields || 0} fields to ${result.langs?.join(", ") || "all languages"}`
+      );
+    } catch (err) {
+      setError(err instanceof Error ? err.message : "Translation failed");
+    } finally {
+      setTranslating(false);
+    }
+  }
 
   function update<K extends keyof StoryFormData>(key: K, value: StoryFormData[K]) {
     setData((prev) => ({ ...prev, [key]: value }));
@@ -246,21 +308,42 @@ export function StoryForm({ initialData, storyId, readOnly, version }: Props) {
         <h3 className="mb-4 text-sm font-semibold uppercase tracking-wider text-neutral-400">
           Story Title & Description
         </h3>
-        <div className="mb-3 flex gap-1 border-b border-neutral-800">
-          {LANGUAGES.map((lang) => (
+        <div className="mb-3 flex items-center justify-between border-b border-neutral-800">
+          <div className="flex gap-1">
+            {LANGUAGES.map((lang) => (
+              <button
+                key={lang}
+                onClick={() => setActiveLang(lang)}
+                className={`px-3 py-2 text-sm font-medium transition-colors ${
+                  activeLang === lang
+                    ? "border-b-2 border-brand text-brand"
+                    : data.title[lang]
+                    ? "text-green-400 hover:text-green-300"
+                    : "text-neutral-400 hover:text-neutral-200"
+                }`}
+              >
+                {lang.toUpperCase()}
+              </button>
+            ))}
+          </div>
+          {storyId && !readOnly && (
             <button
-              key={lang}
-              onClick={() => setActiveLang(lang)}
-              className={`px-3 py-2 text-sm font-medium transition-colors ${
-                activeLang === lang
-                  ? "border-b-2 border-brand text-brand"
-                  : "text-neutral-400 hover:text-neutral-200"
-              }`}
+              onClick={handleTranslate}
+              disabled={translating}
+              className="mb-1 flex items-center gap-1.5 rounded-md bg-blue-600/20 px-3 py-1.5 text-xs font-medium text-blue-400 transition-colors hover:bg-blue-600/30 disabled:opacity-50"
             >
-              {lang.toUpperCase()}
+              <svg className={`h-3.5 w-3.5 ${translating ? "animate-spin" : ""}`} fill="none" viewBox="0 0 24 24" stroke="currentColor" strokeWidth={2}>
+                <path strokeLinecap="round" strokeLinejoin="round" d="M3 5h12M9 3v2m1.048 9.5A18.022 18.022 0 016.412 9m6.088 9h7M11 21l5-10 5 10M12.751 5C11.783 10.77 8.07 15.61 3 18.129" />
+              </svg>
+              {translating ? "Translating..." : "Auto-translate from EN"}
             </button>
-          ))}
+          )}
         </div>
+        {translateMsg && (
+          <div className="mb-3 rounded-lg border border-green-500/30 bg-green-500/10 px-3 py-2 text-xs text-green-400">
+            {translateMsg}
+          </div>
+        )}
         <div className="space-y-4">
           <div>
             <label className="label">Title ({LANGUAGE_LABELS[activeLang]})</label>
@@ -505,6 +588,15 @@ export function StoryForm({ initialData, storyId, readOnly, version }: Props) {
           </div>
         )}
       </div>
+
+      {/* Inline Test Generate */}
+      {storyId && !readOnly && data.chapters.length > 0 && (
+        <TestGenerate
+          type="story"
+          id={storyId}
+          chapterCount={data.chapters.length}
+        />
+      )}
 
       {/* Actions */}
       {!readOnly && (

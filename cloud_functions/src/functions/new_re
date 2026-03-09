@@ -1,0 +1,7 @@
+Tôi cần lên kế hoạc rà soát, tối ưu hóa UI từng creeen về size, vị trí, style
+Đảm bảo các item element của từng màn hình phù hợp, tin tế, đáp ứng đúng UX UI ngahnhf mobile, không dư thừa không quá rối, tuân thủ đúng quy tắc thiết kế
+Các màn hình mang lại sự cân đối, tạo nên cảm giác chỉnh chu , hòa hợp, hoàn chỉnh và chuyên nghiệp
+Các thành phần trong màn hình k dư thừa, tất cả đều clickbale và mang một chức năng cụ thể, dùng được và không thể thiếu (nếu thiếu nó vẫn được thì không cần define), một vài chổ chỉ mới define layput chung còn logic chưa có implement cũng cần implement full luôn
+
+Tôi cần đi qua từng screeen một, popup, block, xem xét phân tích thật kỹ sau đó note lại các vấn đề cần cải tiến và implement. Đây là việc quan trọng cần phân tích sâu, chính xác và thận trọng.
+Cần lên plan phù hợp

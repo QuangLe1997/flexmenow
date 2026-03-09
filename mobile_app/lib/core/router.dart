@@ -3,6 +3,8 @@ import 'package:flutter/material.dart';
 import 'package:go_router/go_router.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 
+import 'design_tokens.dart';
+
 import '../screens/onboarding/splash_screen.dart';
 import '../screens/onboarding/tour_screen.dart';
 import '../screens/onboarding/personalize_screen.dart';
@@ -16,6 +18,7 @@ import '../screens/create/shot_detail_screen.dart';
 import '../screens/create/photo_upload_screen.dart';
 import '../screens/create/shot_processing_screen.dart';
 import '../screens/create/shot_result_screen.dart';
+import '../screens/create/category_templates_screen.dart';
 import '../screens/story/story_tab.dart';
 import '../screens/story/tale_preview_screen.dart';
 import '../screens/story/tale_upload_screen.dart';
@@ -62,6 +65,26 @@ final routerProvider = Provider<GoRouter>((ref) {
 
       return null;
     },
+    errorBuilder: (context, state) => Scaffold(
+      backgroundColor: AppColors.bg,
+      body: Center(
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: [
+            const Icon(Icons.error_outline, size: 48, color: AppColors.textTer),
+            const SizedBox(height: 16),
+            const Text('Page not found', style: TextStyle(fontSize: 18, fontWeight: FontWeight.w600, color: AppColors.text)),
+            const SizedBox(height: 8),
+            Text(state.uri.path, style: const TextStyle(fontSize: 14, color: AppColors.textTer)),
+            const SizedBox(height: 24),
+            TextButton(
+              onPressed: () => context.go('/create'),
+              child: const Text('Go Home', style: TextStyle(color: AppColors.brand)),
+            ),
+          ],
+        ),
+      ),
+    ),
     routes: [
       // Onboarding
       GoRoute(path: '/splash', builder: (_, __) => const SplashScreen()),
@@ -120,6 +143,12 @@ final routerProvider = Provider<GoRouter>((ref) {
             path: '/create',
             builder: (_, __) => const CreateTab(),
             routes: [
+              GoRoute(
+                path: 'category/:categoryId',
+                builder: (_, state) => CategoryTemplatesScreen(
+                  categoryId: state.pathParameters['categoryId']!,
+                ),
+              ),
               GoRoute(
                 path: 'detail/:templateId',
                 builder: (_, state) => ShotDetailScreen(

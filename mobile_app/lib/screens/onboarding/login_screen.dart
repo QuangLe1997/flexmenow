@@ -16,21 +16,33 @@ import '../../widgets/image_slideshow.dart';
 
 /// Login screen: cycling bg images, Zap icon logo, "Get 12 free credits" tagline,
 /// Google button (white), Apple button (black), anonymous link, Terms/Privacy.
-class LoginScreen extends ConsumerWidget {
+class LoginScreen extends ConsumerStatefulWidget {
   const LoginScreen({super.key});
 
-  Future<void> _postLoginInit(BuildContext context, WidgetRef ref) async {
+  @override
+  ConsumerState<LoginScreen> createState() => _LoginScreenState();
+}
+
+class _LoginScreenState extends ConsumerState<LoginScreen> {
+  /// Which login method is currently loading (null = none).
+  String? _loadingMethod; // 'google' | 'apple' | 'anonymous'
+
+  bool get _isLoading => _loadingMethod != null;
+
+  Future<void> _postLoginInit() async {
     final user = FirebaseAuth.instance.currentUser;
     if (user != null) {
       final appInit = ref.read(appInitProvider);
       await appInit.initPostAuth(user.uid);
     }
-    if (context.mounted) {
+    if (mounted) {
       context.go('/create');
     }
   }
 
-  Future<void> _signInWithGoogle(BuildContext context, WidgetRef ref) async {
+  Future<void> _signInWithGoogle() async {
+    if (_isLoading) return;
+    setState(() => _loadingMethod = 'google');
     try {
       final googleUser = await GoogleSignIn.instance.authenticate();
       final googleAuth = googleUser.authentication;
@@ -40,22 +52,24 @@ class LoginScreen extends ConsumerWidget {
       );
 
       await FirebaseAuth.instance.signInWithCredential(credential);
-      if (context.mounted) {
-        await _postLoginInit(context, ref);
-      }
+      if (mounted) await _postLoginInit();
     } on GoogleSignInException catch (e) {
       debugPrint('Google sign-in cancelled or failed: $e');
     } catch (e) {
       debugPrint('Google sign-in failed: $e');
-      if (context.mounted) {
+      if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Google sign-in failed. Please try again.')),
         );
       }
+    } finally {
+      if (mounted) setState(() => _loadingMethod = null);
     }
   }
 
-  Future<void> _signInWithApple(BuildContext context, WidgetRef ref) async {
+  Future<void> _signInWithApple() async {
+    if (_isLoading) return;
+    setState(() => _loadingMethod = 'apple');
     try {
       final appleCredential = await SignInWithApple.getAppleIDCredential(
         scopes: [
@@ -81,41 +95,39 @@ class LoginScreen extends ConsumerWidget {
         await userCredential.user?.updateDisplayName(displayName);
       }
 
-      if (context.mounted) {
-        await _postLoginInit(context, ref);
-      }
+      if (mounted) await _postLoginInit();
     } catch (e) {
       debugPrint('Apple sign-in failed: $e');
-      if (context.mounted) {
+      if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Apple sign-in failed. Please try again.')),
         );
       }
+    } finally {
+      if (mounted) setState(() => _loadingMethod = null);
     }
   }
 
-  Future<void> _continueAnonymously(BuildContext context, WidgetRef ref) async {
-    await _signInAnonymouslyAndInit(context, ref);
-  }
-
-  Future<void> _signInAnonymouslyAndInit(BuildContext context, WidgetRef ref) async {
+  Future<void> _continueAnonymously() async {
+    if (_isLoading) return;
+    setState(() => _loadingMethod = 'anonymous');
     try {
       await FirebaseAuth.instance.signInAnonymously();
-      if (context.mounted) {
-        await _postLoginInit(context, ref);
-      }
+      if (mounted) await _postLoginInit();
     } catch (e) {
       debugPrint('Anonymous sign-in failed: $e');
-      if (context.mounted) {
+      if (mounted) {
         ScaffoldMessenger.of(context).showSnackBar(
           SnackBar(content: Text('Sign in failed. Please try again.')),
         );
       }
+    } finally {
+      if (mounted) setState(() => _loadingMethod = null);
     }
   }
 
   @override
-  Widget build(BuildContext context, WidgetRef ref) {
+  Widget build(BuildContext context) {
     return Scaffold(
       backgroundColor: AppColors.bg,
       body: Stack(
@@ -242,7 +254,9 @@ class LoginScreen extends ConsumerWidget {
                     icon: Icons.g_mobiledata,
                     backgroundColor: Colors.white,
                     textColor: AppColors.zinc800,
-                    onTap: () => _signInWithGoogle(context, ref),
+                    isLoading: _loadingMethod == 'google',
+                    disabled: _isLoading && _loadingMethod != 'google',
+                    onTap: _signInWithGoogle,
                   ),
 
                   // Apple button (black bg, white text)
@@ -252,31 +266,63 @@ class LoginScreen extends ConsumerWidget {
                     icon: Icons.apple,
                     backgroundColor: AppColors.zinc900,
                     textColor: Colors.white,
-                    onTap: () => _signInWithApple(context, ref),
+                    isLoading: _loadingMethod == 'apple',
+                    disabled: _isLoading && _loadingMethod != 'apple',
+                    onTap: _signInWithApple,
                   ),
 
                   const SizedBox(height: 20),
 
-                  // Anonymous option (min 48dp touch target)
-                  InkWell(
-                    onTap: () => _continueAnonymously(context, ref),
-                    borderRadius: BorderRadius.circular(AppSizes.radiusSm),
-                    child: Padding(
-                      padding: const EdgeInsets.symmetric(
-                        horizontal: AppSizes.lg,
-                        vertical: AppSizes.md,
-                      ),
-                      child: Text(
-                        'Continue without account',
-                        style: TextStyle(
-                          fontSize: AppSizes.fontSm,
-                          color: AppColors.textSec,
-                          decoration: TextDecoration.underline,
-                          decorationColor: AppColors.textTer,
+                  // Anonymous option with loading
+                  _isLoading && _loadingMethod == 'anonymous'
+                      ? Padding(
+                          padding: const EdgeInsets.symmetric(
+                            horizontal: AppSizes.lg,
+                            vertical: AppSizes.md,
+                          ),
+                          child: Row(
+                            mainAxisSize: MainAxisSize.min,
+                            children: [
+                              SizedBox(
+                                width: 14,
+                                height: 14,
+                                child: CircularProgressIndicator(
+                                  strokeWidth: 2,
+                                  color: AppColors.textSec,
+                                ),
+                              ),
+                              const SizedBox(width: 8),
+                              Text(
+                                'Setting up...',
+                                style: TextStyle(
+                                  fontSize: AppSizes.fontSm,
+                                  color: AppColors.textSec,
+                                ),
+                              ),
+                            ],
+                          ),
+                        )
+                      : InkWell(
+                          onTap: _isLoading ? null : _continueAnonymously,
+                          borderRadius: BorderRadius.circular(AppSizes.radiusSm),
+                          child: Padding(
+                            padding: const EdgeInsets.symmetric(
+                              horizontal: AppSizes.lg,
+                              vertical: AppSizes.md,
+                            ),
+                            child: Text(
+                              'Continue without account',
+                              style: TextStyle(
+                                fontSize: AppSizes.fontSm,
+                                color: _isLoading
+                                    ? AppColors.textTer
+                                    : AppColors.textSec,
+                                decoration: TextDecoration.underline,
+                                decorationColor: AppColors.textTer,
+                              ),
+                            ),
+                          ),
                         ),
-                      ),
-                    ),
-                  ),
 
                   const Spacer(),
 
@@ -303,7 +349,7 @@ class LoginScreen extends ConsumerWidget {
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 launchUrl(
-                                  Uri.parse('https://flexmenow.com/terms'),
+                                  Uri.parse('https://flexme-now.web.app/terms'),
                                   mode: LaunchMode.externalApplication,
                                 );
                               },
@@ -319,7 +365,7 @@ class LoginScreen extends ConsumerWidget {
                             recognizer: TapGestureRecognizer()
                               ..onTap = () {
                                 launchUrl(
-                                  Uri.parse('https://flexmenow.com/privacy'),
+                                  Uri.parse('https://flexme-now.web.app/privacy'),
                                   mode: LaunchMode.externalApplication,
                                 );
                               },
@@ -344,6 +390,8 @@ class _AuthButton extends StatelessWidget {
   final Color backgroundColor;
   final Color textColor;
   final VoidCallback onTap;
+  final bool isLoading;
+  final bool disabled;
 
   const _AuthButton({
     required this.label,
@@ -351,6 +399,8 @@ class _AuthButton extends StatelessWidget {
     required this.backgroundColor,
     required this.textColor,
     required this.onTap,
+    this.isLoading = false,
+    this.disabled = false,
   });
 
   @override
@@ -359,30 +409,55 @@ class _AuthButton extends StatelessWidget {
       width: double.infinity,
       height: 52,
       child: ElevatedButton(
-        onPressed: onTap,
+        onPressed: (isLoading || disabled) ? null : onTap,
         style: ElevatedButton.styleFrom(
           backgroundColor: backgroundColor,
           foregroundColor: textColor,
+          disabledBackgroundColor: backgroundColor.withValues(alpha: 0.5),
+          disabledForegroundColor: textColor.withValues(alpha: 0.5),
           elevation: 0,
           shape: RoundedRectangleBorder(
             borderRadius: BorderRadius.circular(AppSizes.radiusMd),
           ),
         ),
-        child: Row(
-          mainAxisAlignment: MainAxisAlignment.center,
-          children: [
-            Icon(icon, size: AppSizes.icon2xl),
-            const SizedBox(width: 10),
-            Text(
-              label,
-              style: TextStyle(
-                fontSize: AppSizes.fontMdPlus,
-                fontWeight: FontWeight.w600,
-                color: textColor,
+        child: isLoading
+            ? Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  SizedBox(
+                    width: 20,
+                    height: 20,
+                    child: CircularProgressIndicator(
+                      strokeWidth: 2.5,
+                      color: textColor,
+                    ),
+                  ),
+                  const SizedBox(width: 10),
+                  Text(
+                    'Signing in...',
+                    style: TextStyle(
+                      fontSize: AppSizes.fontMdPlus,
+                      fontWeight: FontWeight.w600,
+                      color: textColor,
+                    ),
+                  ),
+                ],
+              )
+            : Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  Icon(icon, size: AppSizes.icon2xl),
+                  const SizedBox(width: 10),
+                  Text(
+                    label,
+                    style: TextStyle(
+                      fontSize: AppSizes.fontMdPlus,
+                      fontWeight: FontWeight.w600,
+                      color: textColor,
+                    ),
+                  ),
+                ],
               ),
-            ),
-          ],
-        ),
       ),
     );
   }

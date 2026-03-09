@@ -28,15 +28,30 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
     with TickerProviderStateMixin {
   late final AnimationController _logoController;
   late final AnimationController _textController;
-  late final AnimationController _barController;
   late final AnimationController _glowController;
+  late final AnimationController _spotlightController;
+  late final AnimationController _spotlightSwingController;
+  late final AnimationController _nowController;
 
   int _bgIndex = 0;
-  int _phase = 0; // 0=init, 1=logo-in, 2=text-in, 3=bar-fill
+  int _phase = 0; // 0=init, 1=spotlight, 2=logo-in, 3=text-in, 4=now-in
+  Future<void>? _preloadFuture;
 
   @override
   void initState() {
     super.initState();
+
+    // Spotlight beam sweep left→right
+    _spotlightController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 1000),
+    );
+
+    // Spotlight image swing (pendulum, pivot top-center)
+    _spotlightSwingController = AnimationController(
+      vsync: this,
+      duration: const Duration(milliseconds: 3000),
+    )..repeat(reverse: true);
 
     // Logo entrance: rotate + scale
     _logoController = AnimationController(
@@ -50,10 +65,10 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
       duration: AppDurations.slow,
     );
 
-    // Loading bar fill
-    _barController = AnimationController(
+    // "Now!" entrance: spring up from bottom
+    _nowController = AnimationController(
       vsync: this,
-      duration: AppDurations.slowest,
+      duration: const Duration(milliseconds: 800),
     );
 
     // Glow pulse (continuous)
@@ -66,52 +81,88 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
   }
 
   Future<void> _startAnimation() async {
-    // Phase 1: Logo entrance at 200ms
+    // Start background data preload immediately (parallel with animations)
+    _preloadFuture = _preloadData();
+
+    // Phase 1: Spotlight beam sweeps left→right
     await Future.delayed(AppDurations.fast);
     if (!mounted) return;
     setState(() => _phase = 1);
-    _logoController.forward();
+    _spotlightController.forward();
 
-    // Phase 2: Text at 800ms
-    await Future.delayed(const Duration(milliseconds: 600));
+    // Phase 2: Logo entrance follows spotlight
+    await Future.delayed(const Duration(milliseconds: 500));
     if (!mounted) return;
     setState(() => _phase = 2);
-    _textController.forward();
+    _logoController.forward();
 
-    // Phase 3: Loading bar at 1300ms
-    await Future.delayed(AppDurations.slow);
+    // Phase 3: Brand text at 1100ms
+    await Future.delayed(const Duration(milliseconds: 600));
     if (!mounted) return;
     setState(() => _phase = 3);
-    _barController.forward();
+    _textController.forward();
 
-    // Navigate after bar fills
-    await Future.delayed(const Duration(milliseconds: 1400));
+    // Phase 4: "Now!" drops in after FlexMe stabilizes
+    await Future.delayed(const Duration(milliseconds: 700));
+    if (!mounted) return;
+    setState(() => _phase = 4);
+    _nowController.forward();
+
+    // Navigate after animation — preload continues in background (non-blocking)
+    await Future.delayed(const Duration(milliseconds: 800));
     if (!mounted) return;
     _navigate();
+  }
+
+  /// Preloads remote config, templates JSON, stories JSON in parallel.
+  Future<void> _preloadData() async {
+    try {
+      // Warm up remote config (already initialized in main, just ensure fresh)
+      final rc = ref.read(remoteConfigProvider);
+
+      // Fetch templates + stories JSON in parallel
+      final templateRepo = ref.read(templateRepositoryProvider);
+      final storyRepo = ref.read(storyRepositoryProvider);
+
+      await Future.wait([
+        templateRepo.loadTemplates().then((_) {
+          debugPrint('[Splash] Templates preloaded');
+        }),
+        storyRepo.loadStories(rc.flextaleJsonUrl).then((_) {
+          debugPrint('[Splash] Stories preloaded');
+        }),
+      ]);
+    } catch (e) {
+      debugPrint('[Splash] Preload error (non-blocking): $e');
+    }
   }
 
   Future<void> _navigate() async {
     try {
       final user = FirebaseAuth.instance.currentUser;
       if (user != null) {
-        // Run post-auth initialization before navigating
+        // Run post-auth initialization with timeout to prevent infinite hang
         final appInit = ref.read(appInitProvider);
-        await appInit.initPostAuth(user.uid);
+        await appInit.initPostAuth(user.uid).timeout(
+          const Duration(seconds: 5),
+        );
         if (!mounted) return;
         context.go('/create');
       } else {
         context.go('/tour');
       }
     } catch (_) {
-      if (mounted) context.go('/tour');
+      if (mounted) context.go('/create');
     }
   }
 
   @override
   void dispose() {
+    _spotlightController.dispose();
+    _spotlightSwingController.dispose();
     _logoController.dispose();
     _textController.dispose();
-    _barController.dispose();
+    _nowController.dispose();
     _glowController.dispose();
     super.dispose();
   }
@@ -123,17 +174,34 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
       body: Stack(
         fit: StackFit.expand,
         children: [
-          // Static spotlight hero background (main)
-          AnimatedOpacity(
-            opacity: _phase >= 1 ? 0.7 : 0.3,
-            duration: const Duration(milliseconds: 1500),
-            child: Transform.scale(
-              scale: 1.1,
-              child: Image.asset(
-                AppImages.splashSpotlight,
-                fit: BoxFit.cover,
-                width: double.infinity,
-                height: double.infinity,
+          // Spotlight hero background — swings left↔right, pivot at top-center
+          AnimatedBuilder(
+            animation: _spotlightSwingController,
+            builder: (context, child) {
+              // Swing angle: -8° to +8° (pendulum effect)
+              final t = CurvedAnimation(
+                parent: _spotlightSwingController,
+                curve: Curves.easeInOutSine,
+              ).value;
+              final angle = (t - 0.5) * 2 * (math.pi / 22.5); // ±8°
+              return Transform(
+                alignment: Alignment.topCenter,
+                transform: Matrix4.identity()
+                  ..rotateZ(angle),
+                child: child,
+              );
+            },
+            child: AnimatedOpacity(
+              opacity: _phase >= 1 ? 0.7 : 0.3,
+              duration: const Duration(milliseconds: 1500),
+              child: Transform.scale(
+                scale: 1.3,
+                child: Image.asset(
+                  AppImages.splashSpotlight,
+                  fit: BoxFit.cover,
+                  width: double.infinity,
+                  height: double.infinity,
+                ),
               ),
             ),
           ),
@@ -171,6 +239,29 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
               ),
             ),
           ),
+
+          // Animated spotlight beam (sweeps left→right)
+          if (_phase >= 1)
+            AnimatedBuilder(
+              animation: _spotlightController,
+              builder: (context, _) {
+                final t = CurvedAnimation(
+                  parent: _spotlightController,
+                  curve: Curves.easeInOutCubic,
+                ).value;
+                final screenWidth = MediaQuery.of(context).size.width;
+                final beamX = -screenWidth * 0.5 + screenWidth * 1.5 * t;
+                return Positioned.fill(
+                  child: CustomPaint(
+                    painter: _SpotlightBeamPainter(
+                      beamX: beamX,
+                      opacity: (1.0 - (t - 0.7).clamp(0.0, 1.0) * 2.5)
+                          .clamp(0.0, 0.8),
+                    ),
+                  ),
+                );
+              },
+            ),
 
           // Top accent line (gold gradient)
           Positioned(
@@ -238,7 +329,7 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
 
                 const SizedBox(height: 24),
 
-                // Brand: "Flex" (white) + "Me" (gold) — 52px italic w900
+                // Brand: "FlexMe" with "Now!" superscript at top-right of "Me"
                 FadeTransition(
                   opacity: _textController,
                   child: SlideTransition(
@@ -249,33 +340,97 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                       parent: _textController,
                       curve: AppCurves.enter,
                     )),
-                    child: RichText(
-                      text: TextSpan(
-                        style: TextStyle(
-                          fontSize: 52,
-                          fontWeight: FontWeight.w900,
-                          fontStyle: FontStyle.italic,
-                          letterSpacing: -2,
-                        ),
-                        children: [
-                          const TextSpan(
-                            text: 'Flex',
-                            style: TextStyle(color: AppColors.text),
-                          ),
-                          TextSpan(
-                            text: 'Me',
+                    child: Stack(
+                      clipBehavior: Clip.none,
+                      children: [
+                        // "FlexMe" base text
+                        RichText(
+                          text: TextSpan(
                             style: TextStyle(
-                              color: AppColors.brand,
-                              shadows: [
-                                Shadow(
-                                  color: AppColors.brand.withValues(alpha: 0.5),
-                                  blurRadius: 20,
+                              fontSize: 52,
+                              fontWeight: FontWeight.w900,
+                              fontStyle: FontStyle.italic,
+                              letterSpacing: -2,
+                            ),
+                            children: [
+                              const TextSpan(
+                                text: 'Flex',
+                                style: TextStyle(color: AppColors.text),
+                              ),
+                              TextSpan(
+                                text: 'Me',
+                                style: TextStyle(
+                                  color: AppColors.brand,
+                                  shadows: [
+                                    Shadow(
+                                      color: AppColors.brand
+                                          .withValues(alpha: 0.5),
+                                      blurRadius: 20,
+                                    ),
+                                  ],
                                 ),
-                              ],
+                              ),
+                            ],
+                          ),
+                        ),
+
+                        // "Now!" — small superscript, top-right of "Me"
+                        Positioned(
+                          right: -30,
+                          top: -6,
+                          child: AnimatedBuilder(
+                            animation: _nowController,
+                            builder: (context, child) {
+                              final t = CurvedAnimation(
+                                parent: _nowController,
+                                curve: Curves.easeOutBack,
+                              ).value;
+                              final shakeT = _nowController.value;
+                              final shake = shakeT < 0.5
+                                  ? math.sin(shakeT * 16) * 2 * (1.0 - shakeT)
+                                  : 0.0;
+                              return Transform.translate(
+                                offset: Offset(shake, -20 * (1.0 - t)),
+                                child: Transform.rotate(
+                                  angle: math.pi / 30, // slight tilt ~6°
+                                  child: Opacity(
+                                    opacity: t.clamp(0.0, 1.0),
+                                    child: child,
+                                  ),
+                                ),
+                              );
+                            },
+                            child: ShaderMask(
+                              shaderCallback: (bounds) => const LinearGradient(
+                                begin: Alignment.topLeft,
+                                end: Alignment.bottomRight,
+                                colors: [
+                                  Color(0xFF00E5FF),
+                                  Color(0xFF00B0FF),
+                                  Color(0xFF7C4DFF),
+                                ],
+                              ).createShader(bounds),
+                              child: Text(
+                                'Now!',
+                                style: TextStyle(
+                                  fontSize: 16,
+                                  fontWeight: FontWeight.w900,
+                                  fontStyle: FontStyle.italic,
+                                  letterSpacing: 0.5,
+                                  color: Colors.white,
+                                  shadows: [
+                                    Shadow(
+                                      color: const Color(0xFF00E5FF)
+                                          .withValues(alpha: 0.8),
+                                      blurRadius: 12,
+                                    ),
+                                  ],
+                                ),
+                              ),
                             ),
                           ),
-                        ],
-                      ),
+                        ),
+                      ],
                     ),
                   ),
                 ),
@@ -294,42 +449,6 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
                     ),
                   ),
                 ),
-
-                const SizedBox(height: 40),
-
-                // Loading bar (gold → purple gradient)
-                if (_phase >= 3)
-                  AnimatedBuilder(
-                    animation: _barController,
-                    builder: (context, _) {
-                      return Column(
-                        children: [
-                          Container(
-                            width: 140,
-                            height: 3,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(2),
-                              color: AppColors.zinc800,
-                            ),
-                            child: Align(
-                              alignment: Alignment.centerLeft,
-                              child: FractionallySizedBox(
-                                widthFactor: _barController.value,
-                                child: Container(
-                                  decoration: BoxDecoration(
-                                    borderRadius: BorderRadius.circular(2),
-                                    gradient: const LinearGradient(
-                                      colors: [AppColors.brand, AppColors.purple],
-                                    ),
-                                  ),
-                                ),
-                              ),
-                            ),
-                          ),
-                        ],
-                      );
-                    },
-                  ),
 
                 const SizedBox(height: 24),
 
@@ -352,4 +471,64 @@ class _SplashScreenState extends ConsumerState<SplashScreen>
       ),
     );
   }
+}
+
+/// Custom painter for animated spotlight beam sweeping left→right.
+class _SpotlightBeamPainter extends CustomPainter {
+  final double beamX;
+  final double opacity;
+
+  _SpotlightBeamPainter({required this.beamX, required this.opacity});
+
+  @override
+  void paint(Canvas canvas, Size size) {
+    if (opacity <= 0) return;
+
+    final beamWidth = size.width * 0.35;
+
+    // Main cone beam — from top-center down, swept by beamX
+    final beamPaint = Paint()
+      ..shader = LinearGradient(
+        begin: Alignment.topCenter,
+        end: Alignment.bottomCenter,
+        colors: [
+          AppColors.brand.withValues(alpha: 0.25 * opacity),
+          AppColors.brand400.withValues(alpha: 0.08 * opacity),
+          Colors.transparent,
+        ],
+        stops: const [0.0, 0.4, 1.0],
+      ).createShader(Rect.fromLTWH(0, 0, size.width, size.height));
+
+    // Draw cone shape (trapezoid from top to bottom)
+    final path = Path()
+      ..moveTo(beamX - beamWidth * 0.15, 0)
+      ..lineTo(beamX + beamWidth * 0.15, 0)
+      ..lineTo(beamX + beamWidth * 0.8, size.height * 0.85)
+      ..lineTo(beamX - beamWidth * 0.8, size.height * 0.85)
+      ..close();
+    canvas.drawPath(path, beamPaint);
+
+    // Hot-spot glow at top where "light source" is
+    final glowPaint = Paint()
+      ..shader = RadialGradient(
+        center: Alignment.center,
+        radius: 0.5,
+        colors: [
+          AppColors.brand.withValues(alpha: 0.3 * opacity),
+          AppColors.brand.withValues(alpha: 0.05 * opacity),
+          Colors.transparent,
+        ],
+      ).createShader(
+        Rect.fromCenter(
+          center: Offset(beamX, 0),
+          width: beamWidth * 1.2,
+          height: beamWidth * 1.2,
+        ),
+      );
+    canvas.drawCircle(Offset(beamX, 0), beamWidth * 0.6, glowPaint);
+  }
+
+  @override
+  bool shouldRepaint(_SpotlightBeamPainter oldDelegate) =>
+      oldDelegate.beamX != beamX || oldDelegate.opacity != opacity;
 }

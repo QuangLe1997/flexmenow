@@ -8,6 +8,7 @@ import '../data/repositories/story_repository.dart';
 import '../data/repositories/generation_repository.dart';
 import '../data/repositories/story_generation_repository.dart';
 import '../data/repositories/enhancement_repository.dart';
+import '../data/services/analytics_service.dart';
 import '../data/services/app_init_service.dart';
 import '../data/services/gemini_service.dart';
 import '../data/services/remote_config_service.dart';
@@ -76,6 +77,10 @@ final revenueCatServiceProvider = Provider<RevenueCatService>((ref) {
 
 final geminiServiceProvider = Provider<GeminiService>((ref) {
   return GeminiService();
+});
+
+final analyticsServiceProvider = Provider<AnalyticsService>((ref) {
+  return AnalyticsService();
 });
 
 final faceDetectionServiceProvider = Provider<FaceDetectionService>((ref) {

@@ -24,19 +24,31 @@ class _StoryCardTriptychState extends State<StoryCardTriptych>
   Duration get slideshowInterval => const Duration(milliseconds: 3000);
 
   @override
-  int get imageCount => 3; // always 3 portraits
+  int get imageCount => _images.length;
 
   @override
   void initState() {
     super.initState();
     _images = widget.data.paddedImageUrls;
-    currentImageIndex = 1;
+    currentImageIndex = 0;
     startSlideshow();
+  }
+
+  /// Get the 3 image URLs to display based on current slideshow index.
+  /// Center always shows currentImageIndex, left/right show adjacent.
+  List<String> get _visibleImages {
+    final len = _images.length;
+    if (len <= 3) return _images;
+    final left = _images[(currentImageIndex) % len];
+    final center = _images[(currentImageIndex + 1) % len];
+    final right = _images[(currentImageIndex + 2) % len];
+    return [left, center, right];
   }
 
   @override
   Widget build(BuildContext context) {
     final tale = widget.data.tale;
+    final visible = _visibleImages;
 
     return wrapWithVisibility(
       id: 'triptych-${tale.id}',
@@ -54,7 +66,7 @@ class _StoryCardTriptychState extends State<StoryCardTriptych>
             child: Column(
               mainAxisSize: MainAxisSize.min,
               children: [
-                // 3 portrait thumbnails — Expanded prevents overflow
+                // 3 portrait thumbnails — center always elevated
                 SizedBox(
                   height: 210,
                   child: Padding(
@@ -62,7 +74,7 @@ class _StoryCardTriptychState extends State<StoryCardTriptych>
                     child: Row(
                       crossAxisAlignment: CrossAxisAlignment.center,
                       children: List.generate(3, (i) {
-                        final isCenter = currentImageIndex == i;
+                        final isCenter = i == 1; // center always index 1
                         return Expanded(
                           child: AnimatedContainer(
                             duration: const Duration(milliseconds: 700),
@@ -95,19 +107,21 @@ class _StoryCardTriptychState extends State<StoryCardTriptych>
                             child: ClipRRect(
                               borderRadius: BorderRadius.circular(
                                   isCenter ? 14 : 10),
-                              child: ColorFiltered(
-                                colorFilter: ColorFilter.matrix(
-                                  isCenter
-                                      ? _identityMatrix()
-                                      : _dimMatrix(),
-                                ),
-                                child: PlaceholderImage(
-                                  index: widget.data.cardIndex + i,
-                                  borderRadius: 0,
-                                  imageUrl: i < _images.length
-                                      ? _images[i]
-                                      : _images.last,
-                                  fit: BoxFit.cover,
+                              child: AnimatedSwitcher(
+                                duration: const Duration(milliseconds: 600),
+                                child: ColorFiltered(
+                                  key: ValueKey('triptych-$i-${visible[i]}'),
+                                  colorFilter: ColorFilter.matrix(
+                                    isCenter
+                                        ? _identityMatrix()
+                                        : _dimMatrix(),
+                                  ),
+                                  child: PlaceholderImage(
+                                    index: widget.data.cardIndex + i,
+                                    borderRadius: 0,
+                                    imageUrl: visible[i],
+                                    fit: BoxFit.cover,
+                                  ),
                                 ),
                               ),
                             ),

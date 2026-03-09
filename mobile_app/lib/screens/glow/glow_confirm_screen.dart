@@ -316,47 +316,57 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
 
   // ---- Header ----
   Widget _buildHeader(int glowRemaining) {
-    return Padding(
-      padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
-      child: Row(
-        children: [
-          Material(
-            color: Colors.transparent,
-            child: InkWell(
-              onTap: () => context.pop(),
-              customBorder: const CircleBorder(),
-              child: Container(
-                width: 44, height: 44,
-                decoration: BoxDecoration(color: AppColors.card, shape: BoxShape.circle, border: Border.all(color: AppColors.borderMed)),
-                child: const Icon(LucideIcons.arrowLeft, size: AppSizes.iconBase, color: AppColors.text),
+    return Column(
+      children: [
+        Padding(
+          padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
+          child: Row(
+            children: [
+              Material(
+                color: Colors.transparent,
+                child: InkWell(
+                  onTap: () => context.pop(),
+                  customBorder: const CircleBorder(),
+                  child: Container(
+                    width: 44, height: 44,
+                    decoration: BoxDecoration(color: AppColors.card, shape: BoxShape.circle, border: Border.all(color: AppColors.borderMed)),
+                    child: const Icon(LucideIcons.arrowLeft, size: AppSizes.iconBase, color: AppColors.text),
+                  ),
+                ),
               ),
-            ),
+              const SizedBox(width: 12),
+              RichText(
+                text: TextSpan(
+                  style: const TextStyle(fontSize: AppSizes.fontLg, fontWeight: FontWeight.w800, fontStyle: FontStyle.italic),
+                  children: const [
+                    TextSpan(text: 'Flex', style: TextStyle(color: AppColors.text)),
+                    TextSpan(text: 'Locket', style: TextStyle(color: AppColors.brand)),
+                  ],
+                ),
+              ),
+              const Spacer(),
+              if (_resultImageUrl != null)
+                _badge(LucideIcons.check, 'Enhanced', AppColors.green)
+              else if (_isProcessing)
+                _badge(LucideIcons.loader, 'Processing', AppColors.brand)
+              else if (_activeTab == 0)
+                _badge(LucideIcons.zap, 'FREE', AppColors.green)
+              else
+                _badge(
+                  LucideIcons.sparkles,
+                  glowRemaining > 0 ? '$glowRemaining free' : '0.5 cr',
+                  AppColors.brand,
+                ),
+            ],
           ),
-          const SizedBox(width: 12),
-          RichText(
-            text: TextSpan(
-              style: const TextStyle(fontSize: AppSizes.fontLg, fontWeight: FontWeight.w800, fontStyle: FontStyle.italic),
-              children: const [
-                TextSpan(text: 'Flex', style: TextStyle(color: AppColors.text)),
-                TextSpan(text: 'Locket', style: TextStyle(color: AppColors.brand)),
-              ],
-            ),
-          ),
-          const Spacer(),
-          if (_resultImageUrl != null)
-            _badge(LucideIcons.check, 'Enhanced', AppColors.green)
-          else if (_isProcessing)
-            _badge(LucideIcons.loader, 'Processing', AppColors.brand)
-          else if (_activeTab == 0)
-            _badge(LucideIcons.zap, 'FREE', AppColors.green)
-          else
-            _badge(
-              LucideIcons.sparkles,
-              glowRemaining > 0 ? '$glowRemaining free' : '0.5 cr',
-              AppColors.brand,
-            ),
-        ],
-      ),
+        ),
+        // Subtle separator line
+        Container(
+          height: 1,
+          margin: const EdgeInsets.symmetric(horizontal: 16),
+          color: AppColors.borderMed,
+        ),
+      ],
     );
   }
 
@@ -447,75 +457,127 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
   Widget _buildTabSwitcher() {
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
-      child: Container(
-        height: 38,
-        decoration: BoxDecoration(
-          color: AppColors.card,
-          borderRadius: BorderRadius.circular(AppSizes.radiusMd),
-          border: Border.all(color: AppColors.borderMed),
-        ),
-        child: Row(
-          children: [
-            _tabItem(0, LucideIcons.palette, 'Filters', null),
-            _tabItem(1, LucideIcons.bot, 'AI Agent', 'PRO'),
-          ],
-        ),
+      child: Row(
+        children: [
+          // Filters tab
+          Expanded(child: _buildTabButton(
+            index: 0,
+            icon: LucideIcons.palette,
+            label: 'Filters',
+            accentColor: AppColors.green,
+            tagText: 'FREE',
+            tagColor: AppColors.green,
+          )),
+          const SizedBox(width: 8),
+          // AI Agent tab
+          Expanded(child: _buildTabButton(
+            index: 1,
+            icon: LucideIcons.bot,
+            label: 'AI Agent',
+            accentColor: AppColors.brand,
+            tagText: 'PRO',
+            tagGradient: const LinearGradient(colors: [AppColors.brand600, AppColors.brand]),
+          )),
+        ],
       ),
     );
   }
 
-  Widget _tabItem(int index, IconData icon, String label, String? badge) {
+  Widget _buildTabButton({
+    required int index,
+    required IconData icon,
+    required String label,
+    required Color accentColor,
+    String? tagText,
+    Color? tagColor,
+    LinearGradient? tagGradient,
+  }) {
     final isActive = _activeTab == index;
-    return Expanded(
-      child: GestureDetector(
-        onTap: () {
-          setState(() => _activeTab = index);
-          // Auto-analyze when switching to AI Agent tab for the first time
-          if (index == 1 && _agentState == _AgentState.idle) {
-            _analyzeImage();
-          }
-        },
-        child: AnimatedContainer(
-          duration: AppDurations.fast,
-          margin: const EdgeInsets.all(3),
-          decoration: BoxDecoration(
-            color: isActive
-                ? (index == 0 ? AppColors.green.withValues(alpha: 0.15) : AppColors.brand.withValues(alpha: 0.15))
-                : Colors.transparent,
-            borderRadius: BorderRadius.circular(AppSizes.radiusSm),
-            border: isActive
-                ? Border.all(color: index == 0 ? AppColors.green.withValues(alpha: 0.3) : AppColors.brand.withValues(alpha: 0.3))
-                : null,
+
+    return GestureDetector(
+      onTap: () {
+        setState(() => _activeTab = index);
+        if (index == 1 && _agentState == _AgentState.idle) {
+          _analyzeImage();
+        }
+      },
+      child: AnimatedContainer(
+        duration: AppDurations.fast,
+        curve: AppCurves.smooth,
+        height: 48,
+        decoration: BoxDecoration(
+          color: isActive ? accentColor.withValues(alpha: 0.08) : AppColors.card,
+          borderRadius: BorderRadius.circular(AppSizes.radiusMd),
+          border: Border.all(
+            color: isActive ? accentColor.withValues(alpha: 0.4) : AppColors.borderMed,
+            width: isActive ? 1.5 : 1,
           ),
-          child: Row(
-            mainAxisAlignment: MainAxisAlignment.center,
-            children: [
-              Icon(icon, size: 13, color: isActive ? (index == 0 ? AppColors.green : AppColors.brand) : AppColors.textTer),
-              const SizedBox(width: 5),
-              Text(
-                label,
-                style: TextStyle(
-                  fontSize: AppSizes.fontXs,
-                  fontWeight: isActive ? FontWeight.w600 : FontWeight.w400,
-                  color: isActive ? (index == 0 ? AppColors.green : AppColors.brand) : AppColors.textTer,
+          boxShadow: isActive
+              ? [BoxShadow(color: accentColor.withValues(alpha: 0.12), blurRadius: 12, spreadRadius: -2)]
+              : null,
+        ),
+        child: Stack(
+          children: [
+            // Active top accent line
+            if (isActive)
+              Positioned(
+                top: 0, left: 16, right: 16,
+                child: Container(
+                  height: 2,
+                  decoration: BoxDecoration(
+                    color: accentColor,
+                    borderRadius: BorderRadius.circular(1),
+                  ),
                 ),
               ),
-              if (badge != null) ...[
-                const SizedBox(width: 4),
-                Container(
-                  padding: const EdgeInsets.symmetric(horizontal: 4, vertical: 1),
-                  decoration: BoxDecoration(
-                    color: AppColors.brand.withValues(alpha: 0.2),
-                    borderRadius: BorderRadius.circular(4),
+            // Content
+            Center(
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.center,
+                children: [
+                  // Icon with mini background
+                  Container(
+                    width: 26, height: 26,
+                    decoration: BoxDecoration(
+                      shape: BoxShape.circle,
+                      color: isActive ? accentColor.withValues(alpha: 0.15) : Colors.white.withValues(alpha: 0.04),
+                    ),
+                    child: Icon(icon, size: 13, color: isActive ? accentColor : AppColors.textTer),
                   ),
-                  child: Text(
-                    badge,
-                    style: AppTextStyles.mono.copyWith(fontSize: AppSizes.font3xs, fontWeight: FontWeight.w700, color: AppColors.brand),
+                  const SizedBox(width: 7),
+                  Text(
+                    label,
+                    style: TextStyle(
+                      fontSize: AppSizes.fontSmPlus,
+                      fontWeight: isActive ? FontWeight.w700 : FontWeight.w500,
+                      color: isActive ? accentColor : AppColors.textTer,
+                      letterSpacing: isActive ? 0.2 : 0,
+                    ),
                   ),
-                ),
-              ],
-            ],
-          ),
+                  if (tagText != null) ...[
+                    const SizedBox(width: 6),
+                    Container(
+                      padding: const EdgeInsets.symmetric(horizontal: 5, vertical: 2),
+                      decoration: BoxDecoration(
+                        gradient: tagGradient,
+                        color: tagGradient == null ? (tagColor ?? accentColor).withValues(alpha: 0.15) : null,
+                        borderRadius: BorderRadius.circular(4),
+                      ),
+                      child: Text(
+                        tagText,
+                        style: AppTextStyles.mono.copyWith(
+                          fontSize: AppSizes.font3xs,
+                          fontWeight: FontWeight.w800,
+                          color: tagGradient != null ? Colors.white : (tagColor ?? accentColor),
+                          letterSpacing: 0.5,
+                        ),
+                      ),
+                    ),
+                  ],
+                ],
+              ),
+            ),
+          ],
         ),
       ),
     );
@@ -524,7 +586,7 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
   // ---- Local filter: category pills ----
   Widget _buildCategoryPills() {
     return SizedBox(
-      height: 34,
+      height: 42,
       child: ListView.separated(
         scrollDirection: Axis.horizontal,
         padding: const EdgeInsets.symmetric(horizontal: 16),
@@ -535,19 +597,35 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
           final isActive = index == _selectedCategoryIndex;
           return GestureDetector(
             onTap: () => _selectCategory(index),
-            child: AnimatedContainer(
-              duration: AppDurations.fast,
-              padding: const EdgeInsets.symmetric(horizontal: 11, vertical: 5),
-              decoration: BoxDecoration(
-                color: isActive ? cat.color.withValues(alpha: 0.15) : AppColors.card,
-                borderRadius: BorderRadius.circular(AppSizes.radiusFull),
-                border: Border.all(color: isActive ? cat.color : AppColors.borderMed),
-              ),
-              child: Row(mainAxisSize: MainAxisSize.min, children: [
-                Icon(cat.icon, size: 13, color: isActive ? cat.color : AppColors.textSec),
-                const SizedBox(width: 5),
-                Text(cat.name, style: TextStyle(fontSize: AppSizes.fontXsPlus, fontWeight: FontWeight.w600, color: isActive ? cat.color : AppColors.textSec)),
-              ]),
+            child: Column(
+              mainAxisSize: MainAxisSize.min,
+              children: [
+                AnimatedContainer(
+                  duration: AppDurations.fast,
+                  padding: const EdgeInsets.symmetric(horizontal: 13, vertical: 6),
+                  decoration: BoxDecoration(
+                    color: isActive ? cat.color.withValues(alpha: 0.15) : AppColors.card,
+                    borderRadius: BorderRadius.circular(AppSizes.radiusFull),
+                    border: Border.all(color: isActive ? cat.color : AppColors.borderMed),
+                  ),
+                  child: Row(mainAxisSize: MainAxisSize.min, children: [
+                    Icon(cat.icon, size: 13, color: isActive ? cat.color : AppColors.textSec),
+                    const SizedBox(width: 5),
+                    Text(cat.name, style: TextStyle(fontSize: AppSizes.fontXsPlus, fontWeight: FontWeight.w600, color: isActive ? cat.color : AppColors.textSec)),
+                  ]),
+                ),
+                const SizedBox(height: 2),
+                // Selected indicator dot
+                AnimatedContainer(
+                  duration: AppDurations.fast,
+                  width: isActive ? 3 : 0,
+                  height: 3,
+                  decoration: BoxDecoration(
+                    shape: BoxShape.circle,
+                    color: isActive ? cat.color : Colors.transparent,
+                  ),
+                ),
+              ],
             ),
           );
         },
@@ -597,15 +675,34 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
                           color: isActive ? filter.color : AppColors.borderMed,
                           width: isActive ? 2 : 1,
                         ),
+                        boxShadow: isActive ? AppShadows.brandGlow(0.2) : null,
                       ),
-                      child: ClipRRect(
-                        borderRadius: BorderRadius.circular(AppSizes.radiusMd - 1),
-                        child: filter.id == 'original'
-                            ? Image.file(File(widget.imagePath), fit: BoxFit.cover, cacheWidth: 132)
-                            : ColorFiltered(
-                                colorFilter: filter.colorFilter(),
-                                child: Image.file(File(widget.imagePath), fit: BoxFit.cover, cacheWidth: 132),
+                      child: Stack(
+                        children: [
+                          ClipRRect(
+                            borderRadius: BorderRadius.circular(AppSizes.radiusMd - 1),
+                            child: filter.id == 'original'
+                                ? Image.file(File(widget.imagePath), fit: BoxFit.cover, cacheWidth: 132)
+                                : ColorFiltered(
+                                    colorFilter: filter.colorFilter(),
+                                    child: Image.file(File(widget.imagePath), fit: BoxFit.cover, cacheWidth: 132),
+                                  ),
+                          ),
+                          // Checkmark overlay on selected
+                          if (isActive)
+                            Positioned(
+                              top: 3, right: 3,
+                              child: Container(
+                                width: 16, height: 16,
+                                decoration: BoxDecoration(
+                                  shape: BoxShape.circle,
+                                  color: AppColors.green,
+                                  boxShadow: [BoxShadow(color: AppColors.green.withValues(alpha: 0.4), blurRadius: 4)],
+                                ),
+                                child: const Icon(LucideIcons.check, size: 10, color: Colors.white),
                               ),
+                            ),
+                        ],
                       ),
                     ),
                     const SizedBox(height: 4),
@@ -634,11 +731,21 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
   Widget _buildIntensitySlider() {
     if (_isOriginalFilter) return const SizedBox.shrink();
 
+    final pct = (_filterIntensity * 100).round();
+
     return Padding(
       padding: const EdgeInsets.symmetric(horizontal: 16),
       child: Row(
         children: [
-          Icon(LucideIcons.sun, size: AppSizes.iconSm, color: AppColors.textTer),
+          // Sun icon — gradient gold when intensity > 0
+          ShaderMask(
+            shaderCallback: (bounds) => LinearGradient(
+              colors: _filterIntensity > 0
+                  ? [AppColors.brand, AppColors.brand400]
+                  : [AppColors.textTer, AppColors.textTer],
+            ).createShader(bounds),
+            child: Icon(LucideIcons.sun, size: AppSizes.iconSm, color: Colors.white),
+          ),
           Expanded(
             child: SliderTheme(
               data: SliderThemeData(
@@ -657,12 +764,19 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
               ),
             ),
           ),
-          SizedBox(
-            width: 36,
+          // Percentage pill with background
+          Container(
+            padding: const EdgeInsets.symmetric(horizontal: 8, vertical: 3),
+            decoration: BoxDecoration(
+              color: AppColors.brand.withValues(alpha: pct > 0 ? 0.12 : 0.05),
+              borderRadius: BorderRadius.circular(AppSizes.radiusFull),
+            ),
             child: Text(
-              '${(_filterIntensity * 100).round()}%',
-              style: AppTextStyles.monoSmall.copyWith(color: AppColors.textSec),
-              textAlign: TextAlign.right,
+              '$pct%',
+              style: AppTextStyles.monoSmall.copyWith(
+                color: pct > 0 ? AppColors.brand : AppColors.textTer,
+                fontWeight: FontWeight.w700,
+              ),
             ),
           ),
         ],
@@ -1312,6 +1426,7 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
                   gradient: (_submitting || !canSubmit) ? null : AppGradients.btn,
                   color: (_submitting || !canSubmit) ? AppColors.zinc700 : null,
                   borderRadius: BorderRadius.circular(AppSizes.radiusMd),
+                  boxShadow: (_submitting || !canSubmit) ? null : AppShadows.brandGlow(0.2),
                 ),
                 child: ElevatedButton.icon(
                   onPressed: (_submitting || !canSubmit)
@@ -1325,7 +1440,11 @@ class _GlowConfirmScreenState extends ConsumerState<GlowConfirmScreen> {
                   ),
                   icon: _submitting
                       ? const SizedBox(width: AppSizes.iconMd, height: AppSizes.iconMd, child: CircularProgressIndicator(strokeWidth: 2, color: AppColors.bg))
-                      : Icon(buttonIcon, size: AppSizes.iconMd, color: canSubmit ? AppColors.bg : AppColors.textTer),
+                      : Icon(
+                          canSubmit ? buttonIcon : LucideIcons.lock,
+                          size: AppSizes.iconMd,
+                          color: canSubmit ? AppColors.bg : AppColors.textTer,
+                        ),
                   label: Text(
                     _submitting ? 'Processing...' : buttonLabel,
                     style: TextStyle(fontSize: AppSizes.fontSm, fontWeight: FontWeight.w700, color: canSubmit ? AppColors.bg : AppColors.textTer),

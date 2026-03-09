@@ -1,11 +1,11 @@
 {
-    "name": "flexme",
-    "short_name": "flexme",
+    "name": "FlexMe — AI Photo & Story Creator",
+    "short_name": "FlexMe",
     "start_url": ".",
     "display": "standalone",
-    "background_color": "#0175C2",
-    "theme_color": "#0175C2",
-    "description": "A new Flutter project.",
+    "background_color": "#09090B",
+    "theme_color": "#F59E0B",
+    "description": "Create stunning AI-enhanced photos, templates, and story series. FlexLocket, FlexShot, FlexTale — your creative flex starts here.",
     "orientation": "portrait-primary",
     "prefer_related_applications": false,
     "icons": [

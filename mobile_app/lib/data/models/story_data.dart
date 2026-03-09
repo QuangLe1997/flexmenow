@@ -7,9 +7,10 @@ class StoryData {
   final String id;
   final Map<String, dynamic> title; // i18n: { "en": "...", "vi": "...", ... }
   final Map<String, dynamic> description; // i18n
-  final String category; // "Travel" | "Cyberpunk" | "Paradise" | "Romance" | etc.
-  final String type; // "travel" | "trend" | "sexy" | "business" | "traditional"
-  final String gender; // "male" | "female" | "couple"
+  final String category; // "romance" | "travel" | "luxury" | "creative" | "beauty" | "career" | "emotion" | "culture" | "lifestyle" | "active"
+  final String type; // "aesthetic" | "flex" | "journey" | "story" | "travel" | "vlog"
+  final String gender; // "male" | "female" | "couple" | "all"
+  final String promptGender; // "male" | "female" | "neutral" — whether the prompt is gender-specific
   final String duration; // "moment" | "once" | "many"
   final int totalPics; // number of AI images generated
   final int credits; // per-story credit cost (from data JSON, NOT Remote Config)
@@ -32,6 +33,7 @@ class StoryData {
     required this.category,
     required this.type,
     required this.gender,
+    this.promptGender = 'neutral',
     required this.duration,
     required this.totalPics,
     required this.credits,
@@ -57,6 +59,7 @@ class StoryData {
       category: json['category'] as String? ?? '',
       type: json['type'] as String? ?? '',
       gender: json['gender'] as String? ?? 'female',
+      promptGender: json['promptGender'] as String? ?? 'neutral',
       duration: json['duration'] as String? ?? 'many',
       totalPics: (json['totalPics'] as num?)?.toInt() ?? 0,
       credits: (json['credits'] as num?)?.toInt() ?? 0,
@@ -92,6 +95,7 @@ class StoryData {
       'category': category,
       'type': type,
       'gender': gender,
+      'promptGender': promptGender,
       'duration': duration,
       'totalPics': totalPics,
       'credits': credits,

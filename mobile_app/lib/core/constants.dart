@@ -31,6 +31,8 @@ abstract final class AppConstants {
   static const cfGenFlexLocket = 'genFlexLocket';
   static const cfCheckGeo = 'checkGeo';
   static const cfOnUserCreate = 'onUserCreate';
+  static const cfDeleteAccount = 'deleteAccount';
+  static const cfResetGlowDaily = 'resetGlowDaily';
 
   // Remote Config keys
   static const rcFlexshotJsonUrl = 'flexshot_json_url';

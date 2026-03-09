@@ -76,10 +76,10 @@ service firebase.storage {
     }
 
     // =============================================
-    // generated/{userId}/** — AI-generated output images
+    // generations/{userId}/** — AI-generated output images (FlexShot, FlexLocket)
     // Owner can read; written exclusively by Cloud Functions.
     // =============================================
-    match /generated/{userId}/{allPaths=**} {
+    match /generations/{userId}/{allPaths=**} {
       allow read: if isOwner(userId);
       allow write: if false;
     }

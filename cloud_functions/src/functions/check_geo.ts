@@ -34,6 +34,7 @@ export const checkGeo = onCall(
     timeoutSeconds: 10,
     memory: "256MiB",
     maxInstances: 100,
+    enforceAppCheck: true,
   },
   async (request: CallableRequest): Promise<CheckGeoResult> => {
     try {

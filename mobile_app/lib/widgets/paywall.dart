@@ -1,4 +1,5 @@
 import 'package:flutter/material.dart';
+import 'package:purchases_flutter/purchases_flutter.dart';
 
 import '../core/design_tokens.dart';
 import 'gold_button.dart';
@@ -11,6 +12,7 @@ class PaywallPlan {
   final int credits;
   final List<String> features;
   final bool isPopular;
+  final Package? package;
 
   const PaywallPlan({
     required this.name,
@@ -19,6 +21,7 @@ class PaywallPlan {
     required this.credits,
     required this.features,
     this.isPopular = false,
+    this.package,
   });
 }
 
@@ -26,8 +29,95 @@ class PaywallPlan {
 class CreditPack {
   final int credits;
   final String price;
+  final Package? package;
 
-  const CreditPack({required this.credits, required this.price});
+  const CreditPack({required this.credits, required this.price, this.package});
+}
+
+/// Shows the paywall with live RevenueCat offerings.
+///
+/// Fetches offerings from RevenueCat, maps them to UI plans, and handles
+/// purchases via the SDK. Falls back to hardcoded plans if fetch fails.
+Future<void> showPaywallWithPurchase(BuildContext context) async {
+  // Show loading briefly
+  List<PaywallPlan> plans;
+  List<CreditPack> creditPacks;
+
+  try {
+    final offerings = await Purchases.getOfferings();
+    final current = offerings.current;
+
+    if (current != null && current.availablePackages.isNotEmpty) {
+      plans = current.availablePackages
+          .where((p) => p.packageType == PackageType.monthly || p.packageType == PackageType.annual)
+          .map((p) => PaywallPlan(
+                name: p.storeProduct.title,
+                price: p.storeProduct.priceString,
+                period: p.packageType == PackageType.annual ? '/yr' : '/mo',
+                credits: 0,
+                features: [p.storeProduct.description],
+                isPopular: p.packageType == PackageType.monthly,
+                package: p,
+              ))
+          .toList();
+
+      creditPacks = current.availablePackages
+          .where((p) => p.packageType == PackageType.custom || p.packageType == PackageType.lifetime)
+          .map((p) => CreditPack(
+                credits: 0,
+                price: p.storeProduct.priceString,
+                package: p,
+              ))
+          .toList();
+    } else {
+      plans = [];
+      creditPacks = [];
+    }
+  } catch (_) {
+    plans = [];
+    creditPacks = [];
+  }
+
+  if (!context.mounted) return;
+
+  return showPaywall(
+    context,
+    plans: plans.isEmpty ? null : plans,
+    creditPacks: creditPacks.isEmpty ? null : creditPacks,
+    onSelectPlan: (name) async {
+      // Find the matching package and purchase
+      final pkg = plans.where((p) => p.name == name).firstOrNull?.package;
+      if (pkg != null) {
+        try {
+          await Purchases.purchasePackage(pkg);
+          if (context.mounted) {
+            Navigator.of(context).pop();
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Purchase successful!')),
+            );
+          }
+        } on PurchasesErrorCode {
+          // User cancelled or error — do nothing
+        }
+      }
+    },
+    onSelectCreditPack: (credits) async {
+      final pkg = creditPacks.where((p) => p.credits == credits).firstOrNull?.package;
+      if (pkg != null) {
+        try {
+          await Purchases.purchasePackage(pkg);
+          if (context.mounted) {
+            Navigator.of(context).pop();
+            ScaffoldMessenger.of(context).showSnackBar(
+              const SnackBar(content: Text('Credits added!')),
+            );
+          }
+        } on PurchasesErrorCode {
+          // User cancelled or error
+        }
+      }
+    },
+  );
 }
 
 /// Shows the paywall as a modal bottom sheet.

@@ -1,4 +1,3 @@
-import 'dart:math' as math;
 import 'dart:ui';
 
 import 'package:flutter/material.dart';
@@ -91,50 +90,46 @@ class _StoryCardSpotlightState extends State<StoryCardSpotlight>
                             : const SizedBox.shrink(),
                       ),
 
-                      // Centered portrait cards with crossfade
-                      ...List.generate(n, (i) {
-                        final isActive = currentImageIndex == i;
-                        return AnimatedOpacity(
-                          opacity: isActive ? 1.0 : 0.0,
-                          duration: const Duration(milliseconds: 900),
-                          curve: kSmoothBounce,
-                          child: AnimatedContainer(
-                            duration: const Duration(milliseconds: 900),
-                            curve: kSmoothBounce,
-                            transform: Matrix4.identity()
-                              // ignore: deprecated_member_use
-                              ..scale(isActive ? 1.0 : 0.85)
-                              ..rotateZ(isActive ? 0.0 : 3 * math.pi / 180),
-                            transformAlignment: Alignment.center,
-                            width: 140,
-                            height: 200,
-                            decoration: BoxDecoration(
-                              borderRadius: BorderRadius.circular(18),
-                              border: Border.all(
-                                color: isActive
-                                    ? AppColors.brand.withValues(alpha: 0.3)
-                                    : Colors.transparent,
-                                width: 2,
-                              ),
-                              boxShadow: isActive
-                                  ? [
-                                      ...AppShadows.cardHero,
-                                      ...AppShadows.brandGlow(0.12),
-                                    ]
-                                  : [],
+                      // Centered portrait card with crossfade
+                      AnimatedSwitcher(
+                        duration: const Duration(milliseconds: 700),
+                        switchInCurve: kSmoothBounce,
+                        switchOutCurve: Curves.easeIn,
+                        transitionBuilder: (child, animation) {
+                          return FadeTransition(
+                            opacity: animation,
+                            child: ScaleTransition(
+                              scale: Tween(begin: 0.92, end: 1.0).animate(animation),
+                              child: child,
                             ),
-                            child: ClipRRect(
-                              borderRadius: BorderRadius.circular(16),
-                              child: PlaceholderImage(
-                                index: widget.data.cardIndex + i,
-                                borderRadius: 0,
-                                imageUrl: _images[i],
-                                fit: BoxFit.cover,
-                              ),
+                          );
+                        },
+                        child: Container(
+                          key: ValueKey(currentImageIndex),
+                          width: 140,
+                          height: 200,
+                          decoration: BoxDecoration(
+                            borderRadius: BorderRadius.circular(18),
+                            border: Border.all(
+                              color: AppColors.brand.withValues(alpha: 0.3),
+                              width: 2,
+                            ),
+                            boxShadow: [
+                              ...AppShadows.cardHero,
+                              ...AppShadows.brandGlow(0.12),
+                            ],
+                          ),
+                          child: ClipRRect(
+                            borderRadius: BorderRadius.circular(16),
+                            child: PlaceholderImage(
+                              index: widget.data.cardIndex + currentImageIndex,
+                              borderRadius: 0,
+                              imageUrl: _images[currentImageIndex],
+                              fit: BoxFit.cover,
                             ),
                           ),
-                        );
-                      }),
+                        ),
+                      ),
 
                       // Pills top-left
                       Positioned(

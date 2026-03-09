@@ -8,6 +8,7 @@ import 'package:image_picker/image_picker.dart';
 import 'package:lucide_icons/lucide_icons.dart';
 
 import '../../core/app_animations.dart';
+import '../../core/app_shadows.dart';
 import '../../core/app_text_styles.dart';
 import '../../core/design_tokens.dart';
 import '../../providers/app_providers.dart';
@@ -216,7 +217,7 @@ class _GlowTabState extends ConsumerState<GlowTab>
           padding: const EdgeInsets.symmetric(horizontal: 24),
           child: Column(
             children: [
-              const SizedBox(height: 28),
+              const SizedBox(height: 32),
               // Header
               RichText(
                 text: TextSpan(
@@ -230,7 +231,7 @@ class _GlowTabState extends ConsumerState<GlowTab>
               const SizedBox(height: 8),
               Text(
                 'Enhance any photo instantly',
-                style: TextStyle(fontSize: AppSizes.fontSmPlus, color: Colors.white.withValues(alpha: 0.5)),
+                style: TextStyle(fontSize: AppSizes.fontSmPlus, color: Colors.white.withValues(alpha: 0.45)),
               ),
               const Spacer(),
               // Camera card
@@ -251,23 +252,23 @@ class _GlowTabState extends ConsumerState<GlowTab>
                 isPrimary: false,
               ),
               const Spacer(),
-              // Hint
+              // Trust badge
               Container(
                 padding: const EdgeInsets.symmetric(horizontal: 16, vertical: 10),
                 decoration: BoxDecoration(
                   color: Colors.white.withValues(alpha: 0.05),
                   borderRadius: BorderRadius.circular(AppSizes.radiusFull),
-                  border: Border.all(color: Colors.white.withValues(alpha: 0.08)),
+                  border: Border.all(color: AppColors.green.withValues(alpha: 0.15)),
                 ),
                 child: Row(
                   mainAxisSize: MainAxisSize.min,
                   children: [
-                    Icon(LucideIcons.info, size: 13, color: Colors.white.withValues(alpha: 0.4)),
+                    Icon(LucideIcons.shield, size: 13, color: AppColors.green.withValues(alpha: 0.7)),
                     const SizedBox(width: 8),
                     Flexible(
                       child: Text(
-                        'Works with any photo — selfies, food, landscapes',
-                        style: TextStyle(fontSize: AppSizes.fontXsPlus, color: Colors.white.withValues(alpha: 0.4)),
+                        'Subtle & undetectable',
+                        style: TextStyle(fontSize: AppSizes.fontXsPlus, fontWeight: FontWeight.w500, color: Colors.white.withValues(alpha: 0.5)),
                       ),
                     ),
                   ],
@@ -299,16 +300,20 @@ class _GlowTabState extends ConsumerState<GlowTab>
           border: Border.all(
             color: isPrimary ? AppColors.brand.withValues(alpha: 0.3) : Colors.white.withValues(alpha: 0.12),
           ),
+          boxShadow: isPrimary ? AppShadows.brandGlow(0.15) : null,
         ),
         child: Row(
           children: [
+            // Icon container with gradient ring for primary
             Container(
               width: 48, height: 48,
               decoration: BoxDecoration(
                 shape: BoxShape.circle,
                 gradient: isPrimary ? AppGradients.btn : null,
                 color: isPrimary ? null : Colors.white.withValues(alpha: 0.08),
-                border: isPrimary ? null : Border.all(color: Colors.white.withValues(alpha: 0.12)),
+                border: isPrimary
+                    ? Border.all(color: AppColors.brand400.withValues(alpha: 0.5), width: 2)
+                    : Border.all(color: Colors.white.withValues(alpha: 0.12)),
               ),
               child: Icon(icon, size: AppSizes.iconXl, color: isPrimary ? AppColors.bg : Colors.white),
             ),
@@ -323,7 +328,17 @@ class _GlowTabState extends ConsumerState<GlowTab>
                 ],
               ),
             ),
-            Icon(LucideIcons.chevronRight, size: AppSizes.iconBase, color: isPrimary ? AppColors.brand : Colors.white.withValues(alpha: 0.3)),
+            // Animated arrow for primary card
+            if (isPrimary)
+              AnimatedBuilder(
+                animation: _pulseController,
+                builder: (_, __) => Transform.translate(
+                  offset: Offset(3.0 * _pulseController.value, 0),
+                  child: Icon(LucideIcons.chevronRight, size: AppSizes.iconBase, color: AppColors.brand),
+                ),
+              )
+            else
+              Icon(LucideIcons.chevronRight, size: AppSizes.iconBase, color: Colors.white.withValues(alpha: 0.3)),
           ],
         ),
       ),
@@ -406,6 +421,7 @@ class _GlowTabState extends ConsumerState<GlowTab>
                   color: Colors.white.withValues(alpha: 0.1),
                   borderRadius: BorderRadius.circular(AppSizes.radiusFull),
                   border: Border.all(color: AppColors.brand.withValues(alpha: 0.3)),
+                  boxShadow: [BoxShadow(color: AppColors.brand.withValues(alpha: 0.15), blurRadius: 10)],
                 ),
                 child: Row(mainAxisSize: MainAxisSize.min, children: [
                   Icon(LucideIcons.zap, size: 13, color: AppColors.brand),
@@ -467,14 +483,15 @@ class _GlowTabState extends ConsumerState<GlowTab>
             child: const Center(child: CircularProgressIndicator(color: AppColors.brand, strokeWidth: 2)),
           ),
 
-        // Subtle face guide (only in camera mode, very minimal)
+        // Subtle face guide (only in camera mode, gold gradient border)
         if (_selectedImage == null && _cameraReady)
           Center(
             child: Container(
               width: 160, height: 220,
               decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(80),
-                border: Border.all(color: Colors.white.withValues(alpha: 0.12), width: 1),
+                border: Border.all(color: AppColors.brand.withValues(alpha: 0.15), width: 1.5),
+                boxShadow: [BoxShadow(color: AppColors.brand.withValues(alpha: 0.06), blurRadius: 20, spreadRadius: 2)],
               ),
             ),
           ),
@@ -537,61 +554,77 @@ class _GlowTabState extends ConsumerState<GlowTab>
               mainAxisAlignment: MainAxisAlignment.center,
               crossAxisAlignment: CrossAxisAlignment.center,
               children: [
-                // Gallery
+                // Gallery (circle)
                 GestureDetector(
                   onTap: _onGalleryPick,
                   child: Container(
-                    width: 48, height: 48,
+                    width: 44, height: 44,
                     decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.08),
-                      borderRadius: BorderRadius.circular(14),
-                      border: Border.all(color: Colors.white.withValues(alpha: 0.12)),
+                      color: Colors.white.withValues(alpha: 0.1),
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white.withValues(alpha: 0.15)),
                     ),
-                    child: const Icon(LucideIcons.image, color: Colors.white, size: AppSizes.iconLg),
+                    child: const Icon(LucideIcons.image, color: Colors.white, size: AppSizes.iconBase),
                   ),
                 ),
                 const SizedBox(width: 28),
 
-                // Shutter
-                GestureDetector(
-                  onTap: (_cameraReady || _selectedImage != null) ? _onCapture : null,
-                  child: Container(
-                    width: 76, height: 76,
-                    decoration: BoxDecoration(
-                      shape: BoxShape.circle,
-                      border: Border.all(color: AppColors.brand.withValues(alpha: 0.6), width: 3),
-                    ),
-                    child: Center(
-                      child: AnimatedContainer(
-                        duration: AppDurations.fast,
-                        width: 62, height: 62,
+                // Shutter with pulsing outer ring
+                AnimatedBuilder(
+                  animation: _pulseController,
+                  builder: (_, __) => GestureDetector(
+                    onTap: (_cameraReady || _selectedImage != null) ? _onCapture : null,
+                    child: Container(
+                      width: 82, height: 82,
+                      decoration: BoxDecoration(
+                        shape: BoxShape.circle,
+                        boxShadow: [
+                          BoxShadow(
+                            color: AppColors.brand.withValues(alpha: 0.15 + 0.15 * _pulseController.value),
+                            blurRadius: 16 + 8 * _pulseController.value,
+                            spreadRadius: 2,
+                          ),
+                        ],
+                      ),
+                      child: Container(
+                        width: 82, height: 82,
                         decoration: BoxDecoration(
                           shape: BoxShape.circle,
-                          gradient: _selectedImage != null ? null : AppGradients.btn,
-                          color: _selectedImage != null ? AppColors.brand : null,
+                          border: Border.all(color: AppColors.brand.withValues(alpha: 0.4 + 0.2 * _pulseController.value), width: 3),
                         ),
-                        child: _selectedImage != null
-                            ? const Icon(LucideIcons.arrowRight, size: AppSizes.icon2xl, color: AppColors.bg)
-                            : null,
+                        child: Center(
+                          child: AnimatedContainer(
+                            duration: AppDurations.fast,
+                            width: 62, height: 62,
+                            decoration: BoxDecoration(
+                              shape: BoxShape.circle,
+                              gradient: _selectedImage != null ? null : AppGradients.btn,
+                              color: _selectedImage != null ? AppColors.brand : null,
+                            ),
+                            child: _selectedImage != null
+                                ? const Icon(LucideIcons.arrowRight, size: AppSizes.icon2xl, color: AppColors.bg)
+                                : null,
+                          ),
+                        ),
                       ),
                     ),
                   ),
                 ),
                 const SizedBox(width: 28),
 
-                // Flip camera / Clear image
+                // Flip camera / Clear image (circle)
                 GestureDetector(
                   onTap: _selectedImage != null ? _clearSelectedImage : _flipCamera,
                   child: Container(
-                    width: 48, height: 48,
+                    width: 44, height: 44,
                     decoration: BoxDecoration(
-                      color: Colors.white.withValues(alpha: 0.08),
-                      borderRadius: BorderRadius.circular(14),
-                      border: Border.all(color: Colors.white.withValues(alpha: 0.12)),
+                      color: Colors.white.withValues(alpha: 0.1),
+                      shape: BoxShape.circle,
+                      border: Border.all(color: Colors.white.withValues(alpha: 0.15)),
                     ),
                     child: Icon(
                       _selectedImage != null ? LucideIcons.x : LucideIcons.refreshCw,
-                      color: Colors.white, size: AppSizes.iconLg,
+                      color: Colors.white, size: AppSizes.iconBase,
                     ),
                   ),
                 ),

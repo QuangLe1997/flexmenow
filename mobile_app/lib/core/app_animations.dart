@@ -16,6 +16,6 @@ abstract final class AppCurves {
   static const standard = Curves.easeInOut;
   static const enter = Curves.easeOut;
   static const exit = Curves.easeIn;
-  static const spring = Curves.elasticOut;
+  static const spring = Cubic(0.175, 0.885, 0.32, 1.1); // gentle spring
   static const smooth = Curves.easeOutCubic;
 }

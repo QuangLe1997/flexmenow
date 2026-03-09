@@ -1,13 +1,16 @@
 import 'package:cached_network_image/cached_network_image.dart';
+import 'package:cloud_functions/cloud_functions.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
 import 'package:go_router/go_router.dart';
 import 'package:lucide_icons/lucide_icons.dart';
+import 'package:url_launcher/url_launcher.dart';
 
 import '../../core/app_animations.dart';
 import '../../core/app_shadows.dart';
 import '../../core/app_text_styles.dart';
+import '../../core/constants.dart';
 import '../../core/design_tokens.dart';
 import '../../data/mock_data.dart';
 import '../../providers/app_providers.dart';
@@ -643,10 +646,8 @@ class _MeTabState extends ConsumerState<MeTab> with SingleTickerProviderStateMix
             ]),
             const SizedBox(height: 16),
             _settingsItem(LucideIcons.globe, 'Language', 'English', () {}),
-            _settingsItem(LucideIcons.moon, 'Theme', 'Dark', () {}),
-            _settingsItem(LucideIcons.bell, 'Push Notifications', 'On', () {}),
-            _settingsItem(LucideIcons.shield, 'Privacy Policy', '', () {}),
-            _settingsItem(LucideIcons.fileText, 'Terms of Service', '', () {}),
+            _settingsItem(LucideIcons.shield, 'Privacy Policy', '', () => _openUrl('https://flexme-now.web.app/privacy')),
+            _settingsItem(LucideIcons.fileText, 'Terms of Service', '', () => _openUrl('https://flexme-now.web.app/terms')),
             _settingsItem(LucideIcons.info, 'About', 'v1.0.0', () {}),
             const SizedBox(height: 8),
             SizedBox(
@@ -665,11 +666,92 @@ class _MeTabState extends ConsumerState<MeTab> with SingleTickerProviderStateMix
                 child: Text('Sign Out', style: TextStyle(fontSize: AppSizes.fontSm, fontWeight: FontWeight.w600, color: AppColors.red)),
               ),
             ),
-            const SizedBox(height: 16),
+            const SizedBox(height: 8),
+            SizedBox(
+              width: double.infinity,
+              height: 48,
+              child: TextButton(
+                onPressed: () {
+                  Navigator.of(context).pop();
+                  _showDeleteAccountConfirm();
+                },
+                child: Text('Delete Account', style: TextStyle(fontSize: AppSizes.fontXs, color: AppColors.textTer, decoration: TextDecoration.underline)),
+              ),
+            ),
+            const SizedBox(height: 8),
           ],
         ),
       ),
     );
+  }
+
+  Future<void> _openUrl(String url) async {
+    final uri = Uri.parse(url);
+    if (await canLaunchUrl(uri)) {
+      await launchUrl(uri, mode: LaunchMode.externalApplication);
+    }
+  }
+
+  void _showDeleteAccountConfirm() {
+    showDialog(
+      context: context,
+      builder: (ctx) => AlertDialog(
+        backgroundColor: AppColors.card,
+        shape: RoundedRectangleBorder(borderRadius: BorderRadius.circular(AppSizes.radiusLg)),
+        title: const Text('Delete Account', style: TextStyle(color: AppColors.text, fontWeight: FontWeight.w700)),
+        content: const Text(
+          'This will permanently delete your account, all generations, stories, and data. This action cannot be undone.',
+          style: TextStyle(color: AppColors.textSec, fontSize: AppSizes.fontSm),
+        ),
+        actions: [
+          TextButton(
+            onPressed: () => Navigator.of(ctx).pop(),
+            child: const Text('Cancel', style: TextStyle(color: AppColors.textSec)),
+          ),
+          TextButton(
+            onPressed: () async {
+              Navigator.of(ctx).pop();
+              await _deleteAccount();
+            },
+            child: const Text('Delete', style: TextStyle(color: AppColors.red, fontWeight: FontWeight.w700)),
+          ),
+        ],
+      ),
+    );
+  }
+
+  Future<void> _deleteAccount() async {
+    // Show loading
+    if (!context.mounted) return;
+    showDialog(
+      context: context,
+      barrierDismissible: false,
+      builder: (_) => const Center(child: CircularProgressIndicator(color: AppColors.brand)),
+    );
+
+    try {
+      final functions = FirebaseFunctions.instanceFor(region: AppConstants.firebaseRegion);
+      final callable = functions.httpsCallable(AppConstants.cfDeleteAccount);
+      await callable.call<dynamic>();
+
+      // Sign out locally after server cleanup
+      await FirebaseAuth.instance.signOut();
+
+      if (context.mounted) {
+        Navigator.of(context).pop(); // dismiss loading
+        context.go('/tour');
+        ScaffoldMessenger.of(context).showSnackBar(
+          const SnackBar(content: Text('Account deleted successfully')),
+        );
+      }
+    } catch (e) {
+      if (context.mounted) {
+        Navigator.of(context).pop(); // dismiss loading
+        ScaffoldMessenger.of(context).showSnackBar(
+          SnackBar(content: Text('Failed to delete account: $e')),
+        );
+      }
+    }
   }
 
   Widget _settingsItem(IconData icon, String label, String value, VoidCallback onTap) {

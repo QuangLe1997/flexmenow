@@ -1,3 +1,6 @@
+import 'dart:async';
+
+import 'package:firebase_crashlytics/firebase_crashlytics.dart';
 import 'package:flutter/foundation.dart';
 import 'package:flutter/material.dart';
 import 'package:flutter_riverpod/flutter_riverpod.dart';
@@ -22,7 +25,16 @@ Future<void> main() async {
     debugPrint('Firebase init failed (expected without google-services.json): $e');
   }
 
-  // 1b. App Check (required by firebase_ai for Gemini calls)
+  // 1b. Crashlytics — capture all Flutter & platform errors
+  if (firebaseReady) {
+    FlutterError.onError = FirebaseCrashlytics.instance.recordFlutterFatalError;
+    PlatformDispatcher.instance.onError = (error, stack) {
+      FirebaseCrashlytics.instance.recordError(error, stack, fatal: true);
+      return true;
+    };
+  }
+
+  // 1c. App Check (required by firebase_ai for Gemini calls)
   if (firebaseReady) {
     try {
       await FirebaseAppCheck.instance.activate(

@@ -262,6 +262,7 @@ export const genFlexLocket = onCall(
     memory: FLEXLOCKET_MEMORY,
     maxInstances: 50,
     secrets: [geminiApiKeys],
+    enforceAppCheck: true,
   },
   async (request: CallableRequest<GenFlexLocketInput>): Promise<GenFlexLocketResult> => {
     const startTime = Date.now();

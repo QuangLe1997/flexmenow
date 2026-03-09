@@ -28,10 +28,39 @@ class DotIndicator extends StatelessWidget {
 
   @override
   Widget build(BuildContext context) {
-    return ClipRect(
-      child: Row(
-        mainAxisSize: MainAxisSize.min,
-        children: List.generate(count, (index) {
+    // Limit visible dots to prevent overflow — show window around active index
+    const maxVisible = 7;
+    final int startIndex;
+    final int endIndex;
+    final bool showLeadingEllipsis;
+    final bool showTrailingEllipsis;
+
+    if (count <= maxVisible) {
+      startIndex = 0;
+      endIndex = count;
+      showLeadingEllipsis = false;
+      showTrailingEllipsis = false;
+    } else {
+      final half = maxVisible ~/ 2;
+      int s = activeIndex - half;
+      int e = activeIndex + half + 1;
+      if (s < 0) { e += -s; s = 0; }
+      if (e > count) { s -= (e - count); e = count; }
+      s = s.clamp(0, count);
+      e = e.clamp(0, count);
+      startIndex = s;
+      endIndex = e;
+      showLeadingEllipsis = s > 0;
+      showTrailingEllipsis = e < count;
+    }
+
+    return Row(
+      mainAxisSize: MainAxisSize.min,
+      children: [
+        if (showLeadingEllipsis)
+          _miniDot(inactiveColor.withValues(alpha: 0.4)),
+        ...List.generate(endIndex - startIndex, (i) {
+          final index = startIndex + i;
           final isActive = index == activeIndex;
           return AnimatedContainer(
             duration: const Duration(milliseconds: 250),
@@ -48,7 +77,18 @@ class DotIndicator extends StatelessWidget {
             ),
           );
         }),
-      ),
+        if (showTrailingEllipsis)
+          _miniDot(inactiveColor.withValues(alpha: 0.4)),
+      ],
+    );
+  }
+
+  Widget _miniDot(Color color) {
+    return Container(
+      margin: EdgeInsets.symmetric(horizontal: spacing),
+      width: dotSize * 0.5,
+      height: dotSize * 0.5,
+      decoration: BoxDecoration(shape: BoxShape.circle, color: color),
     );
   }
 }

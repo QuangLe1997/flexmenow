@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { TemplateForm } from "@/components/template-form";
-import { TestGenerate } from "@/components/test-generate";
 import type { TemplateItem } from "@/lib/types";
 
 export default function EditTemplatePage() {
@@ -75,11 +74,6 @@ export default function EditTemplatePage() {
           {version && <span className="font-mono"> · v{version}</span>}
         </p>
       </div>
-      {!readOnly && (
-        <div className="mb-6">
-          <TestGenerate type="template" id={id} />
-        </div>
-      )}
       {template && (
         <TemplateForm
           initialData={template}

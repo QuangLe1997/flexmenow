@@ -3,7 +3,6 @@
 import { useEffect, useState } from "react";
 import { useParams, useSearchParams } from "next/navigation";
 import { StoryForm } from "@/components/story-form";
-import { TestGenerate } from "@/components/test-generate";
 import type { StoryItem } from "@/lib/types";
 
 export default function EditStoryPage() {
@@ -74,15 +73,6 @@ export default function EditStoryPage() {
           {version && <span className="font-mono"> · v{version}</span>}
         </p>
       </div>
-      {!readOnly && (
-        <div className="mb-6">
-          <TestGenerate
-            type="story"
-            id={id}
-            chapterCount={story?.chapters?.length || 0}
-          />
-        </div>
-      )}
       {story && (
         <StoryForm
           initialData={story}

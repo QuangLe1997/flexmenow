@@ -5,9 +5,10 @@
 class TemplateData {
   final String id;
   final Map<String, dynamic> name; // i18n: { "en": "...", "vi": "...", ... }
-  final String category; // "travel" | "luxury" | "lifestyle" | "art" | "seasonal"
+  final String category; // "romance" | "travel" | "luxury" | "creative" | "beauty" | "career" | "emotion" | "culture" | "lifestyle" | "active"
   final String type; // "travel" | "sexy" | "business" | "trend" | "traditional"
   final String gender; // "male" | "female" | "couple" | "all"
+  final String promptGender; // "male" | "female" | "neutral" — whether the prompt is gender-specific
   final String style; // "Realistic" | "Cinematic" | "Corporate" | "Anime" | etc.
   final int credits; // cost per generation
   final String? badge; // "HOT" | "NEW" | "TRENDING" | null
@@ -29,6 +30,7 @@ class TemplateData {
     required this.category,
     required this.type,
     required this.gender,
+    this.promptGender = 'neutral',
     required this.style,
     required this.credits,
     this.badge,
@@ -53,6 +55,7 @@ class TemplateData {
       category: json['category'] as String? ?? '',
       type: json['type'] as String? ?? '',
       gender: json['gender'] as String? ?? 'all',
+      promptGender: json['promptGender'] as String? ?? 'neutral',
       style: json['style'] as String? ?? 'Realistic',
       credits: (json['credits'] as num?)?.toInt() ?? 1,
       badge: json['badge'] as String?,
@@ -84,6 +87,7 @@ class TemplateData {
       'category': category,
       'type': type,
       'gender': gender,
+      'promptGender': promptGender,
       'style': style,
       'credits': credits,
       'badge': badge,

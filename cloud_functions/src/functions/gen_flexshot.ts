@@ -60,6 +60,7 @@ export const genFlexShot = onCall(
     memory: FLEXSHOT_MEMORY,
     maxInstances: 50,
     secrets: [geminiApiKeys],
+    enforceAppCheck: true,
   },
   async (request: CallableRequest<GenFlexShotInput>): Promise<GenFlexShotResult> => {
     const startTime = Date.now();

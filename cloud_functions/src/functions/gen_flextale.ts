@@ -74,6 +74,7 @@ export const genFlexTale = onCall(
     memory: FLEXTALE_MEMORY,
     maxInstances: 20,
     secrets: [geminiApiKeys],
+    enforceAppCheck: true,
   },
   async (request: CallableRequest<GenFlexTaleInput>): Promise<GenFlexTaleResult> => {
     // 1. Auth check

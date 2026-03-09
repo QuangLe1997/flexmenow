@@ -129,6 +129,7 @@ class AppInitService {
       _initRevenueCat(uid),
       _updateLastActive(uid),
       _checkGlowDailyReset(uid),
+      _setupFcmHandlers(),
     ]);
 
     // Start listening for Remote Config realtime updates
@@ -250,27 +251,42 @@ class AppInitService {
   // ---------------------------------------------------------------------------
 
   /// Resets `glowUsedToday` to 0 if the last reset date is not today.
+  /// Calls server-side CF to prevent client manipulation of glow counter.
   Future<void> _checkGlowDailyReset(String uid) async {
     try {
-      final doc = await _firestore
-          .collection(AppConstants.colUsers)
-          .doc(uid)
-          .get();
-      if (!doc.exists) return;
-
-      final data = doc.data()!;
-      final lastReset = data['glowLastResetDate'] as String?;
-      final today = DateTime.now().toIso8601String().substring(0, 10);
-
-      if (lastReset != today) {
-        await _firestore.collection(AppConstants.colUsers).doc(uid).update({
-          'glowUsedToday': 0,
-          'glowLastResetDate': today,
-          'updatedAt': FieldValue.serverTimestamp(),
-        });
-      }
+      final callable = _functions.httpsCallable(AppConstants.cfResetGlowDaily);
+      await callable.call<dynamic>();
     } catch (e) {
       debugPrint('glowDailyReset failed: $e');
+    }
+  }
+
+  // ---------------------------------------------------------------------------
+  // FCM message handlers
+  // ---------------------------------------------------------------------------
+
+  Future<void> _setupFcmHandlers() async {
+    try {
+      // Foreground messages
+      FirebaseMessaging.onMessage.listen((message) {
+        debugPrint('FCM foreground: ${message.notification?.title}');
+        // TODO: Show local notification or in-app banner
+      });
+
+      // Background/terminated tap handler
+      FirebaseMessaging.onMessageOpenedApp.listen((message) {
+        debugPrint('FCM opened: ${message.data}');
+        // TODO: Navigate to relevant screen based on message.data
+      });
+
+      // Check if app was opened from a terminated state via notification
+      final initialMessage = await _messaging.getInitialMessage();
+      if (initialMessage != null) {
+        debugPrint('FCM initial: ${initialMessage.data}');
+        // TODO: Navigate to relevant screen
+      }
+    } catch (e) {
+      debugPrint('FCM handlers setup failed: $e');
     }
   }
 }

@@ -14,11 +14,12 @@ import 'story_card_spotlight.dart';
 import 'story_card_magazine.dart';
 
 // ── Custom Curves ──
+// Smooth ease-out with minimal overshoot — feels premium, no jank.
 
-const kBouncyCurve = Cubic(0.34, 1.4, 0.64, 1.0); // B, D
-const kSmoothBounce = Cubic(0.34, 1.2, 0.64, 1.0); // F, G
-const kSpringBounce = Cubic(0.34, 1.3, 0.64, 1.0); // H
-const kAccordionCurve = Cubic(0.25, 0.8, 0.25, 1.0); // C
+const kBouncyCurve = Cubic(0.22, 1.0, 0.36, 1.0); // B, D — gentle ease-out
+const kSmoothBounce = Cubic(0.16, 1.0, 0.3, 1.0); // F, G — silky smooth
+const kSpringBounce = Cubic(0.2, 1.0, 0.32, 1.0); // H — subtle spring
+const kAccordionCurve = Cubic(0.25, 0.8, 0.25, 1.0); // C — unchanged
 
 // ── Data holder ──
 

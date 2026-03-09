@@ -1,6 +1,6 @@
 {
   "version": "1.0.0",
-  "updatedAt": "2026-03-04T10:00:00.000Z",
+  "updatedAt": "2026-03-05T08:27:04.706Z",
   "imageBaseUrl": "https://firebasestorage.googleapis.com/v0/b/flexme-now.firebasestorage.app/o/",
   "imageSuffix": "?alt=media",
   "categories": [
@@ -43483,6 +43483,1366 @@
       "createdAt": "2026-03-03T16:44:03.731Z",
       "updatedAt": "2026-03-03T16:44:03.731Z",
       "promptGender": "neutral"
+    },
+    {
+      "id": "tale_ceo_day",
+      "slug": "tale_ceo_day",
+      "title": {
+        "en": "CEO for a Day",
+        "vi": "Lam CEO Mot Ngay",
+        "es": "CEO por un Dia",
+        "pt": "CEO por um Dia",
+        "ja": "1日CEO体験",
+        "ko": "하루 CEO"
+      },
+      "description": {
+        "en": "One day as a CEO -- morning routine to evening gala.",
+        "vi": "Mot ngay lam CEO -- tu buoi sang den da tiec toi.",
+        "es": "Un dia como CEO -- desde la rutina matutina hasta la gala nocturna.",
+        "pt": "Um dia como CEO -- da rotina matinal ate a gala noturna.",
+        "ja": "CEOの1日 -- 朝のルーティンから夜のガラまで。",
+        "ko": "CEO의 하루 -- 아침 루틴부터 저녕 갈라까지."
+      },
+      "category": "career",
+      "type": "business",
+      "gender": "male",
+      "duration": "many",
+      "totalPics": 9,
+      "credits": 5,
+      "badge": null,
+      "premium": false,
+      "isActive": true,
+      "sortOrder": 3,
+      "coverImage": "mockup-images/stories/tale_ceo_day/ch1.webp",
+      "previewImages": [
+        "mockup-images/stories/tale_ceo_day/ch1.webp",
+        "mockup-images/stories/tale_ceo_day/ch2.webp",
+        "mockup-images/stories/tale_ceo_day/ch3.webp"
+      ],
+      "chapters": [
+        {
+          "order": 1,
+          "heading": {
+            "en": "Morning routine",
+            "vi": "Buoi sang",
+            "es": "Rutina matutina",
+            "pt": "Rotina matinal",
+            "ja": "朝のルーティン",
+            "ko": "아침 루틴"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} in a luxury penthouse kitchen at dawn, wearing a premium robe, holding a coffee cup, city skyline through floor-to-ceiling windows, determined focused expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "corporate editorial photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 2,
+          "heading": {
+            "en": "Corner office",
+            "vi": "Van phong goc",
+            "es": "Oficina esquina",
+            "pt": "Escritorio de canto",
+            "ja": "コーナーオフィス",
+            "ko": "코너 오피스"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} in a modern corner office, tailored suit, standing at floor-to-ceiling windows overlooking a major city skyline, confident powerful stance, morning sun",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "corporate editorial photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 3,
+          "heading": {
+            "en": "Board meeting",
+            "vi": "Hop hoi dong",
+            "es": "Reunion de directiva",
+            "pt": "Reuniao de diretoria",
+            "ja": "取締役会",
+            "ko": "이사회"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} at the head of a modern boardroom table, presenting to executives, large screen with charts behind, commanding presence, corporate photography",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "corporate editorial photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 4,
+          "heading": {
+            "en": "Power lunch",
+            "vi": "An trua quyen luc",
+            "es": "Almuerzo de poder",
+            "pt": "Almoco de poder",
+            "ja": "パワーランチ",
+            "ko": "파워 런치"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} at a high-end restaurant business lunch, shaking hands across the table, expensive wine, tailored suit, confident smile, upscale dining setting",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "corporate editorial photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 5,
+          "heading": {
+            "en": "Media interview",
+            "vi": "Phong van bao chi",
+            "es": "Entrevista mediatica",
+            "pt": "Entrevista de midia",
+            "ja": "メディアインタビュー",
+            "ko": "미디어 인터뷰"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} being interviewed by media, professional studio lighting, camera crew in background, confident articulate expression, wearing executive attire",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "corporate editorial photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 6,
+          "heading": {
+            "en": "Supercar exit",
+            "vi": "Ra ve bang sieu xe",
+            "es": "Salida en superdeportivo",
+            "pt": "Saida de superesportivo",
+            "ja": "スーパーカーで退社",
+            "ko": "슈퍼카 퇴근"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} stepping into a luxury supercar in an underground parking garage, suit jacket over shoulder, evening light, victorious satisfied expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "corporate editorial photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 7,
+          "heading": {
+            "en": "Evening gala",
+            "vi": "Da tiec toi",
+            "es": "Gala nocturna",
+            "pt": "Gala noturna",
+            "ja": "イブニングガラ",
+            "ko": "이브닝 갈라"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} at a black-tie gala event, tuxedo or evening gown, champagne in hand, grand ballroom with chandeliers, elegant guests in background",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "corporate editorial photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 8,
+          "heading": {
+            "en": "Award speech",
+            "vi": "Bai phat bieu nhan giai",
+            "es": "Discurso de premiacion",
+            "pt": "Discurso de premiacao",
+            "ja": "授賞スピーチ",
+            "ko": "수상 연설"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} giving a speech at a podium, award trophy on lectern, spotlight, audience applauding, confident grateful expression, formal event setting",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "corporate editorial photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 9,
+          "heading": {
+            "en": "Rooftop reflection",
+            "vi": "Suy tu tren san thuong",
+            "es": "Reflexion en la azotea",
+            "pt": "Reflexao no terrace",
+            "ja": "屋上での振り返り",
+            "ko": "옥상 회고"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} standing alone on a luxury rooftop at night, city lights panorama below, loosened tie, reflective contemplative expression, dramatic night sky",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "corporate editorial photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tale_fitness_journey",
+      "slug": "tale_fitness_journey",
+      "title": {
+        "en": "Fitness Journey",
+        "vi": "Hanh Trinh The Duc",
+        "es": "Viaje Fitness",
+        "pt": "Jornada Fitness",
+        "ja": "フィットネスジャーニー",
+        "ko": "피트니스 여정"
+      },
+      "description": {
+        "en": "From day one at the gym to crushing your goals -- a transformation story.",
+        "vi": "Tu ngay dau tai phong gym den chinh phuc muc tieu -- cau chuyen thay doi.",
+        "es": "Desde el primer dia en el gimnasio hasta alcanzar tus metas -- una historia de transformacion.",
+        "pt": "Do primeiro dia na academia ate esmagar suas metas -- uma historia de transformacao.",
+        "ja": "ジム初日から目標達成まで -- 変身ストーリー。",
+        "ko": "헬스장 첫날부터 목표 달성까지 -- 변신 스토리."
+      },
+      "category": "sports",
+      "type": "trend",
+      "gender": "male",
+      "duration": "many",
+      "totalPics": 9,
+      "credits": 5,
+      "badge": "NEW",
+      "premium": false,
+      "isActive": true,
+      "sortOrder": 5,
+      "coverImage": "mockup-images/stories/tale_fitness_journey/ch1.webp",
+      "previewImages": [
+        "mockup-images/stories/tale_fitness_journey/ch1.webp",
+        "mockup-images/stories/tale_fitness_journey/ch2.webp",
+        "mockup-images/stories/tale_fitness_journey/ch3.webp"
+      ],
+      "chapters": [
+        {
+          "order": 1,
+          "heading": {
+            "en": "Day one at the gym",
+            "vi": "Ngay dau tai gym",
+            "es": "Primer dia en el gym",
+            "pt": "Primeiro dia na academia",
+            "ja": "ジム初日",
+            "ko": "헬스장 첫날"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} standing at the entrance of a modern gym, determined expression, workout clothes, gym equipment in background, morning light through windows",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "dynamic fitness photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 2,
+          "heading": {
+            "en": "First workout",
+            "vi": "Buoi tap dau",
+            "es": "Primer entrenamiento",
+            "pt": "Primeiro treino",
+            "ja": "初トレーニング",
+            "ko": "첫 운동"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} doing dumbbell curls in the gym, focused determined expression, sweat on forehead, gym mirror reflection, dramatic gym lighting",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "dynamic fitness photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 3,
+          "heading": {
+            "en": "Meal prep",
+            "vi": "Chuan bi bua an",
+            "es": "Preparacion de comidas",
+            "pt": "Preparacao de refeicoes",
+            "ja": "食事準備",
+            "ko": "식단 준비"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} in a clean kitchen preparing healthy meal containers, grilled chicken and vegetables, protein shake, organized meal prep setup, proud expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "dynamic fitness photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 4,
+          "heading": {
+            "en": "Personal best",
+            "vi": "Ky luc ca nhan",
+            "es": "Marca personal",
+            "pt": "Recorde pessoal",
+            "ja": "自己ベスト",
+            "ko": "개인 기록"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} celebrating after a deadlift PR, chalk on hands, barbell on floor, gym crowd cheering in background, triumphant victorious expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "dynamic fitness photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 5,
+          "heading": {
+            "en": "Morning run",
+            "vi": "Chay bo buoi sang",
+            "es": "Carrera matutina",
+            "pt": "Corrida matinal",
+            "ja": "朝ランニング",
+            "ko": "아침 달리기"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} running through empty city streets at dawn, golden sunrise light, athletic wear, dynamic motion blur, energetic powerful stride",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "dynamic fitness photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 6,
+          "heading": {
+            "en": "Progress photo",
+            "vi": "Anh tien trinh",
+            "es": "Foto de progreso",
+            "pt": "Foto de progresso",
+            "ja": "経過写真",
+            "ko": "진행 사진"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} taking a mirror selfie in gym, athletic physique showing progress, confident proud expression, clean modern gym mirror, good lighting",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "dynamic fitness photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 7,
+          "heading": {
+            "en": "Competition day",
+            "vi": "Ngay thi dau",
+            "es": "Dia de competencia",
+            "pt": "Dia de competicao",
+            "ja": "大会当日",
+            "ko": "대회 날"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} backstage at a fitness competition, pumped up physique, competition number pinned, focused intense expression, dramatic stage lighting",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "dynamic fitness photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 8,
+          "heading": {
+            "en": "Medal moment",
+            "vi": "Khoanh khac huy chuong",
+            "es": "Momento de medalla",
+            "pt": "Momento da medalha",
+            "ja": "メダルの瞬間",
+            "ko": "메달의 순간"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} on a podium holding up a gold medal, triumphant pose, crowd cheering, confetti falling, spotlight, pure joy expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "dynamic fitness photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 9,
+          "heading": {
+            "en": "New chapter",
+            "vi": "Chuong moi",
+            "es": "Nuevo capitulo",
+            "pt": "Novo capitulo",
+            "ja": "新しい章",
+            "ko": "새로운 장"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} standing on a mountain peak at sunset, athletic build silhouetted against golden sky, arms raised in victory, epic landscape, inspirational atmosphere",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "dynamic fitness photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tale_got_a_bae",
+      "slug": "tale_got_a_bae",
+      "title": {
+        "en": "Got a Bae",
+        "vi": "Co Nguoi Yeu Roi",
+        "es": "Tengo Pareja",
+        "pt": "Arrumei um Amor",
+        "ja": "恋人ゲット",
+        "ko": "애인 생겼어"
+      },
+      "description": {
+        "en": "The cutest couple story -- from first date to forever.",
+        "vi": "Cau chuyen cap doi de thuong nhat -- tu buoi hen dau tien den mai mai.",
+        "es": "La historia de pareja mas tierna -- desde la primera cita hasta siempre.",
+        "pt": "A historia de casal mais fofa -- do primeiro encontro ate para sempre.",
+        "ja": "最もかわいいカップルストーリー -- 初デートから永遠まで。",
+        "ko": "가장 귀여운 커플 이야기 -- 첫 데이트부터 영원히."
+      },
+      "category": "romance",
+      "type": "sexy",
+      "gender": "couple",
+      "duration": "many",
+      "totalPics": 9,
+      "credits": 6,
+      "badge": "HOT",
+      "premium": false,
+      "isActive": true,
+      "sortOrder": 2,
+      "coverImage": "mockup-images/stories/tale_got_a_bae/ch1.webp",
+      "previewImages": [
+        "mockup-images/stories/tale_got_a_bae/ch1.webp",
+        "mockup-images/stories/tale_got_a_bae/ch2.webp",
+        "mockup-images/stories/tale_got_a_bae/ch3.webp"
+      ],
+      "chapters": [
+        {
+          "order": 1,
+          "heading": {
+            "en": "First date",
+            "vi": "Buoi hen dau",
+            "es": "Primera cita",
+            "pt": "Primeiro encontro",
+            "ja": "初デート",
+            "ko": "첫 데이트"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} sitting across from someone at a romantic restaurant table, candlelight, nervous but happy smile, elegant outfit, soft warm lighting",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "romantic cinematic photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 2,
+          "heading": {
+            "en": "Holding hands",
+            "vi": "Nam tay",
+            "es": "Tomados de la mano",
+            "pt": "De maos dadas",
+            "ja": "手をつなぐ",
+            "ko": "손잡기"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Close-up portrait of {subject} walking hand-in-hand with partner on a city street at dusk, string lights overhead, genuine smile, romantic atmosphere",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "romantic cinematic photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 3,
+          "heading": {
+            "en": "Dinner together",
+            "vi": "An toi cung nhau",
+            "es": "Cena juntos",
+            "pt": "Jantar juntos",
+            "ja": "一緒にディナー",
+            "ko": "함께 저녁 식사"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} at an upscale restaurant, beautifully plated food on table, sharing a laugh with partner across the table, warm ambient lighting, happy expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "romantic cinematic photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 4,
+          "heading": {
+            "en": "Night walk",
+            "vi": "Di dao dem",
+            "es": "Paseo nocturno",
+            "pt": "Caminhada noturna",
+            "ja": "夜の散歩",
+            "ko": "밤 산책"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} walking along a moonlit riverbank with city lights reflecting on water, starry sky, romantic silhouette, peaceful expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "romantic cinematic photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 5,
+          "heading": {
+            "en": "Selfie together",
+            "vi": "Selfie chung",
+            "es": "Selfie juntos",
+            "pt": "Selfie juntos",
+            "ja": "一緒にセルフィー",
+            "ko": "함께 셀카"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Selfie-style portrait of {subject} with partner, big smiles, cute pose, city nightlife background, warm happy energy, casual outfit",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "romantic cinematic photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 6,
+          "heading": {
+            "en": "Surprise gift",
+            "vi": "Qua bat ngo",
+            "es": "Regalo sorpresa",
+            "pt": "Presente surpresa",
+            "ja": "サプライズプレゼント",
+            "ko": "깜짝 선물"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} receiving a beautifully wrapped gift box with a bow, surprised and emotional expression, cozy indoor setting, morning light",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "romantic cinematic photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 7,
+          "heading": {
+            "en": "Cooking together",
+            "vi": "Nau an cung nhau",
+            "es": "Cocinando juntos",
+            "pt": "Cozinhando juntos",
+            "ja": "一緒に料理",
+            "ko": "함께 요리"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} cooking in a modern kitchen, flour on face, laughing, partner in background, warm kitchen lighting, domestic bliss atmosphere",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "romantic cinematic photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 8,
+          "heading": {
+            "en": "Sunset together",
+            "vi": "Hoang hon cung nhau",
+            "es": "Atardecer juntos",
+            "pt": "Por do sol juntos",
+            "ja": "一緒の夕焼け",
+            "ko": "함께하는 일몰"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} watching sunset from a rooftop, partner silhouette beside, golden hour light, city skyline, peaceful romantic expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "romantic cinematic photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 9,
+          "heading": {
+            "en": "Anniversary",
+            "vi": "Ky niem",
+            "es": "Aniversario",
+            "pt": "Aniversario",
+            "ja": "記念日",
+            "ko": "기념일"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} at an anniversary dinner, champagne toast, elegant outfit, roses on table, warm candlelight, celebrating expression, romantic fine dining setting",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "romantic cinematic photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tale_paris_7days",
+      "slug": "tale_paris_7days",
+      "title": {
+        "en": "Paris 7 Days",
+        "vi": "Paris 7 Ngay",
+        "es": "Paris 7 Dias",
+        "pt": "Paris 7 Dias",
+        "ja": "パリ7日間",
+        "ko": "파리 7일"
+      },
+      "description": {
+        "en": "A 7-day journey through Paris -- from the airport to Eiffel Tower, through Louvre and along the Seine.",
+        "vi": "Hanh trinh 7 ngay qua Paris -- tu san bay den thap Eiffel, qua Louvre va doc song Seine.",
+        "es": "Un viaje de 7 dias por Paris -- desde el aeropuerto hasta la Torre Eiffel, por el Louvre y a lo largo del Sena.",
+        "pt": "Uma viagem de 7 dias por Paris -- do aeroporto ate a Torre Eiffel, pelo Louvre e ao longo do Sena.",
+        "ja": "パリ7日間の旅 -- 空港からエッフェル塔、ルーヴルを通りセーヌ川沿いへ。",
+        "ko": "파리 7일 여행 -- 공항에서 에펠탑까지, 루브르를 거쳐 센강을 따라."
+      },
+      "category": "travel",
+      "type": "travel",
+      "gender": "female",
+      "duration": "many",
+      "totalPics": 9,
+      "credits": 8,
+      "badge": "HOT",
+      "premium": false,
+      "isActive": true,
+      "sortOrder": 1,
+      "coverImage": "mockup-images/stories/tale_paris_7days/ch1.webp",
+      "previewImages": [
+        "mockup-images/stories/tale_paris_7days/ch1.webp",
+        "mockup-images/stories/tale_paris_7days/ch2.webp",
+        "mockup-images/stories/tale_paris_7days/ch3.webp"
+      ],
+      "chapters": [
+        {
+          "order": 1,
+          "heading": {
+            "en": "Airport check-in",
+            "vi": "Lam thu tuc tai san bay",
+            "es": "Registro en aeropuerto",
+            "pt": "Check-in no aeroporto",
+            "ja": "空港チェックイン",
+            "ko": "공항 체크인"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} at an international airport terminal, rolling a stylish suitcase, departure board showing Paris CDG, excited expression, travel outfit, bright terminal lighting",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "realistic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 2,
+          "heading": {
+            "en": "Landing at CDG",
+            "vi": "Ha canh tai CDG",
+            "es": "Aterrizaje en CDG",
+            "pt": "Pouso em CDG",
+            "ja": "CDG着陸",
+            "ko": "CDG 착륙"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} walking out of Charles de Gaulle airport, wearing a winter coat, Parisian architecture visible outside, evening light, happy expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "realistic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 3,
+          "heading": {
+            "en": "Hotel with Eiffel view",
+            "vi": "Khach san nhin thap Eiffel",
+            "es": "Hotel con vista Eiffel",
+            "pt": "Hotel com vista Eiffel",
+            "ja": "エッフェル塔が見えるホテル",
+            "ko": "에펠탑 뷰 호텔"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} standing by a hotel window at night, Eiffel Tower sparkling in the background, cozy hotel room, warm ambient lighting, awe-struck expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "realistic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 4,
+          "heading": {
+            "en": "Eiffel Tower",
+            "vi": "Thap Eiffel",
+            "es": "Torre Eiffel",
+            "pt": "Torre Eiffel",
+            "ja": "エッフェル塔",
+            "ko": "에펠탑"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} standing at the base of the Eiffel Tower looking up, Champ de Mars in background, morning light, amazed expression, tourist outfit",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "realistic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 5,
+          "heading": {
+            "en": "Parisian cafe",
+            "vi": "Quan cafe Paris",
+            "es": "Cafe parisino",
+            "pt": "Cafe parisiense",
+            "ja": "パリのカフェ",
+            "ko": "파리지앙 카페"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} sitting at a classic Parisian sidewalk cafe, croissant and coffee on marble table, cobblestone street, afternoon sun, relaxed smile",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "realistic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 6,
+          "heading": {
+            "en": "Louvre Museum",
+            "vi": "Bao Tang Louvre",
+            "es": "Museo del Louvre",
+            "pt": "Museu do Louvre",
+            "ja": "ルーヴル美術館",
+            "ko": "루브르 박물관"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} inside the Louvre Museum, glass pyramid visible through window, grand gallery hall, art on walls, cultured expression, museum lighting",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "realistic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 7,
+          "heading": {
+            "en": "Seine River cruise",
+            "vi": "Du thuyen song Seine",
+            "es": "Crucero por el Sena",
+            "pt": "Cruzeiro no Sena",
+            "ja": "セーヌ川クルーズ",
+            "ko": "센강 크루즈"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} on a Seine River cruise boat at sunset, Notre-Dame silhouette in background, golden orange sky, wind in hair, romantic atmosphere",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "realistic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 8,
+          "heading": {
+            "en": "Eiffel at night",
+            "vi": "Eiffel ve dem",
+            "es": "Eiffel de noche",
+            "pt": "Eiffel a noite",
+            "ja": "夜のエッフェル",
+            "ko": "밤의 에펠"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} standing on Trocadero plaza at night, Eiffel Tower fully illuminated and sparkling behind, city lights, dreamy expression, night photography",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "realistic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 9,
+          "heading": {
+            "en": "Flying home",
+            "vi": "Bay ve nha",
+            "es": "Volando a casa",
+            "pt": "Voando para casa",
+            "ja": "帰国フライト",
+            "ko": "귀국 비행"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} looking out of an airplane window at sunrise, clouds below, bittersweet smile, travel pillow, emotional farewell mood",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "realistic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        }
+      ]
+    },
+    {
+      "id": "tale_tokyo_5days",
+      "slug": "tale_tokyo_5days",
+      "title": {
+        "en": "Tokyo 5 Days",
+        "vi": "Tokyo 5 Ngay",
+        "es": "Tokio 5 Dias",
+        "pt": "Toquio 5 Dias",
+        "ja": "東京5日間",
+        "ko": "도쿄 5일"
+      },
+      "description": {
+        "en": "Neon lights, ramen streets, and ancient temples.",
+        "vi": "Den neon, pho ramen va den chua co.",
+        "es": "Luces de neon, calles de ramen y templos antiguos.",
+        "pt": "Luzes neon, ruas de ramen e templos antigos.",
+        "ja": "ネオン、ラーメン横丁、そして古寺。",
+        "ko": "네온, 라멘 거리, 고대 사원."
+      },
+      "category": "travel",
+      "type": "travel",
+      "gender": "female",
+      "duration": "many",
+      "totalPics": 9,
+      "credits": 8,
+      "badge": null,
+      "premium": false,
+      "isActive": true,
+      "sortOrder": 4,
+      "coverImage": "mockup-images/stories/tale_tokyo_5days/ch1.webp",
+      "previewImages": [
+        "mockup-images/stories/tale_tokyo_5days/ch1.webp",
+        "mockup-images/stories/tale_tokyo_5days/ch2.webp",
+        "mockup-images/stories/tale_tokyo_5days/ch3.webp"
+      ],
+      "chapters": [
+        {
+          "order": 1,
+          "heading": {
+            "en": "Narita arrival",
+            "vi": "Den Narita",
+            "es": "Llegada a Narita",
+            "pt": "Chegada em Narita",
+            "ja": "成田到着",
+            "ko": "나리타 도착"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} at Narita airport arrival hall, Japanese signage, excited expression, travel outfit with suitcase, bright airport terminal",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "cinematic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 2,
+          "heading": {
+            "en": "Shibuya crossing",
+            "vi": "Giao lo Shibuya",
+            "es": "Cruce de Shibuya",
+            "pt": "Cruzamento Shibuya",
+            "ja": "渋谷交差点",
+            "ko": "시부야 횡단보도"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} walking across Shibuya crossing at night, neon billboards, crowds of people, iconic Tokyo atmosphere, cinematic wide shot",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "cinematic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 3,
+          "heading": {
+            "en": "Ramen alley",
+            "vi": "Hem ramen",
+            "es": "Callejon de ramen",
+            "pt": "Beco de ramen",
+            "ja": "ラーメン横丁",
+            "ko": "라멘 골목"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} slurping ramen at a tiny Tokyo ramen counter, steam rising from bowl, red lanterns, authentic Japanese ramen shop atmosphere, happy expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "cinematic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 4,
+          "heading": {
+            "en": "Sensoji Temple",
+            "vi": "Chua Sensoji",
+            "es": "Templo Sensoji",
+            "pt": "Templo Sensoji",
+            "ja": "浅草寺",
+            "ko": "센소지 절"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} at Sensoji Temple gate, giant red lantern overhead, incense smoke, traditional architecture, morning light, contemplative peaceful expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "cinematic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 5,
+          "heading": {
+            "en": "Akihabara",
+            "vi": "Akihabara",
+            "es": "Akihabara",
+            "pt": "Akihabara",
+            "ja": "秋葉原",
+            "ko": "아키하바라"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} in Akihabara electric town, colorful anime billboards, manga shops, bright neon signs, excited geeky expression, afternoon energy",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "cinematic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 6,
+          "heading": {
+            "en": "Shinjuku Garden",
+            "vi": "Vuon Shinjuku",
+            "es": "Jardin Shinjuku",
+            "pt": "Jardim Shinjuku",
+            "ja": "新宿御苑",
+            "ko": "신주쿠 정원"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} standing under cherry blossom trees in Shinjuku Gyoen, pink petals falling, traditional Japanese garden, dreamy soft light, blissful expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "cinematic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 7,
+          "heading": {
+            "en": "Mt. Fuji day trip",
+            "vi": "Du lich nui Phu Si",
+            "es": "Excursion al Monte Fuji",
+            "pt": "Passeio ao Monte Fuji",
+            "ja": "富士山日帰り",
+            "ko": "후지산 당일치기"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} at Lake Kawaguchi with Mt. Fuji snow-capped peak perfectly reflected in still water, morning light, Japanese countryside, awestruck expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "cinematic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 8,
+          "heading": {
+            "en": "Meiji Shrine",
+            "vi": "Den Meiji",
+            "es": "Santuario Meiji",
+            "pt": "Santuario Meiji",
+            "ja": "明治神宮",
+            "ko": "메이지 신궁"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} walking through the giant torii gate at Meiji Shrine, towering forest trees, gravel path, traditional serene atmosphere, respectful expression",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "cinematic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        },
+        {
+          "order": 9,
+          "heading": {
+            "en": "Sayonara",
+            "vi": "Sayonara",
+            "es": "Sayonara",
+            "pt": "Sayonara",
+            "ja": "さようなら",
+            "ko": "사요나라"
+          },
+          "text": {
+            "en": ""
+          },
+          "choices": {},
+          "prompt": {
+            "base": "Portrait of {subject} waving goodbye at the airport gate, Japanese flag visible, bittersweet smile, travel backpack, nostalgic farewell mood",
+            "negative": "blurry, distorted, watermark, text",
+            "styleHint": "cinematic travel photography"
+          },
+          "aiConfig": {
+            "model": "imagen-3.0-generate-001",
+            "guidanceScale": 8,
+            "aspectRatio": "3:4",
+            "referenceType": "subject"
+          }
+        }
+      ]
     }
   ]
 }
